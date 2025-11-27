@@ -3,6 +3,13 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 
 const Services = () => {
+  // Client data - add logos later
+  const clients = [
+    { id: 1, name: 'Client 1', logo: '/clients/vnc.avif' },
+    { id: 2, name: 'Client 2', logo: '/clients/sgeduvn.webp' },
+    { id: 3, name: 'Client 3', logo: '/clients/tpduk.jpg' },
+  ];
+
   const services = [
     {
       icon: 'vscode-icons:file-type-reactjs',
@@ -113,6 +120,52 @@ const Services = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Clients Section */}
+        <div className="mt-32">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4">
+              <span className="text-sm font-semibold text-white tracking-wider uppercase px-4 py-2 bg-gradient-to-r from-azure-cloud to-azure-green rounded-full">
+                Trusted By
+              </span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Our Clients
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We're proud to partner with leading companies and organizations
+            </p>
+          </div>
+
+          {/* Clients Grid */}
+          <div className="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
+            {clients.map((client) => (
+              <div
+                key={client.id}
+                className="group relative bg-white border-2 border-gray-200 hover:border-azure-blue transition-all duration-300 p-4 flex items-center justify-center shadow-sm hover:shadow-xl h-20"
+              >
+                {/* Placeholder for logo */}
+                {client.logo ? (
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="w-auto h-auto max-w-[140px] max-h-16 object-contain group-hover:grayscale-0 transition-all duration-300"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center">
+                    <Icon
+                      icon="fluent:building-24-filled"
+                      className="w-12 h-12 text-gray-300 group-hover:text-azure-blue transition-colors duration-300"
+                    />
+                    <span className="mt-2 text-xs text-gray-400 group-hover:text-azure-blue transition-colors duration-300">
+                      {client.name}
+                    </span>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Bottom CTA */}
