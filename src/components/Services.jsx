@@ -29,7 +29,7 @@ const Services = () => {
       borderColor: 'border-azure-green'
     },
     {
-      icon: 'fluent:design-ideas-24-filled',
+      icon: 'flat-color-icons:smartphone-tablet',
       title: 'Web UI/UX Design',
       description: 'Beautiful, intuitive user interfaces and experiences that delight users and drive engagement.',
       color: 'azure-blue',
@@ -94,7 +94,7 @@ const Services = () => {
                 </div>
 
                 {/* Icon with background */}
-                <div className={`inline-flex p-4 ${service.bgColor} mb-6 transition-transform group-hover:scale-110 duration-300`}>
+                <div className={`inline-flex p-4  mb-6 transition-transform group-hover:scale-110 duration-300`}>
                   <Icon icon={service.icon} className="w-12 h-12" />
                 </div>
 

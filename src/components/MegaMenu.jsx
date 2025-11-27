@@ -3,21 +3,39 @@ import { Icon } from '@iconify/react';
 
 const services = [
   {
-    title: 'Website App',
-    description: 'Custom web applications tailored to your business needs.',
+    title: 'Web Development',
+    description: 'Modern, scalable web applications built with cutting-edge technologies.',
     icon: <Icon icon="vscode-icons:file-type-reactjs" className="w-6 h-6" />,
     href: '#',
   },
   {
     title: 'CMS Solutions',
-    description: 'Robust Content Management Systems for easy content updates.',
+    description: 'Powerful content management platforms for easy content control.',
     icon: <Icon icon="flat-color-icons:template" className="w-6 h-6" />,
     href: '#',
   },
   {
     title: 'CRM Systems',
-    description: 'Customer Relationship Management tools to grow your business.',
+    description: 'Customer relationship management tools that boost conversions.',
     icon: <Icon icon="flat-color-icons:workflow" className="w-6 h-6" />,
+    href: '#',
+  },
+  {
+    title: 'Web UI/UX Design',
+    description: 'Beautiful, intuitive interfaces that delight users.',
+    icon: <Icon icon="flat-color-icons:smartphone-tablet" className="w-6 h-6" />,
+    href: '#',
+  },
+  {
+    title: 'Digital Document Storage',
+    description: 'Secure, cloud-based document management systems.',
+    icon: <Icon icon="flat-color-icons:file" className="w-6 h-6" />,
+    href: '#',
+  },
+  {
+    title: 'Digital Signature',
+    description: 'Legally binding electronic signature solutions.',
+    icon: <Icon icon="flat-color-icons:signature" className="w-6 h-6" />,
     href: '#',
   },
 ];
@@ -25,7 +43,7 @@ const services = [
 const MegaMenu = () => {
   return (
     <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-lg p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-40">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <a
             key={index}
