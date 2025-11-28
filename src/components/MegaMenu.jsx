@@ -11,7 +11,7 @@ const services = [
   {
     title: 'CMS Solutions',
     description: 'Powerful content management platforms for easy content control.',
-    icon: <Icon icon="flat-color-icons:template" className="w-6 h-6" />,
+    icon: <Icon icon="fluent-color:content-view-32" className="w-6 h-6" />,
     href: '#',
   },
   {
@@ -23,13 +23,13 @@ const services = [
   {
     title: 'Web UI/UX Design',
     description: 'Beautiful, intuitive interfaces that delight users.',
-    icon: <Icon icon="flat-color-icons:smartphone-tablet" className="w-6 h-6" />,
+    icon: <Icon icon="fluent-color:design-ideas-32" className="w-6 h-6" />,
     href: '#',
   },
   {
     title: 'Digital Document Storage',
     description: 'Secure, cloud-based document management systems.',
-    icon: <Icon icon="flat-color-icons:file" className="w-6 h-6" />,
+    icon: <Icon icon="fluent-color:document-24" className="w-6 h-6" />,
     href: '#',
   },
   {

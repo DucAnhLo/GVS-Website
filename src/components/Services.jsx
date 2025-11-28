@@ -22,7 +22,7 @@ const Services = () => {
       shadowColor: 'shadow-sky-500/20'
     },
     {
-      icon: 'flat-color-icons:template',
+      icon: 'fluent-color:content-view-32',
       title: 'CMS Solutions',
       description: 'Powerful content management platforms that give you full control over your digital content with ease.',
       color: '#8B5CF6',
@@ -38,7 +38,7 @@ const Services = () => {
       shadowColor: 'shadow-emerald-500/20'
     },
     {
-      icon: 'flat-color-icons:smartphone-tablet',
+      icon: 'fluent-color:design-ideas-32',
       title: 'Web UI/UX Design',
       description: 'Beautiful, intuitive user interfaces and experiences that delight users and drive engagement.',
       color: '#F59E0B',
@@ -46,7 +46,7 @@ const Services = () => {
       shadowColor: 'shadow-amber-500/20'
     },
     {
-      icon: 'flat-color-icons:file',
+      icon: 'fluent-color:document-24',
       title: 'Digital Document Storage',
       description: 'Secure, cloud-based document management systems for easy access, organization, and collaboration.',
       color: '#EC4899',

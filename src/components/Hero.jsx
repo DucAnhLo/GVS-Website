@@ -100,7 +100,7 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-lg lg:text-xl text-slate-400 max-w-xl leading-relaxed" style={{ animation: 'fadeInUp 0.8s ease-out 0.9s both' }}>
-              Transforming businesses through cutting-edge web applications, intelligent CMS platforms, and enterprise CRM systems built for scale.
+              Empowering small businesses through tailored websites, custom web applications, and integrated systems that drive digital transformation.
             </p>
 
             {/* CTAs */}
@@ -130,7 +130,7 @@ const Hero = () => {
 
             {/* Services Tags */}
             <div className="flex flex-wrap gap-3 pt-4" style={{ animation: 'fadeInUp 0.8s ease-out 1.3s both' }}>
-              {['Web Development', 'CMS Solutions', 'CRM Systems', 'Cloud Integration'].map((service, index) => (
+              {['Custom Websites', 'Web Applications', 'Business Systems', 'Digital Transformation'].map((service, index) => (
                 <div
                   key={index}
                   className="px-4 py-2 bg-white/5 border border-white/10 text-xs font-medium text-slate-300 uppercase tracking-wider hover:bg-white/10 hover:border-azure-blue/50 transition-all duration-300 cursor-default"
@@ -141,88 +141,185 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: Software UI Showcase */}
+          {/* Right: Single Main Project Dashboard */}
           <div className="relative hidden lg:block" style={{ animation: 'fadeInRight 1s ease-out 0.8s both' }}>
-            <div className="relative">
-              {/* Main Dashboard Card */}
-              <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl">
-                {/* Dashboard Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="flex gap-1.5">
-                      <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                    </div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Dashboard</span>
-                  </div>
-                  <Icon icon="fluent:more-horizontal-24-filled" className="w-5 h-5 text-slate-500" />
+            <div className="relative" style={{ perspective: '1200px' }}>
+              {/* Main Unified Dashboard Card */}
+              <div
+                className="relative bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-gray-900/95 backdrop-blur-2xl border border-azure-blue/30 rounded-3xl shadow-2xl overflow-hidden max-w-[550px]"
+                style={{
+                  transform: 'rotateY(-8deg) rotateX(5deg)',
+                  boxShadow: '0 30px 60px -15px rgba(14, 165, 233, 0.4), 0 0 0 1px rgba(14, 165, 233, 0.1), inset 0 0 120px rgba(14, 165, 233, 0.08)'
+                }}
+              >
+                {/* Animated Neon Border */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-azure-blue to-transparent opacity-60"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
+                  <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-azure-blue to-transparent opacity-40"></div>
+                  <div className="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-40"></div>
                 </div>
 
-                {/* Stats Grid */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  {[
-                    { label: 'Active Users', value: '2.4K', trend: '+12%', color: '#0EA5E9' },
-                    { label: 'Revenue', value: '$48K', trend: '+8%', color: '#10B981' }
-                  ].map((stat, index) => (
-                    <div key={index} className="bg-white/5 rounded-lg p-4 border border-white/10">
-                      <div className="text-xs text-slate-400 mb-1 uppercase tracking-wide">{stat.label}</div>
-                      <div className="flex items-baseline gap-2">
-                        <div className="text-2xl font-black text-white">{stat.value}</div>
-                        <div className="text-xs font-bold" style={{ color: stat.color }}>{stat.trend}</div>
+                {/* Header */}
+                <div className="relative px-6 py-4 bg-gradient-to-r from-gray-800/90 to-gray-900/90 border-b border-white/10">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-azure-blue to-purple-600 flex items-center justify-center shadow-lg shadow-azure-blue/30">
+                        <Icon icon="fluent:building-multiple-24-filled" className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-white">Active Projects</h3>
+                        <p className="text-sm text-slate-400">Tailored Solutions for Small Businesses</p>
                       </div>
                     </div>
-                  ))}
-                </div>
-
-                {/* Chart Placeholder */}
-                <div className="bg-gradient-to-br from-azure-blue/10 to-azure-cloud/10 rounded-lg p-4 border border-white/10 h-32 flex items-end justify-between gap-2">
-                  {[40, 65, 45, 80, 55, 90, 70, 85].map((height, index) => (
-                    <div
-                      key={index}
-                      className="flex-1 bg-gradient-to-t from-azure-blue to-azure-cloud rounded-sm transition-all duration-500 hover:opacity-80"
-                      style={{
-                        height: `${height}%`,
-                        animation: `barGrow 0.8s ease-out ${1.2 + index * 0.1}s both`
-                      }}
-                    ></div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Floating Notification Card */}
-              <div className="absolute -right-6 top-16 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-4 shadow-xl max-w-[200px]" style={{ animation: 'floatIn 1s ease-out 1.5s both' }}>
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-azure-blue to-azure-cloud flex items-center justify-center flex-shrink-0">
-                    <Icon icon="fluent:checkmark-24-filled" className="w-5 h-5 text-white" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-xs font-bold text-white mb-1">Deploy Success</div>
-                    <div className="text-xs text-slate-400">App deployed to production</div>
+                    <div className="flex items-center gap-2 px-4 py-2 bg-green-500/20 rounded-full border border-green-500/40">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
+                      <span className="text-sm font-bold text-green-400">All Systems Live</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Floating User Card */}
-              <div className="absolute -left-8 bottom-12 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-4 shadow-xl" style={{ animation: 'floatIn 1s ease-out 1.8s both' }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
-                    JD
-                  </div>
+                {/* Main Content */}
+                <div className="p-6 space-y-6">
+                  {/* Active Projects */}
                   <div>
-                    <div className="text-xs font-bold text-white">John Doe</div>
-                    <div className="text-xs text-slate-400">Product Manager</div>
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-sm font-bold text-white uppercase tracking-wider">Current Sprints</h4>
+                      <Icon icon="fluent:more-horizontal-24-filled" className="w-5 h-5 text-slate-500" />
+                    </div>
+
+                    <div className="space-y-3">
+                      {/* Project 1 */}
+                      <div className="group bg-white/5 hover:bg-white/10 rounded-xl p-4 border border-white/10 hover:border-azure-blue/50 transition-all">
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-1">
+                              <div className="text-sm font-bold text-white">Student Data Management System</div>
+                              <span className="px-2 py-0.5 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">Platform</span>
+                            </div>
+                            <div className="text-xs text-slate-400">High School • Excel migration to web-based system</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-black text-azure-blue">78%</div>
+                            <div className="text-xs text-slate-500">Complete</div>
+                          </div>
+                        </div>
+                        <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
+                          <div
+                            className="bg-gradient-to-r from-azure-blue via-cyan-400 to-azure-blue bg-[length:200%_100%] h-full rounded-full"
+                            style={{
+                              width: '78%',
+                              animation: 'progressGrow 2s ease-out 1.2s both, shimmer 4s ease-in-out infinite'
+                            }}
+                          ></div>
+                        </div>
+                      </div>
+
+                      {/* Project 2 */}
+                      <div className="group bg-white/5 hover:bg-white/10 rounded-xl p-4 border border-white/10 hover:border-green-500/50 transition-all">
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-1">
+                              <div className="text-sm font-bold text-white">Online Learning Platform</div>
+                              <span className="px-2 py-0.5 bg-green-500/20 text-green-300 text-xs rounded-full border border-green-500/30">Website</span>
+                            </div>
+                            <div className="text-xs text-slate-400">Language Institute • Course portal & enrollment</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-black text-green-400">92%</div>
+                            <div className="text-xs text-slate-500">Complete</div>
+                          </div>
+                        </div>
+                        <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
+                          <div
+                            className="bg-gradient-to-r from-green-500 via-emerald-400 to-green-500 bg-[length:200%_100%] h-full rounded-full"
+                            style={{
+                              width: '92%',
+                              animation: 'progressGrow 2s ease-out 1.4s both, shimmer 4s ease-in-out infinite'
+                            }}
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Recent Activity Timeline */}
+                  <div className="pt-4 border-t border-white/10">
+                    <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3 flex items-center gap-2">
+                      <Icon icon="fluent:clock-24-filled" className="w-4 h-4 text-azure-blue" />
+                      Recent Activity
+                    </h4>
+                    <div className="space-y-3">
+                      {[
+                        {
+                          icon: 'fluent:checkmark-circle-24-filled',
+                          color: 'green',
+                          action: 'Data Migration Complete',
+                          detail: '2,500+ student records imported to platform',
+                          time: '2 min ago'
+                        },
+                        {
+                          icon: 'fluent:design-ideas-24-filled',
+                          color: 'azure-blue',
+                          action: 'Portal Design Approved',
+                          detail: 'Learning platform UI/UX finalized',
+                          time: '25 min ago'
+                        },
+                        {
+                          icon: 'fluent:database-24-filled',
+                          color: 'purple',
+                          action: 'Excel Processing',
+                          detail: 'Converting grade sheets to database',
+                          time: '1 hour ago'
+                        }
+                      ].map((activity, i) => (
+                        <div key={i} className="flex items-start gap-3 group hover:bg-white/5 p-2 rounded-lg transition-all">
+                          <div className={`w-8 h-8 rounded-lg bg-${activity.color}-500/20 border border-${activity.color}-500/30 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                            <Icon icon={activity.icon} className={`w-4 h-4 text-${activity.color}-400`} />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-medium text-white">{activity.action}</div>
+                            <div className="text-xs text-slate-400 truncate">{activity.detail}</div>
+                          </div>
+                          <div className="text-xs text-slate-500 flex-shrink-0">{activity.time}</div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Code Snippet Card */}
-              <div className="absolute -right-12 bottom-8 bg-gray-900/90 backdrop-blur-xl border border-white/20 rounded-lg p-3 shadow-xl font-mono text-xs max-w-[180px]" style={{ animation: 'floatIn 1s ease-out 2s both' }}>
-                <div className="text-green-400 mb-1">{'> npm run build'}</div>
-                <div className="text-slate-400">Building...</div>
-                <div className="flex items-center gap-2 text-azure-blue">
-                  <Icon icon="fluent:checkmark-circle-24-filled" className="w-3 h-3" />
-                  <span>Success</span>
+                {/* Footer Status Bar */}
+                <div className="px-6 py-4 bg-gradient-to-r from-azure-blue/10 via-purple-500/10 to-green-500/10 border-t border-white/10">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4 text-xs">
+                      <div className="flex items-center gap-2">
+                        <Icon icon="fluent:people-team-24-filled" className="w-4 h-4 text-azure-blue" />
+                        <span className="text-slate-300">Team Online:</span>
+                        <div className="flex -space-x-2">
+                          {['from-blue-500 to-cyan-500', 'from-purple-500 to-pink-500', 'from-orange-500 to-red-500', 'from-green-500 to-teal-500'].map((gradient, i) => (
+                            <div
+                              key={i}
+                              className={`w-6 h-6 rounded-full bg-gradient-to-br ${gradient} border-2 border-gray-900`}
+                            ></div>
+                          ))}
+                          <div className="w-6 h-6 rounded-full bg-white/10 border-2 border-gray-900 flex items-center justify-center">
+                            <span className="text-xs text-white font-bold">+8</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 text-xs">
+                      <div className="flex items-center gap-1.5">
+                        <Icon icon="fluent:branch-24-filled" className="w-3 h-3 text-purple-400" />
+                        <span className="text-slate-400 font-mono">main</span>
+                      </div>
+                      <div className="h-3 w-px bg-white/20"></div>
+                      <div className="flex items-center gap-1.5">
+                        <Icon icon="fluent:rocket-24-filled" className="w-3 h-3 text-green-400" />
+                        <span className="text-slate-400">Last deploy: 2m ago</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -343,6 +440,66 @@ const Hero = () => {
           to {
             opacity: 1;
             transform: translateY(0) scale(1);
+          }
+        }
+
+        @keyframes progressGrow {
+          from {
+            width: 0%;
+          }
+          to {
+            width: var(--final-width, 100%);
+          }
+        }
+
+        @keyframes typeIn {
+          from {
+            opacity: 0;
+            transform: translateX(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes float3D {
+          0%, 100% {
+            transform: translateY(0px) rotateY(var(--rotate-y, 0deg)) rotateX(var(--rotate-x, 0deg));
+          }
+          50% {
+            transform: translateY(-15px) rotateY(var(--rotate-y, 0deg)) rotateX(var(--rotate-x, 0deg));
+          }
+        }
+
+        @keyframes nodePulse {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          50% {
+            transform: scale(1.5);
+            opacity: 0.6;
+          }
+        }
+
+        @keyframes gridPulse {
+          0%, 100% {
+            opacity: 0.2;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.3;
+            transform: scale(1.05);
+          }
+        }
+
+        @keyframes shimmer {
+          0% {
+            background-position: 200% 0;
+          }
+          100% {
+            background-position: -200% 0;
           }
         }
       `}</style>
