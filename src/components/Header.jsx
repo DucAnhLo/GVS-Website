@@ -13,7 +13,8 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex-1">
             <a href="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-azure-blue to-azure-cloud bg-clip-text text-transparent">
+              {/* <img src='/logo-alt.svg' alt="GSV Logo" className="h-40 w-40" /> */}
+              <span className="text-3xl font-bold bg-gradient-to-r from-azure-blue to-azure-cloud bg-clip-text text-transparent">
                 GSV
               </span>
             </a>

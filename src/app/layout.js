@@ -2,6 +2,8 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { LoadingProvider } from "@/contexts/LoadingContext";
+import LoadingWrapper from "@/components/LoadingWrapper";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
@@ -19,11 +21,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${interTight.variable} antialiased`}
       >
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <LoadingProvider>
+          <LoadingWrapper />
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </LoadingProvider>
       </body>
     </html>
   );

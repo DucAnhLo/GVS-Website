@@ -1,196 +1,212 @@
-'use client'
-import React from 'react';
-import { Icon } from '@iconify/react';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
+import { projectsData } from "@/data/projects";
 
 const Projects = () => {
-  const projects = [
-    {
-      title: 'Vietnamese Education Portal',
-      description: 'Comprehensive school discovery platform helping Vietnamese families find and compare schools across Vietnam with detailed information and resources.',
-      slug: 'vietnamese-education-portal',
-      image: '/projects/education.jpg',
-      liveUrl: 'https://education.vietnameseconnect.com/',
-      category: 'Education Platform',
-      tech: ['Next.js', 'React', 'PostgreSQL', 'Google Maps API'],
-      color: 'azure-blue',
-      caseStudy: {
-        client: 'Vietnamese Connect Community',
-        duration: '8 months',
-        challenge: 'Vietnamese families needed a centralized platform to discover, compare, and research schools across Vietnam. Existing solutions lacked comprehensive information, filtering options, and user-friendly interfaces.',
-        solution: 'Developed a modern, responsive education portal with advanced search and filtering capabilities. Integrated Google Maps for location-based discovery, built comprehensive school profiles with detailed information, and implemented user-friendly comparison tools.',
-        results: [
-          '1000+ schools listed nationwide',
-          '50K+ monthly active users',
-          'Average 8 minutes user engagement time',
-          '4.8/5 user satisfaction rating'
-        ],
-        features: [
-          'Advanced school search & filtering',
-          'Location-based school discovery',
-          'Detailed school profiles & information',
-          'School comparison tools',
-          'Interactive maps integration',
-          'Curriculum and program listings',
-          'Tuition fee information',
-          'Contact & application details',
-          'School ratings & reviews',
-          'Multi-language support (Vietnamese/English)',
-          'Mobile-responsive design',
-          'Favorites & saved schools'
-        ]
-      }
-    },
-    {
-      title: 'Project Management Tool',
-      description: 'Collaborative project management software with task tracking, team collaboration, and automated reporting.',
-      image: '/projects/project-mgmt.jpg',
-      liveUrl: '#',
-      category: 'SaaS Platform',
-      tech: ['Next.js', 'PostgreSQL', 'AWS'],
-      color: 'azure-cloud',
-      caseStudy: {
-        client: 'Tech Startup Inc.',
-        duration: '4 months',
-        challenge: 'Growing startup needed a custom project management solution that integrates with their existing tools and scales with team growth.',
-        solution: 'Developed a Next.js-based SaaS platform with PostgreSQL database, deployed on AWS with auto-scaling. Integrated Slack, GitHub, and calendar APIs.',
-        results: [
-          '80% reduction in project delays',
-          '500+ active users across 50 teams',
-          '95% user satisfaction rate',
-          '40% improvement in team productivity'
-        ],
-        features: [
-          'Kanban & Gantt chart views',
-          'Real-time collaboration',
-          'Custom workflow automation',
-          'Time tracking & reporting',
-          'Third-party integrations',
-          'Role-based access control'
-        ]
-      }
-    },
-    {
-      title: 'Healthcare Portal',
-      description: 'Patient management system with appointment scheduling, medical records, and telemedicine capabilities.',
-      image: '/projects/healthcare.jpg',
-      liveUrl: '#',
-      category: 'Enterprise Solution',
-      tech: ['Vue.js', 'Python', 'Docker'],
-      color: 'azure-green',
-      caseStudy: {
-        client: 'Regional Medical Center',
-        duration: '8 months',
-        challenge: 'Healthcare provider needed HIPAA-compliant digital platform for patient management, telemedicine, and secure medical record storage.',
-        solution: 'Built secure Vue.js frontend with Python backend, implemented end-to-end encryption, video consultation feature, and integrated with existing medical systems.',
-        results: [
-          '70% reduction in administrative time',
-          '5000+ patients onboarded',
-          '200+ daily video consultations',
-          'HIPAA compliance certified'
-        ],
-        features: [
-          'Secure patient portal',
-          'Video telemedicine integration',
-          'Electronic health records (EHR)',
-          'Appointment scheduling system',
-          'Prescription management',
-          'Medical billing integration'
-        ]
-      }
-    },
-  ];
+  const projects = projectsData;
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-gray-900 to-slate-800 overflow-hidden">
-      {/* Background Elements - Matching Hero Style */}
-      <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-azure-blue/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-0 w-[600px] h-[600px] bg-azure-green/20 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-azure-cloud/10 rounded-full blur-3xl"></div>
+    <section className="relative py-32 bg-gradient-to-b from-gray-900 via-slate-900 to-slate-800 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-azure-blue/10 rounded-full blur-[120px]"></div>
+      <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-azure-green/10 rounded-full blur-[120px]"></div>
 
       <div className="relative max-w-7xl mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-white tracking-wider uppercase px-4 py-2 bg-gradient-to-r from-azure-blue to-azure-cloud rounded-full">
-              Our Work
+        {/* Header */}
+        <div className="mb-20">
+          <div
+            className="inline-flex items-center gap-3 px-4 py-2 bg-azure-blue/10 border border-azure-blue/30 mb-6"
+            style={{ animation: "fadeInUp 0.6s ease-out both" }}
+          >
+            <div className="w-2 h-2 bg-azure-blue rounded-full animate-pulse"></div>
+            <span className="text-xs font-black tracking-[0.3em] uppercase text-azure-blue">
+              Portfolio
             </span>
           </div>
-          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2
+            className="text-6xl lg:text-7xl font-black text-white mb-6 tracking-tight"
+            style={{
+              fontFamily: "system-ui, -apple-system, sans-serif",
+              animation: "fadeInUp 0.6s ease-out 0.1s both",
+            }}
+          >
             Featured Projects
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-            Real-world applications we've built and deployed for businesses like yours
+          <p
+            className="text-xl text-slate-300 max-w-2xl"
+            style={{ animation: "fadeInUp 0.6s ease-out 0.2s both" }}
+          >
+            Transforming ideas into powerful digital experiences
           </p>
         </div>
 
-        {/* Projects Grid - Optimized */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Projects Grid - Uniform Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {projects.map((project, index) => (
             <Link
               key={index}
-              href={`/projects/${project.slug}`}
-              className="group relative bg-white border-2 border-gray-200 hover:border-azure-blue transition-colors duration-200 overflow-hidden shadow-md hover:shadow-xl block"
+              href={project.slug ? `/projects/${project.slug}` : "#"}
+              className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              style={{
+                animation: `cardPop 0.6s ease-out ${index * 0.1}s both`
+              }}
             >
-              {/* Project Image/Placeholder */}
-              <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Icon icon="fluent-emoji:laptop" className="w-24 h-24 opacity-50" />
+              {/* Card Container */}
+              <div className="relative h-full bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden transition-all duration-500 group-hover:border-white/20">
+                {/* Top Accent Bar */}
+                <div
+                  className="absolute top-0 left-0 w-full h-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20"
+                  style={{ backgroundColor: project.accent }}
+                ></div>
+
+                {/* Project Banner Image */}
+                <div
+                  className={`relative h-48 overflow-hidden bg-gradient-to-br ${project.gradient}`}
+                >
+                  {/* Project Image */}
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center bg-slate-800/50">
+                      <Icon
+                        icon="fluent-emoji:laptop"
+                        className="w-24 h-24 opacity-40 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
+                      />
+                    </div>
+                  )}
+
+                  {/* Category Badge - Overlaid on image */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900/80 backdrop-blur-md border border-white/20">
+                      <div
+                        className="w-1.5 h-1.5 rounded-full"
+                        style={{ backgroundColor: project.accent }}
+                      ></div>
+                      <span className="text-[10px] font-black tracking-[0.2em] uppercase text-white">
+                        {project.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
                 </div>
 
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white text-xs font-semibold text-gray-900">
-                    {project.category}
-                  </span>
+                {/* Content */}
+                <div className="relative p-6 flex flex-col min-h-[280px]">
+                  {/* Title */}
+                  <h3
+                    className="text-2xl font-black text-white mb-3 leading-tight transition-all duration-300"
+                    style={{
+                      fontFamily: "system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    {project.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-slate-300 leading-relaxed mb-4 line-clamp-2">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.slice(0, 3).map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-2.5 py-1 text-xs font-medium bg-white/5 text-slate-400 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:text-white"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {project.tech.length > 3 && (
+                      <span className="px-2.5 py-1 text-xs font-medium text-slate-500">
+                        +{project.tech.length - 3}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Bottom Section - CTA */}
+                  <div className="mt-auto pt-4 border-t border-white/10">
+                    <div className="flex items-center justify-between">
+                      <div
+                        className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-all duration-300"
+                        style={{ color: project.accent }}
+                      >
+                        <span className="transition-transform duration-300 group-hover:translate-x-1">
+                          View Project
+                        </span>
+                        <Icon
+                          icon="fluent:arrow-right-24-filled"
+                          className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2"
+                        />
+                      </div>
+
+                      {/* External Link Icon if available */}
+                      {project.liveUrl && project.liveUrl !== "#" && (
+                        <Icon
+                          icon="fluent:arrow-up-right-24-filled"
+                          className="w-5 h-5 text-slate-500 group-hover:text-white transition-colors"
+                        />
+                      )}
+                    </div>
+                  </div>
                 </div>
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-azure-blue/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-                  <span className="text-white font-semibold flex items-center gap-2">
-                    <Icon icon="fluent:book-open-24-filled" className="w-5 h-5" />
-                    View Case Study
-                  </span>
-                </div>
-              </div>
-
-              {/* Project Info */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 text-xs font-medium bg-azure-sky text-azure-blue"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                {/* Corner Accent Glow */}
+                <div
+                  className="absolute bottom-8 right-8 w-24 h-24 rounded-full opacity-0 group-hover:opacity-20 blur-3xl transition-all duration-500 pointer-events-none"
+                  style={{ backgroundColor: project.accent }}
+                ></div>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* View All Projects CTA */}
+        {/* CTA */}
         <div className="text-center">
           <a
             href="#"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-azure-blue to-azure-cloud text-white font-semibold hover:shadow-xl transition-shadow duration-200 group"
+            className="inline-flex items-center gap-3 px-12 py-5 bg-white text-gray-900 font-black text-sm tracking-wider uppercase transition-all duration-300 hover:bg-azure-blue hover:text-white hover:shadow-2xl hover:shadow-azure-blue/30 hover:-translate-y-1 group"
           >
             View All Projects
-            <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5" />
+            <Icon
+              icon="fluent:arrow-right-24-filled"
+              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2"
+            />
           </a>
         </div>
       </div>
 
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes cardPop {
+          0% {
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
 };

@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
+// import Careers from "@/components/Careers";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Services />
       <Projects />
       <TechStack />
+      {/* <Careers /> */}
     </div>
   );
 }

@@ -26,13 +26,13 @@ const Footer = () => {
               >
                 <Icon icon="logos:facebook" className="w-5 h-5" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="w-10 h-10 flex items-center justify-center bg-white hover:bg-azure-sky transition-all"
                 aria-label="Twitter"
               >
                 <Icon icon="logos:twitter" className="w-5 h-5" />
-              </a>
+              </a> */}
               <a
                 href="#"
                 className="w-10 h-10 flex items-center justify-center bg-white hover:bg-azure-sky transition-all"
@@ -117,19 +117,19 @@ const Footer = () => {
             <h3 className="text-gray-900 font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-gray-600">
-                <Icon icon="fluent-color:location-16" className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <Icon icon="fluent:location-24-filled" className="w-5 h-5 mt-0.5 flex-shrink-0 text-azure-blue" />
                 <span className="text-sm">123 Business Street, Hanoi, Vietnam</span>
               </li>
               <li className="flex items-start gap-3 text-gray-600">
-                <Icon icon="fluent-color:call-16" className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <Icon icon="fluent:call-24-filled" className="w-5 h-5 mt-0.5 flex-shrink-0 text-azure-blue" />
                 <span className="text-sm">+84 123 456 789</span>
               </li>
               <li className="flex items-start gap-3 text-gray-600">
-                <Icon icon="fluent-color:mail-16" className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <Icon icon="fluent:mail-24-filled" className="w-5 h-5 mt-0.5 flex-shrink-0 text-azure-blue" />
                 <span className="text-sm">info@globalsoft.vn</span>
               </li>
               <li className="flex items-start gap-3 text-gray-600">
-                <Icon icon="fluent-color:clock-16" className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <Icon icon="fluent:clock-24-filled" className="w-5 h-5 mt-0.5 flex-shrink-0 text-azure-blue" />
                 <span className="text-sm">Mon - Fri: 9:00 AM - 6:00 PM</span>
               </li>
             </ul>
