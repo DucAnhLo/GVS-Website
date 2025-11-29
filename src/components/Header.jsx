@@ -13,16 +13,16 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex-1">
             <a href="/" className="flex items-center gap-2">
-              {/* <img src='/logo-alt.svg' alt="GSV Logo" className="h-40 w-40" /> */}
-              <span className="text-3xl font-bold bg-gradient-to-r from-azure-blue to-azure-cloud bg-clip-text text-transparent">
+              <img src='/gsvlogo.png' alt="GSV Logo" className="h-40 w-40" />
+              {/* <span className="text-3xl font-bold bg-gradient-to-r from-azure-blue to-azure-cloud bg-clip-text text-transparent">
                 GSV
-              </span>
+              </span> */}
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-10 items-center h-full flex-1 justify-center">
-            <a href="#" className="text-gray-600 hover:text-azure-blue font-medium transition-colors">
+            <a href="/" className="text-gray-600 hover:text-azure-blue font-medium transition-colors">
               Home
             </a>
 
@@ -35,10 +35,10 @@ const Header = () => {
               <MegaMenu />
             </div>
 
-            <a href="#" className="text-gray-600 hover:text-azure-blue font-medium transition-colors">
+            <a href="/about" className="text-gray-600 hover:text-azure-blue font-medium transition-colors">
               About Us
             </a>
-            <a href="#" className="text-gray-600 hover:text-azure-blue font-medium transition-colors">
+            <a href="/contact" className="text-gray-600 hover:text-azure-blue font-medium transition-colors">
               Contact
             </a>
           </nav>

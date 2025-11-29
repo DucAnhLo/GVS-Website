@@ -10,11 +10,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-azure-blue to-azure-cloud bg-clip-text text-transparent">
-                GSV
-              </span>
-            </div>
+            <a href="/" className="flex items-center gap-2">
+              <img src='/gsvlogo.png' alt="GSV Logo" className="h-40 w-40" />
+            </a>
             <p className="text-gray-600 text-sm leading-relaxed">
               Global Soft Vietnam - Delivering innovative software solutions for your business needs.
             </p>
