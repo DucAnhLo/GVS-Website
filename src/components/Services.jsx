@@ -8,8 +8,9 @@ const Services = () => {
   // Client data - add logos later
   const clients = [
     { id: 1, name: 'Client 1', logo: '/clients/vnc.avif' },
-    { id: 2, name: 'Client 2', logo: '/clients/sgeduvn.webp' },
-    { id: 3, name: 'Client 3', logo: '/clients/tpduk.jpg' },
+    { id: 2, name: 'Client 2', logo: '/clients/AIG/aiglogo.png' },
+    { id: 3, name: 'Client 3', logo: '/clients/sgeduvn.webp' },
+    { id: 4, name: 'Client 4', logo: '/clients/tpduk.jpg' },
   ];
 
   const services = [

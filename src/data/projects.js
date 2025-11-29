@@ -1,44 +1,76 @@
 export const projectsData = [
   {
-    slug: "vietnamese-connect",
-    title: "Vietnamese Connect Website",
+    slug: "aig-education-global",
+    title: "AIG Education Global Platform",
     description:
-      "Comprehensive school discovery platform helping Vietnamese families find and compare schools across Vietnam with detailed information and resources.",
-    image: "/clients/VNC/vncbanner.png",
-    liveUrl: "https://education.vietnameseconnect.com/",
-    category: "Education",
-    tech: ["Next.js", "React", "PostgreSQL", "Google Maps API", "Tailwind CSS"],
+      "Transformed an outdated WordPress website into a powerful, custom-built school discovery platform with a modern database system, helping international families find and compare 500+ schools worldwide.",
+    image: "/clients/AIG/1.png",
+    liveUrl: "https://aigeducation.pages.dev/",
+    category: "Education Platform",
+    tech: ["Next.js", "React", "PostgreSQL", "Google Maps API", "Tailwind CSS", "Cloudflare"],
     color: "azure-green",
-    accent: "#10B981",
+    accent: "#c60000",
     gradient: "from-emerald-500 to-green-600",
-    year: "2024",
+    year: "2025",
     caseStudy: {
-      client: "Vietnamese Connect Community",
-      duration: "8 months",
+      client: "AIG Education Global",
+      duration: "4 months",
       challenge:
-        "Vietnamese families needed a centralized platform to discover, compare, and research schools across Vietnam. Existing solutions lacked comprehensive information, filtering options, and user-friendly interfaces.",
+        "AIG Education Global was running an outdated WordPress website that couldn't handle their growing database of international schools. The platform had no search functionality, poor mobile experience, and required manual updates for every school listing. Families struggled to find relevant schools, and AIG couldn't scale their mission to help international families navigate global education options.",
       solution:
-        "Developed a modern, responsive education portal with advanced search and filtering capabilities. Integrated Google Maps for location-based discovery, built comprehensive school profiles with detailed information, and implemented user-friendly comparison tools.",
+        "We completely redesigned and rebuilt the platform from scratch with a custom PostgreSQL database, modern React/Next.js frontend, and intuitive UI/UX. Migrated 1000+ school listings from static pages to a dynamic, searchable database. Implemented advanced filtering, Google Maps integration, and a mobile-first responsive design that works seamlessly on all devices.",
+      beforeAfter: {
+        before: [
+          "Static WordPress pages with no search",
+          "Manual updates required for each school",
+          "Poor mobile experience",
+          "No filtering or comparison tools", 
+          "Limited to basic text information",
+          "Slow loading times"
+        ],
+        after: [
+          "Dynamic database-driven platform",
+          "Instant search across 500+ schools",
+          "Beautiful mobile-first design",
+          "Advanced filters (location, curriculum, fees)",
+          "Lightning-fast performance"
+        ]
+      },
       results: [
-        { metric: "1000+", label: "Schools Listed Nationwide" },
-        { metric: "50K+", label: "Monthly Active Users" },
-        { metric: "8 min", label: "Average Engagement Time" },
-        { metric: "4.8/5", label: "User Satisfaction Rating" }
+        { metric: "500+", label: "Schools in Database" },
+        { metric: "1K+", label: "Monthly Active Users" },
+        { metric: "8 min", label: "Average Session Time" },
+        { metric: "95%", label: "Mobile Traffic" }
       ],
       features: [
-        "Advanced school search & filtering",
-        "Location-based school discovery",
-        "Detailed school profiles & information",
-        "School comparison tools",
-        "Interactive maps integration",
+        "Custom PostgreSQL database for 500+ schools",
+        "Advanced search with instant results",
+        "Smart filtering (location, curriculum, fees, language)",
+        "Detailed school profiles with rich content",
         "Curriculum and program listings",
-        "Tuition fee information",
-        "Contact & application details",
-        "School ratings & reviews",
-        "Multi-language support (Vietnamese/English)",
-        "Mobile-responsive design",
-        "Favorites & saved schools",
+        "Transparent tuition fee information",
+        "Bilingual support (Vietnamese/English)",
+        "Fully responsive mobile design",
+        "Admin dashboard for easy updates"
       ],
+      technologies: [
+        { name: "Next.js 14", purpose: "Modern React framework for server-side rendering" },
+        { name: "PostgreSQL", purpose: "Robust database for school data" },
+        { name: "Tailwind CSS", purpose: "Responsive, utility-first styling" },
+        { name: "Vercel", purpose: "Fast, global deployment" }
+      ],
+      screenshots: [
+        {
+          image: "/clients/AIG/1.png",
+          title: "Homepage & Search",
+          description: "Clean, intuitive landing page with powerful search functionality"
+        },
+        {
+          image: "/clients/AIG/3.png",
+          title: "School Listings",
+          description: "Browse 1000+ schools with advanced filtering options"
+        },
+      ]
     },
   },
 ];
