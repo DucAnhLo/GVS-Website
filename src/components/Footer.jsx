@@ -53,25 +53,25 @@ const Footer = () => {
             <h3 className="text-gray-900 font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                <a href="/" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                <a href="/about" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                <a href="/projects" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  Services
+                  Projects
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                <a href="/contact" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Contact
                 </a>
@@ -86,25 +86,25 @@ const Footer = () => {
               <li>
                 <a href="#" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  Web Development
+                  Excel → Platform
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  Mobile Apps
+                  Educational Sites
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  Cloud Solutions
+                  Business Websites
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-600 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  Consulting
+                  Data Migration
                 </a>
               </li>
             </ul>
@@ -116,15 +116,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-gray-600">
                 <Icon icon="fluent:location-24-filled" className="w-5 h-5 mt-0.5 flex-shrink-0 text-azure-blue" />
-                <span className="text-sm">123 Business Street, Hanoi, Vietnam</span>
+                <span className="text-sm">671 Hoang Hoa Tham, Hanoi, Vietnam</span>
               </li>
               <li className="flex items-start gap-3 text-gray-600">
                 <Icon icon="fluent:call-24-filled" className="w-5 h-5 mt-0.5 flex-shrink-0 text-azure-blue" />
-                <span className="text-sm">+84 123 456 789</span>
+                <span className="text-sm">+84 962062999</span>
               </li>
               <li className="flex items-start gap-3 text-gray-600">
                 <Icon icon="fluent:mail-24-filled" className="w-5 h-5 mt-0.5 flex-shrink-0 text-azure-blue" />
-                <span className="text-sm">info@globalsoft.vn</span>
+                <span className="text-sm">info@globalsoftvietnam.com</span>
               </li>
               <li className="flex items-start gap-3 text-gray-600">
                 <Icon icon="fluent:clock-24-filled" className="w-5 h-5 mt-0.5 flex-shrink-0 text-azure-blue" />

@@ -133,14 +133,14 @@ const Contact = () => {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <h3 className="font-medium text-gray-900 mb-2">Email</h3>
-              <a href="mailto:hello@globalsoft.vn" className="text-gray-600 hover:text-gray-900">
-                hello@globalsoft.vn
+              <a href="" className="text-gray-600 hover:text-gray-900">
+                hello@globalsoftvietnam.com
               </a>
             </div>
             <div>
               <h3 className="font-medium text-gray-900 mb-2">Phone</h3>
-              <a href="tel:+84123456789" className="text-gray-600 hover:text-gray-900">
-                +84 (0) 123 456 789
+              <a href="" className="text-gray-600 hover:text-gray-900">
+                +84 (0) 962062999
               </a>
             </div>
             <div>

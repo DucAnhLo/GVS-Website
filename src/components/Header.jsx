@@ -46,7 +46,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex flex-1 justify-end">
             <a
-              href="#"
+              href="/contact"
               className="px-6 py-2.5 border border-azure-blue text-azure-blue font-medium hover:bg-azure-blue hover:text-white transition-all shadow-lg shadow-azure-blue/10"
             >
               Get Started
