@@ -74,7 +74,7 @@ export default function WebDevelopmentService() {
     <div className="min-h-screen bg-white text-gray-900 overflow-hidden">
 
       {/* Hero Section - Bold Asymmetric */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50">
+      <section className="relative flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50">
         {/* Animated Background Grid */}
         <div className="absolute inset-0 opacity-[0.03]">
           <div className="absolute inset-0" style={{

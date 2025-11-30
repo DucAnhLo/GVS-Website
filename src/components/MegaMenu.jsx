@@ -6,37 +6,37 @@ const services = [
     title: 'Web Development',
     description: 'Modern, scalable web applications built with cutting-edge technologies.',
     icon: <Icon icon="vscode-icons:file-type-reactjs" className="w-6 h-6" />,
-    href: '#',
+    href: '/services/web-development',
   },
   {
     title: 'CMS Solutions',
     description: 'Powerful content management platforms for easy content control.',
     icon: <Icon icon="fluent-color:content-view-32" className="w-6 h-6" />,
-    href: '#',
+    href: '/services/cms-solutions',
   },
   {
     title: 'CRM Systems',
     description: 'Customer relationship management tools that boost conversions.',
     icon: <Icon icon="flat-color-icons:workflow" className="w-6 h-6" />,
-    href: '#',
+    href: '/services/crm-systems',
   },
   {
     title: 'Web UI/UX Design',
     description: 'Beautiful, intuitive interfaces that delight users.',
     icon: <Icon icon="fluent-color:design-ideas-32" className="w-6 h-6" />,
-    href: '#',
+    href: '/services/ui-ux-design',
   },
   {
     title: 'Digital Document Storage',
     description: 'Secure, cloud-based document management systems.',
     icon: <Icon icon="fluent-color:document-24" className="w-6 h-6" />,
-    href: '#',
+    href: '/services/digital-document-storage',
   },
   {
     title: 'Digital Signature',
     description: 'Legally binding electronic signature solutions.',
     icon: <Icon icon="flat-color-icons:signature" className="w-6 h-6" />,
-    href: '#',
+    href: '/services/digital-signature',
   },
 ];
 

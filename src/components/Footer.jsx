@@ -84,27 +84,39 @@ const Footer = () => {
             <h3 className="text-gray-900 dark:text-white font-semibold mb-4 transition-colors">Our Services</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                <a href="/services/web-development" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  Excel → Platform
+                  Web Development
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                <a href="/services/cms-solutions" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  Educational Sites
+                  CMS Solutions
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                <a href="/services/crm-systems" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  Business Websites
+                  CRM Systems
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                <a href="/services/ui-ux-design" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
                   <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  Data Migration
+                  UI/UX Design
+                </a>
+              </li>
+              <li>
+                <a href="/services/digital-document-storage" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                  <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Digital Document Storage
+                </a>
+              </li>
+              <li>
+                <a href="/services/digital-signature" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
+                  <Icon icon="fluent-color:chevron-right-16" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Digital Signature
                 </a>
               </li>
             </ul>

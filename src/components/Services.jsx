@@ -30,7 +30,8 @@ const Services = () => {
       description: 'Powerful content management platforms that give you full control over your digital content with ease.',
       color: '#8B5CF6',
       bgGradient: 'from-violet-500/10 to-purple-500/5',
-      shadowColor: 'shadow-violet-500/20'
+      shadowColor: 'shadow-violet-500/20',
+      slug: 'cms-solutions'
     },
     {
       icon: 'flat-color-icons:workflow',
@@ -38,7 +39,8 @@ const Services = () => {
       description: 'Intelligent customer relationship management tools designed to boost conversions and streamline operations.',
       color: '#10B981',
       bgGradient: 'from-emerald-500/10 to-green-500/5',
-      shadowColor: 'shadow-emerald-500/20'
+      shadowColor: 'shadow-emerald-500/20',
+      slug: 'crm-systems'
     },
     {
       icon: 'fluent-color:design-ideas-32',
@@ -46,7 +48,8 @@ const Services = () => {
       description: 'Beautiful, intuitive user interfaces and experiences that delight users and drive engagement.',
       color: '#F59E0B',
       bgGradient: 'from-amber-500/10 to-orange-500/5',
-      shadowColor: 'shadow-amber-500/20'
+      shadowColor: 'shadow-amber-500/20',
+      slug: 'ui-ux-design'
     },
     {
       icon: 'fluent-color:document-24',
@@ -54,7 +57,8 @@ const Services = () => {
       description: 'Secure, cloud-based document management systems for easy access, organization, and collaboration.',
       color: '#EC4899',
       bgGradient: 'from-pink-500/10 to-rose-500/5',
-      shadowColor: 'shadow-pink-500/20'
+      shadowColor: 'shadow-pink-500/20',
+      slug: 'digital-document-storage'
     },
     {
       icon: 'flat-color-icons:signature',
@@ -62,7 +66,8 @@ const Services = () => {
       description: 'Legally binding electronic signature solutions that streamline document signing and approval workflows.',
       color: '#06B6D4',
       bgGradient: 'from-cyan-500/10 to-teal-500/5',
-      shadowColor: 'shadow-cyan-500/20'
+      shadowColor: 'shadow-cyan-500/20',
+      slug: 'digital-signature'
     }
   ];
 
