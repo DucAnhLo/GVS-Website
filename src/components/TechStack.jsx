@@ -32,7 +32,7 @@ const TechStack = () => {
   const row2Items = [...techStackRow2, ...techStackRow2, ...techStackRow2];
 
   return (
-    <section className="relative py-20 bg-white overflow-hidden">
+    <section className="relative py-20 bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -41,10 +41,10 @@ const TechStack = () => {
               Technologies
             </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Our Tech Stack
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
             We use cutting-edge technologies to build robust, scalable solutions
           </p>
         </div>
@@ -60,10 +60,10 @@ const TechStack = () => {
                 key={`${tech.name}-${index}`}
                 className="flex-shrink-0 mx-8 flex flex-col items-center justify-center group"
               >
-                <div className="w-20 h-20 flex items-center justify-center bg-white border-2 border-gray-200 hover:border-azure-blue transition-all duration-300 shadow-md hover:shadow-xl group-hover:scale-110">
+                <div className="w-20 h-20 flex items-center justify-center bg-white dark:bg-white/5 border-2 border-gray-200 dark:border-white/10 hover:border-azure-blue transition-all duration-300 shadow-md hover:shadow-xl group-hover:scale-110">
                   <Icon icon={tech.icon} className="w-12 h-12" />
                 </div>
-                <span className="mt-3 text-sm font-medium text-gray-700 group-hover:text-azure-blue transition-colors">
+                <span className="mt-3 text-sm font-medium text-gray-700 dark:text-slate-300 group-hover:text-azure-blue transition-colors">
                   {tech.name}
                 </span>
               </div>
@@ -79,10 +79,10 @@ const TechStack = () => {
                 key={`${tech.name}-${index}`}
                 className="flex-shrink-0 mx-8 flex flex-col items-center justify-center group"
               >
-                <div className="w-20 h-20 flex items-center justify-center bg-white border-2 border-gray-200 hover:border-azure-blue transition-all duration-300 shadow-md hover:shadow-xl group-hover:scale-110">
+                <div className="w-20 h-20 flex items-center justify-center bg-white dark:bg-white/5 border-2 border-gray-200 dark:border-white/10 hover:border-azure-blue transition-all duration-300 shadow-md hover:shadow-xl group-hover:scale-110">
                   <Icon icon={tech.icon} className="w-12 h-12" />
                 </div>
-                <span className="mt-3 text-sm font-medium text-gray-700 group-hover:text-azure-blue transition-colors">
+                <span className="mt-3 text-sm font-medium text-gray-700 dark:text-slate-300 group-hover:text-azure-blue transition-colors">
                   {tech.name}
                 </span>
               </div>

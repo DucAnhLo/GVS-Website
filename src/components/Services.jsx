@@ -65,7 +65,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+    <section className="relative py-32 bg-gradient-to-b from-white to-slate-50 dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
       {/* Background Elements - Light Theme */}
       <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-azure-blue/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-[600px] h-[600px] bg-azure-green/5 rounded-full blur-3xl"></div>
@@ -80,13 +80,13 @@ const Services = () => {
               What We Do
             </span>
           </div>
-          <h2 className="text-6xl lg:text-7xl font-black text-gray-900 mb-8 tracking-tight" style={{
+          <h2 className="text-6xl lg:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tight" style={{
             fontFamily: 'system-ui, -apple-system, sans-serif',
             animation: 'fadeInUp 0.6s ease-out 0.1s both'
           }}>
             Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl leading-relaxed" style={{ animation: 'fadeInUp 0.6s ease-out 0.2s both' }}>
+          <p className="text-xl text-gray-600 dark:text-slate-300 max-w-2xl leading-relaxed" style={{ animation: 'fadeInUp 0.6s ease-out 0.2s both' }}>
             Comprehensive digital solutions engineered to transform your business and accelerate growth
           </p>
         </div>
@@ -102,7 +102,7 @@ const Services = () => {
               }}
             >
               {/* Card with Deep Shadow */}
-              <div className={`relative h-full bg-white border-2 border-gray-200/50 p-8 transition-all duration-500 hover:border-transparent hover:shadow-2xl ${service.shadowColor} hover:-translate-y-2`}>
+              <div className={`relative h-full bg-white dark:bg-white/5 border-2 border-gray-200/50 dark:border-white/10 p-8 transition-all duration-500 hover:border-transparent hover:shadow-2xl ${service.shadowColor} hover:-translate-y-2`}>
 
                 {/* Accent Corner */}
                 <div
@@ -114,7 +114,7 @@ const Services = () => {
 
                 {/* Large Number Watermark */}
                 {/* <div
-                  className="absolute -bottom-4 -right-4 text-[120px] font-black leading-none opacity-5 pointer-events-none text-gray-900"
+                  className="absolute -bottom-4 -right-4 text-[120px] font-black leading-none opacity-5 pointer-events-none text-gray-900 dark:text-white"
                   style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
                 >
                   {String(index + 1).padStart(2, '0')}
@@ -122,7 +122,7 @@ const Services = () => {
 
                 {/* Icon Container */}
                 <div className="relative mb-6">
-                  <div className="relative inline-flex p-4 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg transition-all duration-500 group-hover:shadow-xl group-hover:scale-110 group-hover:rotate-3 border border-gray-100">
+                  <div className="relative inline-flex p-4 bg-gradient-to-br from-gray-50 to-white dark:from-white/5 dark:to-white/10 rounded-xl shadow-lg transition-all duration-500 group-hover:shadow-xl group-hover:scale-110 group-hover:rotate-3 border border-gray-100 dark:border-white/10">
                     <Icon icon={service.icon} className="w-12 h-12" />
 
                     {/* Icon Glow */}
@@ -142,14 +142,14 @@ const Services = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-black text-gray-900 mb-4 transition-colors duration-300" style={{
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 transition-colors duration-300" style={{
                   fontFamily: 'system-ui, -apple-system, sans-serif'
                 }}>
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <p className="text-gray-600 dark:text-slate-300 leading-relaxed mb-6">
                   {service.description}
                 </p>
 
@@ -182,16 +182,16 @@ const Services = () => {
                 Trusted By Industry Leaders
               </span>
             </div>
-            <h2 className="text-5xl lg:text-6xl font-black text-gray-900 mb-6" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+            <h2 className="text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-6" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               Our Clients
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
               Partnering with forward-thinking organizations to deliver exceptional results
             </p>
           </div>
 
           {/* Infinite Marquee */}
-          <div className="relative overflow-hidden py-8 bg-gray-50/50 backdrop-blur-sm ">
+          <div className="relative overflow-hidden py-8 bg-gray-50/50 dark:bg-white/5 backdrop-blur-sm transition-colors">
             {/* Gradient Overlays */}
             {/* <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-50 to-transparent z-10"></div>
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-50 to-transparent z-10"></div> */}
@@ -255,7 +255,7 @@ const Services = () => {
         <div className="text-center mt-20">
           <a
             href="#"
-            className="group inline-flex items-center gap-3 px-12 py-5 bg-gray-900 text-white font-black text-sm tracking-wider uppercase transition-all duration-300 hover:bg-azure-blue hover:shadow-2xl hover:shadow-azure-blue/30 hover:-translate-y-1"
+            className="group inline-flex items-center gap-3 px-12 py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-black text-sm tracking-wider uppercase transition-all duration-300 hover:bg-azure-blue hover:text-white hover:shadow-2xl hover:shadow-azure-blue/30 hover:-translate-y-1"
           >
             Explore All Services
             <Icon

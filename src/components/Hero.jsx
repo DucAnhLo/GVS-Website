@@ -22,9 +22,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-950 pt-16">
+    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:via-slate-900 dark:to-slate-800 pt-16 transition-colors duration-300">
       {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: 'linear-gradient(#0EA5E9 1px, transparent 1px), linear-gradient(90deg, #0EA5E9 1px, transparent 1px)',
           backgroundSize: '80px 80px',
@@ -35,20 +35,20 @@ const Hero = () => {
       {/* Floating Geometric Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Orbital 1 */}
-        <div className="orbital absolute top-20 right-[10%] w-32 h-32 border-2 border-azure-blue/30 rounded-full" style={{ animation: 'float 8s ease-in-out infinite' }}></div>
+        <div className="orbital absolute top-20 right-[10%] w-32 h-32 border-2 border-azure-blue/20 rounded-full" style={{ animation: 'float 8s ease-in-out infinite' }}></div>
 
         {/* Orbital 2 */}
-        <div className="orbital absolute bottom-32 left-[15%] w-24 h-24 bg-gradient-to-br from-azure-cloud/20 to-transparent backdrop-blur-sm" style={{ animation: 'float 6s ease-in-out infinite', animationDelay: '1s', transform: 'rotate(45deg)' }}></div>
+        <div className="orbital absolute bottom-32 left-[15%] w-24 h-24 bg-gradient-to-br from-azure-blue/10 to-transparent backdrop-blur-sm" style={{ animation: 'float 6s ease-in-out infinite', animationDelay: '1s', transform: 'rotate(45deg)' }}></div>
 
         {/* Orbital 3 */}
-        <div className="orbital absolute top-1/3 left-[8%] w-16 h-16 border-2 border-azure-green/40" style={{ animation: 'float 10s ease-in-out infinite', animationDelay: '2s' }}></div>
+        <div className="orbital absolute top-1/3 left-[8%] w-16 h-16 border-2 border-azure-green/20" style={{ animation: 'float 10s ease-in-out infinite', animationDelay: '2s' }}></div>
 
         {/* Orbital 4 - Circle with gradient */}
-        <div className="orbital absolute bottom-[20%] right-[20%] w-40 h-40 rounded-full bg-gradient-to-br from-azure-blue/10 to-azure-cloud/10 blur-2xl" style={{ animation: 'pulse 4s ease-in-out infinite' }}></div>
+        <div className="orbital absolute bottom-[20%] right-[20%] w-40 h-40 rounded-full bg-gradient-to-br from-azure-blue/5 to-azure-cloud/5 blur-2xl" style={{ animation: 'pulse 4s ease-in-out infinite' }}></div>
 
         {/* Accent Lines */}
-        <div className="absolute top-1/4 right-0 w-64 h-[2px] bg-gradient-to-l from-azure-blue/50 to-transparent" style={{ animation: 'slideInRight 1.5s ease-out 0.5s both' }}></div>
-        <div className="absolute bottom-1/3 left-0 w-48 h-[2px] bg-gradient-to-r from-azure-green/50 to-transparent" style={{ animation: 'slideInLeft 1.5s ease-out 0.8s both' }}></div>
+        <div className="absolute top-1/4 right-0 w-64 h-[2px] bg-gradient-to-l from-azure-blue/30 to-transparent" style={{ animation: 'slideInRight 1.5s ease-out 0.5s both' }}></div>
+        <div className="absolute bottom-1/3 left-0 w-48 h-[2px] bg-gradient-to-r from-azure-green/30 to-transparent" style={{ animation: 'slideInLeft 1.5s ease-out 0.8s both' }}></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20">
@@ -56,7 +56,7 @@ const Hero = () => {
           {/* Left: Main Content */}
           <div className="space-y-10">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-azure-blue/10 border border-azure-blue/30" style={{ animation: 'fadeInUp 0.6s ease-out 0.2s both' }}>
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-azure-blue/10 border border-azure-blue/20" style={{ animation: 'fadeInUp 0.6s ease-out 0.2s both' }}>
               <div className="w-2 h-2 bg-azure-blue rounded-full animate-pulse"></div>
               <span className="text-xs font-bold tracking-[0.3em] uppercase text-azure-blue">Global Soft Vietnam</span>
             </div>
@@ -64,7 +64,7 @@ const Hero = () => {
             {/* Kinetic Headline */}
             <h1 className="space-y-2">
               <div className="overflow-hidden">
-                <span className="block text-6xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter" style={{
+                <span className="block text-6xl lg:text-8xl font-black text-gray-900 dark:text-white leading-[0.9] tracking-tighter transition-colors duration-300" style={{
                   fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
                   animation: 'slideInUp 0.8s ease-out 0.3s both'
                 }}>
@@ -87,19 +87,19 @@ const Hero = () => {
               </div>
 
               <div className="overflow-hidden relative">
-                <span className="block text-6xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter" style={{
+                <span className="block text-6xl lg:text-8xl font-black text-gray-900 dark:text-white leading-[0.9] tracking-tighter transition-colors duration-300" style={{
                   fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
                   animation: 'slideInUp 0.8s ease-out 0.7s both'
                 }}>
                   SOLUTIONS
                 </span>
                 {/* Accent Block */}
-                <div className="absolute -right-8 top-1/2 -translate-y-1/2 w-32 h-32 bg-azure-blue/20 -z-10 blur-2xl" style={{ animation: 'pulse 3s ease-in-out infinite' }}></div>
+                <div className="absolute -right-8 top-1/2 -translate-y-1/2 w-32 h-32 bg-azure-blue/10 -z-10 blur-2xl" style={{ animation: 'pulse 3s ease-in-out infinite' }}></div>
               </div>
             </h1>
 
             {/* Description */}
-            <p className="text-lg lg:text-xl text-slate-400 max-w-xl leading-relaxed" style={{ animation: 'fadeInUp 0.8s ease-out 0.9s both' }}>
+            <p className="text-lg lg:text-xl text-gray-600 dark:text-slate-300 max-w-xl leading-relaxed transition-colors duration-300" style={{ animation: 'fadeInUp 0.8s ease-out 0.9s both' }}>
               Empowering small businesses through tailored websites, custom web applications, and integrated systems that drive digital transformation.
             </p>
 
@@ -119,7 +119,7 @@ const Hero = () => {
 
               <a
                 href="#"
-                className="group px-10 py-5 border-2 border-white/20 text-white font-bold text-sm tracking-wider uppercase transition-all duration-300 hover:border-azure-blue hover:bg-azure-blue/10 hover:-translate-y-0.5"
+                className="group px-10 py-5 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white font-bold text-sm tracking-wider uppercase transition-all duration-300 hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 hover:-translate-y-0.5"
               >
                 <span className="flex items-center gap-3">
                   View Portfolio
@@ -133,7 +133,7 @@ const Hero = () => {
               {['Custom Websites', 'Web Applications', 'Business Systems', 'Digital Transformation'].map((service, index) => (
                 <div
                   key={index}
-                  className="px-4 py-2 bg-white/5 border border-white/10 text-xs font-medium text-slate-300 uppercase tracking-wider hover:bg-white/10 hover:border-azure-blue/50 transition-all duration-300 cursor-default"
+                  className="px-4 py-2 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-xs font-medium text-gray-700 dark:text-slate-300 uppercase tracking-wider hover:bg-gray-200 dark:hover:bg-white/10 hover:border-azure-blue/50 transition-all duration-300 cursor-default"
                 >
                   {service}
                 </div>
@@ -421,76 +421,12 @@ const Hero = () => {
           }
         }
 
-        @keyframes barGrow {
-          from {
-            transform: scaleY(0);
-            transform-origin: bottom;
-          }
-          to {
-            transform: scaleY(1);
-            transform-origin: bottom;
-          }
-        }
-
-        @keyframes floatIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px) scale(0.9);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-
         @keyframes progressGrow {
           from {
             width: 0%;
           }
           to {
             width: var(--final-width, 100%);
-          }
-        }
-
-        @keyframes typeIn {
-          from {
-            opacity: 0;
-            transform: translateX(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes float3D {
-          0%, 100% {
-            transform: translateY(0px) rotateY(var(--rotate-y, 0deg)) rotateX(var(--rotate-x, 0deg));
-          }
-          50% {
-            transform: translateY(-15px) rotateY(var(--rotate-y, 0deg)) rotateX(var(--rotate-x, 0deg));
-          }
-        }
-
-        @keyframes nodePulse {
-          0%, 100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.5);
-            opacity: 0.6;
-          }
-        }
-
-        @keyframes gridPulse {
-          0%, 100% {
-            opacity: 0.2;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.3;
-            transform: scale(1.05);
           }
         }
 
