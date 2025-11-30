@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
 const Services = () => {
   const marqueeRef = useRef(null);
@@ -20,7 +21,8 @@ const Services = () => {
       description: 'Modern, scalable web applications built with cutting-edge technologies for optimal performance and user experience.',
       color: '#0EA5E9',
       bgGradient: 'from-sky-500/10 to-blue-500/5',
-      shadowColor: 'shadow-sky-500/20'
+      shadowColor: 'shadow-sky-500/20',
+      slug: 'web-development'
     },
     {
       icon: 'fluent-color:content-view-32',
@@ -93,16 +95,11 @@ const Services = () => {
 
         {/* Services Grid - Staggered Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group"
-              style={{
-                animation: `cardSlideIn 0.8s ease-out ${0.1 * index}s both`
-              }}
-            >
-              {/* Card with Deep Shadow */}
-              <div className={`relative h-full bg-white dark:bg-white/5 border-2 border-gray-200/50 dark:border-white/10 p-8 transition-all duration-500 hover:border-transparent hover:shadow-2xl ${service.shadowColor} hover:-translate-y-2`}>
+          {services.map((service, index) => {
+            const CardContent = (
+              <>
+                {/* Card with Deep Shadow */}
+                <div className={`relative h-full bg-white dark:bg-white/5 border-2 border-gray-200/50 dark:border-white/10 p-8 transition-all duration-500 hover:border-transparent hover:shadow-2xl ${service.shadowColor} hover:-translate-y-2`}>
 
                 {/* Accent Corner */}
                 <div
@@ -168,8 +165,27 @@ const Services = () => {
                   style={{ backgroundColor: service.color }}
                 ></div>
               </div>
-            </div>
-          ))}
+              </>
+            );
+
+            return (
+              <div
+                key={index}
+                className="group"
+                style={{
+                  animation: `cardSlideIn 0.8s ease-out ${0.1 * index}s both`
+                }}
+              >
+                {service.slug ? (
+                  <Link href={`/services/${service.slug}`}>
+                    {CardContent}
+                  </Link>
+                ) : (
+                  CardContent
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {/* Clients Section */}
