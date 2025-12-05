@@ -50,7 +50,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-gray-900 dark:text-white font-semibold mb-4 transition-colors">Quick Links</h3>
+            <h3 className="text-gray-900 dark:text-white font-normal mb-4 transition-colors">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <a href="/" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
@@ -81,7 +81,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-gray-900 dark:text-white font-semibold mb-4 transition-colors">Our Services</h3>
+            <h3 className="text-gray-900 dark:text-white font-normal mb-4 transition-colors">Our Services</h3>
             <ul className="space-y-3">
               <li>
                 <a href="/services/web-development" className="text-gray-600 dark:text-slate-300 dark:text-slate-300 hover:text-azure-blue transition-colors flex items-center gap-2 group">
@@ -124,7 +124,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-gray-900 dark:text-white font-semibold mb-4 transition-colors">Contact Us</h3>
+            <h3 className="text-gray-900 dark:text-white font-normal mb-4 transition-colors">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-gray-600 dark:text-slate-300">
                 <Icon icon="fluent:location-24-filled" className="w-5 h-5 mt-0.5 flex-shrink-0 text-azure-blue" />

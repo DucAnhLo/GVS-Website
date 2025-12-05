@@ -104,14 +104,14 @@ export default function WebDevelopmentService() {
               {/* Large Title */}
               <div className="space-y-4">
                 <div
-                  className="inline-block px-6 py-3 border-2 border-cyan-600 text-cyan-600 font-black text-sm tracking-widest"
+                  className="inline-block px-6 py-3 border-2 border-cyan-600 text-cyan-600 font-semibold text-sm tracking-widest"
                   style={{ animation: 'fadeInLeft 0.8s ease-out 0.1s both' }}
                 >
                   WEB DEVELOPMENT
                 </div>
 
                 <h1
-                  className="text-7xl lg:text-8xl font-black leading-none"
+                  className="text-7xl lg:text-8xl font-semibold leading-none"
                   style={{
                     fontFamily: '"Space Grotesk", system-ui, -apple-system, sans-serif',
                     animation: 'fadeInLeft 0.8s ease-out 0.2s both',
@@ -144,7 +144,7 @@ export default function WebDevelopmentService() {
               >
                 <Link
                   href="/contact"
-                  className="group relative px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-sm tracking-wider overflow-hidden"
+                  className="group relative px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold text-sm tracking-wider overflow-hidden"
                 >
                   <span className="relative z-10">START A PROJECT</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -152,7 +152,7 @@ export default function WebDevelopmentService() {
 
                 <Link
                   href="/contact"
-                  className="group px-8 py-4 border-2 border-gray-900 text-gray-900 font-black text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300"
+                  className="group px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300"
                 >
                   GET A QUOTE
                 </Link>
@@ -226,8 +226,8 @@ export default function WebDevelopmentService() {
             {/* Large Title */}
             <div className="lg:col-span-5">
               <div className="sticky top-32">
-                <div className="text-sm font-black tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
-                <h2 className="text-6xl lg:text-7xl font-black leading-none mb-8" style={{
+                <div className="text-sm font-semibold tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
+                <h2 className="text-6xl lg:text-7xl font-semibold leading-none mb-8" style={{
                   fontFamily: '"Space Grotesk", system-ui, sans-serif',
                   letterSpacing: '-0.03em'
                 }}>
@@ -261,7 +261,7 @@ export default function WebDevelopmentService() {
                       <Icon icon={feature.icon} className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-3xl font-black mb-3 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                      <h3 className="text-3xl font-semibold mb-3 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
                         {feature.title}
                       </h3>
                       <p className="text-gray-600 text-lg leading-relaxed">
@@ -286,10 +286,10 @@ export default function WebDevelopmentService() {
       <section className="relative py-32 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <div className="inline-block px-6 py-3 border-2 border-cyan-600 text-cyan-600 font-black text-sm tracking-widest mb-6">
+            <div className="inline-block px-6 py-3 border-2 border-cyan-600 text-cyan-600 font-semibold text-sm tracking-widest mb-6">
               TECHNOLOGY STACK
             </div>
-            <h2 className="text-6xl lg:text-7xl font-black" style={{
+            <h2 className="text-6xl lg:text-7xl font-semibold" style={{
               fontFamily: '"Space Grotesk", system-ui, sans-serif',
               letterSpacing: '-0.03em'
             }}>
@@ -313,7 +313,7 @@ export default function WebDevelopmentService() {
                     icon={tech.icon}
                     className="w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="text-sm font-black text-gray-600 group-hover:text-gray-900 transition-colors">
+                  <div className="text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors">
                     {tech.name}
                   </div>
                 </div>
@@ -333,7 +333,7 @@ export default function WebDevelopmentService() {
       <section className="relative py-32 px-6 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-6xl lg:text-7xl font-black mb-6" style={{
+            <h2 className="text-6xl lg:text-7xl font-semibold mb-6" style={{
               fontFamily: '"Space Grotesk", system-ui, sans-serif',
               letterSpacing: '-0.03em'
             }}>
@@ -358,7 +358,7 @@ export default function WebDevelopmentService() {
                 style={{ animation: `fadeInUp 0.8s ease-out ${0.2 * index}s both` }}
               >
                 <div className={`md:col-span-3 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
-                  <div className="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-purple-600">
+                  <div className="text-8xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-purple-600">
                     {phase.step}
                   </div>
                 </div>
@@ -370,7 +370,7 @@ export default function WebDevelopmentService() {
                 </div>
 
                 <div className={`md:col-span-7 ${index % 2 === 0 ? 'md:order-3' : 'md:order-3'}`}>
-                  <h3 className="text-4xl font-black mb-3" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                  <h3 className="text-4xl font-semibold mb-3" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
                     {phase.title}
                   </h3>
                   <p className="text-xl text-gray-400 leading-relaxed">
@@ -386,7 +386,7 @@ export default function WebDevelopmentService() {
       {/* CTA Section - Bold */}
       <section className="relative py-32 px-6 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-6xl lg:text-7xl font-black mb-8 leading-tight" style={{
+          <h2 className="text-6xl lg:text-7xl font-semibold mb-8 leading-tight" style={{
             fontFamily: '"Space Grotesk", system-ui, sans-serif',
             letterSpacing: '-0.03em'
           }}>
@@ -399,13 +399,13 @@ export default function WebDevelopmentService() {
           <div className="flex flex-wrap justify-center gap-6">
             <Link
               href="/contact"
-              className="group px-12 py-6 bg-black text-white font-black text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300"
+              className="group px-12 py-6 bg-black text-white font-semibold text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300"
             >
               START NOW →
             </Link>
             <Link
               href="/#projects"
-              className="group px-12 py-6 border-4 border-black text-black font-black text-lg tracking-wider hover:bg-black hover:text-white transition-all duration-300"
+              className="group px-12 py-6 border-4 border-black text-black font-semibold text-lg tracking-wider hover:bg-black hover:text-white transition-all duration-300"
             >
               VIEW WORK
             </Link>

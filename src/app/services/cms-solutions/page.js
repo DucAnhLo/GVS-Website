@@ -83,11 +83,11 @@ export default function CMSService() {
               </div>
 
               <div className="space-y-4">
-                <div className="inline-block px-6 py-3 border-2 border-violet-600 text-violet-600 font-black text-sm tracking-widest" style={{ animation: 'fadeInLeft 0.8s ease-out 0.1s both' }}>
+                <div className="inline-block px-6 py-3 border-2 border-violet-600 text-violet-600 font-semibold text-sm tracking-widest" style={{ animation: 'fadeInLeft 0.8s ease-out 0.1s both' }}>
                   CMS SOLUTIONS
                 </div>
 
-                <h1 className="text-7xl lg:text-8xl font-black leading-none" style={{ fontFamily: '"Space Grotesk", system-ui, -apple-system, sans-serif', animation: 'fadeInLeft 0.8s ease-out 0.2s both', letterSpacing: '-0.03em' }}>
+                <h1 className="text-7xl lg:text-8xl font-semibold leading-none" style={{ fontFamily: '"Space Grotesk", system-ui, -apple-system, sans-serif', animation: 'fadeInLeft 0.8s ease-out 0.2s both', letterSpacing: '-0.03em' }}>
                   <span className="block text-gray-900">MANAGE</span>
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600">
                     CONTENT
@@ -101,11 +101,11 @@ export default function CMSService() {
               </p>
 
               <div className="flex flex-wrap gap-4" style={{ animation: 'fadeInLeft 0.8s ease-out 0.4s both' }}>
-                <Link href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-black text-sm tracking-wider overflow-hidden">
+                <Link href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold text-sm tracking-wider overflow-hidden">
                   <span className="relative z-10">START A PROJECT</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-fuchsia-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
-                <Link href="/contact" className="group px-8 py-4 border-2 border-gray-900 text-gray-900 font-black text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300">
+                <Link href="/contact" className="group px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300">
                   GET A QUOTE
                 </Link>
               </div>
@@ -130,7 +130,7 @@ export default function CMSService() {
                   {/* CMS Interface */}
                   <div className="p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                      <h3 className="font-bold text-lg">Content Editor</h3>
+                      <h3 className="font-medium text-lg">Content Editor</h3>
                       <div className="flex gap-2">
                         <div className="w-16 h-6 bg-violet-600 rounded"></div>
                         <div className="w-16 h-6 bg-gray-200 rounded"></div>
@@ -181,8 +181,8 @@ export default function CMSService() {
           <div className="grid lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5">
               <div className="sticky top-32">
-                <div className="text-sm font-black tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
-                <h2 className="text-6xl lg:text-7xl font-black leading-none mb-8" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
+                <div className="text-sm font-semibold tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
+                <h2 className="text-6xl lg:text-7xl font-semibold leading-none mb-8" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
                   POWERFUL
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-600">
                     CMS FEATURES
@@ -202,7 +202,7 @@ export default function CMSService() {
                       <Icon icon={feature.icon} className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-3xl font-black mb-3 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                      <h3 className="text-3xl font-semibold mb-3 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
                         {feature.title}
                       </h3>
                       <p className="text-gray-600 text-lg leading-relaxed">
@@ -222,10 +222,10 @@ export default function CMSService() {
       <section className="relative py-32 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <div className="inline-block px-6 py-3 border-2 border-violet-600 text-violet-600 font-black text-sm tracking-widest mb-6">
+            <div className="inline-block px-6 py-3 border-2 border-violet-600 text-violet-600 font-semibold text-sm tracking-widest mb-6">
               TECHNOLOGY STACK
             </div>
-            <h2 className="text-6xl lg:text-7xl font-black" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
+            <h2 className="text-6xl lg:text-7xl font-semibold" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
               BUILT WITH
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-600">
                 MODERN TECH
@@ -241,7 +241,7 @@ export default function CMSService() {
               <div key={index} className="group relative aspect-square bg-white border border-gray-200 hover:border-violet-600 transition-all duration-300 overflow-hidden hover:shadow-xl" style={{ animation: `fadeInScale 0.6s ease-out ${0.05 * index}s both` }}>
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
                   <Icon icon={tech.icon} className="w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110" />
-                  <div className="text-sm font-black text-gray-600 group-hover:text-gray-900 transition-colors">
+                  <div className="text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors">
                     {tech.name}
                   </div>
                 </div>
@@ -255,7 +255,7 @@ export default function CMSService() {
       {/* CTA Section */}
       <section className="relative py-32 px-6 bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-6xl lg:text-7xl font-black mb-8 leading-tight" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
+          <h2 className="text-6xl lg:text-7xl font-semibold mb-8 leading-tight" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
             READY TO TAKE
             <span className="block">CONTROL?</span>
           </h2>
@@ -263,10 +263,10 @@ export default function CMSService() {
             Let's build a CMS that empowers your team
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/contact" className="group px-12 py-6 bg-black text-white font-black text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300">
+            <Link href="/contact" className="group px-12 py-6 bg-black text-white font-semibold text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300">
               GET STARTED →
             </Link>
-            <Link href="/#projects" className="group px-12 py-6 border-4 border-black text-black font-black text-lg tracking-wider hover:bg-black hover:text-white transition-all duration-300">
+            <Link href="/#projects" className="group px-12 py-6 border-4 border-black text-black font-semibold text-lg tracking-wider hover:bg-black hover:text-white transition-all duration-300">
               VIEW WORK
             </Link>
           </div>

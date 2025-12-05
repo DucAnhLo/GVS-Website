@@ -83,11 +83,11 @@ export default function DigitalSignatureService() {
               </div>
 
               <div className="space-y-4">
-                <div className="inline-block px-6 py-3 border-2 border-cyan-600 text-cyan-600 font-black text-sm tracking-widest" style={{ animation: 'fadeInLeft 0.8s ease-out 0.1s both' }}>
+                <div className="inline-block px-6 py-3 border-2 border-cyan-600 text-cyan-600 font-semibold text-sm tracking-widest" style={{ animation: 'fadeInLeft 0.8s ease-out 0.1s both' }}>
                   DIGITAL SIGNATURE
                 </div>
 
-                <h1 className="text-7xl lg:text-8xl font-black leading-none" style={{ fontFamily: '"Space Grotesk", system-ui, -apple-system, sans-serif', animation: 'fadeInLeft 0.8s ease-out 0.2s both', letterSpacing: '-0.03em' }}>
+                <h1 className="text-7xl lg:text-8xl font-semibold leading-none" style={{ fontFamily: '"Space Grotesk", system-ui, -apple-system, sans-serif', animation: 'fadeInLeft 0.8s ease-out 0.2s both', letterSpacing: '-0.03em' }}>
                   <span className="block text-gray-900">SIGN</span>
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600">
                     DOCUMENTS
@@ -101,11 +101,11 @@ export default function DigitalSignatureService() {
               </p>
 
               <div className="flex flex-wrap gap-4" style={{ animation: 'fadeInLeft 0.8s ease-out 0.4s both' }}>
-                <Link href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-black text-sm tracking-wider overflow-hidden">
+                <Link href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-semibold text-sm tracking-wider overflow-hidden">
                   <span className="relative z-10">START A PROJECT</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
-                <Link href="/contact" className="group px-8 py-4 border-2 border-gray-900 text-gray-900 font-black text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300">
+                <Link href="/contact" className="group px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300">
                   GET A QUOTE
                 </Link>
               </div>
@@ -117,7 +117,7 @@ export default function DigitalSignatureService() {
                 <div className="bg-white border-2 border-gray-200 shadow-2xl p-6">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between pb-3 border-b border-gray-200">
-                      <h3 className="font-bold text-lg">Sign Document</h3>
+                      <h3 className="font-medium text-lg">Sign Document</h3>
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         <span className="text-xs text-green-600 font-medium">Ready to Sign</span>
@@ -140,7 +140,7 @@ export default function DigitalSignatureService() {
                         {/* Signature Field */}
                         <div className="border-2 border-dashed border-cyan-400 bg-cyan-50 p-4 rounded">
                           <div className="flex items-center justify-between mb-2">
-                            <span className="text-xs font-bold text-cyan-700">SIGN HERE</span>
+                            <span className="text-xs font-medium text-cyan-700">SIGN HERE</span>
                             <Icon icon="carbon:pen" className="w-4 h-4 text-cyan-600" />
                           </div>
                           <div className="h-12 flex items-center justify-center">
@@ -175,7 +175,7 @@ export default function DigitalSignatureService() {
                     </div>
 
                     {/* Action Button */}
-                    <button className="w-full bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-black py-3 rounded hover:from-teal-600 hover:to-blue-600 transition-all">
+                    <button className="w-full bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-semibold py-3 rounded hover:from-teal-600 hover:to-blue-600 transition-all">
                       SIGN DOCUMENT
                     </button>
                   </div>
@@ -200,8 +200,8 @@ export default function DigitalSignatureService() {
           <div className="grid lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5">
               <div className="sticky top-32">
-                <div className="text-sm font-black tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
-                <h2 className="text-6xl lg:text-7xl font-black leading-none mb-8" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
+                <div className="text-sm font-semibold tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
+                <h2 className="text-6xl lg:text-7xl font-semibold leading-none mb-8" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
                   SIGNATURE
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-teal-600">
                     SOLUTIONS
@@ -221,7 +221,7 @@ export default function DigitalSignatureService() {
                       <Icon icon={feature.icon} className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-3xl font-black mb-3 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                      <h3 className="text-3xl font-semibold mb-3 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
                         {feature.title}
                       </h3>
                       <p className="text-gray-600 text-lg leading-relaxed">
@@ -241,10 +241,10 @@ export default function DigitalSignatureService() {
       <section className="relative py-32 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <div className="inline-block px-6 py-3 border-2 border-cyan-600 text-cyan-600 font-black text-sm tracking-widest mb-6">
+            <div className="inline-block px-6 py-3 border-2 border-cyan-600 text-cyan-600 font-semibold text-sm tracking-widest mb-6">
               TECHNOLOGY STACK
             </div>
-            <h2 className="text-6xl lg:text-7xl font-black" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
+            <h2 className="text-6xl lg:text-7xl font-semibold" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
               BUILT WITH
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-teal-600">
                 TRUSTED TECH
@@ -260,7 +260,7 @@ export default function DigitalSignatureService() {
               <div key={index} className="group relative aspect-square bg-white border border-gray-200 hover:border-cyan-600 transition-all duration-300 overflow-hidden hover:shadow-xl" style={{ animation: `fadeInScale 0.6s ease-out ${0.05 * index}s both` }}>
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
                   <Icon icon={tech.icon} className="w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110" />
-                  <div className="text-sm font-black text-gray-600 group-hover:text-gray-900 transition-colors">
+                  <div className="text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors">
                     {tech.name}
                   </div>
                 </div>
@@ -274,7 +274,7 @@ export default function DigitalSignatureService() {
       {/* CTA Section */}
       <section className="relative py-32 px-6 bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-6xl lg:text-7xl font-black mb-8 leading-tight" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
+          <h2 className="text-6xl lg:text-7xl font-semibold mb-8 leading-tight" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
             DITCH THE
             <span className="block">INK & PAPER</span>
           </h2>
@@ -282,10 +282,10 @@ export default function DigitalSignatureService() {
             Let's build your digital signature solution
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/contact" className="group px-12 py-6 bg-black text-white font-black text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300">
+            <Link href="/contact" className="group px-12 py-6 bg-black text-white font-semibold text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300">
               GET STARTED →
             </Link>
-            <Link href="/#projects" className="group px-12 py-6 border-4 border-black text-black font-black text-lg tracking-wider hover:bg-black hover:text-white transition-all duration-300">
+            <Link href="/#projects" className="group px-12 py-6 border-4 border-black text-black font-semibold text-lg tracking-wider hover:bg-black hover:text-white transition-all duration-300">
               VIEW WORK
             </Link>
           </div>

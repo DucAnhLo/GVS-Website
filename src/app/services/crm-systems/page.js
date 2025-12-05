@@ -83,11 +83,11 @@ export default function CRMService() {
               </div>
 
               <div className="space-y-4">
-                <div className="inline-block px-6 py-3 border-2 border-emerald-600 text-emerald-600 font-black text-sm tracking-widest" style={{ animation: 'fadeInLeft 0.8s ease-out 0.1s both' }}>
+                <div className="inline-block px-6 py-3 border-2 border-emerald-600 text-emerald-600 font-semibold text-sm tracking-widest" style={{ animation: 'fadeInLeft 0.8s ease-out 0.1s both' }}>
                   CRM SYSTEMS
                 </div>
 
-                <h1 className="text-7xl lg:text-8xl font-black leading-none" style={{ fontFamily: '"Space Grotesk", system-ui, -apple-system, sans-serif', animation: 'fadeInLeft 0.8s ease-out 0.2s both', letterSpacing: '-0.03em' }}>
+                <h1 className="text-7xl lg:text-8xl font-semibold leading-none" style={{ fontFamily: '"Space Grotesk", system-ui, -apple-system, sans-serif', animation: 'fadeInLeft 0.8s ease-out 0.2s both', letterSpacing: '-0.03em' }}>
                   <span className="block text-gray-900">GROW</span>
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600">
                     CUSTOMER
@@ -101,11 +101,11 @@ export default function CRMService() {
               </p>
 
               <div className="flex flex-wrap gap-4" style={{ animation: 'fadeInLeft 0.8s ease-out 0.4s both' }}>
-                <Link href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-emerald-600 to-green-600 text-white font-black text-sm tracking-wider overflow-hidden">
+                <Link href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-emerald-600 to-green-600 text-white font-semibold text-sm tracking-wider overflow-hidden">
                   <span className="relative z-10">START A PROJECT</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
-                <Link href="/contact" className="group px-8 py-4 border-2 border-gray-900 text-gray-900 font-black text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300">
+                <Link href="/contact" className="group px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300">
                   GET A QUOTE
                 </Link>
               </div>
@@ -116,14 +116,14 @@ export default function CRMService() {
               <div className="relative">
                 <div className="bg-white border-2 border-gray-200 shadow-2xl p-6 space-y-4">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-bold text-lg">Sales Pipeline</h3>
+                    <h3 className="font-medium text-lg">Sales Pipeline</h3>
                     <div className="text-xs text-gray-500">Q4 2024</div>
                   </div>
 
                   <div className="grid grid-cols-4 gap-2">
                     {['Lead', 'Qualified', 'Proposal', 'Closed'].map((stage, i) => (
                       <div key={i} className="text-center">
-                        <div className="text-xs font-bold text-gray-600 mb-2">{stage}</div>
+                        <div className="text-xs font-medium text-gray-600 mb-2">{stage}</div>
                         <div className="space-y-1">
                           {[...Array(4 - i)].map((_, j) => (
                             <div key={j} className="h-8 bg-emerald-100 border border-emerald-300 rounded flex items-center justify-center text-xs text-emerald-700">
@@ -138,7 +138,7 @@ export default function CRMService() {
                   <div className="pt-4 border-t border-gray-200">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm text-gray-600">Total Value</span>
-                      <span className="text-2xl font-black text-emerald-600">$340k</span>
+                      <span className="text-2xl font-semibold text-emerald-600">$340k</span>
                     </div>
                     <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
                       <div className="h-full bg-gradient-to-r from-emerald-500 to-green-500" style={{ width: '68%' }}></div>
@@ -165,8 +165,8 @@ export default function CRMService() {
           <div className="grid lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5">
               <div className="sticky top-32">
-                <div className="text-sm font-black tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
-                <h2 className="text-6xl lg:text-7xl font-black leading-none mb-8" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
+                <div className="text-sm font-semibold tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
+                <h2 className="text-6xl lg:text-7xl font-semibold leading-none mb-8" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
                   INTELLIGENT
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">
                     CRM TOOLS
@@ -186,7 +186,7 @@ export default function CRMService() {
                       <Icon icon={feature.icon} className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-3xl font-black mb-3 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                      <h3 className="text-3xl font-semibold mb-3 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
                         {feature.title}
                       </h3>
                       <p className="text-gray-600 text-lg leading-relaxed">
@@ -206,10 +206,10 @@ export default function CRMService() {
       <section className="relative py-32 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <div className="inline-block px-6 py-3 border-2 border-emerald-600 text-emerald-600 font-black text-sm tracking-widest mb-6">
+            <div className="inline-block px-6 py-3 border-2 border-emerald-600 text-emerald-600 font-semibold text-sm tracking-widest mb-6">
               TECHNOLOGY STACK
             </div>
-            <h2 className="text-6xl lg:text-7xl font-black" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
+            <h2 className="text-6xl lg:text-7xl font-semibold" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
               BUILT WITH
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">
                 PROVEN TECH
@@ -225,7 +225,7 @@ export default function CRMService() {
               <div key={index} className="group relative aspect-square bg-white border border-gray-200 hover:border-emerald-600 transition-all duration-300 overflow-hidden hover:shadow-xl" style={{ animation: `fadeInScale 0.6s ease-out ${0.05 * index}s both` }}>
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
                   <Icon icon={tech.icon} className="w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110" />
-                  <div className="text-sm font-black text-gray-600 group-hover:text-gray-900 transition-colors">
+                  <div className="text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors">
                     {tech.name}
                   </div>
                 </div>
@@ -239,7 +239,7 @@ export default function CRMService() {
       {/* CTA Section */}
       <section className="relative py-32 px-6 bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-6xl lg:text-7xl font-black mb-8 leading-tight" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
+          <h2 className="text-6xl lg:text-7xl font-semibold mb-8 leading-tight" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
             BOOST YOUR
             <span className="block">SALES TODAY</span>
           </h2>
@@ -247,10 +247,10 @@ export default function CRMService() {
             Let's build a CRM that drives real results
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/contact" className="group px-12 py-6 bg-black text-white font-black text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300">
+            <Link href="/contact" className="group px-12 py-6 bg-black text-white font-semibold text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300">
               GET STARTED →
             </Link>
-            <Link href="/#projects" className="group px-12 py-6 border-4 border-black text-black font-black text-lg tracking-wider hover:bg-black hover:text-white transition-all duration-300">
+            <Link href="/#projects" className="group px-12 py-6 border-4 border-black text-black font-semibold text-lg tracking-wider hover:bg-black hover:text-white transition-all duration-300">
               VIEW WORK
             </Link>
           </div>

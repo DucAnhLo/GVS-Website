@@ -19,11 +19,11 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 dark:border-white/10 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-[50px] items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0 flex-1">
             <a href="/" className="flex items-center gap-2">
-              <img src='/gsvlogo.png' alt="GSV Logo" className="h-40 w-40" />
+              <img src='/gsvlogo.png' alt="GSV Logo" className="h-10 w-auto" />
               {/* <span className="text-3xl font-bold bg-gradient-to-r from-azure-blue to-azure-cloud bg-clip-text text-transparent">
                 GSV
               </span> */}

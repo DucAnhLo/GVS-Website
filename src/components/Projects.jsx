@@ -21,12 +21,12 @@ const Projects = () => {
             style={{ animation: "fadeInUp 0.6s ease-out both" }}
           >
             <div className="w-2 h-2 bg-azure-blue rounded-full animate-pulse"></div>
-            <span className="text-xs font-black tracking-[0.3em] uppercase text-azure-blue">
+            <span className="text-xs font-semibold tracking-[0.3em] uppercase text-azure-blue">
               Portfolio
             </span>
           </div>
           <h2
-            className="text-6xl lg:text-7xl font-black text-gray-900 dark:text-white mb-6 tracking-tight transition-colors duration-300"
+            className="text-6xl lg:text-7xl font-semibold text-gray-900 dark:text-white mb-6 tracking-tight transition-colors duration-300"
             style={{
               fontFamily: "system-ui, -apple-system, sans-serif",
               animation: "fadeInUp 0.6s ease-out 0.1s both",
@@ -88,7 +88,7 @@ const Projects = () => {
                         className="w-1.5 h-1.5 rounded-full"
                         style={{ backgroundColor: project.accent }}
                       ></div>
-                      <span className="text-[10px] font-black tracking-[0.2em] uppercase text-white">
+                      <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-white">
                         {project.category}
                       </span>
                     </div>
@@ -102,7 +102,7 @@ const Projects = () => {
                 <div className="relative p-6 flex flex-col min-h-[280px]">
                   {/* Title */}
                   <h3
-                    className="text-2xl font-black text-gray-900 dark:text-white mb-3 leading-tight transition-colors duration-300"
+                    className="text-2xl font-semibold text-gray-900 dark:text-white mb-3 leading-tight transition-colors duration-300"
                     style={{
                       fontFamily: "system-ui, -apple-system, sans-serif",
                     }}
@@ -173,7 +173,7 @@ const Projects = () => {
         <div className="text-center">
           <a
             href="#"
-            className="inline-flex items-center gap-3 px-12 py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-black text-sm tracking-wider uppercase transition-all duration-300 hover:bg-azure-blue hover:text-white hover:shadow-2xl hover:shadow-azure-blue/30 hover:-translate-y-1 group"
+            className="inline-flex items-center gap-3 px-12 py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold text-sm tracking-wider uppercase transition-all duration-300 hover:bg-azure-blue hover:text-white hover:shadow-2xl hover:shadow-azure-blue/30 hover:-translate-y-1 group"
           >
             View All Projects
             <Icon

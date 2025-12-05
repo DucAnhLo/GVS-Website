@@ -56,11 +56,11 @@ const Careers = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-white tracking-wider uppercase px-4 py-2 bg-gradient-to-r from-azure-blue to-azure-cloud rounded-full">
+            <span className="text-sm font-normal text-white tracking-wider uppercase px-4 py-2 bg-gradient-to-r from-azure-blue to-azure-cloud rounded-full">
               Join Our Team
             </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-medium text-gray-900 mb-4">
             Career Opportunities
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -86,7 +86,7 @@ const Careers = () => {
                   <div className="flex-grow">
                     <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
                       <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                        <h3 className="text-2xl font-medium text-gray-900 mb-2">
                           {job.title}
                         </h3>
                         <div className="flex flex-wrap gap-3 text-sm">
@@ -106,7 +106,7 @@ const Careers = () => {
                       </div>
                       <button
                         onClick={() => setSelectedJob(selectedJob?.id === job.id ? null : job)}
-                        className="px-6 py-2 bg-azure-blue text-white font-semibold hover:bg-azure-dark transition-colors"
+                        className="px-6 py-2 bg-azure-blue text-white font-normal hover:bg-azure-dark transition-colors"
                       >
                         {selectedJob?.id === job.id ? 'Close' : 'View Details'}
                       </button>
@@ -122,7 +122,7 @@ const Careers = () => {
                   <div className="mt-8 pt-8 border-t border-gray-200 space-y-8 animate-fadeIn">
                     {/* Responsibilities */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      <h4 className="text-xl font-medium text-gray-900 mb-4 flex items-center gap-2">
                         <Icon icon="fluent:clipboard-task-24-filled" className="w-6 h-6 text-azure-blue" />
                         Responsibilities
                       </h4>
@@ -138,7 +138,7 @@ const Careers = () => {
 
                     {/* Requirements */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      <h4 className="text-xl font-medium text-gray-900 mb-4 flex items-center gap-2">
                         <Icon icon="fluent:star-24-filled" className="w-6 h-6 text-azure-blue" />
                         Requirements
                       </h4>
@@ -154,7 +154,7 @@ const Careers = () => {
 
                     {/* Preferred Qualifications */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      <h4 className="text-xl font-medium text-gray-900 mb-4 flex items-center gap-2">
                         <Icon icon="fluent:trophy-24-filled" className="w-6 h-6 text-azure-cloud" />
                         Preferred Qualifications
                       </h4>
@@ -172,7 +172,7 @@ const Careers = () => {
                     <div className="pt-6 border-t border-gray-200 flex flex-wrap gap-4">
                       <a
                         href="mailto:careers@globalsoft.vn?subject=Application for UI/UX Designer Position"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-azure-blue to-azure-cloud text-white font-semibold hover:shadow-xl transition-shadow duration-300"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-azure-blue to-azure-cloud text-white font-normal hover:shadow-xl transition-shadow duration-300"
                       >
                         <Icon icon="fluent:mail-24-filled" className="w-5 h-5" />
                         Apply Now
@@ -180,7 +180,7 @@ const Careers = () => {
                       <a
                         href="/careers/ui-ux-designer"
                         target="_blank"
-                        className="inline-flex items-center gap-2 px-8 py-4 border-2 border-azure-blue text-azure-blue font-semibold hover:bg-azure-blue hover:text-white transition-colors duration-300"
+                        className="inline-flex items-center gap-2 px-8 py-4 border-2 border-azure-blue text-azure-blue font-normal hover:bg-azure-blue hover:text-white transition-colors duration-300"
                       >
                         <Icon icon="fluent:document-pdf-24-filled" className="w-5 h-5" />
                         Download PDF
@@ -200,7 +200,7 @@ const Careers = () => {
           </p>
           <a
             href="mailto:careers@globalsoft.vn"
-            className="inline-flex items-center gap-2 text-azure-blue font-semibold hover:text-azure-dark transition-colors"
+            className="inline-flex items-center gap-2 text-azure-blue font-normal hover:text-azure-dark transition-colors"
           >
             Send us your resume
             <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5" />

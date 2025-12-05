@@ -14,7 +14,7 @@ const About = () => {
               <div className="inline-block px-4 py-2 bg-white/10 text-sm font-medium uppercase tracking-widest">
                 About Us
               </div>
-              <h1 className="text-5xl lg:text-7xl font-black leading-tight">
+              <h1 className="text-5xl lg:text-7xl font-semibold leading-tight">
                 We Turn
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                   Data Into
@@ -29,12 +29,12 @@ const About = () => {
 
           {/* Right - White Section with Focus Areas */}
           <div className="bg-white p-12 lg:p-20 flex flex-col justify-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 text-9xl font-black text-gray-50 leading-none select-none">
+            <div className="absolute top-0 right-0 text-9xl font-semibold text-gray-50 leading-none select-none">
               GVS
             </div>
             <div className="relative z-10 space-y-8">
               <div>
-                <div className="text-2xl font-bold text-gray-900 mb-4">Our Focus</div>
+                <div className="text-2xl font-medium text-gray-900 mb-4">Our Focus</div>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   We're a new company focused on quality over quantity, building tailored solutions for each client.
                 </p>
@@ -61,7 +61,7 @@ const About = () => {
         <div className="px-6 py-24">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
-              <h2 className="text-5xl font-black text-gray-900 mb-8 leading-tight">
+              <h2 className="text-5xl font-semibold text-gray-900 mb-8 leading-tight">
                 Our Story
               </h2>
               <div className="w-20 h-1 bg-blue-500 mb-8"></div>
@@ -85,8 +85,8 @@ const About = () => {
                 <div className="relative bg-gray-50 p-12 border-l-8 border-blue-500">
                   <div className="space-y-8">
                     <div>
-                      <div className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Our Mission</div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">Democratize Digital Transformation</h3>
+                      <div className="text-sm font-medium text-blue-600 uppercase tracking-widest mb-2">Our Mission</div>
+                      <h3 className="text-2xl font-medium text-gray-900 mb-3">Democratize Digital Transformation</h3>
                       <p className="text-gray-600 leading-relaxed">
                         Make professional web platforms accessible and affordable for small businesses and educational institutions.
                       </p>
@@ -119,7 +119,7 @@ const About = () => {
         {/* What We Do - Bento Grid Style */}
         <div className="bg-gray-50 px-6 py-24">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-gray-900 mb-4">What We Do Best</h2>
+            <h2 className="text-5xl font-semibold text-gray-900 mb-4">What We Do Best</h2>
             <p className="text-xl text-gray-600">Three core services that transform businesses</p>
           </div>
 
@@ -159,11 +159,11 @@ const About = () => {
               <div key={index} className="group bg-white p-8 hover:shadow-2xl transition-all duration-300 border-t-4 border-transparent hover:border-gray-900">
                 <div className="space-y-6">
                   <div className="flex items-start justify-between">
-                    <div className={`text-6xl font-black ${service.numberColor}`}>{service.number}</div>
+                    <div className={`text-6xl font-semibold ${service.numberColor}`}>{service.number}</div>
                     <Icon icon={service.icon} className={`w-12 h-12 ${service.iconColor}`} />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black text-gray-900 mb-2">{service.title}</h3>
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                     <p className="text-gray-600">{service.description}</p>
                   </div>
                   <div className="space-y-2">
@@ -184,8 +184,8 @@ const About = () => {
         <div className="px-6 py-24 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Our Approach</div>
-              <h2 className="text-5xl font-black text-gray-900 mb-8 leading-tight">
+              <div className="text-sm font-medium text-blue-600 uppercase tracking-widest mb-4">Our Approach</div>
+              <h2 className="text-5xl font-semibold text-gray-900 mb-8 leading-tight">
                 Quality Over Quantity
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
@@ -222,7 +222,7 @@ const About = () => {
               ].map((item, index) => (
                 <div key={index} className="text-center p-6 bg-gray-50 hover:bg-gray-100 transition-colors">
                   <Icon icon={item.icon} className={`w-12 h-12 ${item.iconColor} mx-auto mb-4`} />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600">{item.description}</p>
                 </div>
               ))}
@@ -234,7 +234,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2">
           {/* Left - Black */}
           <div className="bg-gray-900 text-white p-12 lg:p-20">
-            <h2 className="text-4xl font-black mb-12">Why Work With Us</h2>
+            <h2 className="text-4xl font-semibold mb-12">Why Work With Us</h2>
             <div className="space-y-8">
               {[
                 {
@@ -261,7 +261,7 @@ const About = () => {
                 <div key={index} className="flex gap-4">
                   <Icon icon={item.icon} className="w-8 h-8 text-blue-400 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <h3 className="text-xl font-medium mb-2">{item.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
@@ -288,7 +288,7 @@ const About = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <Icon icon="fluent:shield-checkmark-24-filled" className="w-20 h-20 text-blue-500 mx-auto mb-3" />
-                      <div className="text-2xl font-black text-gray-900">Quality</div>
+                      <div className="text-2xl font-semibold text-gray-900">Quality</div>
                       <div className="text-sm font-medium text-gray-600">Guaranteed</div>
                     </div>
                   </div>
@@ -296,10 +296,10 @@ const About = () => {
 
                 {/* Side text decorations */}
                 <div className="absolute -left-8 top-1/2 -translate-y-1/2 -rotate-90">
-                  <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">Built With Care</div>
+                  <div className="text-xs font-medium text-gray-400 uppercase tracking-widest">Built With Care</div>
                 </div>
                 <div className="absolute -right-8 top-1/2 -translate-y-1/2 rotate-90">
-                  <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">Since 2024</div>
+                  <div className="text-xs font-medium text-gray-400 uppercase tracking-widest">Since 2024</div>
                 </div>
               </div>
 
@@ -330,7 +330,7 @@ const About = () => {
         {/* CTA - Full Width */}
         <div className="bg-white px-6 py-24">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
+            <h2 className="text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-tight">
               Ready to Go Digital?
             </h2>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -339,14 +339,14 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-12 py-5 bg-gray-900 text-white font-bold text-sm tracking-wider uppercase hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-3"
+                className="px-12 py-5 bg-gray-900 text-white font-medium text-sm tracking-wider uppercase hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-3"
               >
                 Start Your Project
                 <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="px-12 py-5 border-2 border-gray-900 text-gray-900 font-bold text-sm tracking-wider uppercase hover:bg-gray-50 transition-colors inline-flex items-center justify-center gap-3"
+                className="px-12 py-5 border-2 border-gray-900 text-gray-900 font-medium text-sm tracking-wider uppercase hover:bg-gray-50 transition-colors inline-flex items-center justify-center gap-3"
               >
                 View Our Work
                 <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5" />

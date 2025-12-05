@@ -53,7 +53,7 @@ const MegaMenu = () => {
             <div className="mb-4 p-3 bg-azure-sky w-fit group-hover/item:scale-110 transition-transform duration-200">
               {service.icon}
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover/item:text-azure-blue transition-colors">
+            <h3 className="text-lg font-normal text-gray-900 mb-2 group-hover/item:text-azure-blue transition-colors">
               {service.title}
             </h3>
             <p className="text-sm text-gray-600 leading-relaxed">
