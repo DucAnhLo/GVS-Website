@@ -1,11 +1,26 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Icon } from '@iconify/react';
 import MegaMenu from './MegaMenu';
+import Link from 'next/link';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const services = [
     { title: 'Web Development', href: '/services/web-development' },
@@ -17,57 +32,64 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-100 dark:border-white/10 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-[50px] items-center justify-between">
+    <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+      isScrolled
+        ? 'bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm'
+        : 'bg-transparent border-b border-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <div className="flex-shrink-0 flex-1">
-            <a href="/" className="flex items-center gap-2">
-              <img src='/gsvlogo.png' alt="GSV Logo" className="h-10 w-auto" />
-              {/* <span className="text-3xl font-bold bg-gradient-to-r from-azure-blue to-azure-cloud bg-clip-text text-transparent">
-                GSV
-              </span> */}
-            </a>
+          <div className="flex-shrink-0 relative">
+            <Link href="/" className="flex items-center">
+              <img src='/gsvlogo.png' alt="GSV Logo" className="h-32 w-auto relative z-10" style={{marginTop: '-8px', marginBottom: '-8px'}} />
+            </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-10 items-center h-full flex-1 justify-center">
-            <a href="/" className="text-gray-600 dark:text-slate-300 hover:text-azure-blue dark:hover:text-azure-blue font-medium transition-colors">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="text-[15px] font-medium text-gray-700 hover:text-brand-black transition-colors">
               Home
-            </a>
+            </Link>
 
             {/* Mega Menu Trigger */}
             <div className="group h-full flex items-center">
-              <button className="flex items-center gap-1 text-gray-600 dark:text-slate-300 group-hover:text-azure-blue font-medium transition-colors focus:outline-none">
+              <button className="flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-brand-black transition-colors focus:outline-none">
                 Services
                 <Icon icon="lucide:chevron-down" className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
               </button>
               <MegaMenu />
             </div>
 
-            <a href="/about" className="text-gray-600 dark:text-slate-300 hover:text-azure-blue dark:hover:text-azure-blue font-medium transition-colors">
-              About Us
+            <a href="/about" className="text-[15px] font-medium text-gray-700 hover:text-brand-black transition-colors">
+              About
             </a>
-            <a href="/contact" className="text-gray-600 dark:text-slate-300 hover:text-azure-blue dark:hover:text-azure-blue font-medium transition-colors">
+            <a href="/contact" className="text-[15px] font-medium text-gray-700 hover:text-brand-black transition-colors">
               Contact
             </a>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex flex-1 justify-end">
+          {/* CTA Buttons */}
+          {/* <div className="hidden md:flex items-center gap-3">
+            <a
+              href="/login"
+              className="px-5 py-2.5 text-[15px] font-semibold text-gray-900 hover:text-gray-700 transition-colors"
+            >
+              Login
+            </a>
             <a
               href="/contact"
-              className="px-6 py-2.5 border border-azure-blue text-azure-blue font-medium hover:bg-azure-blue hover:text-white transition-all shadow-lg shadow-azure-blue/10"
+              className="px-6 py-2.5 bg-azure-blue text-white text-sm font-semibold rounded-md hover:bg-azure-blue/90 transition-all shadow-sm"
             >
-              Get Started
+              Start 7-day free trial
             </a>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-gray-600 dark:text-slate-300 hover:text-azure-blue hover:bg-azure-sky/50 dark:hover:bg-white/10 focus:outline-none transition-colors"
+              className="p-2 text-gray-700 hover:text-brand-black focus:outline-none transition-colors"
             >
               {isMobileMenuOpen ? <Icon icon="lucide:x" className="w-6 h-6" /> : <Icon icon="lucide:menu" className="w-6 h-6" />}
             </button>
@@ -79,9 +101,9 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-white/10 absolute w-full left-0 shadow-lg transition-colors">
           <div className="px-4 pt-2 pb-6 space-y-2">
-            <a href="/" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-slate-300 hover:text-azure-blue hover:bg-azure-sky/30 dark:hover:bg-white/10 transition-colors">
+            <Link href="/" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-slate-300 hover:text-azure-blue hover:bg-azure-sky/30 dark:hover:bg-white/10 transition-colors">
               Home
-            </a>
+            </Link>
 
             {/* Services Dropdown */}
             <div>

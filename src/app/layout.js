@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import LoadingWrapper from "@/components/LoadingWrapper";
 import { ThemeProvider } from "@/contexts/ThemeContext";
-import ThemeToggle from "@/components/ThemeToggle";
+// import ThemeToggle from "@/components/ThemeToggle";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
               {children}
             </main>
             <Footer />
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </LoadingProvider>
         </ThemeProvider>
       </body>

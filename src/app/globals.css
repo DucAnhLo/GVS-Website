@@ -12,6 +12,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter-tight);
 
+  /* Brand Colors */
+  --color-brand-black: #0D1011;
+
   /* Azure Color Palette */
   --color-azure-blue: #0078D4;
   --color-azure-light: #A3C8E4;
