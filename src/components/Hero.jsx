@@ -7,12 +7,23 @@ const Hero = () => {
     <section className="relative flex items-start justify-center overflow-hidden bg-gradient-to-br from-blue-50/50 via-white to-cyan-50/50 pt-20 pb-40">
       {/* Decorative flowing waves - Enhanced Azure Blue Theme */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Background Pattern */}
+        <div 
+          className="absolute top-0 right-0 opacity-60 w-full h-full mix-blend-multiply"
+          style={{
+            backgroundImage: `url('/101.jpg')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }}
+        ></div>
+
         {/* Large Azure Blue gradient blob */}
-        <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-azure-blue/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+        {/* <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-azure-blue/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div> */}
 
         {/* Azure Blue flowing lines (left side) */}
-        <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        {/* <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
           <defs>
             <linearGradient id="azureGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" style={{stopColor: '#0EA5E9', stopOpacity: 0.6}} />
@@ -29,10 +40,10 @@ const Hero = () => {
               opacity={0.8 - i * 0.07}
             />
           ))}
-        </svg>
+        </svg> */}
 
         {/* Cyan flowing lines (right side) */}
-        <svg className="absolute top-0 right-0 w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        {/* <svg className="absolute top-0 right-0 w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
           <defs>
             <linearGradient id="cyanGradient" x1="100%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" style={{stopColor: '#06B6D4', stopOpacity: 0.5}} />
@@ -49,7 +60,7 @@ const Hero = () => {
               opacity={0.75 - i * 0.07}
             />
           ))}
-        </svg>
+        </svg> */}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">

@@ -7,7 +7,7 @@ import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Hero />
       <Services />
       <Benefits />

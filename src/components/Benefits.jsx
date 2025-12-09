@@ -61,14 +61,14 @@ const Benefits = () => {
       stat: '24/7',
       title: 'Dedicated support',
       description: 'Committed team focused on your success with responsive communication',
-      image: '/benefits/support.jpg',
+      image: '/benefits/629.jpg',
       gradient: 'from-emerald-500/20 to-green-500/10',
     },
     {
       stat: '100%',
       title: 'Modern technology',
       description: 'Latest tools and frameworks to build cutting-edge digital solutions',
-      image: '/benefits/tech.jpg',
+      image: '/benefits/628.jpg',
       gradient: 'from-violet-500/20 to-purple-500/10',
     }
   ];

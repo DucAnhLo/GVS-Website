@@ -54,7 +54,7 @@ const Projects = () => {
   const azureBlue = '#0078D4';
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white to-slate-50 dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
+    <section className="relative py-32 dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
       <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-azure-blue/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-[600px] h-[600px] bg-azure-green/5 rounded-full blur-3xl"></div>

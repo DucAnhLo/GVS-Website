@@ -80,50 +80,68 @@ const Services = () => {
   
   const services = [
     {
-      icon: 'vscode-icons:file-type-reactjs',
+      icon: 'fluent:box-multiple-24-filled',
       title: 'Web Development',
-      description: 'Modern, scalable web applications built with cutting-edge technologies for optimal performance and user experience.',
-      slug: 'web-development'
+      description: 'Modern, scalable web applications built with cutting-edge technologies.',
+      slug: 'web-development',
+      color: 'text-violet-600',
+      bgColor: 'bg-violet-50 dark:bg-violet-900/10',
+      borderColor: 'border-violet-100 dark:border-violet-900/20'
     },
     {
-      icon: 'fluent-color:content-view-32',
+      icon: 'fluent:content-settings-24-filled',
       title: 'CMS Solutions',
-      description: 'Powerful content management platforms that give you full control over your digital content with ease.',
-      slug: 'cms-solutions'
+      description: 'Powerful content management platforms for full control over your content.',
+      slug: 'cms-solutions',
+      color: 'text-emerald-500',
+      bgColor: 'bg-emerald-50 dark:bg-emerald-900/10',
+      borderColor: 'border-emerald-100 dark:border-emerald-900/20'
     },
     {
-      icon: 'flat-color-icons:workflow',
+      icon: 'fluent:people-community-24-filled',
       title: 'CRM Systems',
-      description: 'Intelligent customer relationship management tools designed to boost conversions and streamline operations.',
-      slug: 'crm-systems'
+      description: 'Intelligent tools to boost conversions and streamline operations.',
+      slug: 'crm-systems',
+      color: 'text-blue-500',
+      bgColor: 'bg-blue-50 dark:bg-blue-900/10',
+      borderColor: 'border-blue-100 dark:border-blue-900/20'
     },
     {
-      icon: 'fluent-color:design-ideas-32',
+      icon: 'fluent:design-ideas-24-filled',
       title: 'Web UI/UX Design',
-      description: 'Beautiful, intuitive user interfaces and experiences that delight users and drive engagement.',
-      slug: 'ui-ux-design'
+      description: 'Beautiful, intuitive interfaces that delight users and drive engagement.',
+      slug: 'ui-ux-design',
+      color: 'text-sky-500',
+      bgColor: 'bg-sky-50 dark:bg-sky-900/10',
+      borderColor: 'border-sky-100 dark:border-sky-900/20'
     },
     {
-      icon: 'fluent-color:document-24',
+      icon: 'fluent:document-24-filled',
       title: 'Digital Document Storage',
-      description: 'Secure, cloud-based document management systems for easy access, organization, and collaboration.',
-      slug: 'digital-document-storage'
+      description: 'Secure systems for easy access, organization, and collaboration.',
+      slug: 'digital-document-storage',
+      color: 'text-rose-500',
+      bgColor: 'bg-rose-50 dark:bg-rose-900/10',
+      borderColor: 'border-rose-100 dark:border-rose-900/20'
     },
     {
-      icon: 'flat-color-icons:signature',
+      icon: 'fluent:signature-24-filled',
       title: 'Digital Signature',
-      description: 'Legally binding electronic signature solutions that streamline document signing and approval workflows.',
-      slug: 'digital-signature'
+      description: 'Streamline document signing and approval workflows securely.',
+      slug: 'digital-signature',
+      color: 'text-amber-500',
+      bgColor: 'bg-amber-50 dark:bg-amber-900/10',
+      borderColor: 'border-amber-100 dark:border-amber-900/20'
     }
   ];
 
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white to-slate-50 dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
+    <section className="relative py-32  dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
       {/* Background Elements - Light Theme */}
-      <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-azure-blue/5 rounded-full blur-3xl"></div>
+      {/* <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-azure-blue/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-[600px] h-[600px] bg-azure-green/5 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-azure-cloud/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-azure-cloud/5 rounded-full blur-3xl"></div> */}
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Section Header - Minimalist Style */}
@@ -162,63 +180,28 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Services Grid - Staggered Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        {/* Services Grid - Minimalist List Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {services.map((service, index) => {
             const CardContent = (
-              <>
-                {/* Card with Deep Shadow - Rounded */}
-                <div className="relative h-full bg-white dark:bg-white/5 border-2 border-gray-200/50 dark:border-white/10 p-8 rounded-2xl transition-all duration-500 hover:border-transparent hover:shadow-2xl hover:shadow-azure-blue/20 hover:-translate-y-2">
-
-                {/* Accent Corner */}
-                <div
-                  className="absolute top-0 right-0 w-24 h-24 opacity-10 transition-all duration-500 group-hover:opacity-20 group-hover:scale-110 rounded-tr-2xl"
-                  style={{
-                    background: `radial-gradient(circle at top right, ${azureBlue}, transparent 70%)`
-                  }}
-                ></div>
-
-                {/* Icon Container */}
-                <div className="relative mb-6">
-                  <div className="relative inline-flex p-4 bg-gradient-to-br from-gray-50 to-white dark:from-white/5 dark:to-white/10 rounded-xl shadow-lg transition-all duration-500 group-hover:shadow-xl group-hover:scale-110 group-hover:rotate-3 border border-gray-100 dark:border-white/10">
-                    <Icon icon={service.icon} className="w-12 h-12" />
-
-                    {/* Icon Glow */}
-                    <div
-                      className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-                      style={{ backgroundColor: azureBlue }}
-                    ></div>
-                  </div>
+              <div className="flex items-start gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg hover:shadow-gray-100 dark:hover:bg-white/5 dark:hover:shadow-none">
+                {/* Icon Box */}
+                <div className={`flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-2xl ${service.bgColor} ${service.color} border ${service.borderColor} transition-transform duration-300 group-hover:scale-105`}>
+                  <Icon icon={service.icon} className="w-8 h-8" />
                 </div>
 
-                {/* Title */}
-                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 transition-colors duration-300" style={{
-                  fontFamily: 'system-ui, -apple-system, sans-serif'
-                }}>
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 dark:text-slate-300 leading-relaxed mb-6">
-                  {service.description}
-                </p>
-
-                {/* Learn More Link */}
-                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-all duration-300" style={{ color: azureBlue }}>
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">Learn More</span>
-                  <Icon
-                    icon="fluent:arrow-right-24-filled"
-                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2"
-                  />
+                {/* Content */}
+                <div className="flex-1 min-w-0 pt-1">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 truncate" style={{
+                    fontFamily: 'system-ui, -apple-system, sans-serif'
+                  }}>
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
+                    {service.description}
+                  </p>
                 </div>
-
-                {/* Bottom Accent Line */}
-                <div
-                  className="absolute bottom-0 left-0 h-1 w-0 transition-all duration-700 group-hover:w-full rounded-bl-2xl"
-                  style={{ backgroundColor: azureBlue }}
-                ></div>
               </div>
-              </>
             );
 
             return (
@@ -232,7 +215,7 @@ const Services = () => {
                 }`}
               >
                 {service.slug ? (
-                  <Link href={`/services/${service.slug}`}>
+                  <Link href={`/services/${service.slug}`} className="block">
                     {CardContent}
                   </Link>
                 ) : (

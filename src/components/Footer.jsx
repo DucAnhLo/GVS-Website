@@ -5,13 +5,23 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-gray-50 to-azure-sky dark:from-gray-900 dark:to-slate-900 border-t border-gray-200 dark:border-white/10 dark:border-white/10 transition-colors duration-300">
+    <footer className="relative dark:from-gray-900 dark:to-slate-900 border-t border-gray-200 dark:border-white/10 transition-colors duration-300 overflow-hidden">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-10 pointer-events-none"
+        style={{
+          backgroundImage: `url('/bg_control_1.svg')`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover'
+        }}
+      ></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="space-y-4">
             <a href="/" className="flex items-center gap-2">
-              <img src='/gsvlogo.png' alt="GSV Logo" className="h-40 w-40" />
+              <img src='/gsvlogo1.png' alt="GSV Logo" className="h-30" />
             </a>
             <p className="text-gray-600 dark:text-slate-300 dark:text-slate-300 text-sm leading-relaxed transition-colors">
               Global Soft Vietnam - Delivering innovative software solutions for your business needs.

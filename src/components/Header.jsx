@@ -42,7 +42,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0 relative">
             <Link href="/" className="flex items-center">
-              <img src='/gsvlogo.png' alt="GSV Logo" className="h-32 w-auto relative z-10" style={{marginTop: '-8px', marginBottom: '-8px'}} />
+              <img src='/gsvlogo1.png' alt="GSV Logo" className="h-28 w-auto relative z-10" style={{marginTop: '-8px', marginBottom: '-8px'}} />
             </Link>
           </div>
 
