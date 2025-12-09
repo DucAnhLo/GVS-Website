@@ -1,10 +1,72 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
 const Services = () => {
-  const marqueeRef = useRef(null);
+  const [visibleCards, setVisibleCards] = useState(new Set());
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const [isClientsVisible, setIsClientsVisible] = useState(false);
+  const cardRefs = useRef([]);
+  const headerRef = useRef(null);
+  const clientsRef = useRef(null);
+
+  useEffect(() => {
+    // Observer for header
+    const headerObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsHeaderVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    if (headerRef.current) {
+      headerObserver.observe(headerRef.current);
+    }
+
+    // Observer for clients section
+    const clientsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsClientsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    if (clientsRef.current) {
+      clientsObserver.observe(clientsRef.current);
+    }
+
+    // Observers for cards
+    const cardObservers = cardRefs.current.map((ref, index) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleCards((prev) => new Set([...prev, index]));
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+
+      if (ref) observer.observe(ref);
+      return observer;
+    });
+
+    return () => {
+      headerObserver.disconnect();
+      clientsObserver.disconnect();
+      cardObservers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
 
   // Client data - add logos later
   const clients = [
@@ -14,62 +76,47 @@ const Services = () => {
     { id: 4, name: 'Client 4', logo: '/clients/tpduk.jpg' },
   ];
 
+  const azureBlue = '#0078D4';
+  
   const services = [
     {
       icon: 'vscode-icons:file-type-reactjs',
       title: 'Web Development',
       description: 'Modern, scalable web applications built with cutting-edge technologies for optimal performance and user experience.',
-      color: '#0EA5E9',
-      bgGradient: 'from-sky-500/10 to-blue-500/5',
-      shadowColor: 'shadow-sky-500/20',
       slug: 'web-development'
     },
     {
       icon: 'fluent-color:content-view-32',
       title: 'CMS Solutions',
       description: 'Powerful content management platforms that give you full control over your digital content with ease.',
-      color: '#8B5CF6',
-      bgGradient: 'from-violet-500/10 to-purple-500/5',
-      shadowColor: 'shadow-violet-500/20',
       slug: 'cms-solutions'
     },
     {
       icon: 'flat-color-icons:workflow',
       title: 'CRM Systems',
       description: 'Intelligent customer relationship management tools designed to boost conversions and streamline operations.',
-      color: '#10B981',
-      bgGradient: 'from-emerald-500/10 to-green-500/5',
-      shadowColor: 'shadow-emerald-500/20',
       slug: 'crm-systems'
     },
     {
       icon: 'fluent-color:design-ideas-32',
       title: 'Web UI/UX Design',
       description: 'Beautiful, intuitive user interfaces and experiences that delight users and drive engagement.',
-      color: '#F59E0B',
-      bgGradient: 'from-amber-500/10 to-orange-500/5',
-      shadowColor: 'shadow-amber-500/20',
       slug: 'ui-ux-design'
     },
     {
       icon: 'fluent-color:document-24',
       title: 'Digital Document Storage',
       description: 'Secure, cloud-based document management systems for easy access, organization, and collaboration.',
-      color: '#EC4899',
-      bgGradient: 'from-pink-500/10 to-rose-500/5',
-      shadowColor: 'shadow-pink-500/20',
       slug: 'digital-document-storage'
     },
     {
       icon: 'flat-color-icons:signature',
       title: 'Digital Signature',
       description: 'Legally binding electronic signature solutions that streamline document signing and approval workflows.',
-      color: '#06B6D4',
-      bgGradient: 'from-cyan-500/10 to-teal-500/5',
-      shadowColor: 'shadow-cyan-500/20',
       slug: 'digital-signature'
     }
   ];
+
 
   return (
     <section className="relative py-32 bg-gradient-to-b from-white to-slate-50 dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
@@ -79,23 +126,40 @@ const Services = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-azure-cloud/5 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-6">
-        {/* Section Header */}
-        <div className="mb-24">
-          <div className="flex items-center gap-4 mb-6" style={{ animation: 'fadeInUp 0.6s ease-out both' }}>
-            <div className="h-1 w-20 bg-gradient-to-r from-azure-blue to-transparent"></div>
-            <span className="text-xs font-black tracking-[0.3em] uppercase text-azure-blue">
-              What We Do
-            </span>
+        {/* Section Header - Minimalist Style */}
+        <div 
+          ref={headerRef}
+          className={`mb-24 transition-all duration-700 ${
+            isHeaderVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-12'
+          }`}
+        >
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+            <div>
+              <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
+                <span className="font-normal">Transform your</span>{' '}
+                <span className="font-bold">business</span>
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
+                From web development to digital signatures, our comprehensive solutions help you build, manage, and scale your digital presence with confidence.
+              </p>
+            </div>
+            
+            {/* CTA Button */}
+            <div className="flex-shrink-0">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-10 py-4 border border-brand-black bg-white text-brand-black text-sm font-semibold rounded-full hover:bg-brand-black hover:text-white transition-all group whitespace-nowrap"
+              >
+                <span>Get started</span>
+                <Icon
+                  icon="fluent:arrow-right-24-filled"
+                  className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </Link>
+            </div>
           </div>
-          <h2 className="text-6xl lg:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tight" style={{
-            fontFamily: 'system-ui, -apple-system, sans-serif',
-            animation: 'fadeInUp 0.6s ease-out 0.1s both'
-          }}>
-            Our Services
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-slate-300 max-w-2xl leading-relaxed" style={{ animation: 'fadeInUp 0.6s ease-out 0.2s both' }}>
-            Comprehensive digital solutions engineered to transform your business and accelerate growth
-          </p>
         </div>
 
         {/* Services Grid - Staggered Cards */}
@@ -103,24 +167,16 @@ const Services = () => {
           {services.map((service, index) => {
             const CardContent = (
               <>
-                {/* Card with Deep Shadow */}
-                <div className={`relative h-full bg-white dark:bg-white/5 border-2 border-gray-200/50 dark:border-white/10 p-8 transition-all duration-500 hover:border-transparent hover:shadow-2xl ${service.shadowColor} hover:-translate-y-2`}>
+                {/* Card with Deep Shadow - Rounded */}
+                <div className="relative h-full bg-white dark:bg-white/5 border-2 border-gray-200/50 dark:border-white/10 p-8 rounded-2xl transition-all duration-500 hover:border-transparent hover:shadow-2xl hover:shadow-azure-blue/20 hover:-translate-y-2">
 
                 {/* Accent Corner */}
                 <div
-                  className="absolute top-0 right-0 w-24 h-24 opacity-10 transition-all duration-500 group-hover:opacity-20 group-hover:scale-110"
+                  className="absolute top-0 right-0 w-24 h-24 opacity-10 transition-all duration-500 group-hover:opacity-20 group-hover:scale-110 rounded-tr-2xl"
                   style={{
-                    background: `radial-gradient(circle at top right, ${service.color}, transparent 70%)`
+                    background: `radial-gradient(circle at top right, ${azureBlue}, transparent 70%)`
                   }}
                 ></div>
-
-                {/* Large Number Watermark */}
-                {/* <div
-                  className="absolute -bottom-4 -right-4 text-[120px] font-black leading-none opacity-5 pointer-events-none text-gray-900 dark:text-white"
-                  style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
-                >
-                  {String(index + 1).padStart(2, '0')}
-                </div> */}
 
                 {/* Icon Container */}
                 <div className="relative mb-6">
@@ -130,16 +186,8 @@ const Services = () => {
                     {/* Icon Glow */}
                     <div
                       className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-                      style={{ backgroundColor: service.color }}
+                      style={{ backgroundColor: azureBlue }}
                     ></div>
-                  </div>
-
-                  {/* Service Number Badge */}
-                  <div
-                    className="absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black shadow-lg"
-                    style={{ backgroundColor: service.color }}
-                  >
-                    {index + 1}
                   </div>
                 </div>
 
@@ -156,7 +204,7 @@ const Services = () => {
                 </p>
 
                 {/* Learn More Link */}
-                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-all duration-300" style={{ color: service.color }}>
+                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-all duration-300" style={{ color: azureBlue }}>
                   <span className="transition-transform duration-300 group-hover:translate-x-1">Learn More</span>
                   <Icon
                     icon="fluent:arrow-right-24-filled"
@@ -166,8 +214,8 @@ const Services = () => {
 
                 {/* Bottom Accent Line */}
                 <div
-                  className="absolute bottom-0 left-0 h-1 w-0 transition-all duration-700 group-hover:w-full"
-                  style={{ backgroundColor: service.color }}
+                  className="absolute bottom-0 left-0 h-1 w-0 transition-all duration-700 group-hover:w-full rounded-bl-2xl"
+                  style={{ backgroundColor: azureBlue }}
                 ></div>
               </div>
               </>
@@ -176,10 +224,12 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className="group"
-                style={{
-                  animation: `cardSlideIn 0.8s ease-out ${0.1 * index}s both`
-                }}
+                ref={(el) => (cardRefs.current[index] = el)}
+                className={`group transition-all duration-700 ${
+                  visibleCards.has(index)
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-12'
+                }`}
               >
                 {service.slug ? (
                   <Link href={`/services/${service.slug}`}>
@@ -194,29 +244,27 @@ const Services = () => {
         </div>
 
         {/* Clients Section */}
-        <div className="mt-40">
+        <div 
+          ref={clientsRef}
+          className={`mt-40 transition-all duration-700 ${
+            isClientsVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-12'
+          }`}
+        >
           {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 px-5 py-2 bg-azure-blue/10 border border-azure-blue/30 mb-6">
-              <div className="w-2 h-2 bg-azure-blue rounded-full animate-pulse"></div>
-              <span className="text-xs font-black tracking-[0.3em] uppercase text-azure-blue">
-                Trusted By Industry Leaders
-              </span>
-            </div>
-            <h2 className="text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-6" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-              Our Clients
+          <div className="mb-16">
+            <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
+              <span className="font-normal">Trusted by</span>{' '}
+              <span className="font-bold">industry leaders</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
               Partnering with forward-thinking organizations to deliver exceptional results
             </p>
           </div>
 
           {/* Infinite Marquee */}
-          <div className="relative overflow-hidden py-8 bg-gray-50/50 dark:bg-white/5 backdrop-blur-sm transition-colors">
-            {/* Gradient Overlays */}
-            {/* <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-50 to-transparent z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-50 to-transparent z-10"></div> */}
-
+          <div className="relative overflow-hidden py-8">
             {/* Marquee Content */}
             <div className="flex gap-16 animate-marquee">
               {[...clients, ...clients, ...clients].map((client, index) => (
@@ -224,12 +272,16 @@ const Services = () => {
                   key={index}
                   className="flex-shrink-0 group"
                 >
-                  <div className="w-48 h-24 flex items-center justify-center transition-all duration-300">
+                  <div className="w-64 h-32 flex items-center justify-center transition-all duration-300">
                     {client.logo ? (
                       <img
                         src={client.logo}
                         alt={client.name}
-                        className="w-auto h-auto max-w-[140px] max-h-16 object-contain transition-all duration-300 group-hover:scale-110"
+                        className={`w-auto h-auto object-contain transition-all duration-300 group-hover:scale-110 ${
+                          client.logo.includes('AIG') 
+                            ? 'max-w-[400px] max-h-48' 
+                            : 'max-w-[200px] max-h-24'
+                        }`}
                       />
                     ) : (
                       <div className="flex flex-col items-center justify-center">
@@ -247,43 +299,20 @@ const Services = () => {
               ))}
             </div>
           </div>
-
-          {/* Stats Bar */}
-          {/* <div className="grid grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
-            {[
-              { number: '50+', label: 'Happy Clients', icon: 'fluent:people-24-filled' },
-              { number: '200+', label: 'Projects Completed', icon: 'fluent:rocket-24-filled' },
-              { number: '15+', label: 'Years Experience', icon: 'fluent:trophy-24-filled' }
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 shadow-sm hover:shadow-lg hover:border-white/20 transition-all duration-300 hover:-translate-y-1"
-                style={{ animation: `fadeInUp 0.6s ease-out ${0.2 + index * 0.1}s both` }}
-              >
-                <Icon icon={stat.icon} className="w-10 h-10 text-azure-blue mx-auto mb-3" />
-                <div className="text-4xl font-black text-white mb-2" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-                  {stat.number}
-                </div>
-                <div className="text-sm text-slate-400 font-medium uppercase tracking-wider">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div> */}
         </div>
 
         {/* Bottom CTA */}
         <div className="text-center mt-20">
-          <a
-            href="#"
-            className="group inline-flex items-center gap-3 px-12 py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-black text-sm tracking-wider uppercase transition-all duration-300 hover:bg-azure-blue hover:text-white hover:shadow-2xl hover:shadow-azure-blue/30 hover:-translate-y-1"
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 px-10 py-4 border border-brand-black bg-white text-brand-black text-sm font-semibold rounded-full hover:bg-brand-black hover:text-white transition-all group"
           >
-            Explore All Services
+            <span>Explore all services</span>
             <Icon
               icon="fluent:arrow-right-24-filled"
-              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2"
+              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
             />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -320,7 +349,7 @@ const Services = () => {
         }
 
         .animate-marquee {
-          animation: marquee 30s linear infinite;
+          animation: marquee 15s linear infinite;
         }
 
         .animate-marquee:hover {
