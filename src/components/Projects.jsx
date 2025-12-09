@@ -1,71 +1,101 @@
 "use client";
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { projectsData } from "@/data/projects";
 
 const Projects = () => {
+  const [visibleCards, setVisibleCards] = useState(new Set());
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const cardRefs = useRef([]);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    // Observer for header
+    const headerObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsHeaderVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    if (headerRef.current) {
+      headerObserver.observe(headerRef.current);
+    }
+
+    // Observers for cards
+    const cardObservers = cardRefs.current.map((ref, index) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleCards((prev) => new Set([...prev, index]));
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+
+      if (ref) observer.observe(ref);
+      return observer;
+    });
+
+    return () => {
+      headerObserver.disconnect();
+      cardObservers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
   const projects = projectsData;
+  const azureBlue = '#0078D4';
 
   return (
-    <section className="relative py-32 bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:via-slate-900 dark:to-slate-800 overflow-hidden transition-colors duration-300">
+    <section className="relative py-32 bg-gradient-to-b from-white to-slate-50 dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-azure-blue/5 dark:bg-azure-blue/10 rounded-full blur-[120px]"></div>
-      <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-azure-green/5 dark:bg-azure-green/10 rounded-full blur-[120px]"></div>
+      <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-azure-blue/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-0 w-[600px] h-[600px] bg-azure-green/5 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className="mb-20">
-          <div
-            className="inline-flex items-center gap-3 px-4 py-2 bg-azure-blue/10 border border-azure-blue/20 dark:border-azure-blue/30 mb-6"
-            style={{ animation: "fadeInUp 0.6s ease-out both" }}
-          >
-            <div className="w-2 h-2 bg-azure-blue rounded-full animate-pulse"></div>
-            <span className="text-xs font-semibold tracking-[0.3em] uppercase text-azure-blue">
-              Portfolio
-            </span>
-          </div>
-          <h2
-            className="text-6xl lg:text-7xl font-semibold text-gray-900 dark:text-white mb-6 tracking-tight transition-colors duration-300"
-            style={{
-              fontFamily: "system-ui, -apple-system, sans-serif",
-              animation: "fadeInUp 0.6s ease-out 0.1s both",
-            }}
-          >
-            Featured Projects
+        {/* Header - Minimalist Style */}
+        <div 
+          ref={headerRef}
+          className={`mb-24 transition-all duration-700 ${
+            isHeaderVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-12'
+          }`}
+        >
+          <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
+            <span className="font-normal">Featured</span>{' '}
+            <span className="font-bold">projects</span>
           </h2>
-          <p
-            className="text-xl text-gray-600 dark:text-slate-300 max-w-2xl transition-colors duration-300"
-            style={{ animation: "fadeInUp 0.6s ease-out 0.2s both" }}
-          >
-            Transforming ideas into powerful digital experiences
+          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
+            Transforming ideas into powerful digital experiences that drive real results
           </p>
         </div>
 
-        {/* Projects Grid - Uniform Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-16">
           {projects.map((project, index) => (
             <Link
               key={index}
               href={project.slug ? `/projects/${project.slug}` : "#"}
-              className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
-              style={{
-                animation: `cardPop 0.6s ease-out ${index * 0.1}s both`
-              }}
+              ref={(el) => (cardRefs.current[index] = el)}
+              className={`group transition-all duration-700 ${
+                visibleCards.has(index)
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-12'
+              }`}
             >
               {/* Card Container */}
-              <div className="relative h-full bg-white dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 overflow-hidden transition-all duration-500 hover:border-gray-300 dark:hover:border-white/20">
-                {/* Top Accent Bar */}
-                <div
-                  className="absolute top-0 left-0 w-full h-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20"
-                  style={{ backgroundColor: project.accent }}
-                ></div>
-
+              <div className="relative h-full bg-white dark:bg-white/5 border-2 border-gray-200/50 dark:border-white/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-transparent hover:shadow-2xl hover:shadow-azure-blue/20 hover:-translate-y-2">
+                
                 {/* Project Banner Image */}
-                <div
-                  className={`relative h-48 overflow-hidden bg-gradient-to-br ${project.gradient}`}
-                >
-                  {/* Project Image */}
+                <div className="relative h-48 overflow-hidden">
                   {project.image ? (
                     <img
                       src={project.image}
@@ -73,45 +103,40 @@ const Projects = () => {
                       className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-slate-800/50">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient || 'from-azure-blue/20 to-azure-sky/10'} flex items-center justify-center`}>
                       <Icon
                         icon="fluent-emoji:laptop"
-                        className="w-24 h-24 opacity-40 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
+                        className="w-24 h-24 opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
                       />
                     </div>
                   )}
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/20 to-transparent"></div>
 
-                  {/* Category Badge - Overlaid on image */}
+                  {/* Category Badge */}
                   <div className="absolute top-4 left-4 z-10">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900/80 backdrop-blur-md border border-white/20">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-gray-200 dark:border-white/20 rounded-full">
                       <div
                         className="w-1.5 h-1.5 rounded-full"
-                        style={{ backgroundColor: project.accent }}
+                        style={{ backgroundColor: project.accent || azureBlue }}
                       ></div>
-                      <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-white">
+                      <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-900 dark:text-white">
                         {project.category}
                       </span>
                     </div>
                   </div>
-
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
                 </div>
 
                 {/* Content */}
-                <div className="relative p-6 flex flex-col min-h-[280px]">
+                <div className="relative p-6 flex flex-col min-h-[240px]">
                   {/* Title */}
-                  <h3
-                    className="text-2xl font-semibold text-gray-900 dark:text-white mb-3 leading-tight transition-colors duration-300"
-                    style={{
-                      fontFamily: "system-ui, -apple-system, sans-serif",
-                    }}
-                  >
+                  <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-3 leading-tight transition-colors duration-300">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed mb-4 line-clamp-2 transition-colors duration-300">
+                  <p className="text-gray-600 dark:text-slate-300 leading-relaxed mb-4 line-clamp-2 transition-colors duration-300">
                     {project.description}
                   </p>
 
@@ -120,93 +145,62 @@ const Projects = () => {
                     {project.tech.slice(0, 3).map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-2.5 py-1 text-xs font-medium bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-slate-400 border border-gray-200 dark:border-white/10 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-white/10 dark:hover:text-white"
+                        className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-slate-400 border border-gray-200 dark:border-white/10 rounded-full transition-all duration-300 hover:bg-gray-200 dark:hover:bg-white/10"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.tech.length > 3 && (
-                      <span className="px-2.5 py-1 text-xs font-medium text-gray-500 dark:text-slate-500">
+                      <span className="px-3 py-1 text-xs font-medium text-gray-500 dark:text-slate-500">
                         +{project.tech.length - 3}
                       </span>
                     )}
                   </div>
 
-                  {/* Bottom Section - CTA */}
-                  <div className="mt-auto pt-4 border-t border-gray-200 dark:border-white/10 transition-colors duration-300">
-                    <div className="flex items-center justify-between">
-                      <div
-                        className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-all duration-300"
-                        style={{ color: project.accent }}
-                      >
-                        <span className="transition-transform duration-300 group-hover:translate-x-1">
-                          View Project
-                        </span>
-                        <Icon
-                          icon="fluent:arrow-right-24-filled"
-                          className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2"
-                        />
-                      </div>
-
-                      {/* External Link Icon if available */}
-                      {project.liveUrl && project.liveUrl !== "#" && (
-                        <Icon
-                          icon="fluent:arrow-up-right-24-filled"
-                          className="w-5 h-5 text-gray-500 dark:text-slate-500 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
-                        />
-                      )}
+                  {/* View Project Link */}
+                  <div className="mt-auto">
+                    <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-all duration-300" style={{ color: project.accent || azureBlue }}>
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">View Project</span>
+                      <Icon
+                        icon="fluent:arrow-right-24-filled"
+                        className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2"
+                      />
                     </div>
                   </div>
                 </div>
 
-                {/* Corner Accent Glow */}
+                {/* Bottom Accent Line */}
                 <div
-                  className="absolute bottom-8 right-8 w-24 h-24 rounded-full opacity-0 group-hover:opacity-20 blur-3xl transition-all duration-500 pointer-events-none"
-                  style={{ backgroundColor: project.accent }}
+                  className="absolute bottom-0 left-0 h-1 w-0 transition-all duration-700 group-hover:w-full rounded-bl-2xl"
+                  style={{ backgroundColor: project.accent || azureBlue }}
+                ></div>
+
+                {/* Corner Accent */}
+                <div
+                  className="absolute top-0 right-0 w-24 h-24 opacity-10 transition-all duration-500 group-hover:opacity-20 group-hover:scale-110 rounded-tr-2xl"
+                  style={{
+                    background: `radial-gradient(circle at top right, ${project.accent || azureBlue}, transparent 70%)`
+                  }}
                 ></div>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* CTA */}
+        {/* Bottom CTA */}
         <div className="text-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-3 px-12 py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold text-sm tracking-wider uppercase transition-all duration-300 hover:bg-azure-blue hover:text-white hover:shadow-2xl hover:shadow-azure-blue/30 hover:-translate-y-1 group"
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 px-10 py-4 border border-brand-black bg-white text-brand-black text-sm font-semibold rounded-full hover:bg-brand-black hover:text-white transition-all group"
           >
-            View All Projects
+            <span>View all projects</span>
             <Icon
               icon="fluent:arrow-right-24-filled"
-              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2"
+              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
             />
-          </a>
+          </Link>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes cardPop {
-          0% {
-            opacity: 0;
-            transform: scale(0.9) translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 };
