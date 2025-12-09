@@ -20,6 +20,10 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "Global Soft Vietnam",
   description: "Software solutions for your business",
+  icons: {
+    icon: '/gsvfavicon.png',
+    apple: '/gsvfavicon.png', // Also good for mobile
+  },
 };
 
 export default function RootLayout({ children }) {
