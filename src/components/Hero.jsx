@@ -4,12 +4,12 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative flex items-start justify-center overflow-hidden  pt-20 pb-40">
+    <section className="relative flex items-start justify-center overflow-hidden bg-white pt-20 pb-40">
       {/* Decorative flowing waves - Enhanced Azure Blue Theme */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Background Pattern */}
         <div 
-          className="absolute top-0 right-0 opacity-60 w-full h-full"
+          className="absolute top-0 right-0 opacity-20 w-full h-full"
           style={{
             backgroundImage: `url('/101.jpg')`,
             backgroundRepeat: 'no-repeat',
