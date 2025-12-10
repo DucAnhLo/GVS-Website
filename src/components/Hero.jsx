@@ -9,9 +9,9 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Background Pattern */}
         <div 
-          className="absolute top-0 right-0 opacity-20 w-full h-full"
+          className="absolute top-0 right-0 opacity-40 w-full h-full"
           style={{
-            backgroundImage: `url('/101.jpg')`,
+            backgroundImage: `url('/blue_waves.jpg')`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover'
