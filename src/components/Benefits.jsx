@@ -58,7 +58,7 @@ const Benefits = () => {
       gradient: 'from-azure-blue/20 to-cyan-500/10',
     },
     {
-      stat: '24/7',
+      stat: 'Reliable',
       title: 'Dedicated support',
       description: 'Committed team focused on your success with responsive communication',
       image: '/benefits/629.jpg',

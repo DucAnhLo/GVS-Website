@@ -1,6 +1,6 @@
-'use client'
-import Link from 'next/link';
-import React from 'react';
+"use client";
+import Link from "next/link";
+import React from "react";
 
 const Hero = () => {
   return (
@@ -8,13 +8,13 @@ const Hero = () => {
       {/* Decorative flowing waves - Enhanced Azure Blue Theme */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Background Pattern */}
-        <div 
+        <div
           className="absolute top-0 right-0 opacity-40 w-full h-full"
           style={{
             backgroundImage: `url('/blue_waves.jpg')`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
           }}
         ></div>
 
@@ -68,15 +68,59 @@ const Hero = () => {
           {/* Main Content */}
           <div className="space-y-8 max-w-4xl">
             {/* Headline */}
-            <h1 className="text-[50px] font-normal text-brand-black">
-              We build digital solutions.
+            <h1 className="text-[50px] font-normal text-brand-black leading-tight">
+              We build{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10 font-bold bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                  digital solutions
+                </span>
+                {/* Decorative underline */}
+                <svg
+                  className="absolute -bottom-2 left-0 w-full"
+                  viewBox="0 0 300 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 8C50 4 100 2 150 4C200 6 250 8 298 6"
+                    stroke="url(#gradient)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="gradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stopColor="#2563eb" />
+                      <stop offset="50%" stopColor="#06b6d4" />
+                      <stop offset="100%" stopColor="#2563eb" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
               <br />
-              <span className="text-[50px] font-bold">Tailored for you.</span>
+              <span className="relative inline-block">
+                <span className="text-[50px] font-bold">
+                  created just for you
+                </span>
+              </span>
             </h1>
 
             {/* Description */}
             <p className="text-[18px] text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Empowering small businesses through <span className="font-semibold text-brand-black">tailored websites, custom web applications,</span> and <span className="font-semibold text-brand-black">integrated systems</span> that drive digital transformation.
+              Empowering small businesses through{" "}
+              <span className="font-semibold text-brand-black">
+                tailored websites, custom web applications,
+              </span>{" "}
+              and{" "}
+              <span className="font-semibold text-brand-black">
+                integrated systems
+              </span>{" "}
+              that drive digital transformation.
             </p>
 
             {/* CTAs */}
