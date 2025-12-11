@@ -84,7 +84,7 @@ export default function WebDevelopmentService() {
           }}></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-32 w-full">
+        <div className="relative max-w-7xl mx-auto px-6 py-20 w-full">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-8">
@@ -111,7 +111,7 @@ export default function WebDevelopmentService() {
                 </div>
 
                 <h1
-                  className="text-7xl lg:text-8xl font-semibold leading-none"
+                  className="text-4xl lg:text-[40px] font-semibold leading-none"
                   style={{
                     fontFamily: '"Space Grotesk", system-ui, -apple-system, sans-serif',
                     animation: 'fadeInLeft 0.8s ease-out 0.2s both',
@@ -127,7 +127,7 @@ export default function WebDevelopmentService() {
               </div>
 
               <p
-                className="text-xl text-gray-600 max-w-xl leading-relaxed"
+                className="text-base text-gray-600 max-w-xl leading-relaxed"
                 style={{
                   animation: 'fadeInLeft 0.8s ease-out 0.3s both',
                   fontFamily: '"Inter", system-ui, sans-serif'
@@ -144,7 +144,7 @@ export default function WebDevelopmentService() {
               >
                 <Link
                   href="/contact"
-                  className="group relative px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold text-sm tracking-wider overflow-hidden"
+                  className="group relative px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold text-sm tracking-wider overflow-hidden rounded-full"
                 >
                   <span className="relative z-10">START A PROJECT</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -152,7 +152,7 @@ export default function WebDevelopmentService() {
 
                 <Link
                   href="/contact"
-                  className="group px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300"
+                  className="group px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300 rounded-full"
                 >
                   GET A QUOTE
                 </Link>
@@ -220,14 +220,14 @@ export default function WebDevelopmentService() {
       </section>
 
       {/* Features Section - Magazine Layout */}
-      <section className="relative py-32 px-6 bg-gray-50">
+      <section className="relative py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-16">
             {/* Large Title */}
             <div className="lg:col-span-5">
               <div className="sticky top-32">
                 <div className="text-sm font-semibold tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
-                <h2 className="text-6xl lg:text-7xl font-semibold leading-none mb-8" style={{
+                <h2 className="text-3xl lg:text-[36px] font-semibold leading-none mb-6" style={{
                   fontFamily: '"Space Grotesk", system-ui, sans-serif',
                   letterSpacing: '-0.03em'
                 }}>
@@ -236,7 +236,7 @@ export default function WebDevelopmentService() {
                     MATTER
                   </span>
                 </h2>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-base text-gray-600 leading-relaxed">
                   Every feature is crafted with precision, tested rigorously, and optimized for real-world performance.
                 </p>
               </div>
@@ -247,7 +247,7 @@ export default function WebDevelopmentService() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group relative p-8 bg-white border-l-8 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-2xl"
+                  className="group relative p-6 bg-white border-l-4 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-2xl rounded-r-2xl"
                   style={{
                     borderColor: feature.accent,
                     animation: `fadeInUp 0.6s ease-out ${0.1 * index}s both`
@@ -255,16 +255,16 @@ export default function WebDevelopmentService() {
                 >
                   <div className="flex items-start gap-6">
                     <div
-                      className="flex-shrink-0 w-16 h-16 flex items-center justify-center"
+                      className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg"
                       style={{ backgroundColor: feature.accent }}
                     >
-                      <Icon icon={feature.icon} className="w-8 h-8 text-white" />
+                      <Icon icon={feature.icon} className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-3xl font-semibold mb-3 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                      <h3 className="text-xl font-semibold mb-2 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 text-lg leading-relaxed">
+                      <p className="text-gray-600 text-base leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
@@ -283,13 +283,13 @@ export default function WebDevelopmentService() {
       </section>
 
       {/* Tech Stack - Brutalist Grid */}
-      <section className="relative py-32 px-6 bg-white">
+      <section className="relative py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
             <div className="inline-block px-6 py-3 border-2 border-cyan-600 text-cyan-600 font-semibold text-sm tracking-widest mb-6">
               TECHNOLOGY STACK
             </div>
-            <h2 className="text-6xl lg:text-7xl font-semibold" style={{
+            <h2 className="text-3xl lg:text-[36px] font-semibold" style={{
               fontFamily: '"Space Grotesk", system-ui, sans-serif',
               letterSpacing: '-0.03em'
             }}>
@@ -311,7 +311,7 @@ export default function WebDevelopmentService() {
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
                   <Icon
                     icon={tech.icon}
-                    className="w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110"
+                    className="w-16 h-16 mb-3 transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors">
                     {tech.name}
@@ -330,22 +330,22 @@ export default function WebDevelopmentService() {
       </section>
 
       {/* Process Section - Timeline (KEEP DARK) */}
-      <section className="relative py-32 px-6 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+      <section className="relative py-20 px-6 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-6xl lg:text-7xl font-semibold mb-6" style={{
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-[36px] font-semibold mb-4" style={{
               fontFamily: '"Space Grotesk", system-ui, sans-serif',
               letterSpacing: '-0.03em'
             }}>
               OUR PROCESS
             </h2>
-            <p className="text-xl text-gray-400">
+            <p className="text-base text-gray-400">
               From concept to launch, we've got you covered
             </p>
           </div>
 
           {/* Timeline */}
-          <div className="space-y-24">
+          <div className="space-y-16">
             {[
               { step: '01', title: 'DISCOVERY', desc: 'Deep dive into your vision, goals, and requirements', icon: 'carbon:search' },
               { step: '02', title: 'DESIGN', desc: 'Craft beautiful, intuitive interfaces that users love', icon: 'carbon:paint-brush' },
@@ -358,22 +358,22 @@ export default function WebDevelopmentService() {
                 style={{ animation: `fadeInUp 0.8s ease-out ${0.2 * index}s both` }}
               >
                 <div className={`md:col-span-3 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
-                  <div className="text-8xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-purple-600">
+                  <div className="text-6xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-purple-600">
                     {phase.step}
                   </div>
                 </div>
 
                 <div className={`md:col-span-2 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex justify-center`}>
-                  <div className="w-24 h-24 border-4 border-cyan-400 flex items-center justify-center">
-                    <Icon icon={phase.icon} className="w-12 h-12 text-cyan-400" />
+                  <div className="w-20 h-20 border-4 border-cyan-400 flex items-center justify-center rounded-lg">
+                    <Icon icon={phase.icon} className="w-10 h-10 text-cyan-400" />
                   </div>
                 </div>
 
                 <div className={`md:col-span-7 ${index % 2 === 0 ? 'md:order-3' : 'md:order-3'}`}>
-                  <h3 className="text-4xl font-semibold mb-3" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                  <h3 className="text-2xl font-semibold mb-2" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
                     {phase.title}
                   </h3>
-                  <p className="text-xl text-gray-400 leading-relaxed">
+                  <p className="text-base text-gray-400 leading-relaxed">
                     {phase.desc}
                   </p>
                 </div>
@@ -384,28 +384,28 @@ export default function WebDevelopmentService() {
       </section>
 
       {/* CTA Section - Bold */}
-      <section className="relative py-32 px-6 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 text-white">
+      <section className="relative py-20 px-6 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-6xl lg:text-7xl font-semibold mb-8 leading-tight" style={{
+          <h2 className="text-3xl lg:text-[36px] font-semibold mb-6 leading-tight" style={{
             fontFamily: '"Space Grotesk", system-ui, sans-serif',
             letterSpacing: '-0.03em'
           }}>
             LET'S BUILD
             <span className="block">SOMETHING EPIC</span>
           </h2>
-          <p className="text-2xl mb-12 text-white/90">
+          <p className="text-lg mb-10 text-white/90">
             Your vision. Our expertise. Unlimited possibilities.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link
               href="/contact"
-              className="group px-12 py-6 bg-black text-white font-semibold text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300"
+              className="group px-8 py-4 bg-black text-white font-semibold text-base tracking-wider hover:bg-white hover:text-black transition-all duration-300 rounded-full"
             >
               START NOW →
             </Link>
             <Link
               href="/#projects"
-              className="group px-12 py-6 border-4 border-black text-black font-semibold text-lg tracking-wider hover:bg-black hover:text-white transition-all duration-300"
+              className="group px-8 py-4 border-4 border-black text-black font-semibold text-base tracking-wider hover:bg-black hover:text-white transition-all duration-300 rounded-full"
             >
               VIEW WORK
             </Link>

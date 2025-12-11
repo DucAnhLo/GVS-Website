@@ -74,7 +74,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section className="relative py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* Background Elements */}
       <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-azure-blue/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-[600px] h-[600px] bg-azure-green/5 rounded-full blur-3xl"></div>
@@ -83,7 +83,7 @@ const Benefits = () => {
         {/* Header - Minimalist Style */}
         <div 
           ref={headerRef}
-          className={`mb-16 transition-all duration-700 ${
+          className={`mb-8 transition-all duration-700 ${
             isHeaderVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-12'

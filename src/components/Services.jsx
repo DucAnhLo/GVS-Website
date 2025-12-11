@@ -137,7 +137,7 @@ const Services = () => {
 
 
   return (
-    <section className="relative py-32  dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
+    <section className="relative py-20  dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
       {/* Background Elements - Light Theme */}
       {/* <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-azure-blue/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-[600px] h-[600px] bg-azure-green/5 rounded-full blur-3xl"></div>
@@ -147,7 +147,7 @@ const Services = () => {
         {/* Section Header - Minimalist Style */}
         <div 
           ref={headerRef}
-          className={`mb-24 transition-all duration-700 ${
+          className={`mb-12 transition-all duration-700 ${
             isHeaderVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-12'
@@ -229,7 +229,7 @@ const Services = () => {
         {/* Clients Section */}
         <div 
           ref={clientsRef}
-          className={`mt-40 transition-all duration-700 ${
+          className={`mt-20 transition-all duration-700 ${
             isClientsVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-12'
@@ -285,7 +285,7 @@ const Services = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-10">
           <Link
             href="/services"
             className="inline-flex items-center gap-2 px-10 py-4 border border-brand-black bg-white text-brand-black text-sm font-semibold rounded-full hover:bg-brand-black hover:text-white transition-all group"

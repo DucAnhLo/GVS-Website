@@ -11,10 +11,10 @@ const About = () => {
           {/* Left - Black Section */}
           <div className="bg-gray-900 text-white p-12 lg:p-20 flex flex-col justify-center">
             <div className="space-y-6">
-              <div className="inline-block px-4 py-2 bg-white/10 text-sm font-medium uppercase tracking-widest">
+              <div className="inline-block px-4 py-2 bg-white/10 text-sm font-medium uppercase tracking-widest rounded-full">
                 About Us
               </div>
-              <h1 className="text-5xl lg:text-7xl font-semibold leading-tight">
+              <h1 className="text-4xl lg:text-[48px] font-semibold leading-tight">
                 We Turn
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                   Data Into
@@ -29,7 +29,7 @@ const About = () => {
 
           {/* Right - White Section with Focus Areas */}
           <div className="bg-white p-12 lg:p-20 flex flex-col justify-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 text-9xl font-semibold text-gray-50 leading-none select-none">
+            <div className="absolute top-0 right-0 text-[50px] font-semibold text-gray-50 leading-none select-none">
               GVS
             </div>
             <div className="relative z-10 space-y-8">
@@ -41,15 +41,15 @@ const About = () => {
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-1 bg-blue-500"></div>
+                  <div className="w-16 h-1 bg-blue-500 rounded-full"></div>
                   <span className="text-gray-700 font-medium">Educational Platforms</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-24 h-1 bg-purple-500"></div>
+                  <div className="w-24 h-1 bg-purple-500 rounded-full"></div>
                   <span className="text-gray-700 font-medium">Small Business Sites</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-20 h-1 bg-green-500"></div>
+                  <div className="w-20 h-1 bg-green-500 rounded-full"></div>
                   <span className="text-gray-700 font-medium">Excel → Web Migration</span>
                 </div>
               </div>
@@ -64,7 +64,7 @@ const About = () => {
               <h2 className="text-5xl font-semibold text-gray-900 mb-8 leading-tight">
                 Our Story
               </h2>
-              <div className="w-20 h-1 bg-blue-500 mb-8"></div>
+              <div className="w-20 h-1 bg-blue-500 mb-8 rounded-full"></div>
               <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
                 <p>
                   We're a newly established tech team in Vietnam with a clear vision: helping small businesses escape the limitations of Excel spreadsheets.
@@ -82,7 +82,7 @@ const About = () => {
               <div className="relative">
                 {/* Large decorative element */}
                 <div className="absolute -top-8 -right-8 w-64 h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-50"></div>
-                <div className="relative bg-gray-50 p-12 border-l-8 border-blue-500">
+                <div className="relative bg-gray-50 p-12 border-l-8 border-blue-500 rounded-r-3xl rounded-bl-3xl">
                   <div className="space-y-8">
                     <div>
                       <div className="text-sm font-medium text-blue-600 uppercase tracking-widest mb-2">Our Mission</div>
@@ -156,7 +156,7 @@ const About = () => {
                 features: ['Modern Design', 'Mobile First', 'SEO Ready', 'Easy Updates']
               }
             ].map((service, index) => (
-              <div key={index} className="group bg-white p-8 hover:shadow-2xl transition-all duration-300 border-t-4 border-transparent hover:border-gray-900">
+              <div key={index} className="group bg-white p-8 hover:shadow-2xl transition-all duration-300 border-t-4 border-transparent hover:border-gray-900 rounded-2xl">
                 <div className="space-y-6">
                   <div className="flex items-start justify-between">
                     <div className={`text-6xl font-semibold ${service.numberColor}`}>{service.number}</div>
@@ -169,7 +169,7 @@ const About = () => {
                   <div className="space-y-2">
                     {service.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
-                        <div className={`w-1.5 h-1.5 ${service.dotColor}`}></div>
+                        <div className={`w-1.5 h-1.5 ${service.dotColor} rounded-full`}></div>
                         {feature}
                       </div>
                     ))}
@@ -220,7 +220,7 @@ const About = () => {
                   iconColor: 'text-orange-500'
                 }
               ].map((item, index) => (
-                <div key={index} className="text-center p-6 bg-gray-50 hover:bg-gray-100 transition-colors">
+                <div key={index} className="text-center p-6 bg-gray-50 hover:bg-gray-100 transition-colors rounded-2xl">
                   <Icon icon={item.icon} className={`w-12 h-12 ${item.iconColor} mx-auto mb-4`} />
                   <h3 className="text-lg font-medium text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600">{item.description}</p>
@@ -310,7 +310,7 @@ const About = () => {
                   { icon: 'fluent:design-ideas-24-filled', label: 'Modern', iconColor: 'text-purple-500' },
                   { icon: 'fluent:shield-24-filled', label: 'Secure', iconColor: 'text-green-500' }
                 ].map((item, index) => (
-                  <div key={index} className="p-4 bg-gray-50 hover:bg-gray-100 transition-colors">
+                  <div key={index} className="p-4 bg-gray-50 hover:bg-gray-100 transition-colors rounded-xl">
                     <Icon icon={item.icon} className={`w-8 h-8 ${item.iconColor} mx-auto mb-2`} />
                     <div className="text-xs font-medium text-gray-900">{item.label}</div>
                   </div>
@@ -330,7 +330,7 @@ const About = () => {
         {/* CTA - Full Width */}
         <div className="bg-white px-6 py-24">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-[48px] font-semibold text-gray-900 mb-6 leading-tight">
               Ready to Go Digital?
             </h2>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -339,17 +339,17 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-12 py-5 bg-gray-900 text-white font-medium text-sm tracking-wider uppercase hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-3"
+                className="px-10 py-4 bg-brand-black text-white text-sm font-semibold rounded-full hover:bg-brand-black/90 transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2 group"
               >
                 Start Your Project
-                <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5" />
+                <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
                 href="#"
-                className="px-12 py-5 border-2 border-gray-900 text-gray-900 font-medium text-sm tracking-wider uppercase hover:bg-gray-50 transition-colors inline-flex items-center justify-center gap-3"
+                className="px-10 py-4 border border-brand-black text-brand-black text-sm font-semibold rounded-full hover:bg-brand-black hover:text-white transition-all inline-flex items-center justify-center gap-2 group"
               >
                 View Our Work
-                <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5" />
+                <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>

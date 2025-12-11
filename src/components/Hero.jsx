@@ -4,7 +4,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative flex items-start justify-center overflow-hidden bg-white pt-20 pb-40">
+    <section className="relative flex items-start justify-center overflow-hidden bg-white pt-20 pb-20">
       {/* Decorative flowing waves - Enhanced Azure Blue Theme */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Background Pattern */}
@@ -63,7 +63,7 @@ const Hero = () => {
         </svg> */}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
         <div className="flex flex-col items-center text-center">
           {/* Main Content */}
           <div className="space-y-8 max-w-4xl">

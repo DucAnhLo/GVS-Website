@@ -54,7 +54,7 @@ const Projects = () => {
   const azureBlue = '#0078D4';
 
   return (
-    <section className="relative py-32 dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
+    <section className="relative py-20 dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
       <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-azure-blue/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-[600px] h-[600px] bg-azure-green/5 rounded-full blur-3xl"></div>
@@ -63,7 +63,7 @@ const Projects = () => {
         {/* Header - Minimalist Style */}
         <div 
           ref={headerRef}
-          className={`mb-24 transition-all duration-700 ${
+          className={`mb-12 transition-all duration-700 ${
             isHeaderVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-12'
@@ -79,7 +79,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-8">
           {projects.map((project, index) => (
             <Link
               key={index}
