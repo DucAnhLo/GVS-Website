@@ -1,73 +1,9 @@
 'use client'
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
 const Services = () => {
-  const [visibleCards, setVisibleCards] = useState(new Set());
-  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
-  const [isClientsVisible, setIsClientsVisible] = useState(false);
-  const cardRefs = useRef([]);
-  const headerRef = useRef(null);
-  const clientsRef = useRef(null);
-
-  useEffect(() => {
-    // Observer for header
-    const headerObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsHeaderVisible(true);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    if (headerRef.current) {
-      headerObserver.observe(headerRef.current);
-    }
-
-    // Observer for clients section
-    const clientsObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsClientsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    if (clientsRef.current) {
-      clientsObserver.observe(clientsRef.current);
-    }
-
-    // Observers for cards
-    const cardObservers = cardRefs.current.map((ref, index) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setVisibleCards((prev) => new Set([...prev, index]));
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-      );
-
-      if (ref) observer.observe(ref);
-      return observer;
-    });
-
-    return () => {
-      headerObserver.disconnect();
-      clientsObserver.disconnect();
-      cardObservers.forEach((observer) => observer.disconnect());
-    };
-  }, []);
-
   // Client data - add logos later
   const clients = [
     { id: 1, name: 'Client 1', logo: '/clients/vnc.avif' },
@@ -145,14 +81,7 @@ const Services = () => {
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Section Header - Minimalist Style */}
-        <div 
-          ref={headerRef}
-          className={`mb-12 transition-all duration-700 ${
-            isHeaderVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-12'
-          }`}
-        >
+        <div className="mb-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
             <div>
               <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
@@ -207,12 +136,7 @@ const Services = () => {
             return (
               <div
                 key={index}
-                ref={(el) => (cardRefs.current[index] = el)}
-                className={`group transition-all duration-700 ${
-                  visibleCards.has(index)
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-12'
-                }`}
+                className="group"
               >
                 {service.slug ? (
                   <Link href={`/services/${service.slug}`} className="block">
@@ -227,14 +151,7 @@ const Services = () => {
         </div>
 
         {/* Clients Section */}
-        <div 
-          ref={clientsRef}
-          className={`mt-20 transition-all duration-700 ${
-            isClientsVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-12'
-          }`}
-        >
+        <div className="mt-20">
           {/* Header */}
           <div className="mb-16">
             <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">

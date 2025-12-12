@@ -1,142 +1,192 @@
 "use client";
 import Link from "next/link";
 import React from "react";
+import { Icon } from "@iconify/react";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-start justify-center overflow-hidden bg-white pt-20 pb-20">
-      {/* Decorative flowing waves - Enhanced Azure Blue Theme */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#0078D4] via-[#0078D4] to-[#005A9E]">
+      {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Background Pattern */}
-        <div
-          className="absolute top-0 right-0 opacity-40 w-full h-full"
-          style={{
-            backgroundImage: `url('/blue_waves.jpg')`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        ></div>
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
 
-        {/* Large Azure Blue gradient blob */}
-        {/* <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-azure-blue/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div> */}
+        {/* Floating Shapes */}
+        <div className="absolute top-20 right-[10%] w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 left-[15%] w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
 
-        {/* Azure Blue flowing lines (left side) */}
-        {/* <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="azureGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{stopColor: '#0EA5E9', stopOpacity: 0.6}} />
-              <stop offset="100%" style={{stopColor: '#0EA5E9', stopOpacity: 0}} />
-            </linearGradient>
-          </defs>
-          {[...Array(10)].map((_, i) => (
-            <path
-              key={`azure-1-${i}`}
-              d={`M ${-300 + i * 80} ${200 + i * 60} Q ${500 + i * 120} ${400 + i * 70}, ${1200 + i * 150} ${700 + i * 80}`}
-              stroke="url(#azureGradient1)"
-              strokeWidth="3"
-              fill="none"
-              opacity={0.8 - i * 0.07}
-            />
-          ))}
-        </svg> */}
-
-        {/* Cyan flowing lines (right side) */}
-        {/* <svg className="absolute top-0 right-0 w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="cyanGradient" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style={{stopColor: '#06B6D4', stopOpacity: 0.5}} />
-              <stop offset="100%" style={{stopColor: '#06B6D4', stopOpacity: 0}} />
-            </linearGradient>
-          </defs>
-          {[...Array(10)].map((_, i) => (
-            <path
-              key={`cyan-${i}`}
-              d={`M ${2220 - i * 80} ${150 + i * 55} Q ${1620 - i * 120} ${350 + i * 75}, ${920 - i * 150} ${750 + i * 85}`}
-              stroke="url(#cyanGradient)"
-              strokeWidth="3"
-              fill="none"
-              opacity={0.75 - i * 0.07}
-            />
-          ))}
-        </svg> */}
+        {/* Accent Lines */}
+        <div className="absolute top-40 right-0 w-1/3 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="absolute bottom-40 left-0 w-1/2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
-        <div className="flex flex-col items-center text-center">
-          {/* Main Content */}
-          <div className="space-y-8 max-w-4xl">
-            {/* Headline */}
-            <h1 className="text-[50px] font-normal text-brand-black leading-tight">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-32 lg:pb-48">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="max-w-2xl">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-white/90 text-sm font-medium">
+                Available for new projects
+              </span>
+            </div>
+
+            {/* Headline with Creative Typography */}
+            <h1
+              className="text-4xl lg:text-5xl font-bold text-white leading-[1.1] mb-6"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.125rem)" }}
+            >
               We build{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 font-bold bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                <span className="relative z-10 bg-gradient-to-r from-cyan-300 via-white to-cyan-300 bg-clip-text text-transparent">
                   digital solutions
                 </span>
                 {/* Decorative underline */}
                 <svg
-                  className="absolute -bottom-2 left-0 w-full"
+                  className="absolute -bottom-2 left-0 w-full h-3"
                   viewBox="0 0 300 12"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
                 >
                   <path
-                    d="M2 8C50 4 100 2 150 4C200 6 250 8 298 6"
-                    stroke="url(#gradient)"
-                    strokeWidth="3"
-                    strokeLinecap="round"
+                    d="M2 6 Q 75 2, 150 6 T 298 6"
+                    stroke="rgba(255,255,255,0.3)"
+                    strokeWidth="2"
+                    fill="none"
                   />
-                  <defs>
-                    <linearGradient
-                      id="gradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="0%"
-                    >
-                      <stop offset="0%" stopColor="#2563eb" />
-                      <stop offset="50%" stopColor="#06b6d4" />
-                      <stop offset="100%" stopColor="#2563eb" />
-                    </linearGradient>
-                  </defs>
                 </svg>
               </span>
               <br />
-              <span className="relative inline-block">
-                <span className="text-[50px] font-bold">
-                  created just for you
-                </span>
-              </span>
+              created just for you.
             </h1>
 
-            {/* Description */}
-            <p className="text-[18px] text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Empowering small businesses through{" "}
-              <span className="font-semibold text-brand-black">
-                tailored websites, custom web applications,
-              </span>{" "}
-              and{" "}
-              <span className="font-semibold text-brand-black">
-                integrated systems
-              </span>{" "}
-              that drive digital transformation.
-            </p>
+            {/* Description with Icon */}
+            <div className="flex gap-4 mb-8">
+              <div className="flex-shrink-0 w-1 bg-gradient-to-b from-cyan-400 to-transparent rounded-full"></div>
+              <p className="text-lg text-white/90 leading-relaxed max-w-xl">
+                Empowering small businesses through tailored websites, custom
+                web applications, and integrated systems that drive digital
+                transformation.
+              </p>
+            </div>
 
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <a
+            {/* Features Grid */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="flex items-start gap-3">
+                <Icon
+                  icon="lucide:check-circle"
+                  className="w-5 h-5 text-cyan-300 flex-shrink-0 mt-0.5"
+                />
+                <div>
+                  <div className="text-sm font-semibold text-white">
+                    Custom Development
+                  </div>
+                  <div className="text-xs text-white/70">
+                    Tailored to your needs
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon
+                  icon="lucide:zap"
+                  className="w-5 h-5 text-cyan-300 flex-shrink-0 mt-0.5"
+                />
+                <div>
+                  <div className="text-sm font-semibold text-white">
+                    Fast Delivery
+                  </div>
+                  <div className="text-xs text-white/70">
+                    Quick turnaround time
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon
+                  icon="lucide:shield-check"
+                  className="w-5 h-5 text-cyan-300 flex-shrink-0 mt-0.5"
+                />
+                <div>
+                  <div className="text-sm font-semibold text-white">
+                    Quality Assured
+                  </div>
+                  <div className="text-xs text-white/70">Tested & reliable</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon
+                  icon="lucide:headset"
+                  className="w-5 h-5 text-cyan-300 flex-shrink-0 mt-0.5"
+                />
+                <div>
+                  <div className="text-sm font-semibold text-white">
+                    Ongoing Support
+                  </div>
+                  <div className="text-xs text-white/70">
+                    We're here to help
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 items-center">
+              <Link
                 href="/contact"
-                className="px-10 py-4 bg-brand-black text-white text-sm font-semibold rounded-full hover:bg-brand-black/90 transition-all shadow-lg hover:shadow-xl"
+                className="group relative px-8 py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all"
               >
-                Contact sales
-              </a>
+                <span className="relative z-10 flex items-center gap-2">
+                  Contact sales
+                  <Icon
+                    icon="lucide:arrow-right"
+                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </Link>
               <Link
                 href="/projects"
-                className="px-10 py-4 border border-brand-black bg-white text-brand-black text-sm font-semibold rounded-full hover:bg-brand-black hover:text-white transition-all"
+                className="group px-8 py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center gap-2"
               >
-                Get started
+                View our work
+                <Icon
+                  icon="lucide:external-link"
+                  className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
               </Link>
+            </div>
+          </div>
+
+          {/* Right Image with Frame */}
+          <div className="relative hidden lg:block">
+            <div className="relative">
+              {/* Decorative Frame */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-white/20 to-cyan-400/20 rounded-2xl blur-xl"></div>
+
+              {/* Image Container */}
+              <div className="relative w-[680px] h-[500px] rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+                <img
+                  src="/hero-2.jpg"
+                  alt="Digital solutions"
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#0078D4]/20 to-transparent"></div>
+              </div>
+
+              {/* Floating Card */}
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-4 flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#0078D4] to-cyan-400 rounded-lg flex items-center justify-center">
+                  <Icon icon="lucide:check" className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-gray-900">
+                    Quality Assured
+                  </div>
+                  <div className="text-xs text-gray-600">100% Satisfaction</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

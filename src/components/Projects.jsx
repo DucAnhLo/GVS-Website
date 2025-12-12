@@ -1,55 +1,10 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { projectsData } from "@/data/projects";
 
 const Projects = () => {
-  const [visibleCards, setVisibleCards] = useState(new Set());
-  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
-  const cardRefs = useRef([]);
-  const headerRef = useRef(null);
-
-  useEffect(() => {
-    // Observer for header
-    const headerObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsHeaderVisible(true);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    if (headerRef.current) {
-      headerObserver.observe(headerRef.current);
-    }
-
-    // Observers for cards
-    const cardObservers = cardRefs.current.map((ref, index) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setVisibleCards((prev) => new Set([...prev, index]));
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-      );
-
-      if (ref) observer.observe(ref);
-      return observer;
-    });
-
-    return () => {
-      headerObserver.disconnect();
-      cardObservers.forEach((observer) => observer.disconnect());
-    };
-  }, []);
-
   const projects = projectsData;
   const azureBlue = '#0078D4';
 
@@ -61,14 +16,7 @@ const Projects = () => {
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Header - Minimalist Style */}
-        <div 
-          ref={headerRef}
-          className={`mb-12 transition-all duration-700 ${
-            isHeaderVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-12'
-          }`}
-        >
+        <div className="mb-12">
           <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
             <span className="font-normal">Featured</span>{' '}
             <span className="font-bold">projects</span>
@@ -84,12 +32,7 @@ const Projects = () => {
             <Link
               key={index}
               href={project.slug ? `/projects/${project.slug}` : "#"}
-              ref={(el) => (cardRefs.current[index] = el)}
-              className={`group transition-all duration-700 ${
-                visibleCards.has(index)
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-12'
-              }`}
+              className="group"
             >
               {/* Card Container */}
               <div className="relative h-full bg-white dark:bg-white/5 border-2 border-gray-200/50 dark:border-white/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-transparent hover:shadow-2xl hover:shadow-azure-blue/20 hover:-translate-y-2">
