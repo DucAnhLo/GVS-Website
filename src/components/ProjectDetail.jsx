@@ -8,6 +8,7 @@ const ProjectDetail = ({ project }) => {
     title,
     description,
     image,
+    images,
     category,
     tech,
     accent,
@@ -141,6 +142,29 @@ const ProjectDetail = ({ project }) => {
             ))}
           </div>
         </section>
+
+        {/* Project Gallery - 2 Column Grid */}
+        {images && images.length > 0 && (
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Project Gallery
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {images.map((img, index) => (
+                <div
+                  key={index}
+                  className="overflow-hidden rounded-xl bg-white aspect-video"
+                >
+                  <img
+                    src={img}
+                    alt={`${title} - Screenshot ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
       </div>
 

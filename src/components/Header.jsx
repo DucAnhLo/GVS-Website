@@ -40,13 +40,13 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo with subtle animation */}
-          <div className="flex-shrink-0 relative group">
+          <div className="flex-shrink-0 relative group ml-2 md:ml-0">
             <Link href="/" className="flex items-center">
               <img
                 src='/gsvlogo1.png'
                 alt="GSV Logo"
                 className="h-28 w-auto relative z-10 transition-transform duration-300 group-hover:scale-105"
-                style={{marginTop: '-8px', marginBottom: '-8px'}}
+                style={{marginTop: '-8px', marginBottom: '-8px', marginLeft: '-40px', marginRight: '-10px'}}
               />
             </Link>
           </div>

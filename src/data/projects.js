@@ -5,6 +5,14 @@ export const projectsData = [
     description:
       "Transformed an outdated WordPress website into a powerful, custom-built school discovery platform with a modern database system, helping international families find and compare 500+ schools worldwide.",
     image: "/clients/AIG/1.png",
+    images: [
+      "/clients/AIG/1.png",
+      "/clients/AIG/2.png",
+      "/clients/AIG/3.png",
+      "/clients/AIG/4.png",
+      "/clients/AIG/5.png",
+      "/clients/AIG/6.png",
+    ],
     liveUrl: "https://aigeducation.vn/",
     category: "Education Platform",
     tech: [
@@ -45,6 +53,14 @@ export const projectsData = [
     description:
       "Built a comprehensive event management and career platform for a non-profit organization empowering Vietnamese students through competitive learning events, networking opportunities, and seamless integration with a custom data management system.",
     image: "/clients/TPD/TPD1.PNG",
+    images: [
+      "/clients/TPD/TPD1.PNG",
+      "/clients/TPD/TPD2.PNG",
+      "/clients/TPD/TPD3.PNG",
+      "/clients/TPD/TPD4.PNG",
+      "/clients/TPD/TPD5.PNG",
+      "/clients/TPD/TPD6.PNG",
+    ],
     liveUrl: "https://theprojectdarts.pages.dev/",
     category: "Non-Profit & Education",
     tech: [
@@ -82,11 +98,65 @@ export const projectsData = [
   },
 
   {
+    slug: "tpd-mentors-portal",
+    title: "The Project Darts - Mentors Portal",
+    description:
+      "Revolutionized mentor management by transforming manual Excel spreadsheets and Google Forms into a comprehensive data management platform with intelligent mentor matching, event creation, and automated catch-up tracking.",
+    image: "/clients/TPD/portal.png",
+    images: [
+      "/clients/TPD/portal.png",
+      "/clients/TPD/portal2.png",
+    ],
+    liveUrl: "https://tpd-portal.pages.dev",
+    category: "Data Management & Platform",
+    tech: [
+      "Next.js",
+      "React",
+      "Authentication",
+      "Database Management",
+      "Autonomous Matching",
+      "Event Automation",
+    ],
+    color: "crimson-red",
+    accent: "#c60000",
+    gradient: "from-red-600 to-red-700",
+    year: "2025",
+    caseStudy: {
+      client: "The Project Darts",
+      duration: "4 months",
+      challenge:
+        "The Project Darts was managing their growing mentor network using Excel spreadsheets and Google Forms, leading to data fragmentation, manual matching processes, and difficulty tracking mentor engagement. Event organizers spent hours manually reviewing mentor profiles to find the right fit for each event, and there was no centralized system to manage catch-ups or track mentor-student interactions over time.",
+      solution:
+        "We built a comprehensive data management portal that digitizes and centralizes all mentor information in a structured database. The platform features intelligent event management with automated mentor suggestions based on expertise, availability, and past performance. Implemented a catch-up tracking system that replaces scattered spreadsheets with organized, searchable records, and created an intuitive admin interface for seamless data management.",
+      features: [
+        "Centralized mentor database with detailed profiles",
+        "Intelligent mentor matching for events using algorithms",
+        "Event creation and management system",
+        "Automated mentor suggestions based on expertise",
+        "Catch-up session tracking and scheduling",
+        "Data migration from Excel and Google Forms",
+        "Secure authentication and role-based access",
+        "Real-time mentor availability tracking",
+        "Analytics dashboard for mentor engagement",
+        "Export and reporting capabilities",
+        "Search and filter functionality",
+        "Integration with main TPD platform",
+      ],
+    },
+  },
+
+  {
     slug: "vietnamese-connect-education",
     title: "Vietnamese Connect Education",
     description:
       "Transformed a limited Wix website into a modern, high-performance study abroad platform, empowering students to explore international education opportunities with a seamless, professional experience.",
-    image: "/clients/VNC/vncbanner.png",
+    image: "/clients/VNC/vnc1.png",
+    images: [
+      "/clients/VNC/vnc4.png",
+      "/clients/VNC/vnc2.png",
+      "/clients/VNC/vnc3.png",
+      "/clients/VNC/vnc1.png",
+    ],
     liveUrl: "https://education.vietnameseconnect.com/",
     category: "Education Platform",
     tech: ["React", "Vite", "Tailwind CSS", "Modern UI/UX"],
