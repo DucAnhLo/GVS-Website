@@ -1,13 +1,16 @@
-'use client'
-import React, { useState, useEffect } from 'react';
-import { Icon } from '@iconify/react';
-import MegaMenu from './MegaMenu';
-import Link from 'next/link';
+"use client";
+import React, { useState, useEffect } from "react";
+import { Icon } from "@iconify/react";
+import MegaMenu from "./MegaMenu";
+import Link from "next/link";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,35 +21,60 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const services = [
-    { title: 'Web Development', href: '/services/web-development' },
-    { title: 'CMS Solutions', href: '/services/cms-solutions' },
-    { title: 'CRM Systems', href: '/services/crm-systems' },
-    { title: 'UI/UX Design', href: '/services/ui-ux-design' },
-    { title: 'Digital Document Storage', href: '/services/digital-document-storage' },
-    { title: 'Digital Signature', href: '/services/digital-signature' },
+    {
+      title: t("services.items.webDevelopment.title"),
+      href: "/services/web-development",
+    },
+    {
+      title: t("services.items.cmsSolutions.title"),
+      href: "/services/cms-solutions",
+    },
+    {
+      title: t("services.items.crmSystems.title"),
+      href: "/services/crm-systems",
+    },
+    {
+      title: t("services.items.uiuxDesign.title"),
+      href: "/services/ui-ux-design",
+    },
+    {
+      title: t("services.items.digitalStorage.title"),
+      href: "/services/digital-document-storage",
+    },
+    {
+      title: t("services.items.digitalSignature.title"),
+      href: "/services/digital-signature",
+    },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
-      isScrolled
-        ? 'bg-white/98 backdrop-blur-md border-b border-gray-200 shadow-lg shadow-black/5'
-        : 'bg-white/80 backdrop-blur-sm border-b border-white/20'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/98 backdrop-blur-md border-b border-gray-200 shadow-lg shadow-black/5"
+          : "bg-white/80 backdrop-blur-sm border-b border-white/20"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo with subtle animation */}
           <div className="flex-shrink-0 relative group ml-2 md:ml-0">
             <Link href="/" className="flex items-center">
               <img
-                src='/gsvlogo1.png'
+                src="/gsvlogo1.png"
                 alt="GSV Logo"
                 className="h-28 w-auto relative z-10 transition-transform duration-300 group-hover:scale-105"
-                style={{marginTop: '-8px', marginBottom: '-8px', marginLeft: '-40px', marginRight: '-10px'}}
+                style={{
+                  marginTop: "-8px",
+                  marginBottom: "-8px",
+                  marginLeft: "-40px",
+                  marginRight: "-10px",
+                }}
               />
             </Link>
           </div>
@@ -57,15 +85,18 @@ const Header = () => {
               href="/"
               className="relative px-4 py-2 text-[15px] font-medium text-gray-700 hover:text-[#0078D4] transition-colors group"
             >
-              Home
+              {t("navigation.home")}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#0078D4] transition-all duration-300 group-hover:w-3/4"></span>
             </Link>
 
             {/* Mega Menu Trigger */}
             <div className="group h-full flex items-center">
               <button className="relative flex items-center gap-1.5 px-4 py-2 text-[15px] font-medium text-gray-700 hover:text-[#0078D4] transition-colors focus:outline-none group">
-                Services
-                <Icon icon="lucide:chevron-down" className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                {t("navigation.services")}
+                <Icon
+                  icon="lucide:chevron-down"
+                  className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                />
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#0078D4] transition-all duration-300 group-hover:w-3/4"></span>
               </button>
               <MegaMenu />
@@ -75,27 +106,31 @@ const Header = () => {
               href="/about"
               className="relative px-4 py-2 text-[15px] font-medium text-gray-700 hover:text-[#0078D4] transition-colors group"
             >
-              About
+              {t("navigation.about")}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#0078D4] transition-all duration-300 group-hover:w-3/4"></span>
             </a>
             <a
               href="/contact"
               className="relative px-4 py-2 text-[15px] font-medium text-gray-700 hover:text-[#0078D4] transition-colors group"
             >
-              Contact
+              {t("navigation.contact")}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#0078D4] transition-all duration-300 group-hover:w-3/4"></span>
             </a>
           </nav>
 
-          {/* CTA Button - Creative Design */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* CTA Button & Language Switcher */}
+          <div className="hidden md:flex items-center gap-4">
+            <LanguageSwitcher />
             <a
               href="/contact"
               className="relative px-6 py-2.5 bg-[#0078D4] text-white text-sm font-semibold rounded-lg overflow-hidden group transition-all hover:shadow-lg hover:shadow-[#0078D4]/30"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Get started
-                <Icon icon="lucide:arrow-right" className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                {t("services.getStarted")}
+                <Icon
+                  icon="lucide:arrow-right"
+                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#0078D4] to-[#00A4EF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
@@ -107,7 +142,11 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-gray-700 hover:text-[#0078D4] focus:outline-none transition-colors rounded-lg hover:bg-gray-100"
             >
-              {isMobileMenuOpen ? <Icon icon="lucide:x" className="w-6 h-6" /> : <Icon icon="lucide:menu" className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <Icon icon="lucide:x" className="w-6 h-6" />
+              ) : (
+                <Icon icon="lucide:menu" className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -121,7 +160,7 @@ const Header = () => {
               href="/"
               className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-[#0078D4] hover:bg-blue-50 rounded-lg transition-all"
             >
-              Home
+              {t("navigation.home")}
             </Link>
 
             {/* Services Dropdown */}
@@ -130,10 +169,12 @@ const Header = () => {
                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                 className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-700 hover:text-[#0078D4] hover:bg-blue-50 rounded-lg transition-all"
               >
-                Services
+                {t("navigation.services")}
                 <Icon
                   icon="lucide:chevron-down"
-                  className={`w-4 h-4 transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`}
+                  className={`w-4 h-4 transition-transform duration-300 ${
+                    isMobileServicesOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
               {isMobileServicesOpen && (
@@ -155,14 +196,19 @@ const Header = () => {
               href="/about"
               className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-[#0078D4] hover:bg-blue-50 rounded-lg transition-all"
             >
-              About
+              {t("navigation.about")}
             </a>
             <a
               href="/contact"
               className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-[#0078D4] hover:bg-blue-50 rounded-lg transition-all"
             >
-              Contact
+              {t("navigation.contact")}
             </a>
+
+            {/* Language Switcher - Mobile */}
+            <div className="px-4 py-3">
+              <LanguageSwitcher />
+            </div>
 
             {/* Mobile CTA */}
             <div className="pt-4">
@@ -170,7 +216,7 @@ const Header = () => {
                 href="/contact"
                 className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-[#0078D4] text-white font-semibold rounded-lg hover:bg-[#00A4EF] transition-all shadow-lg shadow-[#0078D4]/30"
               >
-                Get started
+                {t("services.getStarted")}
                 <Icon icon="lucide:arrow-right" className="w-4 h-4" />
               </a>
             </div>

@@ -3,10 +3,12 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { projectsData } from "@/data/projects";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Projects = () => {
   const projects = projectsData;
-  const azureBlue = '#0078D4';
+  const azureBlue = "#0078D4";
+  const { t } = useLanguage();
 
   return (
     <section className="relative py-20 dark:from-gray-900 dark:to-slate-900 overflow-hidden transition-colors duration-300">
@@ -18,11 +20,11 @@ const Projects = () => {
         {/* Header - Minimalist Style */}
         <div className="mb-12">
           <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
-            <span className="font-normal">Featured</span>{' '}
-            <span className="font-bold">projects</span>
+            <span className="font-normal">{t("projects.sectionTitle")}</span>{" "}
+            <span className="font-bold">{t("projects.sectionTitleBold")}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
-            Transforming ideas into powerful digital experiences that drive real results
+            {t("projects.description")}
           </p>
         </div>
 
@@ -36,7 +38,6 @@ const Projects = () => {
             >
               {/* Card Container */}
               <div className="relative h-full bg-white dark:bg-white/5 border-2 border-gray-200/50 dark:border-white/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-transparent hover:shadow-2xl hover:shadow-azure-blue/20 hover:-translate-y-2">
-                
                 {/* Project Banner Image */}
                 <div className="relative h-48 overflow-hidden">
                   {project.image ? (
@@ -46,14 +47,18 @@ const Projects = () => {
                       className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     />
                   ) : (
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient || 'from-azure-blue/20 to-azure-sky/10'} flex items-center justify-center`}>
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${
+                        project.gradient || "from-azure-blue/20 to-azure-sky/10"
+                      } flex items-center justify-center`}
+                    >
                       <Icon
                         icon="fluent-emoji:laptop"
                         className="w-24 h-24 opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
                       />
                     </div>
                   )}
-                  
+
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/20 to-transparent"></div>
 
@@ -102,8 +107,13 @@ const Projects = () => {
 
                   {/* View Project Link */}
                   <div className="mt-auto">
-                    <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-all duration-300" style={{ color: project.accent || azureBlue }}>
-                      <span className="transition-transform duration-300 group-hover:translate-x-1">View Project</span>
+                    <div
+                      className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-all duration-300"
+                      style={{ color: project.accent || azureBlue }}
+                    >
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">
+                        {t("projects.viewProject")}
+                      </span>
                       <Icon
                         icon="fluent:arrow-right-24-filled"
                         className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2"
@@ -122,7 +132,9 @@ const Projects = () => {
                 <div
                   className="absolute top-0 right-0 w-24 h-24 opacity-10 transition-all duration-500 group-hover:opacity-20 group-hover:scale-110 rounded-tr-2xl"
                   style={{
-                    background: `radial-gradient(circle at top right, ${project.accent || azureBlue}, transparent 70%)`
+                    background: `radial-gradient(circle at top right, ${
+                      project.accent || azureBlue
+                    }, transparent 70%)`,
                   }}
                 ></div>
               </div>
@@ -136,7 +148,7 @@ const Projects = () => {
             href="/projects"
             className="inline-flex items-center gap-2 px-10 py-4 border border-brand-black bg-white text-brand-black text-sm font-semibold rounded-full hover:bg-brand-black hover:text-white transition-all group"
           >
-            <span>View all projects</span>
+            <span>{t("projects.viewAll")}</span>
             <Icon
               icon="fluent:arrow-right-24-filled"
               className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"

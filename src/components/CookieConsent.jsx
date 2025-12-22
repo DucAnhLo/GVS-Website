@@ -1,8 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const cookieConsent = localStorage.getItem("cookieConsent");
@@ -27,7 +29,6 @@ const CookieConsent = () => {
   };
 
   const handleCustomize = () => {
-    // For now, just accept essential only
     localStorage.setItem("cookieConsent", "essential");
     localStorage.setItem("cookieConsentDate", new Date().toISOString());
     setIsVisible(false);
@@ -42,13 +43,15 @@ const CookieConsent = () => {
           {/* Text Content */}
           <div className="flex-1">
             <h3 className="text-white font-semibold mb-1">
-              Cookies on the GVS website
+              {t("cookies.title")}
             </h3>
             <p className="text-sm text-gray-400">
-              <span className="text-[#0078D4]">We use cookies</span> to give you
-              the best online experience. Strictly necessary cookies are on by
-              default. Additional cookies are{" "}
-              <span className="font-medium text-white">off</span> by default.
+              <span className="text-[#0078D4]">
+                {t("cookies.description").split(".")[0]}.
+              </span>{" "}
+              {t("cookies.description").split(".").slice(1).join(".")}{" "}
+              <span className="font-medium text-white">{t("cookies.off")}</span>{" "}
+              {t("cookies.byDefault")}
             </p>
           </div>
 
@@ -58,19 +61,19 @@ const CookieConsent = () => {
               onClick={handleAccept}
               className="px-4 py-2 text-sm font-medium text-white bg-[#0078D4] hover:bg-[#006cbd] rounded transition-colors duration-200"
             >
-              Accept additional cookies
+              {t("cookies.accept")}
             </button>
             <button
               onClick={handleReject}
               className="px-4 py-2 text-sm font-medium text-white bg-[#333] hover:bg-[#444] border border-gray-600 rounded transition-colors duration-200"
             >
-              Reject additional cookies
+              {t("cookies.reject")}
             </button>
             <button
               onClick={handleCustomize}
               className="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200"
             >
-              Let me choose
+              {t("cookies.customize")}
             </button>
           </div>
         </div>

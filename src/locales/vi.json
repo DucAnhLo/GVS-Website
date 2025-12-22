@@ -1,0 +1,150 @@
+{
+  "navigation": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "aboutUs": "Về Chúng Tôi",
+    "services": "Dịch vụ",
+    "projects": "Dự án",
+    "careers": "Tuyển dụng",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "badge": "Sẵn sàng cho dự án mới",
+    "title": "Chúng tôi xây dựng",
+    "titleHighlight": "giải pháp số",
+    "titleEnd": "được tạo riêng cho bạn.",
+    "description": "Hỗ trợ doanh nghiệp nhỏ thông qua các trang web tùy chỉnh, ứng dụng web và hệ thống tích hợp thúc đẩy chuyển đổi số.",
+    "features": {
+      "customDev": {
+        "title": "Phát Triển Tùy Chỉnh",
+        "subtitle": "Phù hợp với nhu cầu của bạn"
+      },
+      "fastDelivery": {
+        "title": "Giao Hàng Nhanh",
+        "subtitle": "Thời gian xử lý nhanh chóng"
+      },
+      "qualityAssured": {
+        "title": "Đảm Bảo Chất Lượng",
+        "subtitle": "Đã kiểm tra & đáng tin cậy"
+      },
+      "ongoingSupport": {
+        "title": "Hỗ Trợ Liên Tục",
+        "subtitle": "Chúng tôi luôn sẵn sàng hỗ trợ"
+      }
+    },
+    "cta": {
+      "primary": "Liên hệ tư vấn",
+      "secondary": "Xem dự án"
+    }
+  },
+  "services": {
+    "badge": "Dịch Vụ Của Chúng Tôi",
+    "title": "Dịch Vụ",
+    "description": "Giải pháp phần mềm toàn diện được thiết kế riêng cho nhu cầu doanh nghiệp của bạn.",
+    "items": {
+      "webDevelopment": {
+        "title": "Phát Triển Web",
+        "description": "Ứng dụng web tùy chỉnh được xây dựng với công nghệ hiện đại để có hiệu suất và trải nghiệm người dùng tối ưu."
+      },
+      "cmsSolutions": {
+        "title": "Giải Pháp CMS",
+        "description": "Hệ thống quản lý nội dung giúp bạn quản lý nội dung số một cách dễ dàng."
+      },
+      "crmSystems": {
+        "title": "Hệ Thống CRM",
+        "description": "Giải pháp quản lý quan hệ khách hàng giúp bạn xây dựng mối quan hệ bền vững."
+      },
+      "uiuxDesign": {
+        "title": "Thiết Kế UI/UX",
+        "description": "Thiết kế lấy người dùng làm trung tâm tạo ra trải nghiệm số trực quan và thu hút."
+      },
+      "digitalStorage": {
+        "title": "Lưu Trữ Tài Liệu Số",
+        "description": "Giải pháp lưu trữ đám mây an toàn để quản lý và truy cập tài liệu ở bất kỳ đâu."
+      },
+      "digitalSignature": {
+        "title": "Chữ Ký Số",
+        "description": "Giải pháp chữ ký điện tử giúp tối ưu hóa quy trình tài liệu và phê duyệt."
+      }
+    },
+    "learnMore": "Tìm hiểu thêm",
+    "getStarted": "Bắt đầu",
+    "exploreAll": "Khám phá tất cả dịch vụ",
+    "sectionTitle": "Chuyển đổi",
+    "sectionTitleBold": "doanh nghiệp",
+    "sectionDescription": "Từ phát triển web đến chữ ký số, các giải pháp toàn diện của chúng tôi giúp bạn xây dựng, quản lý và mở rộng sự hiện diện số của mình một cách tự tin.",
+    "trustedBy": "Được tin tưởng bởi",
+    "trustedByBold": "các doanh nghiệp hàng đầu",
+    "trustedByDescription": "Hợp tác với các tổ chức tiên phong để mang lại kết quả xuất sắc"
+  },
+  "about": {
+    "badge": "Về Chúng Tôi",
+    "title": "Chúng Tôi Là Ai",
+    "description": "Chúng tôi là một đội ngũ các nhà phát triển và thiết kế đam mê, cam kết mang đến các giải pháp phần mềm xuất sắc.",
+    "mission": {
+      "title": "Sứ Mệnh",
+      "description": "Trao quyền cho doanh nghiệp với các giải pháp công nghệ sáng tạo thúc đẩy tăng trưởng và thành công."
+    },
+    "vision": {
+      "title": "Tầm Nhìn",
+      "description": "Trở thành đối tác phát triển phần mềm hàng đầu cho các doanh nghiệp trên toàn thế giới."
+    }
+  },
+  "projects": {
+    "badge": "Dự Án",
+    "title": "Dự Án Nổi Bật",
+    "sectionTitle": "Dự án",
+    "sectionTitleBold": "nổi bật",
+    "description": "Biến ý tưởng thành trải nghiệm số mạnh mẽ mang lại kết quả thực tế",
+    "viewAll": "Xem tất cả dự án",
+    "viewProject": "Xem Dự Án",
+    "visitSite": "Truy Cập Trang Web"
+  },
+  "contact": {
+    "badge": "Liên Hệ",
+    "title": "Liên Hệ Với Chúng Tôi",
+    "description": "Sẵn sàng bắt đầu dự án? Hãy thảo luận về cách chúng tôi có thể giúp doanh nghiệp của bạn phát triển.",
+    "form": {
+      "name": "Họ và Tên",
+      "email": "Địa Chỉ Email",
+      "phone": "Số Điện Thoại",
+      "subject": "Tiêu Đề",
+      "message": "Tin Nhắn",
+      "submit": "Gửi Tin Nhắn",
+      "sending": "Đang gửi...",
+      "success": "Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất.",
+      "error": "Đã xảy ra lỗi. Vui lòng thử lại hoặc liên hệ trực tiếp."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Điện thoại",
+      "location": "Địa điểm"
+    }
+  },
+  "footer": {
+    "description": "Global Soft Vietnam - Cung cấp giải pháp phần mềm sáng tạo cho nhu cầu kinh doanh của bạn.",
+    "quickLinks": "Liên Kết Nhanh",
+    "ourServices": "Dịch Vụ",
+    "contactUs": "Liên Hệ",
+    "followUs": "Theo Dõi",
+    "copyright": "Bản quyền thuộc về.",
+    "privacyPolicy": "Chính Sách Bảo Mật",
+    "termsOfService": "Điều Khoản Dịch Vụ",
+    "cookiePolicy": "Chính Sách Cookie"
+  },
+  "cookies": {
+    "title": "Cookie trên trang web GVS",
+    "description": "Chúng tôi sử dụng cookie để mang đến cho bạn trải nghiệm trực tuyến tốt nhất. Cookie cần thiết được bật theo mặc định. Cookie bổ sung được",
+    "off": "tắt",
+    "byDefault": "theo mặc định.",
+    "accept": "Chấp nhận cookie bổ sung",
+    "reject": "Từ chối cookie bổ sung",
+    "customize": "Để tôi chọn"
+  },
+  "common": {
+    "readMore": "Đọc thêm",
+    "viewAll": "Xem tất cả",
+    "backToHome": "Về Trang Chủ",
+    "loading": "Đang tải..."
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Available for new projects",
+    "title": "We build",
+    "titleHighlight": "digital solutions",
+    "titleEnd": "created just for you.",
+    "description": "Empowering small businesses through tailored websites, custom web applications, and integrated systems that drive digital transformation.",
+    "features": {
+      "customDev": {
+        "title": "Custom Development",
+        "subtitle": "Tailored to your needs"
+      },
+      "fastDelivery": {
+        "title": "Fast Delivery",
+        "subtitle": "Quick turnaround time"
+      },
+      "qualityAssured": {
+        "title": "Quality Assured",
+        "subtitle": "Tested & reliable"
+      },
+      "ongoingSupport": {
+        "title": "Ongoing Support",
+        "subtitle": "We're here to help"
+      }
+    },
+    "cta": {
+      "primary": "Contact sales",
+      "secondary": "View our work"
+    }
+  },
+  "services": {
+    "badge": "What We Offer",
+    "title": "Our Services",
+    "description": "Comprehensive software solutions tailored to your business needs.",
+    "items": {
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Custom web applications built with modern technologies for optimal performance and user experience."
+      },
+      "cmsSolutions": {
+        "title": "CMS Solutions",
+        "description": "Content management systems that empower you to manage your digital content effortlessly."
+      },
+      "crmSystems": {
+        "title": "CRM Systems",
+        "description": "Customer relationship management solutions that help you build lasting relationships."
+      },
+      "uiuxDesign": {
+        "title": "UI/UX Design",
+        "description": "User-centered design that creates intuitive and engaging digital experiences."
+      },
+      "digitalStorage": {
+        "title": "Digital Document Storage",
+        "description": "Secure cloud storage solutions for managing and accessing your documents anywhere."
+      },
+      "digitalSignature": {
+        "title": "Digital Signature",
+        "description": "Electronic signature solutions that streamline document workflows and approvals."
+      }
+    },
+    "learnMore": "Learn more",
+    "getStarted": "Get started",
+    "exploreAll": "Explore all services",
+    "sectionTitle": "Transform your",
+    "sectionTitleBold": "business",
+    "sectionDescription": "From web development to digital signatures, our comprehensive solutions help you build, manage, and scale your digital presence with confidence.",
+    "trustedBy": "Trusted by",
+    "trustedByBold": "industry leaders",
+    "trustedByDescription": "Partnering with forward-thinking organizations to deliver exceptional results"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Who We Are",
+    "description": "We are a team of passionate developers and designers committed to delivering exceptional software solutions.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses with innovative technology solutions that drive growth and success."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading software development partner for businesses worldwide."
+    }
+  },
+  "projects": {
+    "badge": "Our Portfolio",
+    "title": "Featured Projects",
+    "sectionTitle": "Featured",
+    "sectionTitleBold": "projects",
+    "description": "Transforming ideas into powerful digital experiences that drive real results",
+    "viewAll": "View all projects",
+    "viewProject": "View Project",
+    "visitSite": "Visit Site"
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title": "Contact Us",
+    "description": "Ready to start your project? Let's discuss how we can help your business grow.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you for your message! We will get back to you soon.",
+      "error": "Sorry, something went wrong. Please try again or contact us directly."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    }
+  },
+  "footer": {
+    "description": "Global Soft Vietnam - Delivering innovative software solutions for your business needs.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contactUs": "Contact Us",
+    "followUs": "Follow Us",
+    "copyright": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy"
+  },
+  "cookies": {
+    "title": "Cookies on the GVS website",
+    "description": "We use cookies to give you the best online experience. Strictly necessary cookies are on by default. Additional cookies are",
+    "off": "off",
+    "byDefault": "by default.",
+    "accept": "Accept additional cookies",
+    "reject": "Reject additional cookies",
+    "customize": "Let me choose"
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "backToHome": "Back to Home",
+    "loading": "Loading..."
+  }
+}

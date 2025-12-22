@@ -2,8 +2,11 @@
 import Link from "next/link";
 import React from "react";
 import { Icon } from "@iconify/react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#0078D4] via-[#0078D4] to-[#005A9E]">
       {/* Decorative Elements */}
@@ -28,7 +31,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               <span className="text-white/90 text-sm font-medium">
-                Available for new projects
+                {t("hero.badge")}
               </span>
             </div>
 
@@ -37,10 +40,10 @@ const Hero = () => {
               className="text-4xl lg:text-5xl font-bold text-white leading-[1.1] mb-6"
               style={{ fontSize: "clamp(2rem, 5vw, 3.125rem)" }}
             >
-              We build{" "}
+              {t("hero.title")}{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-cyan-300 via-white to-cyan-300 bg-clip-text text-transparent">
-                  digital solutions
+                  {t("hero.titleHighlight")}
                 </span>
                 {/* Decorative underline */}
                 <svg
@@ -58,16 +61,14 @@ const Hero = () => {
                 </svg>
               </span>
               <br />
-              created just for you.
+              {t("hero.titleEnd")}
             </h1>
 
             {/* Description with Icon */}
             <div className="flex gap-4 mb-8">
               <div className="flex-shrink-0 w-1 bg-gradient-to-b from-cyan-400 to-transparent rounded-full"></div>
               <p className="text-lg text-white/90 leading-relaxed max-w-xl">
-                Empowering small businesses through tailored websites, custom
-                web applications, and integrated systems that drive digital
-                transformation.
+                {t("hero.description")}
               </p>
             </div>
 
@@ -80,10 +81,10 @@ const Hero = () => {
                 />
                 <div>
                   <div className="text-sm font-semibold text-white">
-                    Custom Development
+                    {t("hero.features.customDev.title")}
                   </div>
                   <div className="text-xs text-white/70">
-                    Tailored to your needs
+                    {t("hero.features.customDev.subtitle")}
                   </div>
                 </div>
               </div>
@@ -94,10 +95,10 @@ const Hero = () => {
                 />
                 <div>
                   <div className="text-sm font-semibold text-white">
-                    Fast Delivery
+                    {t("hero.features.fastDelivery.title")}
                   </div>
                   <div className="text-xs text-white/70">
-                    Quick turnaround time
+                    {t("hero.features.fastDelivery.subtitle")}
                   </div>
                 </div>
               </div>
@@ -108,9 +109,11 @@ const Hero = () => {
                 />
                 <div>
                   <div className="text-sm font-semibold text-white">
-                    Quality Assured
+                    {t("hero.features.qualityAssured.title")}
                   </div>
-                  <div className="text-xs text-white/70">Tested & reliable</div>
+                  <div className="text-xs text-white/70">
+                    {t("hero.features.qualityAssured.subtitle")}
+                  </div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -120,10 +123,10 @@ const Hero = () => {
                 />
                 <div>
                   <div className="text-sm font-semibold text-white">
-                    Ongoing Support
+                    {t("hero.features.ongoingSupport.title")}
                   </div>
                   <div className="text-xs text-white/70">
-                    We're here to help
+                    {t("hero.features.ongoingSupport.subtitle")}
                   </div>
                 </div>
               </div>
@@ -136,7 +139,7 @@ const Hero = () => {
                 className="group relative px-8 py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all"
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  Contact sales
+                  {t("hero.cta.primary")}
                   <Icon
                     icon="lucide:arrow-right"
                     className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -148,7 +151,7 @@ const Hero = () => {
                 href="/projects"
                 className="group px-8 py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center gap-2"
               >
-                View our work
+                {t("hero.cta.secondary")}
                 <Icon
                   icon="lucide:external-link"
                   className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -174,19 +177,6 @@ const Hero = () => {
                 {/* Overlay Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#0078D4]/20 to-transparent"></div>
               </div>
-
-              {/* Floating Card */}
-              {/* <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-4 flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#0078D4] to-cyan-400 rounded-lg flex items-center justify-center">
-                  <Icon icon="lucide:check" className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-gray-900">
-                    Quality Assured
-                  </div>
-                  <div className="text-xs text-gray-600">100% Satisfaction</div>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

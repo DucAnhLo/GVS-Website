@@ -1,39 +1,43 @@
-import React from 'react';
-
-const services = [
-  {
-    title: 'Web Development',
-    description: 'Modern, scalable web applications built with cutting-edge technologies.',
-    href: '/services/web-development',
-  },
-  {
-    title: 'CMS Solutions',
-    description: 'Powerful content management platforms for easy content control.',
-    href: '/services/cms-solutions',
-  },
-  {
-    title: 'CRM Systems',
-    description: 'Customer relationship management tools that boost conversions.',
-    href: '/services/crm-systems',
-  },
-  {
-    title: 'Web UI/UX Design',
-    description: 'Beautiful, intuitive interfaces that delight users.',
-    href: '/services/ui-ux-design',
-  },
-  {
-    title: 'Digital Document Storage',
-    description: 'Secure, cloud-based document management systems.',
-    href: '/services/digital-document-storage',
-  },
-  {
-    title: 'Digital Signature',
-    description: 'Legally binding electronic signature solutions.',
-    href: '/services/digital-signature',
-  },
-];
+"use client";
+import React from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const MegaMenu = () => {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      title: t("services.items.webDevelopment.title"),
+      description: t("services.items.webDevelopment.description"),
+      href: "/services/web-development",
+    },
+    {
+      title: t("services.items.cmsSolutions.title"),
+      description: t("services.items.cmsSolutions.description"),
+      href: "/services/cms-solutions",
+    },
+    {
+      title: t("services.items.crmSystems.title"),
+      description: t("services.items.crmSystems.description"),
+      href: "/services/crm-systems",
+    },
+    {
+      title: t("services.items.uiuxDesign.title"),
+      description: t("services.items.uiuxDesign.description"),
+      href: "/services/ui-ux-design",
+    },
+    {
+      title: t("services.items.digitalStorage.title"),
+      description: t("services.items.digitalStorage.description"),
+      href: "/services/digital-document-storage",
+    },
+    {
+      title: t("services.items.digitalSignature.title"),
+      description: t("services.items.digitalSignature.description"),
+      href: "/services/digital-signature",
+    },
+  ];
+
   return (
     <div className="absolute top-full left-0 w-full bg-white/98 backdrop-blur-md border-t border-gray-200 shadow-lg p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-40">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6">

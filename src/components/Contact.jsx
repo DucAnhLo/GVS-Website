@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,7 +13,7 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [submitStatus, setSubmitStatus] = useState(null);
   const [statusMessage, setStatusMessage] = useState("");
 
   const handleChange = (e) => {
@@ -45,13 +47,9 @@ const Contact = () => {
 
       const result = await response.json();
 
-      // Success
       setSubmitStatus("success");
-      setStatusMessage(
-        "Thank you for your message! We will get back to you soon."
-      );
+      setStatusMessage(t("contact.form.success"));
 
-      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -60,7 +58,6 @@ const Contact = () => {
         message: "",
       });
 
-      // Auto-hide success message after 5 seconds
       setTimeout(() => {
         setSubmitStatus(null);
         setStatusMessage("");
@@ -68,9 +65,7 @@ const Contact = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitStatus("error");
-      setStatusMessage(
-        "Sorry, something went wrong. Please try again or contact us directly."
-      );
+      setStatusMessage(t("contact.form.error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -82,9 +77,9 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-medium text-gray-900 mb-4">
-            Contact Us
+            {t("contact.title")}
           </h1>
-          <p className="text-gray-600">Get in touch for your next project</p>
+          <p className="text-gray-600">{t("contact.description")}</p>
         </div>
 
         {/* Status Message */}
@@ -139,7 +134,7 @@ const Contact = () => {
               htmlFor="name"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Full Name *
+              {t("contact.form.name")} *
             </label>
             <input
               type="text"
@@ -160,7 +155,7 @@ const Contact = () => {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Email Address *
+              {t("contact.form.email")} *
             </label>
             <input
               type="email"
@@ -181,7 +176,7 @@ const Contact = () => {
               htmlFor="phone"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Phone Number
+              {t("contact.form.phone")}
             </label>
             <input
               type="tel"
@@ -201,7 +196,7 @@ const Contact = () => {
               htmlFor="subject"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Subject *
+              {t("contact.form.subject")} *
             </label>
             <input
               type="text"
@@ -222,7 +217,7 @@ const Contact = () => {
               htmlFor="message"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Message *
+              {t("contact.form.message")} *
             </label>
             <textarea
               id="message"
@@ -265,10 +260,10 @@ const Contact = () => {
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                   ></path>
                 </svg>
-                Sending...
+                {t("contact.form.sending")}
               </>
             ) : (
-              "Send Message"
+              t("contact.form.submit")
             )}
           </button>
         </form>
@@ -277,19 +272,25 @@ const Contact = () => {
         <div className="mt-16 pt-12 border-t border-gray-200">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <h3 className="font-medium text-gray-900 mb-2">Email</h3>
+              <h3 className="font-medium text-gray-900 mb-2">
+                {t("contact.info.email")}
+              </h3>
               <a href="" className="text-gray-600 hover:text-gray-900">
                 hello@globalsoftvietnam.com
               </a>
             </div>
             <div>
-              <h3 className="font-medium text-gray-900 mb-2">Phone</h3>
+              <h3 className="font-medium text-gray-900 mb-2">
+                {t("contact.info.phone")}
+              </h3>
               <a href="" className="text-gray-600 hover:text-gray-900">
                 +84 (0) 962062999
               </a>
             </div>
             <div>
-              <h3 className="font-medium text-gray-900 mb-2">Location</h3>
+              <h3 className="font-medium text-gray-900 mb-2">
+                {t("contact.info.location")}
+              </h3>
               <p className="text-gray-600">Hanoi, Vietnam</p>
             </div>
           </div>
