@@ -1,237 +1,366 @@
-'use client'
-import React, { useState, useEffect } from 'react';
-import { Icon } from '@iconify/react';
-import Link from 'next/link';
+"use client";
+import React, { useState } from "react";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 export default function UIUXService() {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const tools = [
-    { name: 'Figma', icon: 'logos:figma', color: '#F24E1E' },
-    { name: 'Adobe XD', icon: 'logos:adobe-xd', color: '#FF61F6' },
-    { name: 'Sketch', icon: 'logos:sketch', color: '#F7B500' },
-    { name: 'Framer', icon: 'logos:framer', color: '#0055FF' },
-    { name: 'Photoshop', icon: 'logos:adobe-photoshop', color: '#31A8FF' },
-    { name: 'Illustrator', icon: 'logos:adobe-illustrator', color: '#FF9A00' },
-    { name: 'InVision', icon: 'simple-icons:invision', color: '#FF3366' },
-    { name: 'Miro', icon: 'simple-icons:miro', color: '#FFD02F' },
-  ];
+  const [activeService, setActiveService] = useState(0);
 
   const features = [
     {
-      title: 'User Research',
-      description: 'In-depth user interviews, personas, and journey mapping to understand your audience deeply.',
-      icon: 'carbon:user-avatar',
-      accent: '#F59E0B'
+      title: "User Research",
+      description:
+        "In-depth user interviews, personas, and journey mapping to understand your audience deeply.",
+      icon: "lucide:users",
     },
     {
-      title: 'Wireframing',
-      description: 'Low and high-fidelity wireframes that establish solid information architecture.',
-      icon: 'carbon:template',
-      accent: '#06B6D4'
+      title: "Interface Design",
+      description:
+        "Beautiful, on-brand interfaces with attention to typography, color, and composition.",
+      icon: "lucide:palette",
     },
     {
-      title: 'Visual Design',
-      description: 'Beautiful, on-brand interfaces with attention to typography, color, and composition.',
-      icon: 'carbon:palette',
-      accent: '#EC4899'
+      title: "Prototyping",
+      description:
+        "Interactive prototypes that bring designs to life before development begins.",
+      icon: "lucide:smartphone",
     },
     {
-      title: 'Prototyping',
-      description: 'Interactive prototypes that bring designs to life before development begins.',
-      icon: 'carbon:presentation-file',
-      accent: '#8B5CF6'
+      title: "Usability Testing",
+      description:
+        "Validate designs with real users to ensure intuitive and effective experiences.",
+      icon: "lucide:check-circle",
+    },
+  ];
+
+  const services = [
+    {
+      title: "Web & Mobile Design",
+      description:
+        "Responsive designs for web and mobile applications that adapt seamlessly across all devices. From concept to high-fidelity mockups ready for development.",
+      icon: "lucide:layout",
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      title: "Design Systems",
+      description:
+        "Comprehensive design systems with reusable components, style guides, and documentation that ensure consistency across your entire product ecosystem.",
+      icon: "lucide:package",
+      color: "from-cyan-500 to-blue-500",
+    },
+    {
+      title: "User Experience Audit",
+      description:
+        "Thorough analysis of your existing product to identify usability issues, pain points, and opportunities for improvement based on UX best practices.",
+      icon: "lucide:search",
+      color: "from-blue-600 to-cyan-600",
+    },
+    {
+      title: "Interaction Design",
+      description:
+        "Thoughtful animations, micro-interactions, and transitions that enhance usability and create delightful user experiences.",
+      icon: "lucide:mouse-pointer-click",
+      color: "from-cyan-600 to-blue-600",
+    },
+  ];
+
+  const approach = [
+    {
+      title: "Discovery & Research",
+      description:
+        "Understanding your users, business goals, and competitive landscape.",
+      icon: "lucide:compass",
+      step: "01",
+    },
+    {
+      title: "Information Architecture",
+      description:
+        "Organizing content and features for optimal user flow.",
+      icon: "lucide:sitemap",
+      step: "02",
+    },
+    {
+      title: "Wireframing",
+      description:
+        "Creating low-fidelity layouts to establish structure.",
+      icon: "lucide:layout-template",
+      step: "03",
+    },
+    {
+      title: "Visual Design",
+      description: "Applying brand identity and creating polished interfaces.",
+      icon: "lucide:paintbrush",
+      step: "04",
+    },
+    {
+      title: "Prototyping & Testing",
+      description: "Building interactive prototypes and gathering user feedback.",
+      icon: "lucide:play-circle",
+      step: "05",
+    },
+    {
+      title: "Design Handoff",
+      description: "Delivering specifications and assets to development.",
+      icon: "lucide:package-check",
+      step: "06",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 overflow-hidden">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative flex items-center overflow-hidden bg-gradient-to-br from-amber-50 via-white to-orange-50">
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)',
-            backgroundSize: '50px 50px',
-            transform: `translateY(${scrollY * 0.5}px)`
-          }}></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0078D4] via-[#0078D4] to-[#005A9E]">
+        {/* Animated Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
+          <div className="absolute top-20 right-[10%] w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div
+            className="absolute bottom-32 left-[15%] w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse-slow"
+            style={{ animationDelay: "1s" }}
+          ></div>
         </div>
 
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-amber-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-orange-400/20 rounded-full blur-3xl"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-32">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm mb-8 sm:mb-10 lg:mb-12 opacity-0 animate-fade-in">
+            <Link
+              href="/"
+              className="text-white/70 hover:text-white transition-colors"
+            >
+              Home
+            </Link>
+            <div className="w-1 h-1 bg-white/50 rounded-full"></div>
+            <Link
+              href="/#services"
+              className="text-white/70 hover:text-white transition-colors"
+            >
+              Services
+            </Link>
+            <div className="w-1 h-1 bg-white/50 rounded-full"></div>
+            <span className="text-white font-medium">UI/UX Design</span>
+          </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-20 w-full">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-8">
-              <div className="flex items-center gap-3 text-sm" style={{ animation: 'fadeInLeft 0.8s ease-out both' }}>
-                <Link href="/" className="text-gray-500 hover:text-amber-600 transition-colors">Home</Link>
-                <div className="w-8 h-px bg-gradient-to-r from-gray-300 to-transparent"></div>
-                <Link href="/#services" className="text-gray-500 hover:text-amber-600 transition-colors">Services</Link>
-                <div className="w-8 h-px bg-gradient-to-r from-gray-300 to-transparent"></div>
-                <span className="text-amber-600 font-medium">UI/UX Design</span>
-              </div>
-
-              <div className="space-y-4">
-                <div className="inline-block px-6 py-3 border-2 border-amber-600 text-amber-600 font-semibold text-sm tracking-widest" style={{ animation: 'fadeInLeft 0.8s ease-out 0.1s both' }}>
-                  UI/UX DESIGN
-                </div>
-
-                <h1 className="text-4xl lg:text-[40px] font-semibold leading-none" style={{ fontFamily: '"Space Grotesk", system-ui, -apple-system, sans-serif', animation: 'fadeInLeft 0.8s ease-out 0.2s both', letterSpacing: '-0.03em' }}>
-                  <span className="block text-gray-900">DESIGN</span>
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-orange-600 to-red-600">
-                    EXPERIENCES
-                  </span>
-                  <span className="block text-gray-900">THAT DELIGHT</span>
-                </h1>
-              </div>
-
-              <p className="text-base text-gray-600 max-w-xl leading-relaxed" style={{ animation: 'fadeInLeft 0.8s ease-out 0.3s both', fontFamily: '"Inter", system-ui, sans-serif' }}>
-                We design beautiful, intuitive user interfaces and experiences that delight users and drive engagement through research-driven, user-centered design.
-              </p>
-
-              <div className="flex flex-wrap gap-4" style={{ animation: 'fadeInLeft 0.8s ease-out 0.4s both' }}>
-                <Link href="/contact" className="group relative px-6 py-3 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold text-sm tracking-wider overflow-hidden rounded-full">
-                  <span className="relative z-10">START A PROJECT</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </Link>
-                <Link href="/contact" className="group px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold text-sm tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300 rounded-full">
-                  GET A QUOTE
-                </Link>
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <div
+              className="inline-flex items-center gap-2 px-3 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-4 lg:mb-6 opacity-0 animate-fade-in text-xs sm:text-sm"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
+              <span className="text-white/90 font-medium">
+                User Interface & Experience Design
+              </span>
             </div>
 
-            {/* Design Tool Interface Mockup */}
-            <div className="lg:col-span-5" style={{ animation: 'fadeInRight 0.8s ease-out 0.3s both' }}>
-              <div className="relative">
-                <div className="bg-white border-2 border-gray-200 shadow-2xl overflow-hidden">
-                  {/* Tool Header */}
-                  <div className="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <Icon icon="logos:figma" className="w-5 h-5" />
-                      <span className="text-sm font-bold text-gray-700">Design Tool</span>
-                    </div>
-                    <div className="flex gap-2">
-                      <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center">
-                        <Icon icon="carbon:view" className="w-4 h-4 text-gray-600" />
-                      </div>
-                      <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center">
-                        <Icon icon="carbon:share" className="w-4 h-4 text-gray-600" />
-                      </div>
-                    </div>
-                  </div>
+            {/* Title */}
+            <h1
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 lg:mb-6 opacity-0 animate-fade-in"
+              style={{ animationDelay: "0.2s" }}
+            >
+              Design Experiences
+              <br />
+              <span className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">
+                That Users Love
+              </span>
+            </h1>
 
-                  {/* Canvas Area */}
-                  <div className="bg-gray-100 p-8 min-h-[400px] flex items-center justify-center gap-6">
-                    {/* Mobile Frame */}
-                    <div className="bg-white rounded-lg shadow-lg p-4 w-40 transform -rotate-2 hover:rotate-0 transition-transform duration-300">
-                      <div className="bg-gray-200 rounded w-8 h-1 mx-auto mb-3"></div>
-                      <div className="space-y-2">
-                        <div className="bg-amber-100 border border-amber-300 h-12 rounded flex items-center justify-center">
-                          <Icon icon="carbon:user-avatar" className="w-6 h-6 text-amber-600" />
-                        </div>
-                        <div className="bg-gray-200 h-3 rounded"></div>
-                        <div className="bg-gray-200 h-3 rounded w-3/4"></div>
-                        <div className="grid grid-cols-2 gap-2 pt-2">
-                          <div className="bg-amber-500 h-8 rounded"></div>
-                          <div className="bg-gray-300 h-8 rounded"></div>
-                        </div>
-                      </div>
-                    </div>
+            {/* Description */}
+            <p
+              className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 lg:mb-8 max-w-3xl mx-auto opacity-0 animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              We create beautiful, intuitive interfaces that delight users and
+              drive engagement through research-driven, user-centered design.
+            </p>
 
-                    {/* Desktop Frame */}
-                    <div className="bg-white rounded-lg shadow-xl p-3 w-56 transform rotate-1 hover:rotate-0 transition-transform duration-300">
-                      <div className="flex gap-1 mb-2">
-                        <div className="w-2 h-2 rounded-full bg-red-400"></div>
-                        <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
-                        <div className="w-2 h-2 rounded-full bg-green-400"></div>
-                      </div>
-                      <div className="bg-gray-50 border border-gray-200 rounded p-3 space-y-2">
-                        <div className="flex items-center gap-2 pb-2 border-b border-gray-200">
-                          <div className="bg-amber-500 w-8 h-8 rounded"></div>
-                          <div className="flex-1">
-                            <div className="bg-gray-200 h-2 rounded mb-1"></div>
-                            <div className="bg-gray-200 h-2 rounded w-2/3"></div>
-                          </div>
-                        </div>
-                        <div className="space-y-1.5">
-                          <div className="bg-amber-100 h-6 rounded"></div>
-                          <div className="bg-gray-200 h-6 rounded"></div>
-                          <div className="bg-gray-200 h-6 rounded"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Color Palette */}
-                  <div className="bg-gray-50 border-t border-gray-200 px-4 py-3 flex items-center gap-2">
-                    <span className="text-xs font-bold text-gray-500 mr-2">COLORS:</span>
-                    <div className="w-6 h-6 rounded bg-amber-500 border border-gray-300"></div>
-                    <div className="w-6 h-6 rounded bg-orange-500 border border-gray-300"></div>
-                    <div className="w-6 h-6 rounded bg-gray-900 border border-gray-300"></div>
-                    <div className="w-6 h-6 rounded bg-gray-100 border border-gray-300"></div>
-                  </div>
-                </div>
-
-                {/* <div className="absolute -top-4 -right-4 w-24 h-24 bg-amber-500 animate-pulse-slow"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 border-4 border-orange-600"></div> */}
-              </div>
+            {/* CTA Buttons */}
+            <div
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center opacity-0 animate-fade-in"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <Link
+                href="/contact"
+                className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all text-center"
+              >
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Get Started
+                  <Icon
+                    icon="lucide:arrow-right"
+                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </Link>
+              <Link
+                href="/contact"
+                className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
+              >
+                Schedule Consultation
+              </Link>
             </div>
           </div>
-        </div>
-
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-bounce-slow">
-          <span className="text-xs tracking-widest text-gray-400">SCROLL</span>
-          <div className="w-px h-16 bg-gradient-to-b from-gray-400 to-transparent"></div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="relative py-20 px-6 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-16">
-            <div className="lg:col-span-5">
-              <div className="sticky top-32">
-                <div className="text-sm font-semibold tracking-widest text-gray-400 mb-6">WHAT WE DELIVER</div>
-                <h2 className="text-3xl lg:text-[36px] font-semibold leading-none mb-6" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
-                  DESIGN
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
-                    EXCELLENCE
-                  </span>
-                </h2>
-                <p className="text-base text-gray-600 leading-relaxed">
-                  User-centered design that puts your customers first.
+          <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
+              Our Design Approach
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              User-centered design that puts your customers first.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="group relative p-5 sm:p-6 border border-gray-200 rounded-xl hover:border-[#0078D4] transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#0078D4] to-cyan-500 rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Icon
+                    icon={feature.icon}
+                    className="w-6 h-6 sm:w-7 sm:h-7 text-white"
+                  />
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {feature.description}
                 </p>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="lg:col-span-7 space-y-8">
-              {features.map((feature, index) => (
-                <div key={index} className="group relative p-6 bg-white border-l-4 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-2xl rounded-r-2xl" style={{ borderColor: feature.accent, animation: `fadeInUp 0.6s ease-out ${0.1 * index}s both` }}>
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg" style={{ backgroundColor: feature.accent }}>
-                      <Icon icon={feature.icon} className="w-6 h-6 text-white" />
-                    </div>
+      {/* What We Build Section - Interactive Tabs */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
+              Design Services We Offer
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              From web and mobile design to comprehensive design systems, we
+              deliver solutions that enhance user experience.
+            </p>
+          </div>
+
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
+            {services.map((service, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveService(index)}
+                className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 ${
+                  activeService === index
+                    ? "bg-[#0078D4] text-white shadow-lg scale-105"
+                    : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
+                }`}
+              >
+                <span className="hidden sm:inline">{service.title}</span>
+                <span className="sm:hidden">{service.title.split(" ")[0]}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Tab Content */}
+          <div className="max-w-4xl mx-auto">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`transition-all duration-500 ${
+                  activeService === index
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4 absolute pointer-events-none"
+                }`}
+              >
+                <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 border border-gray-200">
+                  <div className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8">
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-2 text-gray-900" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
-                        {feature.title}
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+                        {service.title}
                       </h3>
-                      <p className="text-gray-600 text-base leading-relaxed">
-                        {feature.description}
+                      <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                        {service.description}
                       </p>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 text-[#0078D4] font-semibold hover:gap-3 transition-all text-sm sm:text-base"
+                      >
+                        Learn more
+                        <Icon icon="lucide:arrow-right" className="w-4 h-4" />
+                      </Link>
                     </div>
                   </div>
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" style={{ backgroundColor: feature.accent }}></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How We Help Section - Timeline Style */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
+              Our Design Process
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              A structured approach from research to delivery that ensures
+              user-centered results.
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Timeline Line - Desktop Only */}
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#0078D4] via-cyan-400 to-[#0078D4]"></div>
+
+            {/* Mobile Timeline Line */}
+            <div className="lg:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#0078D4] via-cyan-400 to-[#0078D4]"></div>
+
+            <div className="space-y-8 sm:space-y-12">
+              {approach.map((item, index) => (
+                <div
+                  key={index}
+                  className={`relative flex flex-col lg:flex-row gap-4 sm:gap-8 items-start lg:items-center ${
+                    index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                  }`}
+                >
+                  {/* Mobile Step Number */}
+                  <div className="lg:hidden absolute left-0 flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#0078D4] to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg z-10 ring-2 ring-white">
+                    {item.step}
+                  </div>
+
+                  {/* Content Card */}
+                  <div className="flex-1 w-full lg:w-auto ml-16 lg:ml-0">
+                    <div className="group bg-white border border-gray-200 rounded-xl p-4 sm:p-6 hover:border-[#0078D4] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                      <div className="flex items-start gap-3 sm:gap-4">
+                        <div className="flex-1">
+                          <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">
+                            {item.title}
+                          </h3>
+                          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Timeline Node - Desktop Only */}
+                  <div className="hidden lg:flex flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#0078D4] to-cyan-500 rounded-full items-center justify-center text-white font-bold text-lg shadow-lg z-10 ring-4 ring-white">
+                    {item.step}
+                  </div>
+
+                  {/* Spacer - Desktop Only */}
+                  <div className="hidden lg:block flex-1"></div>
                 </div>
               ))}
             </div>
@@ -239,68 +368,79 @@ export default function UIUXService() {
         </div>
       </section>
 
-      {/* Tools */}
-      <section className="relative py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block px-6 py-3 border-2 border-amber-600 text-amber-600 font-semibold text-sm tracking-widest mb-6">
-              DESIGN TOOLS
-            </div>
-            <h2 className="text-3xl lg:text-[36px] font-semibold" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
-              INDUSTRY
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
-                STANDARD TOOLS
-              </span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-1 bg-gray-200">
-            {tools.map((tool, index) => (
-              <div key={index} className="group relative aspect-square bg-white border border-gray-200 hover:border-amber-600 transition-all duration-300 overflow-hidden hover:shadow-xl" style={{ animation: `fadeInScale 0.6s ease-out ${0.05 * index}s both` }}>
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
-                  <Icon icon={tool.icon} className="w-16 h-16 mb-3 transition-transform duration-300 group-hover:scale-110" />
-                  <div className="text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors">
-                    {tool.name}
-                  </div>
-                </div>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" style={{ backgroundColor: tool.color }}></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="relative py-20 px-6 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-[36px] font-semibold mb-6 leading-tight" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif', letterSpacing: '-0.03em' }}>
-            READY TO
-            <span className="block">DESIGN BETTER?</span>
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0078D4] via-[#0078D4] to-[#005A9E] py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
+          <div className="absolute top-20 right-[10%] w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
+            Ready to Design Better?
           </h2>
-          <p className="text-lg mb-10 text-white/90">
-            Let's create experiences your users will love
+          <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+            Let's create beautiful, user-centered experiences that your
+            customers will love.
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/contact" className="group px-8 py-4 bg-black text-white font-semibold text-base tracking-wider hover:bg-white hover:text-black transition-all duration-300 rounded-full">
-              GET STARTED →
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <Link
+              href="/contact"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Contact Us
+                <Icon
+                  icon="lucide:arrow-right"
+                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-white to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </Link>
-            <Link href="/#projects" className="group px-8 py-4 border-4 border-black text-black font-semibold text-base tracking-wider hover:bg-black hover:text-white transition-all duration-300 rounded-full">
-              VIEW WORK
+            <Link
+              href="/projects"
+              className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
+            >
+              View Our Work
+              <Icon
+                icon="lucide:external-link"
+                className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              />
             </Link>
           </div>
         </div>
       </section>
 
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@400;600;700&display=swap');
-        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes fadeInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInScale { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
-        @keyframes pulse-slow { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.8; } }
-        @keyframes bounce-slow { 0%, 100% { transform: translateY(0) translateX(-50%); } 50% { transform: translateY(-10px) translateX(-50%); } }
-        .animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
-        .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes pulse-slow {
+          0%,
+          100% {
+            opacity: 0.3;
+          }
+          50% {
+            opacity: 0.6;
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out forwards;
+        }
+
+        .animate-pulse-slow {
+          animation: pulse-slow 4s ease-in-out infinite;
+        }
       `}</style>
     </div>
   );
