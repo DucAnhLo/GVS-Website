@@ -61,7 +61,7 @@ export const projectsData = [
       "/clients/TPD/TPD5.PNG",
       "/clients/TPD/TPD6.PNG",
     ],
-    liveUrl: "https://theprojectdarts.pages.dev/",
+    liveUrl: "https://theprojectdarts.co.uk/",
     category: "Non-Profit & Education",
     tech: [
       "Next.js",
@@ -103,10 +103,7 @@ export const projectsData = [
     description:
       "Revolutionized mentor management by transforming manual Excel spreadsheets and Google Forms into a comprehensive data management platform with intelligent mentor matching, event creation, and automated catch-up tracking.",
     image: "/clients/TPD/portal.png",
-    images: [
-      "/clients/TPD/portal.png",
-      "/clients/TPD/portal2.png",
-    ],
+    images: ["/clients/TPD/portal.png", "/clients/TPD/portal2.png"],
     liveUrl: "https://tpd-portal.pages.dev",
     category: "Data Management & Platform",
     tech: [
