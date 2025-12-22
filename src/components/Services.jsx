@@ -16,58 +16,34 @@ const Services = () => {
   
   const services = [
     {
-      icon: 'fluent:box-multiple-24-filled',
       title: 'Web Development',
       description: 'Modern, scalable web applications built with cutting-edge technologies.',
       slug: 'web-development',
-      color: 'text-violet-600',
-      bgColor: 'bg-violet-50 dark:bg-violet-900/10',
-      borderColor: 'border-violet-100 dark:border-violet-900/20'
     },
     {
-      icon: 'fluent:content-settings-24-filled',
       title: 'CMS Solutions',
       description: 'Powerful content management platforms for full control over your content.',
       slug: 'cms-solutions',
-      color: 'text-emerald-500',
-      bgColor: 'bg-emerald-50 dark:bg-emerald-900/10',
-      borderColor: 'border-emerald-100 dark:border-emerald-900/20'
     },
     {
-      icon: 'fluent:people-community-24-filled',
       title: 'CRM Systems',
       description: 'Intelligent tools to boost conversions and streamline operations.',
       slug: 'crm-systems',
-      color: 'text-blue-500',
-      bgColor: 'bg-blue-50 dark:bg-blue-900/10',
-      borderColor: 'border-blue-100 dark:border-blue-900/20'
     },
     {
-      icon: 'fluent:design-ideas-24-filled',
       title: 'Web UI/UX Design',
       description: 'Beautiful, intuitive interfaces that delight users and drive engagement.',
       slug: 'ui-ux-design',
-      color: 'text-sky-500',
-      bgColor: 'bg-sky-50 dark:bg-sky-900/10',
-      borderColor: 'border-sky-100 dark:border-sky-900/20'
     },
     {
-      icon: 'fluent:document-24-filled',
       title: 'Digital Document Storage',
       description: 'Secure systems for easy access, organization, and collaboration.',
       slug: 'digital-document-storage',
-      color: 'text-rose-500',
-      bgColor: 'bg-rose-50 dark:bg-rose-900/10',
-      borderColor: 'border-rose-100 dark:border-rose-900/20'
     },
     {
-      icon: 'fluent:signature-24-filled',
       title: 'Digital Signature',
       description: 'Streamline document signing and approval workflows securely.',
       slug: 'digital-signature',
-      color: 'text-amber-500',
-      bgColor: 'bg-amber-50 dark:bg-amber-900/10',
-      borderColor: 'border-amber-100 dark:border-amber-900/20'
     }
   ];
 
@@ -109,35 +85,22 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Services Grid - Minimalist List Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        {/* Services Grid - Simple */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
           {services.map((service, index) => {
             const CardContent = (
-              <div className="flex items-start gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg hover:shadow-gray-100 dark:hover:bg-white/5 dark:hover:shadow-none">
-                {/* Icon Box */}
-                <div className={`flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-2xl ${service.bgColor} ${service.color} border ${service.borderColor} transition-transform duration-300 group-hover:scale-105`}>
-                  <Icon icon={service.icon} className="w-8 h-8" />
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 min-w-0 pt-1">
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 truncate" style={{
-                    fontFamily: 'system-ui, -apple-system, sans-serif'
-                  }}>
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
-                    {service.description}
-                  </p>
-                </div>
+              <div className="group/item py-4 border-b border-gray-200 hover:border-[#0078D4] transition-all duration-300">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2 group-hover/item:text-[#0078D4] transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {service.description}
+                </p>
               </div>
             );
 
             return (
-              <div
-                key={index}
-                className="group"
-              >
+              <div key={index}>
                 {service.slug ? (
                   <Link href={`/services/${service.slug}`} className="block">
                     {CardContent}

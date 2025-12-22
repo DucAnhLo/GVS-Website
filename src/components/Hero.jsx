@@ -176,7 +176,7 @@ const Hero = () => {
               </div>
 
               {/* Floating Card */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-4 flex items-center gap-3">
+              {/* <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-4 flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-[#0078D4] to-cyan-400 rounded-lg flex items-center justify-center">
                   <Icon icon="lucide:check" className="w-6 h-6 text-white" />
                 </div>
@@ -186,7 +186,7 @@ const Hero = () => {
                   </div>
                   <div className="text-xs text-gray-600">100% Satisfaction</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
