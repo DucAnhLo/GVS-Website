@@ -6,33 +6,6 @@ import Link from "next/link";
 export default function CMSService() {
   const [activeService, setActiveService] = useState(0);
 
-  const features = [
-    {
-      title: "Custom Development",
-      description:
-        "Tailored CMS platforms built to match your exact content workflows and business needs.",
-      icon: "lucide:code-2",
-    },
-    {
-      title: "User-Friendly Interface",
-      description:
-        "Intuitive admin panels that make content management effortless for your team.",
-      icon: "lucide:layout-dashboard",
-    },
-    {
-      title: "Flexible Architecture",
-      description:
-        "Headless or traditional CMS solutions designed to scale with your content strategy.",
-      icon: "lucide:boxes",
-    },
-    {
-      title: "Secure & Reliable",
-      description:
-        "Enterprise-grade security with role-based access control and content versioning.",
-      icon: "lucide:shield-check",
-    },
-  ];
-
   const services = [
     {
       title: "Headless CMS Development",
@@ -81,8 +54,7 @@ export default function CMSService() {
     },
     {
       title: "Development & Customization",
-      description:
-        "Building your CMS with custom features and integrations.",
+      description: "Building your CMS with custom features and integrations.",
       icon: "lucide:code",
       step: "03",
     },
@@ -203,103 +175,64 @@ export default function CMSService() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+      {/* CMS Solutions Section - Bento Grid */}
+      {/* CMS Solutions Section - Enterprise Minimal */}
+      <section className="py-20 lg:py-32 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Why Choose Our CMS Solutions
+          {/* Section Header */}
+          <div className="max-w-3xl mb-16 lg:mb-20">
+            <p className="text-sm font-medium text-[#0078D4] uppercase tracking-wider mb-4">
+              Our Services
+            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
+              CMS Solutions
             </h2>
-            <p className="text-base sm:text-lg text-gray-600">
-              Enterprise-grade content management with the simplicity your team
-              needs.
+            <p className="text-lg text-gray-500 leading-relaxed">
+              Enterprise-grade content management systems designed to scale with
+              your business.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {features.map((feature, index) => (
+          {/* Clean Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-xl overflow-hidden">
+            {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative p-5 sm:p-6 border border-gray-200 rounded-xl hover:border-[#0078D4] transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white p-8 lg:p-12 hover:bg-gray-50 transition-colors duration-300"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#0078D4] to-cyan-500 rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                {/* Service Number */}
+                <div className="flex items-start justify-between mb-8">
+                  <span className="text-sm font-medium text-gray-400">
+                    0{index + 1}
+                  </span>
                   <Icon
-                    icon={feature.icon}
-                    className="w-6 h-6 sm:w-7 sm:h-7 text-white"
+                    icon={service.icon}
+                    className="w-6 h-6 text-gray-400 group-hover:text-[#0078D4] transition-colors duration-300"
                   />
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* What We Build Section - Interactive Tabs */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              CMS Solutions We Provide
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600">
-              From headless architecture to custom platforms, we deliver CMS
-              solutions tailored to your needs.
-            </p>
-          </div>
+                {/* Content */}
+                <div className="space-y-4">
+                  <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 group-hover:text-[#0078D4] transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-500 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
 
-          {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
-            {services.map((service, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveService(index)}
-                className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 ${
-                  activeService === index
-                    ? "bg-[#0078D4] text-white shadow-lg scale-105"
-                    : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
-                }`}
-              >
-                <span className="hidden sm:inline">{service.title}</span>
-                <span className="sm:hidden">{service.title.split(" ")[0]}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Tab Content */}
-          <div className="max-w-4xl mx-auto">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className={`transition-all duration-500 ${
-                  activeService === index
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4 absolute pointer-events-none"
-                }`}
-              >
-                <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 border border-gray-200">
-                  <div className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8">
-                    <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-                        {service.title}
-                      </h3>
-                      <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
-                        {service.description}
-                      </p>
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-2 text-[#0078D4] font-semibold hover:gap-3 transition-all text-sm sm:text-base"
-                      >
-                        Learn more
-                        <Icon icon="lucide:arrow-right" className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
+                {/* Link */}
+                <div className="mt-8 pt-8 border-t border-gray-100">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-[#0078D4] transition-colors duration-300 group/link"
+                  >
+                    Get started
+                    <Icon
+                      icon="lucide:arrow-right"
+                      className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300"
+                    />
+                  </Link>
                 </div>
               </div>
             ))}

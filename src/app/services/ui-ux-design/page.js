@@ -74,15 +74,13 @@ export default function UIUXService() {
     },
     {
       title: "Information Architecture",
-      description:
-        "Organizing content and features for optimal user flow.",
+      description: "Organizing content and features for optimal user flow.",
       icon: "lucide:sitemap",
       step: "02",
     },
     {
       title: "Wireframing",
-      description:
-        "Creating low-fidelity layouts to establish structure.",
+      description: "Creating low-fidelity layouts to establish structure.",
       icon: "lucide:layout-template",
       step: "03",
     },
@@ -94,7 +92,8 @@ export default function UIUXService() {
     },
     {
       title: "Prototyping & Testing",
-      description: "Building interactive prototypes and gathering user feedback.",
+      description:
+        "Building interactive prototypes and gathering user feedback.",
       icon: "lucide:play-circle",
       step: "05",
     },
@@ -238,66 +237,65 @@ export default function UIUXService() {
         </div>
       </section>
 
-      {/* What We Build Section - Interactive Tabs */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-white">
+      {/* Design Services Section - Enterprise Minimal (Two Column) */}
+      <section className="py-20 lg:py-32 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Design Services We Offer
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600">
-              From web and mobile design to comprehensive design systems, we
-              deliver solutions that enhance user experience.
-            </p>
+          {/* Section Header */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-16 lg:mb-20">
+            <div>
+              <p className="text-sm font-medium text-[#0078D4] uppercase tracking-wider mb-4">
+                Our Services
+              </p>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight">
+                Design Services
+              </h2>
+            </div>
+            <div className="flex items-end">
+              <p className="text-lg text-gray-500 leading-relaxed">
+                Comprehensive UI/UX design services that transform complex ideas
+                into intuitive, beautiful experiences.
+              </p>
+            </div>
           </div>
 
-          {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
-            {services.map((service, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveService(index)}
-                className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 ${
-                  activeService === index
-                    ? "bg-[#0078D4] text-white shadow-lg scale-105"
-                    : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
-                }`}
-              >
-                <span className="hidden sm:inline">{service.title}</span>
-                <span className="sm:hidden">{service.title.split(" ")[0]}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Tab Content */}
-          <div className="max-w-4xl mx-auto">
+          {/* Two Column Services */}
+          <div className="space-y-0">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`transition-all duration-500 ${
-                  activeService === index
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4 absolute pointer-events-none"
-                }`}
+                className="group grid lg:grid-cols-12 gap-6 lg:gap-12 py-10 lg:py-14 border-t border-gray-200 first:border-t-0"
               >
-                <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 border border-gray-200">
-                  <div className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8">
-                    <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-                        {service.title}
-                      </h3>
-                      <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
-                        {service.description}
-                      </p>
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-2 text-[#0078D4] font-semibold hover:gap-3 transition-all text-sm sm:text-base"
-                      >
-                        Learn more
-                        <Icon icon="lucide:arrow-right" className="w-4 h-4" />
-                      </Link>
-                    </div>
+                {/* Left - Icon & Number */}
+                <div className="lg:col-span-4 flex items-start gap-6">
+                  <span className="text-sm font-medium text-gray-400 pt-1">
+                    0{index + 1}
+                  </span>
+                  <div className="w-12 h-12 rounded-lg bg-gray-100 group-hover:bg-[#0078D4]/10 flex items-center justify-center transition-colors duration-300">
+                    <Icon
+                      icon={service.icon}
+                      className="w-6 h-6 text-gray-500 group-hover:text-[#0078D4] transition-colors duration-300"
+                    />
                   </div>
+                  <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 group-hover:text-[#0078D4] transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                </div>
+
+                {/* Right - Description & Link */}
+                <div className="lg:col-span-8 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+                  <p className="text-gray-500 leading-relaxed max-w-xl">
+                    {service.description}
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-[#0078D4] transition-colors duration-300 flex-shrink-0 group/link"
+                  >
+                    Learn more
+                    <Icon
+                      icon="lucide:arrow-right"
+                      className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300"
+                    />
+                  </Link>
                 </div>
               </div>
             ))}

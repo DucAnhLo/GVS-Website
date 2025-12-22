@@ -74,15 +74,13 @@ export default function DocumentStorageService() {
     },
     {
       title: "System Design",
-      description:
-        "Planning folder structures, metadata, and access controls.",
+      description: "Planning folder structures, metadata, and access controls.",
       icon: "lucide:layout-dashboard",
       step: "02",
     },
     {
       title: "Development & Integration",
-      description:
-        "Building your system with necessary integrations.",
+      description: "Building your system with necessary integrations.",
       icon: "lucide:code",
       step: "03",
     },
@@ -137,7 +135,9 @@ export default function DocumentStorageService() {
               Services
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
-            <span className="text-white font-medium">Digital Document Storage</span>
+            <span className="text-white font-medium">
+              Digital Document Storage
+            </span>
           </div>
 
           <div className="max-w-4xl mx-auto text-center">
@@ -238,66 +238,57 @@ export default function DocumentStorageService() {
         </div>
       </section>
 
-      {/* What We Build Section - Interactive Tabs */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-white">
+      {/* Document Solutions Section - Enterprise Minimal */}
+      <section className="py-20 lg:py-32 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Document Solutions We Provide
+          {/* Section Header */}
+          <div className="max-w-3xl mb-16 lg:mb-20">
+            <p className="text-sm font-medium text-[#0078D4] uppercase tracking-wider mb-4">
+              Our Services
+            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
+              Document Solutions
             </h2>
-            <p className="text-base sm:text-lg text-gray-600">
-              Comprehensive document management systems tailored to your business needs.
+            <p className="text-lg text-gray-500 leading-relaxed">
+              Comprehensive document management systems tailored to your
+              business needs.
             </p>
           </div>
 
-          {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
-            {services.map((service, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveService(index)}
-                className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 ${
-                  activeService === index
-                    ? "bg-[#0078D4] text-white shadow-lg scale-105"
-                    : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
-                }`}
-              >
-                <span className="hidden sm:inline">{service.title}</span>
-                <span className="sm:hidden">{service.title.split(" ")[0]}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Tab Content */}
-          <div className="max-w-4xl mx-auto">
+          {/* Clean Grid */}
+          <div className="grid md:grid-cols-2 gap-px bg-gray-200">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`transition-all duration-500 ${
-                  activeService === index
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4 absolute pointer-events-none"
-                }`}
+                className="group bg-white p-8 lg:p-12 hover:bg-gray-50 transition-colors duration-300"
               >
-                <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 border border-gray-200">
-                  <div className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8">
-                    <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-                        {service.title}
-                      </h3>
-                      <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
-                        {service.description}
-                      </p>
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-2 text-[#0078D4] font-semibold hover:gap-3 transition-all text-sm sm:text-base"
-                      >
-                        Learn more
-                        <Icon icon="lucide:arrow-right" className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
+                <div className="flex items-start justify-between mb-6">
+                  <span className="text-sm font-medium text-gray-400">
+                    0{index + 1}
+                  </span>
+                  <Icon
+                    icon={service.icon}
+                    className="w-5 h-5 text-gray-400 group-hover:text-[#0078D4] transition-colors duration-300"
+                  />
                 </div>
+
+                <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 group-hover:text-[#0078D4] transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-gray-500 leading-relaxed mb-8">
+                  {service.description}
+                </p>
+
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-[#0078D4] transition-colors duration-300 group/link"
+                >
+                  Get started
+                  <Icon
+                    icon="lucide:arrow-right"
+                    className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300"
+                  />
+                </Link>
               </div>
             ))}
           </div>
@@ -379,7 +370,8 @@ export default function DocumentStorageService() {
             Ready to Go Paperless?
           </h2>
           <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Let's build a document management system that transforms how you work.
+            Let's build a document management system that transforms how you
+            work.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link

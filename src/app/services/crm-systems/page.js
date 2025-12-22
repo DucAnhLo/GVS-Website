@@ -67,22 +67,19 @@ export default function CRMService() {
   const approach = [
     {
       title: "Business Process Mapping",
-      description:
-        "Analyze your sales process and customer touchpoints.",
+      description: "Analyze your sales process and customer touchpoints.",
       icon: "lucide:map",
       step: "01",
     },
     {
       title: "CRM Strategy & Design",
-      description:
-        "Define workflows, data structures, and automation rules.",
+      description: "Define workflows, data structures, and automation rules.",
       icon: "lucide:layout-dashboard",
       step: "02",
     },
     {
       title: "Custom Development",
-      description:
-        "Build your CRM with tailored features and integrations.",
+      description: "Build your CRM with tailored features and integrations.",
       icon: "lucide:code",
       step: "03",
     },
@@ -238,65 +235,63 @@ export default function CRMService() {
         </div>
       </section>
 
-      {/* What We Build Section - Interactive Tabs */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-white">
+      {/* CRM Solutions Section - Enterprise Minimal (Horizontal List) */}
+      <section className="py-20 lg:py-32 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              CRM Solutions We Provide
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600">
-              From custom development to sales automation, we deliver CRM
-              solutions that drive results.
+          {/* Section Header */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 lg:mb-20">
+            <div className="max-w-2xl">
+              <p className="text-sm font-medium text-[#0078D4] uppercase tracking-wider mb-4">
+                Our Services
+              </p>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight">
+                CRM Solutions
+              </h2>
+            </div>
+            <p className="text-lg text-gray-500 max-w-md lg:text-right">
+              Enterprise-grade customer relationship management built to
+              accelerate your growth.
             </p>
           </div>
 
-          {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
+          {/* Horizontal List Layout */}
+          <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
             {services.map((service, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveService(index)}
-                className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 ${
-                  activeService === index
-                    ? "bg-[#0078D4] text-white shadow-lg scale-105"
-                    : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
-                }`}
-              >
-                <span className="hidden sm:inline">{service.title}</span>
-                <span className="sm:hidden">{service.title.split(" ")[0]}</span>
-              </button>
-            ))}
-          </div>
+              <div key={index} className="group py-8 lg:py-12">
+                <div className="grid grid-cols-12 gap-4 lg:gap-8 items-start">
+                  {/* Number */}
+                  <div className="col-span-2 lg:col-span-1">
+                    <span className="text-sm font-medium text-gray-400">
+                      0{index + 1}
+                    </span>
+                  </div>
 
-          {/* Tab Content */}
-          <div className="max-w-4xl mx-auto">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className={`transition-all duration-500 ${
-                  activeService === index
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4 absolute pointer-events-none"
-                }`}
-              >
-                <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 border border-gray-200">
-                  <div className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8">
-                    <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-                        {service.title}
-                      </h3>
-                      <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
-                        {service.description}
-                      </p>
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-2 text-[#0078D4] font-semibold hover:gap-3 transition-all text-sm sm:text-base"
-                      >
-                        Learn more
-                        <Icon icon="lucide:arrow-right" className="w-4 h-4" />
-                      </Link>
-                    </div>
+                  {/* Title */}
+                  <div className="col-span-10 lg:col-span-3">
+                    <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 group-hover:text-[#0078D4] transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                  </div>
+
+                  {/* Description */}
+                  <div className="col-span-12 lg:col-span-5 lg:col-start-5">
+                    <p className="text-gray-500 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* Link */}
+                  <div className="col-span-12 lg:col-span-2 lg:col-start-11 lg:text-right mt-4 lg:mt-0">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-[#0078D4] transition-colors duration-300 group/link"
+                    >
+                      <span className="hidden lg:inline">Learn more</span>
+                      <Icon
+                        icon="lucide:arrow-right"
+                        className="w-5 h-5 group-hover/link:translate-x-1 transition-transform duration-300"
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>

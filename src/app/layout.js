@@ -2,6 +2,7 @@ import { Inter_Tight, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import LoadingWrapper from "@/components/LoadingWrapper";
 import { ThemeProvider } from "@/contexts/ThemeContext";
@@ -21,8 +22,8 @@ export const metadata = {
   title: "Global Soft Vietnam",
   description: "Software solutions for your business",
   icons: {
-    icon: '/gsvfavicon.png',
-    apple: '/gsvfavicon.png', // Also good for mobile
+    icon: "/gsvfavicon.png",
+    apple: "/gsvfavicon.png", // Also good for mobile
   },
 };
 
@@ -31,8 +32,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,100..1000&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body
         className={`${interTight.variable} ${montserrat.variable} antialiased`}
@@ -41,10 +49,9 @@ export default function RootLayout({ children }) {
           <LoadingProvider>
             <LoadingWrapper />
             <Header />
-            <main className="min-h-screen">
-              {children}
-            </main>
+            <main className="min-h-screen">{children}</main>
             <Footer />
+            <CookieConsent />
             {/* <ThemeToggle /> */}
           </LoadingProvider>
         </ThemeProvider>
