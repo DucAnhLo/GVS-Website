@@ -2,63 +2,69 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function UIUXService() {
   const [activeService, setActiveService] = useState(0);
+  const { t } = useLanguage();
 
   const features = [
     {
-      title: "User Research",
-      description:
-        "In-depth user interviews, personas, and journey mapping to understand your audience deeply.",
+      title: t("servicePages.uiuxDesign.features.userResearch.title"),
+      description: t(
+        "servicePages.uiuxDesign.features.userResearch.description"
+      ),
       icon: "lucide:users",
     },
     {
-      title: "Interface Design",
-      description:
-        "Beautiful, on-brand interfaces with attention to typography, color, and composition.",
+      title: t("servicePages.uiuxDesign.features.interfaceDesign.title"),
+      description: t(
+        "servicePages.uiuxDesign.features.interfaceDesign.description"
+      ),
       icon: "lucide:palette",
     },
     {
-      title: "Prototyping",
-      description:
-        "Interactive prototypes that bring designs to life before development begins.",
+      title: t("servicePages.uiuxDesign.features.prototyping.title"),
+      description: t(
+        "servicePages.uiuxDesign.features.prototyping.description"
+      ),
       icon: "lucide:smartphone",
     },
     {
-      title: "Usability Testing",
-      description:
-        "Validate designs with real users to ensure intuitive and effective experiences.",
+      title: t("servicePages.uiuxDesign.features.usabilityTesting.title"),
+      description: t(
+        "servicePages.uiuxDesign.features.usabilityTesting.description"
+      ),
       icon: "lucide:check-circle",
     },
   ];
 
   const services = [
     {
-      title: "Web & Mobile Design",
-      description:
-        "Responsive designs for web and mobile applications that adapt seamlessly across all devices. From concept to high-fidelity mockups ready for development.",
+      title: t("servicePages.uiuxDesign.services.webMobile.title"),
+      description: t("servicePages.uiuxDesign.services.webMobile.description"),
       icon: "lucide:layout",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Design Systems",
-      description:
-        "Comprehensive design systems with reusable components, style guides, and documentation that ensure consistency across your entire product ecosystem.",
+      title: t("servicePages.uiuxDesign.services.designSystem.title"),
+      description: t(
+        "servicePages.uiuxDesign.services.designSystem.description"
+      ),
       icon: "lucide:package",
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "User Experience Audit",
-      description:
-        "Thorough analysis of your existing product to identify usability issues, pain points, and opportunities for improvement based on UX best practices.",
+      title: t("servicePages.uiuxDesign.services.uxAudit.title"),
+      description: t("servicePages.uiuxDesign.services.uxAudit.description"),
       icon: "lucide:search",
       color: "from-blue-600 to-cyan-600",
     },
     {
-      title: "Interaction Design",
-      description:
-        "Thoughtful animations, micro-interactions, and transitions that enhance usability and create delightful user experiences.",
+      title: t("servicePages.uiuxDesign.services.interaction.title"),
+      description: t(
+        "servicePages.uiuxDesign.services.interaction.description"
+      ),
       icon: "lucide:mouse-pointer-click",
       color: "from-cyan-600 to-blue-600",
     },
@@ -66,40 +72,48 @@ export default function UIUXService() {
 
   const approach = [
     {
-      title: "Discovery & Research",
-      description:
-        "Understanding your users, business goals, and competitive landscape.",
+      title: t("servicePages.uiuxDesign.process.steps.discovery.title"),
+      description: t(
+        "servicePages.uiuxDesign.process.steps.discovery.description"
+      ),
       icon: "lucide:compass",
       step: "01",
     },
     {
-      title: "Information Architecture",
-      description: "Organizing content and features for optimal user flow.",
+      title: t("servicePages.uiuxDesign.process.steps.ia.title"),
+      description: t("servicePages.uiuxDesign.process.steps.ia.description"),
       icon: "lucide:sitemap",
       step: "02",
     },
     {
-      title: "Wireframing",
-      description: "Creating low-fidelity layouts to establish structure.",
+      title: t("servicePages.uiuxDesign.process.steps.wireframing.title"),
+      description: t(
+        "servicePages.uiuxDesign.process.steps.wireframing.description"
+      ),
       icon: "lucide:layout-template",
       step: "03",
     },
     {
-      title: "Visual Design",
-      description: "Applying brand identity and creating polished interfaces.",
+      title: t("servicePages.uiuxDesign.process.steps.visualDesign.title"),
+      description: t(
+        "servicePages.uiuxDesign.process.steps.visualDesign.description"
+      ),
       icon: "lucide:paintbrush",
       step: "04",
     },
     {
-      title: "Prototyping & Testing",
-      description:
-        "Building interactive prototypes and gathering user feedback.",
+      title: t("servicePages.uiuxDesign.process.steps.prototyping.title"),
+      description: t(
+        "servicePages.uiuxDesign.process.steps.prototyping.description"
+      ),
       icon: "lucide:play-circle",
       step: "05",
     },
     {
-      title: "Design Handoff",
-      description: "Delivering specifications and assets to development.",
+      title: t("servicePages.uiuxDesign.process.steps.handoff.title"),
+      description: t(
+        "servicePages.uiuxDesign.process.steps.handoff.description"
+      ),
       icon: "lucide:package-check",
       step: "06",
     },
@@ -126,17 +140,19 @@ export default function UIUXService() {
               href="/"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Home
+              {t("servicePages.breadcrumb.home")}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
             <Link
               href="/#services"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Services
+              {t("servicePages.breadcrumb.services")}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
-            <span className="text-white font-medium">UI/UX Design</span>
+            <span className="text-white font-medium">
+              {t("services.items.uiuxDesign.title")}
+            </span>
           </div>
 
           <div className="max-w-4xl mx-auto text-center">
@@ -147,7 +163,7 @@ export default function UIUXService() {
             >
               <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
               <span className="text-white/90 font-medium">
-                User Interface & Experience Design
+                {t("servicePages.uiuxDesign.badge")}
               </span>
             </div>
 
@@ -156,10 +172,10 @@ export default function UIUXService() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 lg:mb-6 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              Design Experiences
+              {t("servicePages.uiuxDesign.title")}
               <br />
               <span className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">
-                That Users Love
+                {t("servicePages.uiuxDesign.titleHighlight")}
               </span>
             </h1>
 
@@ -168,8 +184,7 @@ export default function UIUXService() {
               className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 lg:mb-8 max-w-3xl mx-auto opacity-0 animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              We create beautiful, intuitive interfaces that delight users and
-              drive engagement through research-driven, user-centered design.
+              {t("servicePages.uiuxDesign.description")}
             </p>
 
             {/* CTA Buttons */}
@@ -182,7 +197,7 @@ export default function UIUXService() {
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all text-center"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  Get Started
+                  {t("servicePages.getStarted")}
                   <Icon
                     icon="lucide:arrow-right"
                     className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -194,7 +209,7 @@ export default function UIUXService() {
                 href="/contact"
                 className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
               >
-                Schedule Consultation
+                {t("servicePages.scheduleConsultation")}
               </Link>
             </div>
           </div>
@@ -206,10 +221,10 @@ export default function UIUXService() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Our Design Approach
+              {t("servicePages.uiuxDesign.approachTitle")}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              User-centered design that puts your customers first.
+              {t("servicePages.uiuxDesign.approachSubtitle")}
             </p>
           </div>
 
@@ -244,16 +259,15 @@ export default function UIUXService() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-16 lg:mb-20">
             <div>
               <p className="text-sm font-medium text-[#0078D4] uppercase tracking-wider mb-4">
-                Our Services
+                {t("servicePages.uiuxDesign.ourServicesBadge")}
               </p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight">
-                Design Services
+                {t("servicePages.uiuxDesign.serviceTitle")}
               </h2>
             </div>
             <div className="flex items-end">
               <p className="text-lg text-gray-500 leading-relaxed">
-                Comprehensive UI/UX design services that transform complex ideas
-                into intuitive, beautiful experiences.
+                {t("servicePages.uiuxDesign.serviceSubtitle")}
               </p>
             </div>
           </div>
@@ -290,7 +304,7 @@ export default function UIUXService() {
                     href="/contact"
                     className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-[#0078D4] transition-colors duration-300 flex-shrink-0 group/link"
                   >
-                    Learn more
+                    {t("common.readMore")}
                     <Icon
                       icon="lucide:arrow-right"
                       className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300"
@@ -308,11 +322,10 @@ export default function UIUXService() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Our Design Process
+              {t("servicePages.uiuxDesign.process.title")}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              A structured approach from research to delivery that ensures
-              user-centered results.
+              {t("servicePages.uiuxDesign.process.description")}
             </p>
           </div>
 
@@ -376,11 +389,10 @@ export default function UIUXService() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
-            Ready to Design Better?
+            {t("servicePages.uiuxDesign.cta.title")}
           </h2>
           <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Let's create beautiful, user-centered experiences that your
-            customers will love.
+            {t("servicePages.uiuxDesign.cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link
@@ -388,7 +400,7 @@ export default function UIUXService() {
               className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                Contact Us
+                {t("servicePages.uiuxDesign.cta.contact")}
                 <Icon
                   icon="lucide:arrow-right"
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -400,7 +412,7 @@ export default function UIUXService() {
               href="/projects"
               className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
             >
-              View Our Work
+              {t("servicePages.uiuxDesign.cta.viewWork")}
               <Icon
                 icon="lucide:external-link"
                 className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

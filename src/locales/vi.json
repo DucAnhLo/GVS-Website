@@ -382,8 +382,8 @@
           "description": "Theo dõi và nuôi dưỡng các cơ hội kinh doanh xuyên suốt hành trình chuyển đổi từ khách lạ thành đơn hàng."
         },
         "salesPipeline": {
-          "title": "Tối Ưu Phễu Bán Hàng",
-          "description": "Trực quan hóa và quản trị chặt chẽ mọi giai đoạn bán hàng, từ tiếp cận ban đầu đến khi chốt deal thành công."
+          "title": "Quản Trị Quy Trình Bán Hàng",
+          "description": "Trực quan hóa và kiểm soát chặt chẽ mọi giai đoạn kinh doanh, từ bước tiếp cận đầu tiên đến khi chốt hợp đồng thành công."
         },
         "customerInsights": {
           "title": "Thấu Hiểu Khách Hàng",
@@ -446,6 +446,255 @@
         "title": "Sẵn Sàng Nâng Tầm Quản Trị Khách Hàng?",
         "description": "Hãy để chúng tôi giúp bạn xây dựng hệ thống CRM mạnh mẽ, biến mọi điểm tiếp xúc thành cơ hội tăng trưởng doanh thu."
       }
+    },
+    "uiuxDesign": {
+      "badge": "Thiết Kế Giao Diện & Trải Nghiệm",
+      "title": "Kiến Tạo Trải Nghiệm",
+      "titleHighlight": "Chinh Phục Người Dùng",
+      "description": "Chúng tôi kết hợp nghệ thuật thị giác với nghiên cứu hành vi để tạo nên những giao diện tinh tế, trực quan, giúp tối ưu hóa sự hài lòng và lòng trung thành của người dùng.",
+      "features": {
+        "userResearch": {
+          "title": "Thấu Hiểu Người Dùng",
+          "description": "Nghiên cứu hành vi, xây dựng chân dung khách hàng và bản đồ hành trình để đưa ra những quyết định thiết kế dựa trên dữ liệu thực tế."
+        },
+        "interfaceDesign": {
+          "title": "Thiết Kế Giao Diện (UI)",
+          "description": "Giao diện hiện đại, mang đậm dấu ấn thương hiệu với sự chỉn chu trong từng điểm ảnh, màu sắc và nghệ thuật chữ (Typography)."
+        },
+        "prototyping": {
+          "title": "Tạo Mẫu Tương Tác",
+          "description": "Xây dựng các bản mẫu (Prototype) sống động, cho phép bạn trải nghiệm sản phẩm thật trước khi bắt đầu giai đoạn lập trình."
+        },
+        "usabilityTesting": {
+          "title": "Kiểm Thử Trải Nghiệm",
+          "description": "Đánh giá thiết kế thông qua thực tế sử dụng để đảm bảo sản phẩm luôn dễ dùng, logic và đạt hiệu quả chuyển đổi cao nhất."
+        }
+      },
+      "services": {
+        "webMobile": {
+          "title": "Thiết Kế Đa Nền Tảng",
+          "description": "Tối ưu hóa hiển thị trên mọi kích thước màn hình. Từ ý tưởng sơ khai đến bản mockup hoàn thiện, sẵn sàng cho công đoạn phát triển."
+        },
+        "designSystem": {
+          "title": "Hệ Thống Thiết Kế (Design System)",
+          "description": "Xây dựng quy chuẩn thiết kế đồng nhất với thư viện thành phần (components) tái sử dụng, giúp duy trì sự chuyên nghiệp cho toàn bộ hệ sinh thái."
+        },
+        "uxAudit": {
+          "title": "Đánh Giá Trải Nghiệm (UX Audit)",
+          "description": "Phân tích sâu sản phẩm hiện tại để phát hiện các 'điểm nghẽn' trải nghiệm và đề xuất giải pháp cải thiện dựa trên tiêu chuẩn UX quốc tế."
+        },
+        "interaction": {
+          "title": "Thiết Kế Tương Tác",
+          "description": "Thổi hồn vào sản phẩm bằng các hiệu ứng chuyển động và tương tác nhỏ (micro-interactions) đầy tinh tế, tạo sự thích thú cho người dùng."
+        }
+      },
+      "process": {
+        "title": "Quy Trình Thiết Kế Tiêu Chuẩn",
+        "description": "Phương pháp tiếp cận lấy người dùng làm trọng tâm, đảm bảo sự cân bằng giữa mục tiêu kinh doanh và trải nghiệm thực tế.",
+        "steps": {
+          "discovery": {
+            "title": "Khám Phá & Phân Tích",
+            "description": "Nghiên cứu sâu về người dùng, mục tiêu thương hiệu và bối cảnh cạnh tranh trên thị trường."
+          },
+          "ia": {
+            "title": "Kiến Trúc Thông Tin",
+            "description": "Sắp xếp hệ thống tính năng và nội dung một cách khoa học để tối ưu luồng di chuyển của người dùng (User Flow)."
+          },
+          "wireframing": {
+            "title": "Dựng Khung Sườn (Wireframe)",
+            "description": "Phác thảo cấu trúc sản phẩm dưới dạng sơ đồ để tập trung vào tính logic và bố cục trước khi thiết kế chi tiết."
+          },
+          "visualDesign": {
+            "title": "Thiết Kế Trực Quan",
+            "description": "Sáng tạo giao diện hoàn chỉnh, kết hợp hài hòa giữa bộ nhận diện thương hiệu và xu hướng thiết kế hiện đại."
+          },
+          "prototyping": {
+            "title": "Mô Phỏng & Kiểm Thử",
+            "description": "Vận hành bản thử nghiệm tương tác để thu thập phản hồi và tinh chỉnh sản phẩm đến mức hoàn hảo."
+          },
+          "handoff": {
+            "title": "Bàn Giao Chuyên Nghiệp",
+            "description": "Cung cấp đầy đủ tài liệu quy chuẩn và tài nguyên đồ họa chi tiết cho đội ngũ lập trình triển khai."
+          }
+        }
+      },
+      "cta": {
+        "title": "Sẵn Sàng Nâng Tầm Trải Nghiệm?",
+        "description": "Hãy cùng chúng tôi tạo nên những giao diện đẳng cấp và trải nghiệm người dùng khác biệt cho sản phẩm của bạn.",
+        "contact": "Tư vấn ngay",
+        "viewWork": "Xem các dự án tiêu biểu"
+      },
+      "approachTitle": "Phương Pháp Tiếp Cận",
+      "approachSubtitle": "Thiết kế xoay quanh trải nghiệm con người.",
+      "serviceTitle": "Dịch Vụ Thiết Kế UI/UX",
+      "serviceSubtitle": "Giải pháp toàn diện giúp chuyển hóa các ý tưởng phức tạp thành những trải nghiệm mượt mà và đầy cảm hứng.",
+      "ourServicesBadge": "Hệ Sinh Thái Dịch Vụ"
+    },
+    "digitalStorage": {
+      "badge": "Quản Lý Tài Liệu Số",
+      "title": "Lưu Trữ Số Bảo Mật",
+      "titleHighlight": "Nâng Tầm Tài Sản Dữ Liệu",
+      "description": "Hệ thống lưu trữ, phân loại và truy cập tài liệu thông minh từ mọi nơi với tiêu chuẩn bảo mật cấp doanh nghiệp và khả năng cộng tác vượt trội.",
+      "features": {
+        "cloudStorage": {
+          "title": "Lưu Trữ Đám Mây",
+          "description": "Hạ tầng Cloud an toàn, linh hoạt mở rộng và luôn sẵn sàng đáp ứng lộ trình phát triển của doanh nghiệp."
+        },
+        "versionControl": {
+          "title": "Kiểm Soát Phiên Bản",
+          "description": "Quản lý lịch sử thay đổi, cho phép truy xuất và khôi phục các phiên bản cũ một cách chính xác, minh bạch."
+        },
+        "advancedSearch": {
+          "title": "Tìm Kiếm Thông Minh",
+          "description": "Công nghệ tìm kiếm mạnh mẽ kết hợp AI để phân loại và gắn thẻ (tagging), giúp truy xuất tài liệu trong tích tắc."
+        },
+        "accessControl": {
+          "title": "Phân Quyền Chuyên Sâu",
+          "description": "Kiểm soát truy cập nghiêm ngặt dựa trên vai trò, đảm bảo dữ liệu nhạy cảm luôn nằm trong vòng an toàn."
+        }
+      },
+      "services": {
+        "dms": {
+          "title": "Hệ Thống Quản Trị Tài Liệu (DMS)",
+          "description": "Chuẩn hóa vòng đời tài liệu từ khâu số hóa đến lưu trữ lâu dài. Sắp xếp khoa học, tìm kiếm nhanh chóng và bảo mật tuyệt đối."
+        },
+        "collaboration": {
+          "title": "Cộng Tác Thời Gian Thực",
+          "description": "Tăng tốc độ làm việc nhóm với tính năng thảo luận, ghi chú trực tiếp trên tài liệu trong một không gian số thống nhất."
+        },
+        "workflow": {
+          "title": "Tự Động Hóa Quy Trình",
+          "description": "Tối ưu hóa quy trình phê duyệt tài liệu nhờ hệ thống điều hướng tự động, thông báo nhắc việc và kiểm soát thời hạn xử lý."
+        },
+        "security": {
+          "title": "Bảo Mật & Tuân Thủ",
+          "description": "Mã hóa dữ liệu tiêu chuẩn cao, lưu vết lịch sử (audit log) và tuân thủ các quy định bảo mật quốc tế khắt khe nhất."
+        }
+      },
+      "process": {
+        "title": "Quy Trình Triển Khai Bài Bản",
+        "description": "Phương pháp luận đã được kiểm chứng giúp doanh nghiệp chuyển đổi sang hệ thống quản trị số hiệu quả.",
+        "steps": {
+          "analysis": {
+            "title": "Khảo Sát & Phân Tích",
+            "description": "Thấu hiểu cấu trúc tài liệu, luồng vận hành và nhu cầu lưu trữ đặc thù của doanh nghiệp."
+          },
+          "design": {
+            "title": "Quy Hoạch Hệ Thống",
+            "description": "Thiết kế cấu trúc thư mục, hệ thống siêu dữ liệu (metadata) và ma trận phân quyền truy cập."
+          },
+          "development": {
+            "title": "Triển Khai & Tích Hợp",
+            "description": "Xây dựng hệ thống hoàn chỉnh và tích hợp mượt mà với các công cụ làm việc hiện có."
+          },
+          "migration": {
+            "title": "Số Hóa & Di Trú",
+            "description": "Chuyển đổi và nhập liệu an toàn toàn bộ kho tài liệu hiện có vào hệ thống mới."
+          },
+          "training": {
+            "title": "Đào Tạo Chuyển Giao",
+            "description": "Hướng dẫn sử dụng chi tiết cho người dùng và chuyển giao kỹ thuật cho quản trị viên hệ thống."
+          },
+          "support": {
+            "title": "Hậu Mãi & Cập Nhật",
+            "description": "Duy trì bảo trì định kỳ và liên tục cập nhật các tính năng công nghệ mới nhất."
+          }
+        }
+      },
+      "cta": {
+        "title": "Sẵn Sàng Cho Văn Phòng Không Giấy Tờ?",
+        "description": "Hãy để chúng tôi giúp bạn xây dựng hệ thống quản trị tài liệu hiện đại, giúp giải phóng không gian và tối ưu hiệu suất làm việc.",
+        "contact": "Nhận tư vấn ngay",
+        "viewWork": "Xem các dự án đã triển khai"
+      },
+      "enterpriseFeaturesTitle": "Tiêu Chuẩn Doanh Nghiệp",
+      "enterpriseFeaturesSubtitle": "Mọi công cụ bạn cần để quản trị tài liệu số an toàn, khoa học và hiệu quả.",
+      "serviceTitle": "Giải Pháp Số Hóa Tài Liệu",
+      "serviceSubtitle": "Hệ thống quản trị tài liệu toàn diện, được thiết kế 'may đo' theo quy mô và nhu cầu của doanh nghiệp.",
+      "ourServicesBadge": "Hệ Sinh Thái Giải Pháp"
+    },
+    "digitalSignature": {
+      "badge": "Giải Pháp Chữ Ký Số",
+      "title": "Nền Tảng Ký Số Toàn Diện",
+      "titleHighlight": "Tối Ưu Quy Trình Phê Duyệt",
+      "description": "Số hóa quy trình ký kết với giải pháp chữ ký số bảo mật, đảm bảo tính pháp lý tuyệt đối, giúp loại bỏ rào cản giấy tờ và tăng tốc hiệu suất vận hành.",
+      "features": {
+        "eSignature": {
+          "title": "Chữ Ký Điện Tử Pháp Lý",
+          "description": "Chữ ký số có giá trị pháp lý tương đương chữ ký tay, đi kèm đầy đủ bằng chứng xác thực và tuân thủ quy định pháp luật."
+        },
+        "workflow": {
+          "title": "Tự Động Hóa Luồng Ký",
+          "description": "Tự động định tuyến tài liệu, nhắc lịch và thông báo tức thì để đẩy nhanh tiến độ ký kết giữa các phòng ban."
+        },
+        "multiParty": {
+          "title": "Ký Kết Đa Bên",
+          "description": "Hỗ trợ nhiều bên ký cùng lúc với thứ tự ưu tiên và vai trò được tùy chỉnh linh hoạt theo từng loại văn bản."
+        },
+        "compliance": {
+          "title": "Tiêu Chuẩn Quốc Tế",
+          "description": "Tuân thủ nghiêm ngặt các quy định về giao dịch điện tử và các tiêu chuẩn bảo mật quốc tế hàng đầu."
+        }
+      },
+      "services": {
+        "platform": {
+          "title": "Hệ Thống Ký Số Trực Tuyến",
+          "description": "Giải pháp ký kết trọn gói trên nền tảng web, đơn giản hóa quy trình phê duyệt với các luồng công việc tự động và bảo mật cao."
+        },
+        "contract": {
+          "title": "Quản Trị Vòng Đời Hợp Đồng",
+          "description": "Quản lý hợp đồng tập trung từ khâu soạn thảo, ký số đến lưu trữ lâu dài với hệ thống nhắc nhở gia hạn tự động."
+        },
+        "approval": {
+          "title": "Chuỗi Phê Duyệt Linh Hoạt",
+          "description": "Thiết lập quy trình duyệt song song hoặc tuần tự theo quy tắc nghiệp vụ, cập nhật trạng thái xử lý theo thời gian thực."
+        },
+        "audit": {
+          "title": "Lưu Vết & Kiểm Toán",
+          "description": "Hệ thống ghi nhận chi tiết lịch sử ký kết, địa chỉ IP và dấu thời gian, đảm bảo tính toàn vẹn và minh bạch tuyệt đối cho tài liệu."
+        }
+      },
+      "process": {
+        "title": "Quy Trình Triển Khai Chuyên Nghiệp",
+        "description": "Lộ trình triển khai bài bản đảm bảo hệ thống ký số vận hành mượt mà và tuân thủ đúng quy định doanh nghiệp.",
+        "steps": {
+          "assessment": {
+            "title": "Khảo Sát Luồng Vận Hành",
+            "description": "Phân tích thực trạng quy trình phê duyệt và ký kết hiện tại để tìm ra giải pháp số hóa tối ưu."
+          },
+          "design": {
+            "title": "Thiết Kế Luồng Ký Số",
+            "description": "Xây dựng sơ đồ định tuyến tài liệu và các kịch bản tự động hóa phù hợp với cấu trúc tổ chức."
+          },
+          "development": {
+            "title": "Cấu Hình & Phát Triển",
+            "description": "Thiết lập nền tảng ký số tùy chỉnh, tích hợp đầy đủ các tính năng bảo mật theo yêu cầu."
+          },
+          "integration": {
+            "title": "Kết Nối Hệ Sinh Thái",
+            "description": "Đồng bộ hóa giải pháp ký số với các phần mềm quản lý hiện có như ERP, CRM hay HRM."
+          },
+          "training": {
+            "title": "Hướng Dẫn & Chuyển Giao",
+            "description": "Đào tạo đội ngũ nhân sự làm chủ quy trình ký kết và phê duyệt điện tử một cách hiệu quả."
+          },
+          "support": {
+            "title": "Đồng Hành & Cập Nhật",
+            "description": "Hỗ trợ kỹ thuật liên tục và cập nhật hệ thống theo các thay đổi mới nhất của pháp luật về chữ ký số."
+          }
+        }
+      },
+      "cta": {
+        "title": "Sẵn Sàng Loại Bỏ Giấy Tờ Thủ Công?",
+        "description": "Hãy để chúng tôi giúp bạn xây dựng quy trình ký kết thông minh, an toàn và chuyên nghiệp hơn.",
+        "contact": "Liên hệ tư vấn",
+        "viewWork": "Dự án tiêu biểu"
+      },
+      "enterpriseFeaturesTitle": "Nền Tảng Ký Kết Chuyên Nghiệp",
+      "enterpriseFeaturesSubtitle": "Giải pháp toàn diện từ yêu cầu ký, phê duyệt đến lưu trữ và kiểm toán lịch sử.",
+      "serviceTitle": "Dịch Vụ Chữ Ký Số Doanh Nghiệp",
+      "serviceSubtitle": "Từ công cụ ký văn bản đơn giản đến hệ thống quản trị hợp đồng điện tử tập trung.",
+      "ourServicesBadge": "Dịch Vụ Của Chúng Tôi"
     }
   },
   "projects": {

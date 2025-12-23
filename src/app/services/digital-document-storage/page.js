@@ -2,63 +2,71 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function DocumentStorageService() {
   const [activeService, setActiveService] = useState(0);
+  const { t } = useLanguage();
 
   const features = [
     {
-      title: "Cloud Storage",
-      description:
-        "Scalable, secure cloud infrastructure that grows with your business needs.",
+      title: t("servicePages.digitalStorage.features.cloudStorage.title"),
+      description: t(
+        "servicePages.digitalStorage.features.cloudStorage.description"
+      ),
       icon: "lucide:cloud-upload",
     },
     {
-      title: "Version Control",
-      description:
-        "Track changes, restore previous versions, and maintain complete document history.",
+      title: t("servicePages.digitalStorage.features.versionControl.title"),
+      description: t(
+        "servicePages.digitalStorage.features.versionControl.description"
+      ),
       icon: "lucide:history",
     },
     {
-      title: "Advanced Search",
-      description:
-        "Powerful search capabilities with AI-powered document classification and tagging.",
+      title: t("servicePages.digitalStorage.features.advancedSearch.title"),
+      description: t(
+        "servicePages.digitalStorage.features.advancedSearch.description"
+      ),
       icon: "lucide:search",
     },
     {
-      title: "Access Control",
-      description:
-        "Granular permissions and role-based access to keep your documents secure.",
+      title: t("servicePages.digitalStorage.features.accessControl.title"),
+      description: t(
+        "servicePages.digitalStorage.features.accessControl.description"
+      ),
       icon: "lucide:shield-check",
     },
   ];
 
   const services = [
     {
-      title: "Document Management System",
-      description:
-        "Complete document lifecycle management from upload to archival. Organize, search, and retrieve documents with ease while maintaining security and compliance.",
+      title: t("servicePages.digitalStorage.services.dms.title"),
+      description: t("servicePages.digitalStorage.services.dms.description"),
       icon: "lucide:folder",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Collaboration Tools",
-      description:
-        "Real-time collaboration features with commenting, annotations, and shared workspaces. Enable teams to work together seamlessly on documents from anywhere.",
+      title: t("servicePages.digitalStorage.services.collaboration.title"),
+      description: t(
+        "servicePages.digitalStorage.services.collaboration.description"
+      ),
       icon: "lucide:users-2",
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "Automated Workflows",
-      description:
-        "Streamline document approval processes with automated routing, notifications, and deadline tracking. Reduce manual effort and accelerate business processes.",
+      title: t("servicePages.digitalStorage.services.workflow.title"),
+      description: t(
+        "servicePages.digitalStorage.services.workflow.description"
+      ),
       icon: "lucide:workflow",
       color: "from-blue-600 to-cyan-600",
     },
     {
-      title: "Compliance & Security",
-      description:
-        "Enterprise-grade security with encryption, audit logs, and compliance with GDPR, HIPAA, and other regulations. Keep your sensitive documents safe.",
+      title: t("servicePages.digitalStorage.services.security.title"),
+      description: t(
+        "servicePages.digitalStorage.services.security.description"
+      ),
       icon: "lucide:lock",
       color: "from-cyan-600 to-blue-600",
     },
@@ -66,39 +74,50 @@ export default function DocumentStorageService() {
 
   const approach = [
     {
-      title: "Requirements Analysis",
-      description:
-        "Understanding your document types, workflows, and storage needs.",
+      title: t("servicePages.digitalStorage.process.steps.analysis.title"),
+      description: t(
+        "servicePages.digitalStorage.process.steps.analysis.description"
+      ),
       icon: "lucide:clipboard-list",
       step: "01",
     },
     {
-      title: "System Design",
-      description: "Planning folder structures, metadata, and access controls.",
+      title: t("servicePages.digitalStorage.process.steps.design.title"),
+      description: t(
+        "servicePages.digitalStorage.process.steps.design.description"
+      ),
       icon: "lucide:layout-dashboard",
       step: "02",
     },
     {
-      title: "Development & Integration",
-      description: "Building your system with necessary integrations.",
+      title: t("servicePages.digitalStorage.process.steps.development.title"),
+      description: t(
+        "servicePages.digitalStorage.process.steps.development.description"
+      ),
       icon: "lucide:code",
       step: "03",
     },
     {
-      title: "Data Migration",
-      description: "Safely transferring existing documents to the new system.",
+      title: t("servicePages.digitalStorage.process.steps.migration.title"),
+      description: t(
+        "servicePages.digitalStorage.process.steps.migration.description"
+      ),
       icon: "lucide:database",
       step: "04",
     },
     {
-      title: "Training & Rollout",
-      description: "Comprehensive training for all users and administrators.",
+      title: t("servicePages.digitalStorage.process.steps.training.title"),
+      description: t(
+        "servicePages.digitalStorage.process.steps.training.description"
+      ),
       icon: "lucide:graduation-cap",
       step: "05",
     },
     {
-      title: "Ongoing Support",
-      description: "Continuous maintenance and feature enhancements.",
+      title: t("servicePages.digitalStorage.process.steps.support.title"),
+      description: t(
+        "servicePages.digitalStorage.process.steps.support.description"
+      ),
       icon: "lucide:settings",
       step: "06",
     },
@@ -125,18 +144,18 @@ export default function DocumentStorageService() {
               href="/"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Home
+              {t("servicePages.breadcrumb.home")}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
             <Link
               href="/#services"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Services
+              {t("servicePages.breadcrumb.services")}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
             <span className="text-white font-medium">
-              Digital Document Storage
+              {t("services.items.digitalStorage.title")}
             </span>
           </div>
 
@@ -148,7 +167,7 @@ export default function DocumentStorageService() {
             >
               <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
               <span className="text-white/90 font-medium">
-                Document Management Solutions
+                {t("servicePages.digitalStorage.badge")}
               </span>
             </div>
 
@@ -157,10 +176,10 @@ export default function DocumentStorageService() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 lg:mb-6 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              Secure Digital Storage
+              {t("servicePages.digitalStorage.title")}
               <br />
               <span className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">
-                For Your Documents
+                {t("servicePages.digitalStorage.titleHighlight")}
               </span>
             </h1>
 
@@ -169,8 +188,7 @@ export default function DocumentStorageService() {
               className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 lg:mb-8 max-w-3xl mx-auto opacity-0 animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              Store, organize, and access your documents from anywhere with
-              enterprise-grade security and powerful collaboration features.
+              {t("servicePages.digitalStorage.description")}
             </p>
 
             {/* CTA Buttons */}
@@ -183,7 +201,7 @@ export default function DocumentStorageService() {
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all text-center"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  Get Started
+                  {t("servicePages.getStarted")}
                   <Icon
                     icon="lucide:arrow-right"
                     className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -195,7 +213,7 @@ export default function DocumentStorageService() {
                 href="/contact"
                 className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
               >
-                Schedule Consultation
+                {t("servicePages.scheduleConsultation")}
               </Link>
             </div>
           </div>
@@ -207,10 +225,10 @@ export default function DocumentStorageService() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Enterprise Features
+              {t("servicePages.digitalStorage.enterpriseFeaturesTitle")}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              Everything you need for secure, efficient document management.
+              {t("servicePages.digitalStorage.enterpriseFeaturesSubtitle")}
             </p>
           </div>
 
@@ -244,14 +262,13 @@ export default function DocumentStorageService() {
           {/* Section Header */}
           <div className="max-w-3xl mb-16 lg:mb-20">
             <p className="text-sm font-medium text-[#0078D4] uppercase tracking-wider mb-4">
-              Our Services
+              {t("servicePages.digitalStorage.ourServicesBadge")}
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-              Document Solutions
+              {t("servicePages.digitalStorage.serviceTitle")}
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed">
-              Comprehensive document management systems tailored to your
-              business needs.
+              {t("servicePages.digitalStorage.serviceSubtitle")}
             </p>
           </div>
 
@@ -283,7 +300,7 @@ export default function DocumentStorageService() {
                   href="/contact"
                   className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-[#0078D4] transition-colors duration-300 group/link"
                 >
-                  Get started
+                  {t("servicePages.getStarted")}
                   <Icon
                     icon="lucide:arrow-right"
                     className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300"
@@ -300,10 +317,10 @@ export default function DocumentStorageService() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Our Implementation Process
+              {t("servicePages.digitalStorage.process.title")}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              A proven approach to implementing document management systems.
+              {t("servicePages.digitalStorage.process.description")}
             </p>
           </div>
 
@@ -367,11 +384,10 @@ export default function DocumentStorageService() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
-            Ready to Go Paperless?
+            {t("servicePages.digitalStorage.cta.title")}
           </h2>
           <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Let's build a document management system that transforms how you
-            work.
+            {t("servicePages.digitalStorage.cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link
@@ -379,7 +395,7 @@ export default function DocumentStorageService() {
               className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                Contact Us
+                {t("servicePages.digitalStorage.cta.contact")}
                 <Icon
                   icon="lucide:arrow-right"
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -391,7 +407,7 @@ export default function DocumentStorageService() {
               href="/projects"
               className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
             >
-              View Our Work
+              {t("servicePages.digitalStorage.cta.viewWork")}
               <Icon
                 icon="lucide:external-link"
                 className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

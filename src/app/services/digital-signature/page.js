@@ -2,63 +2,73 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function DigitalSignatureService() {
   const [activeService, setActiveService] = useState(0);
+  const { t } = useLanguage();
 
   const features = [
     {
-      title: "E-Signature",
-      description:
-        "Legally binding electronic signatures with full audit trails and compliance.",
+      title: t("servicePages.digitalSignature.features.eSignature.title"),
+      description: t(
+        "servicePages.digitalSignature.features.eSignature.description"
+      ),
       icon: "lucide:pen-tool",
     },
     {
-      title: "Workflow Automation",
-      description:
-        "Automated routing, reminders, and notifications to speed up your signing process.",
+      title: t("servicePages.digitalSignature.features.workflow.title"),
+      description: t(
+        "servicePages.digitalSignature.features.workflow.description"
+      ),
       icon: "lucide:workflow",
     },
     {
-      title: "Multi-Party Signing",
-      description:
-        "Support for multiple signers with customizable signing orders and roles.",
+      title: t("servicePages.digitalSignature.features.multiParty.title"),
+      description: t(
+        "servicePages.digitalSignature.features.multiParty.description"
+      ),
       icon: "lucide:users",
     },
     {
-      title: "Compliance",
-      description:
-        "Full compliance with eIDAS, ESIGN, UETA, and other international regulations.",
+      title: t("servicePages.digitalSignature.features.compliance.title"),
+      description: t(
+        "servicePages.digitalSignature.features.compliance.description"
+      ),
       icon: "lucide:shield-check",
     },
   ];
 
   const services = [
     {
-      title: "Document Signing Platform",
-      description:
-        "Complete e-signature solution for securely signing documents online. Streamline approvals with automated workflows, tracking, and legally binding signatures.",
+      title: t("servicePages.digitalSignature.services.platform.title"),
+      description: t(
+        "servicePages.digitalSignature.services.platform.description"
+      ),
       icon: "lucide:file-signature",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Contract Management",
-      description:
-        "End-to-end contract lifecycle management with e-signatures, templates, automated reminders, and centralized storage for all your agreements.",
+      title: t("servicePages.digitalSignature.services.contract.title"),
+      description: t(
+        "servicePages.digitalSignature.services.contract.description"
+      ),
       icon: "lucide:file-text",
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "Approval Workflows",
-      description:
-        "Custom approval chains with sequential or parallel signing. Route documents automatically based on business rules and get real-time status updates.",
+      title: t("servicePages.digitalSignature.services.approval.title"),
+      description: t(
+        "servicePages.digitalSignature.services.approval.description"
+      ),
       icon: "lucide:git-branch",
       color: "from-blue-600 to-cyan-600",
     },
     {
-      title: "Audit & Compliance",
-      description:
-        "Complete audit trails with timestamp verification, IP tracking, and certificate of completion. Meet regulatory requirements with confidence.",
+      title: t("servicePages.digitalSignature.services.audit.title"),
+      description: t(
+        "servicePages.digitalSignature.services.audit.description"
+      ),
       icon: "lucide:file-check",
       color: "from-cyan-600 to-blue-600",
     },
@@ -66,38 +76,50 @@ export default function DigitalSignatureService() {
 
   const approach = [
     {
-      title: "Process Assessment",
-      description: "Analyzing your current signature and approval workflows.",
+      title: t("servicePages.digitalSignature.process.steps.assessment.title"),
+      description: t(
+        "servicePages.digitalSignature.process.steps.assessment.description"
+      ),
       icon: "lucide:clipboard-list",
       step: "01",
     },
     {
-      title: "Solution Design",
-      description: "Designing signature flows and automation rules.",
+      title: t("servicePages.digitalSignature.process.steps.design.title"),
+      description: t(
+        "servicePages.digitalSignature.process.steps.design.description"
+      ),
       icon: "lucide:layout",
       step: "02",
     },
     {
-      title: "System Development",
-      description: "Building your custom e-signature platform.",
+      title: t("servicePages.digitalSignature.process.steps.development.title"),
+      description: t(
+        "servicePages.digitalSignature.process.steps.development.description"
+      ),
       icon: "lucide:code",
       step: "03",
     },
     {
-      title: "Integration Setup",
-      description: "Connecting with your existing business systems.",
+      title: t("servicePages.digitalSignature.process.steps.integration.title"),
+      description: t(
+        "servicePages.digitalSignature.process.steps.integration.description"
+      ),
       icon: "lucide:plug",
       step: "04",
     },
     {
-      title: "User Training",
-      description: "Training teams on the e-signature workflow.",
+      title: t("servicePages.digitalSignature.process.steps.training.title"),
+      description: t(
+        "servicePages.digitalSignature.process.steps.training.description"
+      ),
       icon: "lucide:users",
       step: "05",
     },
     {
-      title: "Support & Updates",
-      description: "Ongoing support and compliance updates.",
+      title: t("servicePages.digitalSignature.process.steps.support.title"),
+      description: t(
+        "servicePages.digitalSignature.process.steps.support.description"
+      ),
       icon: "lucide:headset",
       step: "06",
     },
@@ -124,17 +146,19 @@ export default function DigitalSignatureService() {
               href="/"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Home
+              {t("servicePages.breadcrumb.home")}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
             <Link
               href="/#services"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Services
+              {t("servicePages.breadcrumb.services")}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
-            <span className="text-white font-medium">Digital Signature</span>
+            <span className="text-white font-medium">
+              {t("services.items.digitalSignature.title")}
+            </span>
           </div>
 
           <div className="max-w-4xl mx-auto text-center">
@@ -145,7 +169,7 @@ export default function DigitalSignatureService() {
             >
               <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
               <span className="text-white/90 font-medium">
-                Electronic Signature Solutions
+                {t("servicePages.digitalSignature.badge")}
               </span>
             </div>
 
@@ -154,10 +178,10 @@ export default function DigitalSignatureService() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 lg:mb-6 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              Digital Signature Solutions
+              {t("servicePages.digitalSignature.title")}
               <br />
               <span className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">
-                That Accelerate Workflows
+                {t("servicePages.digitalSignature.titleHighlight")}
               </span>
             </h1>
 
@@ -166,9 +190,7 @@ export default function DigitalSignatureService() {
               className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 lg:mb-8 max-w-3xl mx-auto opacity-0 animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              Streamline document approvals with secure, legally binding
-              electronic signatures that eliminate paper and accelerate business
-              processes.
+              {t("servicePages.digitalSignature.description")}
             </p>
 
             {/* CTA Buttons */}
@@ -181,7 +203,7 @@ export default function DigitalSignatureService() {
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all text-center"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  Get Started
+                  {t("servicePages.getStarted")}
                   <Icon
                     icon="lucide:arrow-right"
                     className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -193,7 +215,7 @@ export default function DigitalSignatureService() {
                 href="/contact"
                 className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
               >
-                Schedule Consultation
+                {t("servicePages.scheduleConsultation")}
               </Link>
             </div>
           </div>
@@ -205,10 +227,10 @@ export default function DigitalSignatureService() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Signature Solutions
+              {t("servicePages.digitalSignature.enterpriseFeaturesTitle")}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              Complete digital signature workflow from request to audit.
+              {t("servicePages.digitalSignature.enterpriseFeaturesSubtitle")}
             </p>
           </div>
 
@@ -242,14 +264,13 @@ export default function DigitalSignatureService() {
           {/* Section Header */}
           <div className="max-w-3xl mb-16 lg:mb-20">
             <p className="text-sm font-medium text-[#0078D4] uppercase tracking-wider mb-4">
-              Our Services
+              {t("servicePages.digitalSignature.ourServicesBadge")}
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-              E-Signature Solutions
+              {t("servicePages.digitalSignature.serviceTitle")}
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed">
-              From simple document signing to comprehensive contract management
-              systems.
+              {t("servicePages.digitalSignature.serviceSubtitle")}
             </p>
           </div>
 
@@ -308,10 +329,10 @@ export default function DigitalSignatureService() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Our Implementation Process
+              {t("servicePages.digitalSignature.process.title")}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              A proven approach to implementing digital signature solutions.
+              {t("servicePages.digitalSignature.process.description")}
             </p>
           </div>
 
@@ -375,19 +396,18 @@ export default function DigitalSignatureService() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
-            Ready to Go Digital?
+            {t("servicePages.digitalSignature.cta.title")}
           </h2>
           <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Let's build a digital signature solution that accelerates your
-            business processes.
+            {t("servicePages.digitalSignature.cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link
               href="/contact"
-              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all text-center"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                Contact Us
+                {t("servicePages.digitalSignature.cta.contact")}
                 <Icon
                   icon="lucide:arrow-right"
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -399,7 +419,7 @@ export default function DigitalSignatureService() {
               href="/projects"
               className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
             >
-              View Our Work
+              {t("servicePages.digitalSignature.cta.viewWork")}
               <Icon
                 icon="lucide:external-link"
                 className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
