@@ -613,6 +613,7 @@
       "serviceSubtitle": "Hệ thống quản trị tài liệu toàn diện, được thiết kế 'may đo' theo quy mô và nhu cầu của doanh nghiệp.",
       "ourServicesBadge": "Hệ Sinh Thái Giải Pháp"
     },
+
     "digitalSignature": {
       "badge": "Giải Pháp Chữ Ký Số",
       "title": "Nền Tảng Ký Số Toàn Diện",
@@ -695,6 +696,115 @@
       "serviceTitle": "Dịch Vụ Chữ Ký Số Doanh Nghiệp",
       "serviceSubtitle": "Từ công cụ ký văn bản đơn giản đến hệ thống quản trị hợp đồng điện tử tập trung.",
       "ourServicesBadge": "Dịch Vụ Của Chúng Tôi"
+    }
+  },
+  "projectPage": {
+    "badge": "Hồ Sơ Năng Lực",
+    "title": "Dự Án Của Chúng Tôi",
+    "description": "Khám phá danh mục các dự án chuyển đổi số thành công. Mỗi dự án là minh chứng cho cam kết về chất lượng và sự đổi mới không ngừng của chúng tôi.",
+    "cta": {
+      "title": "Sẵn Sàng Bắt Đầu Dự Án?",
+      "description": "Hãy cùng thảo luận về cách chúng tôi có thể nâng tầm sự hiện diện số của doanh nghiệp bạn.",
+      "button": "Liên Hệ Ngay"
+    }
+  },
+  "projectDetail": {
+    "back": "Quay Lại",
+    "viewLiveSite": "Xem Website",
+    "problem": "Bài Toán",
+    "solution": "Giải Pháp",
+    "keyFeatures": "Tính Năng Nổi Bật",
+    "gallery": "Thư Viện Hình Ảnh",
+    "cta": {
+      "title": "Sẵn Sàng Nâng Cấp Nền Tảng?",
+      "description": "Hãy cùng nhau kiến tạo những sản phẩm tuyệt vời.",
+      "start": "Khởi Động Dự Án",
+      "viewMore": "Xem Các Dự Án Khác"
+    }
+  },
+  "projectsData": {
+    "aig-education-global": {
+      "title": "Nền Tảng AIG Education Global",
+      "description": "Chuyển đổi một website WordPress cũ thành nền tảng tìm kiếm trường học tùy chỉnh mạnh mẽ với hệ thống cơ sở dữ liệu hiện đại, giúp các gia đình quốc tế tìm kiếm và so sánh hơn 500 trường học trên toàn thế giới.",
+      "category": "Nền Tảng Giáo Dục",
+      "caseStudy": {
+        "challenge": "AIG Education Global đang vận hành một website WordPress lỗi thời, không thể đáp ứng cơ sở dữ liệu trường học quốc tế ngày càng tăng. Nền tảng không có chức năng tìm kiếm, trải nghiệm trên di động kém và yêu cầu cập nhật thủ công cho từng danh sách trường học. Các gia đình gặp khó khăn trong việc tìm kiếm trường phù hợp, và AIG không thể mở rộng sứ mệnh hỗ trợ các gia đình quốc tế trong việc định hướng giáo dục toàn cầu.",
+        "solution": "Chúng tôi đã thiết kế và xây dựng lại hoàn toàn nền tảng từ đầu với cơ sở dữ liệu PostgreSQL tùy chỉnh, frontend React/Next.js hiện đại và giao diện UI/UX trực quan. Di chuyển hơn 1000 danh sách trường học từ các trang tĩnh sang cơ sở dữ liệu động, có thể tìm kiếm. Triển khai bộ lọc nâng cao, tích hợp Google Maps và thiết kế đáp ứng ưu tiên di động, hoạt động mượt mà trên mọi thiết bị.",
+        "features": [
+          "Cơ sở dữ liệu PostgreSQL tùy chỉnh cho hơn 500 trường học",
+          "Tìm kiếm nâng cao với kết quả tức thì",
+          "Bộ lọc thông minh (vị trí, chương trình học, học phí, ngôn ngữ)",
+          "Hồ sơ trường học chi tiết với nội dung phong phú",
+          "Danh sách chương trình học và khóa học",
+          "Thông tin học phí minh bạch",
+          "Hỗ trợ song ngữ (Tiếng Việt/Tiếng Anh)",
+          "Thiết kế đáp ứng hoàn toàn trên di động",
+          "Bảng điều khiển quản trị để cập nhật dễ dàng"
+        ]
+      }
+    },
+    "the-project-darts": {
+      "title": "Nền Tảng The Project Darts",
+      "description": "Xây dựng nền tảng quản lý sự kiện và nghề nghiệp toàn diện cho một tổ chức phi lợi nhuận hỗ trợ sinh viên Việt Nam thông qua các sự kiện học tập cạnh tranh, cơ hội kết nối và tích hợp liền mạch với hệ thống quản lý dữ liệu tùy chỉnh.",
+      "category": "Phi Lợi Nhuận & Giáo Dục",
+      "caseStudy": {
+        "challenge": "The Project Darts, một tổ chức phi lợi nhuận hỗ trợ sinh viên Việt Nam trong hành trình sự nghiệp, cần một nền tảng kỹ thuật số toàn diện để tổ chức các sự kiện học tập, quản lý đăng ký và kết nối sinh viên với cơ hội việc làm. Họ cần một hệ thống có thể xử lý đăng ký sự kiện, thu thập dữ liệu người tham gia và tích hợp liền mạch với nền tảng quản lý dữ liệu của họ để theo dõi và tương tác với sinh viên lâu dài.",
+        "solution": "Chúng tôi đã phát triển một nền tảng hiện đại, lấy người dùng làm trung tâm bằng Next.js với giao diện tối nổi bật và các điểm nhấn màu đỏ phản ánh tinh thần năng động, cạnh tranh của tổ chức. Nền tảng có hệ thống quản lý sự kiện mạnh mẽ, biểu mẫu đăng ký trực quan và tích hợp luồng dữ liệu liền mạch với hệ thống quản lý backend. Thiết kế nhấn mạnh khả năng tiếp cận và tương tác, giúp sinh viên dễ dàng khám phá sự kiện, đăng ký và tham gia vào sứ mệnh của tổ chức.",
+        "features": [
+          "Hệ thống quản lý và danh sách sự kiện động",
+          "Biểu mẫu đăng ký tích hợp với xác thực",
+          "Đồng bộ dữ liệu thời gian thực với nền tảng quản lý",
+          "Hệ thống hồ sơ và theo dõi sinh viên",
+          "Thiết kế đáp ứng ưu tiên truy cập di động",
+          "Giao diện tối với các điểm nhấn thương hiệu màu đỏ nổi bật",
+          "Theo dõi cuộc thi và thử thách",
+          "Tính năng cộng đồng và kết nối",
+          "Bảng phân tích cho ban tổ chức",
+          "Hệ thống thông báo email cho sự kiện"
+        ]
+      }
+    },
+    "tpd-mentors-portal": {
+      "title": "Cổng Thông Tin Mentor - The Project Darts",
+      "description": "Cách mạng hóa việc quản lý mentor bằng cách chuyển đổi các bảng tính Excel thủ công và Google Forms thành một nền tảng quản lý dữ liệu toàn diện với tính năng ghép đôi mentor thông minh, tạo sự kiện và theo dõi lịch họp tự động.",
+      "category": "Quản Lý Dữ Liệu & Nền Tảng",
+      "caseStudy": {
+        "challenge": "The Project Darts đang quản lý mạng lưới mentor ngày càng tăng bằng Excel và Google Forms, dẫn đến phân mảnh dữ liệu, quy trình ghép đôi thủ công và khó khăn trong việc theo dõi sự tham gia của mentor. Ban tổ chức sự kiện mất hàng giờ để xem xét thủ công hồ sơ mentor để tìm người phù hợp cho từng sự kiện, và không có hệ thống tập trung để quản lý các buổi gặp mặt hoặc theo dõi tương tác mentor-sinh viên theo thời gian.",
+        "solution": "Chúng tôi đã xây dựng một cổng thông tin quản lý dữ liệu toàn diện, số hóa và tập trung hóa tất cả thông tin mentor vào một cơ sở dữ liệu có cấu trúc. Nền tảng có tính năng quản lý sự kiện thông minh với các gợi ý mentor tự động dựa trên chuyên môn, sự sẵn có và hiệu suất trong quá khứ. Triển khai hệ thống theo dõi lịch họp thay thế các bảng tính rời rạc bằng các hồ sơ được tổ chức, có thể tìm kiếm và tạo giao diện quản trị trực quan để quản lý dữ liệu liền mạch.",
+        "features": [
+          "Cơ sở dữ liệu mentor tập trung với hồ sơ chi tiết",
+          "Ghép đôi mentor thông minh cho sự kiện bằng thuật toán",
+          "Hệ thống tạo và quản lý sự kiện",
+          "Gợi ý mentor tự động dựa trên chuyên môn",
+          "Theo dõi và lập lịch buổi gặp mặt (catch-up)",
+          "Di chuyển dữ liệu từ Excel và Google Forms",
+          "Xác thực bảo mật và truy cập theo vai trò",
+          "Theo dõi sự sẵn có của mentor theo thời gian thực",
+          "Bảng phân tích mức độ tham gia của mentor",
+          "Khả năng xuất và báo cáo dữ liệu",
+          "Chức năng tìm kiếm và lọc",
+          "Tích hợp với nền tảng TPD chính"
+        ]
+      }
+    },
+    "vietnamese-connect-education": {
+      "title": "Vietnamese Connect Education",
+      "description": "Chuyển đổi một website Wix hạn chế thành nền tảng du học hiện đại, hiệu suất cao, giúp sinh viên khám phá các cơ hội giáo dục quốc tế với trải nghiệm chuyên nghiệp, mượt mà.",
+      "category": "Nền Tảng Giáo Dục",
+      "caseStudy": {
+        "challenge": "Vietnamese Connect Education đang hoạt động trên nền tảng Wix, hạn chế nghiêm trọng khả năng cung cấp trải nghiệm tư vấn du học chuyên nghiệp. Trang web tải chậm, phản hồi kém trên di động, tùy chỉnh hạn chế và thiếu các tính năng hiện đại cần thiết để giới thiệu dịch vụ và thu hút học sinh tiềm năng hiệu quả.",
+        "solution": "Chúng tôi đã xây dựng một nền tảng hoàn toàn tùy chỉnh từ đầu bằng React và Vite, mang lại một website tốc độ cực nhanh, thiết kế chuyên nghiệp với khả năng tùy chỉnh hoàn toàn. Triển khai các mẫu UI/UX hiện đại, tối ưu hóa hiệu suất cho mọi thiết bị, nâng cao cấu trúc SEO và tạo nền tảng có thể mở rộng để hỗ trợ các dịch vụ du học ngày càng phát triển của họ.",
+        "features": [
+          "Thành phần React tùy chỉnh cho tính linh hoạt tối đa",
+          "Tải trang cực nhanh với hệ thống build Vite",
+          "Thiết kế UI/UX hiện đại, chuyên nghiệp",
+          "Đáp ứng hoàn toàn trên mọi thiết bị",
+          "Cấu trúc và siêu dữ liệu tối ưu hóa SEO",
+          "Chuyển trang nhanh chóng, mượt mà",
+          "Kiến trúc có thể mở rộng cho sự phát triển trong tương lai",
+          "Hệ thống quản lý nội dung dễ dàng"
+        ]
+      }
     }
   },
   "projects": {

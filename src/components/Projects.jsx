@@ -30,72 +30,72 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-8">
-          {projects.map((project, index) => (
-            <Link
-              key={index}
-              href={project.slug ? `/projects/${project.slug}` : "#"}
-              className="group flex flex-col"
-            >
-              {/* Card Container */}
-              <div className="flex flex-col h-full bg-white dark:bg-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl dark:hover:bg-white/10">
-                {/* Image Section - Top */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100 dark:bg-gray-800">
-                  {project.image ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div
-                      className={`w-full h-full bg-gradient-to-br ${
-                        project.gradient || "from-azure-blue/20 to-azure-sky/10"
-                      } flex items-center justify-center`}
-                    >
-                      <Icon
-                        icon="fluent-emoji:laptop"
-                        className="w-16 h-16 opacity-60 transition-transform duration-700 group-hover:scale-110"
+          {projects.map((project, index) => {
+            const { t: tLang, language } = useLanguage();
+            const title =
+              language === "vi"
+                ? tLang(`projectsData.${project.slug}.title`)
+                : project.title;
+            const description =
+              language === "vi"
+                ? tLang(`projectsData.${project.slug}.description`)
+                : project.description;
+
+            return (
+              <Link
+                key={index}
+                href={project.slug ? `/projects/${project.slug}` : "#"}
+                className="group flex flex-col"
+              >
+                {/* Card Container */}
+                <div className="flex flex-col h-full bg-white dark:bg-white/5 rounded-lg border border-gray-100 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:bg-white/10">
+                  {/* Image Section - Top */}
+                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-100 dark:bg-gray-800">
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
+                    ) : (
+                      <div
+                        className={`w-full h-full bg-gradient-to-br ${
+                          project.gradient ||
+                          "from-azure-blue/20 to-azure-sky/10"
+                        } flex items-center justify-center`}
+                      >
+                        <Icon
+                          icon="fluent-emoji:laptop"
+                          className="w-16 h-16 opacity-60 transition-transform duration-700 group-hover:scale-110"
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="flex flex-col flex-grow p-6">
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 uppercase leading-tight group-hover:text-[#0078D4] transition-colors line-clamp-2">
+                      {title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-600 dark:text-gray-400 line-clamp-3 leading-relaxed mb-6 text-sm">
+                      {description}
+                    </p>
+
+                    {/* View Project Link */}
+                    <div className="mt-auto">
+                      <span className="inline-flex items-center text-[#0078D4] font-bold text-sm hover:underline uppercase">
+                        {t("common.readMore") || "Đọc thêm"}
+                        <span className="ml-1">→</span>
+                      </span>
                     </div>
-                  )}
-                </div>
-
-                {/* Content Section */}
-                <div className="flex flex-col flex-grow p-6">
-                  {/* Meta Row: Source */}
-                  <div className="flex items-center gap-3 text-sm mb-3">
-                    <span
-                      className="font-medium"
-                      style={{ color: project.accent || azureBlue }}
-                    >
-                      {project.caseStudy?.client || project.title}
-                    </span>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-azure-blue transition-colors">
-                    {project.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-600 dark:text-gray-400 line-clamp-3 leading-relaxed mb-6">
-                    {project.description}
-                  </p>
-
-                  {/* View Project Link - visual indicator similar to before but cleaner */}
-                  <div className="mt-auto pt-4 border-t border-gray-100 dark:border-white/10 flex items-center justify-between">
-                    <span className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-azure-blue transition-colors">
-                      {t("projects.viewProject")}
-                    </span>
-                    <Icon
-                      icon="fluent:arrow-right-24-filled"
-                      className="w-5 h-5 text-gray-400 group-hover:text-azure-blue transition-colors transform group-hover:translate-x-1"
-                    />
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Bottom CTA */}

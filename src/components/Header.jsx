@@ -54,10 +54,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-white ${
         isScrolled
-          ? "bg-white/98 backdrop-blur-md border-b border-gray-200 shadow-lg shadow-black/5"
-          : "bg-white/80 backdrop-blur-sm border-b border-white/20"
+          ? "border-b border-gray-200 shadow-lg shadow-black/5"
+          : "border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -101,6 +101,14 @@ const Header = () => {
               </button>
               <MegaMenu />
             </div>
+
+            <Link
+              href="/projects"
+              className="relative px-4 py-2 text-[15px] font-medium text-gray-700 hover:text-[#0078D4] transition-colors group"
+            >
+              {t("navigation.projects")}
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#0078D4] transition-all duration-300 group-hover:w-3/4"></span>
+            </Link>
 
             <a
               href="/about"
@@ -191,6 +199,13 @@ const Header = () => {
                 </div>
               )}
             </div>
+
+            <Link
+              href="/projects"
+              className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-[#0078D4] hover:bg-blue-50 rounded-lg transition-all"
+            >
+              {t("navigation.projects")}
+            </Link>
 
             <a
               href="/about"
