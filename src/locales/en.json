@@ -146,5 +146,29 @@
     "viewAll": "View all",
     "backToHome": "Back to Home",
     "loading": "Loading..."
+  },
+  "benefits": {
+    "pillarsPrefix": "3 pillars of",
+    "pillarsBold": "outsourcing",
+    "pillarsSuffix": "tailored for your needs",
+    "description": "Partner with us to leverage flexible, cost-effective solutions delivered by experienced professionals dedicated to your success.",
+    "cta": "Start your project",
+    "items": {
+      "tailored": {
+        "stat": "100%",
+        "title": "Tailored solutions",
+        "description": "Flexible outsourcing that adapts to your unique business needs and goals"
+      },
+      "dedicated": {
+        "stat": "Reliable",
+        "title": "Dedicated support",
+        "description": "Committed team focused on your success with responsive communication"
+      },
+      "modern": {
+        "stat": "100%",
+        "title": "Modern technology",
+        "description": "Latest tools and frameworks to build cutting-edge digital solutions"
+      }
+    }
   }
 }

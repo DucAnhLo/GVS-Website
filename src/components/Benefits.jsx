@@ -1,31 +1,34 @@
-'use client'
-import React from 'react';
-import { Icon } from '@iconify/react';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Benefits = () => {
+  const { t } = useLanguage();
+
   const benefits = [
     {
-      stat: '100%',
-      title: 'Tailored solutions',
-      description: 'Flexible outsourcing that adapts to your unique business needs and goals',
-      image: '/benefits/tailored.jpg',
-      gradient: 'from-azure-blue/20 to-cyan-500/10',
+      stat: t("benefits.items.tailored.stat"),
+      title: t("benefits.items.tailored.title"),
+      description: t("benefits.items.tailored.description"),
+      image: "/benefits/tailored.jpg",
+      gradient: "from-azure-blue/20 to-cyan-500/10",
     },
     {
-      stat: 'Reliable',
-      title: 'Dedicated support',
-      description: 'Committed team focused on your success with responsive communication',
-      image: '/benefits/629.jpg',
-      gradient: 'from-emerald-500/20 to-green-500/10',
+      stat: t("benefits.items.dedicated.stat"),
+      title: t("benefits.items.dedicated.title"),
+      description: t("benefits.items.dedicated.description"),
+      image: "/benefits/629.jpg",
+      gradient: "from-emerald-500/20 to-green-500/10",
     },
     {
-      stat: '100%',
-      title: 'Modern technology',
-      description: 'Latest tools and frameworks to build cutting-edge digital solutions',
-      image: '/benefits/628.jpg',
-      gradient: 'from-violet-500/20 to-purple-500/10',
-    }
+      stat: t("benefits.items.modern.stat"),
+      title: t("benefits.items.modern.title"),
+      description: t("benefits.items.modern.description"),
+      image: "/benefits/628.jpg",
+      gradient: "from-violet-500/20 to-purple-500/10",
+    },
   ];
 
   return (
@@ -34,12 +37,12 @@ const Benefits = () => {
         {/* Header - Minimalist Style */}
         <div className="mb-8">
           <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
-            <span className="font-normal">3 pillars of</span>{' '}
-            <span className="font-bold">outsourcing</span>{' '}
-            <span className="font-normal">tailored for your needs</span>
+            <span className="font-normal">{t("benefits.pillarsPrefix")}</span>{" "}
+            <span className="font-bold">{t("benefits.pillarsBold")}</span>{" "}
+            <span className="font-normal">{t("benefits.pillarsSuffix")}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mb-8">
-            Partner with us to leverage flexible, cost-effective solutions delivered by experienced professionals dedicated to your success.
+            {t("benefits.description")}
           </p>
 
           {/* CTA Button */}
@@ -47,7 +50,7 @@ const Benefits = () => {
             href="/contact"
             className="inline-flex items-center gap-2 px-10 py-4 border border-brand-black bg-white text-brand-black text-sm font-semibold rounded-full hover:bg-brand-black hover:text-white transition-all group"
           >
-            <span>Start your project</span>
+            <span>{t("benefits.cta")}</span>
             <Icon
               icon="fluent:arrow-right-24-filled"
               className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -72,7 +75,9 @@ const Benefits = () => {
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 ) : (
-                  <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient}`}></div>
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient}`}
+                  ></div>
                 )}
 
                 {/* Dark Overlay */}

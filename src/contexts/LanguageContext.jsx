@@ -8,7 +8,7 @@ const translations = { en, vi };
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("vi");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -54,11 +54,11 @@ export const LanguageProvider = ({ children }) => {
     return (
       <LanguageContext.Provider
         value={{
-          language: "en",
+          language: "vi",
           changeLanguage,
           t: (key) => {
             const keys = key.split(".");
-            let value = translations.en;
+            let value = translations.vi;
             for (const k of keys) {
               if (value && value[k]) {
                 value = value[k];

@@ -1,35 +1,34 @@
 {
   "navigation": {
-    "home": "Trang chủ",
-    "about": "Giới thiệu",
-    "aboutUs": "Về Chúng Tôi",
-    "services": "Dịch vụ",
-    "projects": "Dự án",
-    "careers": "Tuyển dụng",
-    "contact": "Liên hệ"
+    "home": "Trang Chủ",
+    "about": "Về Chúng Tôi",
+    "services": "Dịch Vụ",
+    "projects": "Dự Án",
+    "careers": "Tuyển Dụng",
+    "contact": "Liên Hệ"
   },
   "hero": {
-    "badge": "Sẵn sàng cho dự án mới",
+    "badge": "Sẵn Sàng Cho Dự Án Mới",
     "title": "Chúng tôi xây dựng",
     "titleHighlight": "giải pháp số",
-    "titleEnd": "được tạo riêng cho bạn.",
-    "description": "Hỗ trợ doanh nghiệp nhỏ thông qua các trang web tùy chỉnh, ứng dụng web và hệ thống tích hợp thúc đẩy chuyển đổi số.",
+    "titleEnd": "dành riêng cho bạn.",
+    "description": "Tiếp sức doanh nghiệp nhỏ bứt phá với website tùy chỉnh, web app và hệ thống tích hợp chuyên sâu, thúc đẩy chuyển đổi số toàn diện.",
     "features": {
       "customDev": {
         "title": "Phát Triển Tùy Chỉnh",
-        "subtitle": "Phù hợp với nhu cầu của bạn"
+        "subtitle": "Tối ưu theo đặc thù kinh doanh"
       },
       "fastDelivery": {
-        "title": "Giao Hàng Nhanh",
-        "subtitle": "Thời gian xử lý nhanh chóng"
+        "title": "Tiến độ thần tốc",
+        "subtitle": "Quy trình tinh gọn, bàn giao sớm"
       },
       "qualityAssured": {
-        "title": "Đảm Bảo Chất Lượng",
-        "subtitle": "Đã kiểm tra & đáng tin cậy"
+        "title": "Cam kết chất lượng",
+        "subtitle": "Kiểm duyệt & đảm bảo chất lượng"
       },
       "ongoingSupport": {
-        "title": "Hỗ Trợ Liên Tục",
-        "subtitle": "Chúng tôi luôn sẵn sàng hỗ trợ"
+        "title": "Hỗ trợ liên tục",
+        "subtitle": "Luôn sẵn sàng hỗ trợ bạn"
       }
     },
     "cta": {
@@ -44,38 +43,38 @@
     "items": {
       "webDevelopment": {
         "title": "Phát Triển Web",
-        "description": "Ứng dụng web tùy chỉnh được xây dựng với công nghệ hiện đại để có hiệu suất và trải nghiệm người dùng tối ưu."
+        "description": "Phát triển Web App tùy biến trên nền tảng công nghệ hiện đại, đảm bảo hiệu năng vượt trội và trải nghiệm mượt mà."
       },
       "cmsSolutions": {
         "title": "Giải Pháp CMS",
-        "description": "Hệ thống quản lý nội dung giúp bạn quản lý nội dung số một cách dễ dàng."
+        "description": "Hệ quản trị nội dung thông minh, giúp bạn làm chủ kho dữ liệu số một cách đơn giản và khoa học."
       },
       "crmSystems": {
         "title": "Hệ Thống CRM",
-        "description": "Giải pháp quản lý quan hệ khách hàng giúp bạn xây dựng mối quan hệ bền vững."
+        "description": "Quản trị quan hệ khách hàng chuyên sâu, nền tảng để xây dựng sự gắn kết và lòng trung thành của khách hàng."
       },
       "uiuxDesign": {
         "title": "Thiết Kế UI/UX",
-        "description": "Thiết kế lấy người dùng làm trung tâm tạo ra trải nghiệm số trực quan và thu hút."
+        "description": "Thiết kế tối ưu trải nghiệm (UX) và giao diện (UI), chú trọng tính trực quan, hiện đại và lôi cuốn người dùng."
       },
       "digitalStorage": {
         "title": "Lưu Trữ Tài Liệu Số",
-        "description": "Giải pháp lưu trữ đám mây an toàn để quản lý và truy cập tài liệu ở bất kỳ đâu."
+        "description": "Lưu trữ đám mây bảo mật, cho phép quản lý và truy xuất dữ liệu mọi lúc, mọi nơi trên mọi thiết bị."
       },
       "digitalSignature": {
         "title": "Chữ Ký Số",
-        "description": "Giải pháp chữ ký điện tử giúp tối ưu hóa quy trình tài liệu và phê duyệt."
+        "description": "Số hóa quy trình ký duyệt với Chữ ký số, giúp tối ưu thời gian và đảm bảo tính pháp lý cho mọi giao dịch."
       }
     },
     "learnMore": "Tìm hiểu thêm",
     "getStarted": "Bắt đầu",
     "exploreAll": "Khám phá tất cả dịch vụ",
-    "sectionTitle": "Chuyển đổi",
-    "sectionTitleBold": "doanh nghiệp",
-    "sectionDescription": "Từ phát triển web đến chữ ký số, các giải pháp toàn diện của chúng tôi giúp bạn xây dựng, quản lý và mở rộng sự hiện diện số của mình một cách tự tin.",
-    "trustedBy": "Được tin tưởng bởi",
-    "trustedByBold": "các doanh nghiệp hàng đầu",
-    "trustedByDescription": "Hợp tác với các tổ chức tiên phong để mang lại kết quả xuất sắc"
+    "sectionTitle": "Nâng tầm",
+    "sectionTitleBold": "doanh nghiệp số",
+    "sectionDescription": "Từ phát triển Web đến Chữ ký số, hệ sinh thái giải pháp toàn diện của chúng tôi giúp bạn xây dựng, vận hành và bứt phá trong kỷ nguyên số.",
+    "trustedBy": "Đối tác tin cậy",
+    "trustedByBold": "của các doanh nghiệp và tổ chức hàng đầu",
+    "trustedByDescription": "Đồng hành cùng các đơn vị tiên phong để kiến tạo nên những thành quả vượt trội"
   },
   "about": {
     "badge": "Về Chúng Tôi",
@@ -95,7 +94,7 @@
     "title": "Dự Án Nổi Bật",
     "sectionTitle": "Dự án",
     "sectionTitleBold": "nổi bật",
-    "description": "Biến ý tưởng thành trải nghiệm số mạnh mẽ mang lại kết quả thực tế",
+    "description": "Hiện thực hóa ý tưởng thành những trải nghiệm số bứt phá, tạo ra giá trị thực cho doanh nghiệp",
     "viewAll": "Xem tất cả dự án",
     "viewProject": "Xem Dự Án",
     "visitSite": "Truy Cập Trang Web"
@@ -127,7 +126,6 @@
     "ourServices": "Dịch Vụ",
     "contactUs": "Liên Hệ",
     "followUs": "Theo Dõi",
-    "copyright": "Bản quyền thuộc về.",
     "privacyPolicy": "Chính Sách Bảo Mật",
     "termsOfService": "Điều Khoản Dịch Vụ",
     "cookiePolicy": "Chính Sách Cookie"
@@ -146,5 +144,29 @@
     "viewAll": "Xem tất cả",
     "backToHome": "Về Trang Chủ",
     "loading": "Đang tải..."
+  },
+  "benefits": {
+    "pillarsPrefix": "3 giá trị cốt lõi trong dịch vụ",
+    "pillarsBold": "Outsourcing",
+    "pillarsSuffix": "theo nhu cầu",
+    "description": "Đồng hành cùng chúng tôi để tối ưu hóa nguồn lực với các giải pháp linh hoạt, tiết kiệm chi phí, được triển khai bởi đội ngũ chuyên gia tận tâm vì sự phát triển của bạn.",
+    "cta": "Bắt đầu dự án của bạn",
+    "items": {
+      "tailored": {
+        "stat": "100%",
+        "title": "Giải pháp chuyên biệt",
+        "description": "Mô hình hợp tác linh hoạt, được thiết kế chuẩn xác theo đặc thù và mục tiêu kinh doanh riêng biệt của bạn."
+      },
+      "dedicated": {
+        "stat": "Tin cậy",
+        "title": "Đồng hành tận lực",
+        "description": "Đội ngũ chuyên gia cam kết dồn mọi nguồn lực cho thành công của bạn với quy trình kết nối tức thì."
+      },
+      "modern": {
+        "stat": "100%",
+        "title": "Công nghệ tiên phong",
+        "description": "Công cụ và framework mới nhất để xây dựng các giải pháp số tiên tiến"
+      }
+    }
   }
 }

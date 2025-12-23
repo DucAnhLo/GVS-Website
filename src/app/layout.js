@@ -20,8 +20,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Global Soft Vietnam",
-  description: "Software solutions for your business",
+  title: "GSV | Xây dựng giải pháp chuyển đổi số dành riêng cho doanh nghiệp",
+  description:
+    "Giải pháp phần mềm toàn diện được thiết kế riêng cho nhu cầu doanh nghiệp của bạn.",
   icons: {
     icon: "/gsvfavicon.png",
     apple: "/gsvfavicon.png",
@@ -30,7 +31,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="vi">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
