@@ -78,15 +78,374 @@
   },
   "about": {
     "badge": "Về Chúng Tôi",
-    "title": "Chúng Tôi Là Ai",
-    "description": "Chúng tôi là một đội ngũ các nhà phát triển và thiết kế đam mê, cam kết mang đến các giải pháp phần mềm xuất sắc.",
-    "mission": {
-      "title": "Sứ Mệnh",
-      "description": "Trao quyền cho doanh nghiệp với các giải pháp công nghệ sáng tạo thúc đẩy tăng trưởng và thành công."
+    "hero": {
+      "prefix": "Khát vọng biến",
+      "highlight": "Dữ Liệu Thành",
+      "suffix": "Giá Trị Thực",
+      "description": "Đội ngũ chuyên gia trẻ từ Việt Nam, tiên phong trong việc số hóa quy trình truyền thống thành những nền tảng công nghệ hiện đại và đột phá."
     },
-    "vision": {
-      "title": "Tầm Nhìn",
-      "description": "Trở thành đối tác phát triển phần mềm hàng đầu cho các doanh nghiệp trên toàn thế giới."
+    "focus": {
+      "title": "Trọng Tâm Chiến Lược",
+      "description": "Chúng tôi ưu tiên chất lượng thay vì số lượng, tập trung kiến tạo những giải pháp được 'may đo' chuẩn xác cho từng bài toán của khách hàng.",
+      "areas": {
+        "educational": "Nền tảng Giáo dục số",
+        "business": "Website Doanh nghiệp tối ưu",
+        "migration": "Số hóa Excel → Web App"
+      }
+    },
+    "story": {
+      "title": "Hành Trình Của Chúng Tôi",
+      "paragraphs": {
+        "p1": "Chúng tôi là đội ngũ công nghệ trẻ tại Việt Nam với sứ mệnh rõ ràng: giải phóng doanh nghiệp khỏi những rào cản và sự thủ công của bảng tính Excel truyền thống.",
+        "p2": "Mỗi dự án đều được chăm chút tỉ mỉ để xây dựng mối quan hệ đối tác bền vững, lâu dài.",
+        "p3": "Dù quy mô tinh gọn nhưng đầy nhiệt huyết, chúng tôi cam kết mang đến những giải pháp chuyên nghiệp và hiệu quả thực tế cho các doanh nghiệp nhỏ cùng các tổ chức giáo dục."
+      }
+    },
+    "mission": {
+      "badge": "Sứ Mệnh",
+      "title": "Bình dân hóa Chuyển đổi số",
+      "description": "Xóa bỏ rào cản công nghệ, giúp mọi doanh nghiệp nhỏ và tổ chức giáo dục dễ dàng sở hữu nền tảng web chuyên nghiệp với chi phí hợp lý nhất.",
+      "values": {
+        "clientFirst": "Khách hàng là trọng tâm",
+        "fastDelivery": "Triển khai thần tốc",
+        "qualityCode": "Hệ thống chuẩn mực",
+        "longTermSupport": "Đồng hành lâu dài"
+      }
+    },
+    "whatWeDo": {
+      "title": "Thế Mạnh Của Chúng Tôi",
+      "subtitle": "Hệ sinh thái dịch vụ cốt lõi thúc đẩy tăng trưởng",
+      "services": {
+        "excelPlatform": {
+          "title": "Nâng cấp Excel → Web App",
+          "description": "Chuyển hóa bảng tính thủ công thành nền tảng quản trị web mạnh mẽ",
+          "features": {
+            "migration": "Chuẩn hóa dữ liệu",
+            "dashboards": "Báo cáo trực quan",
+            "realtime": "Dữ liệu thời gian thực",
+            "roles": "Phân quyền chuyên sâu"
+          }
+        },
+        "educational": {
+          "title": "Giải pháp Giáo dục",
+          "description": "Xây dựng không gian học tập số chuyên nghiệp cho trường học và trung tâm đào tạo",
+          "features": {
+            "portals": "Cổng thông tin học viên",
+            "courses": "Quản lý khóa học",
+            "grades": "Sổ điểm điện tử",
+            "enrollment": "Tuyển sinh trực tuyến"
+          }
+        },
+        "business": {
+          "title": "Website Doanh Nghiệp",
+          "description": "Xây dựng sự hiện diện chuyên nghiệp và uy tín trên môi trường số",
+          "features": {
+            "design": "Giao diện hiện đại",
+            "mobile": "Tương thích đa thiết bị",
+            "seo": "Tối ưu hóa tìm kiếm (SEO)",
+            "updates": "Quản trị dễ dàng"
+          }
+        }
+      }
+    },
+    "approach": {
+      "badge": "Cách Chúng Tôi Làm Việc",
+      "title": "Chất Lượng Thay Vì Số Lượng",
+      "description": "Chúng tôi cá nhân hóa trải nghiệm cho từng dự án. Tại đây, bạn không phải là một 'mã khách hàng'—bạn là đối tác chiến lược cùng chúng tôi tạo nên những giá trị khác biệt.",
+      "items": {
+        "personal": {
+          "title": "Kết nối trực tiếp",
+          "description": "Làm việc và trao đổi trực tiếp với đội ngũ kỹ thuật thực hiện dự án của bạn."
+        },
+        "attention": {
+          "title": "Toàn tâm toàn ý",
+          "description": "Chúng tôi giới hạn số lượng dự án để đảm bảo sự tỉ mỉ và hoàn hảo nhất trong từng sản phẩm."
+        },
+        "training": {
+          "title": "Đào tạo bài bản",
+          "description": "Hướng dẫn chi tiết cách vận hành và giúp bạn hoàn toàn làm chủ nền tảng mới."
+        },
+        "available": {
+          "title": "Luôn đồng hành",
+          "description": "Phản hồi tức thì và hỗ trợ kỹ thuật liên tục sau khi hệ thống đi vào vận hành."
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "Tại Sao Nên Chọn Chúng Tôi?",
+      "items": {
+        "language": {
+          "title": "Ngôn ngữ kinh doanh, không phải thuật ngữ IT",
+          "description": "Chúng tôi không dùng thuật ngữ phức tạp để làm khó khách hàng. Mọi giải pháp đều được diễn giải đơn giản và tập trung vào hiệu quả kinh doanh."
+        },
+        "affordable": {
+          "title": "Minh bạch & Tối ưu chi phí",
+          "description": "Báo giá cố định, cam kết không phí ẩn. Giải pháp cao cấp được thiết kế vừa vặn với ngân sách doanh nghiệp."
+        },
+        "fast": {
+          "title": "Triển khai gọn lẹ",
+          "description": "Hoàn thiện dự án chỉ trong 4-8 tuần. Chúng tôi trân trọng thời gian và đà bứt phá của bạn."
+        },
+        "support": {
+          "title": "Hậu mãi tận tâm",
+          "description": "Chúng tôi cam kết không 'biến mất' sau khi bàn giao. Dịch vụ đào tạo và bảo trì luôn sẵn sàng khi bạn cần."
+        }
+      },
+      "badge": {
+        "quality": "Đỉnh cao Chất lượng",
+        "guaranteed": "Cam kết Hiệu quả",
+        "builtWithCare": "Xây dựng bằng Tâm huyết",
+        "since": "Thiết lập từ 2024",
+        "cleanCode": "Mã nguồn Sạch",
+        "modern": "Công nghệ Hiện đại",
+        "secure": "Bảo mật Tuyệt đối",
+        "quote": "Mỗi dự án là một kiệt tác xứng đáng với sự nỗ lực tốt nhất của chúng tôi."
+      }
+    },
+    "cta": {
+      "title": "Sẵn Sàng Cho Bước Ngoặt Số?",
+      "description": "Hãy để chúng tôi lắng nghe ý tưởng của bạn. Tư vấn chuyên sâu, hoàn toàn miễn phí và không ràng buộc.",
+      "startProject": "Bắt đầu ngay",
+      "viewWork": "Xem các dự án thực tế"
+    }
+  },
+  "servicePages": {
+    "breadcrumb": {
+      "home": "Trang Chủ",
+      "services": "Dịch Vụ"
+    },
+    "cta": {
+      "title": "Sẵn Sàng Khởi Động Dự Án?",
+      "description": "Hãy thảo luận về cách chúng tôi có thể giúp bạn chuyển đổi doanh nghiệp với giải pháp web tùy chỉnh.",
+      "contactUs": "Liên Hệ Chúng Tôi",
+      "viewWork": "Xem Dự Án Của Chúng Tôi"
+    },
+    "learnMore": "Tìm hiểu thêm",
+    "getStarted": "Bắt Đầu",
+    "scheduleConsultation": "Đặt Lịch Tư Vấn",
+    "webDevelopment": {
+      "badge": "Phát Triển Web Doanh Nghiệp",
+      "title": "Ứng Dụng Web Tùy Biến",
+      "titleHighlight": "Thiết Kế Chuyên Biệt Cho Doanh Nghiệp Bạn",
+      "description": "Chúng tôi phát triển các ứng dụng web có khả năng mở rộng linh hoạt và hiệu năng cao, giúp tối ưu hóa vận hành, tăng cường tương tác người dùng và mang lại kết quả kinh doanh thực tế.",
+      "whyChooseUs": {
+        "title": "Tại Sao Nên Chọn Chúng Tôi?",
+        "description": "Chúng tôi kết hợp nền tảng kỹ thuật xuất sắc với tư duy kinh doanh sắc bén để mang lại những kết quả vượt trội."
+      },
+      "features": {
+        "custom": {
+          "title": "Phát triển 'may đo'",
+          "description": "Ứng dụng web được xây dựng riêng biệt, khớp hoàn toàn với yêu cầu đặc thù và quy trình vận hành của bạn."
+        },
+        "scalable": {
+          "title": "Kiến trúc mở rộng",
+          "description": "Giải pháp hướng tới tương lai, sẵn sàng phát triển cùng quy mô doanh nghiệp và đáp ứng nhu cầu tăng trưởng không giới hạn."
+        },
+        "responsive": {
+          "title": "Giao diện đa nền tảng",
+          "description": "Trải nghiệm mượt mà và đồng nhất trên mọi thiết bị, từ smartphone đến máy tính để bàn."
+        },
+        "optimized": {
+          "title": "Tối ưu hiệu năng",
+          "description": "Tốc độ tải trang thần tốc nhờ mã nguồn được tối ưu và quy trình quản lý tài nguyên hệ thống hiệu quả."
+        }
+      },
+      "whatWeBuild": {
+        "title": "Hệ Sinh Thái Giải Pháp",
+        "description": "Từ các trang web tinh gọn đến hệ thống quản trị doanh nghiệp phức tạp, chúng tôi mang đến giá trị thực chất cho mọi dự án."
+      },
+      "services": {
+        "business": {
+          "title": "Web App Doanh Nghiệp",
+          "description": "Tự động hóa quy trình và giải quyết các bài toán vận hành cụ thể thông qua cổng thông tin khách hàng và hệ thống quản lý nội bộ tùy chỉnh."
+        },
+        "ecommerce": {
+          "title": "Giải Pháp Thương Mại Điện Tử",
+          "description": "Xây dựng cửa hàng trực tuyến toàn diện với hệ thống thanh toán bảo mật, quản lý kho vận và tệp khách hàng được thiết kế riêng cho mô hình của bạn."
+        },
+        "api": {
+          "title": "Phát Triển & Tích Hợp API",
+          "description": "Kết nối các hệ thống liền mạch, đồng bộ hóa luồng dữ liệu và tối ưu hóa vận hành thông qua các tích hợp bên thứ ba chuyên sâu."
+        },
+        "legacy": {
+          "title": "Hiện Đại Hóa Hệ Thống",
+          "description": "Nâng cấp các hệ thống cũ lỗi thời thành ứng dụng web hiện đại, hiệu quả mà vẫn bảo toàn trọn vẹn dữ liệu và logic kinh doanh cốt lõi."
+        }
+      },
+      "approach": {
+        "title": "Đồng Hành Cùng Thành Công Của Bạn",
+        "description": "Quy trình toàn diện của chúng tôi đảm bảo ứng dụng web được xây dựng chuẩn xác, vận hành ổn định và luôn được hỗ trợ dài hạn."
+      },
+      "steps": {
+        "understanding": {
+          "title": "Thấu Hiểu Doanh Nghiệp",
+          "description": "Chúng tôi bắt đầu bằng việc nghiên cứu kỹ lưỡng quy trình, thách thức và mục tiêu chiến lược của bạn."
+        },
+        "planning": {
+          "title": "Hoạch Định Chiến Lược",
+          "description": "Phối hợp chặt chẽ để xác định các tính năng trọng tâm, quy trình làm việc và lộ trình ưu tiên triển khai."
+        },
+        "development": {
+          "title": "Phát Triển Linh Hoạt",
+          "description": "Theo dõi tiến độ dự án trực quan qua các bản cập nhật thường xuyên và demo tính năng định kỳ."
+        },
+        "qa": {
+          "title": "Kiểm Định Chất Lượng",
+          "description": "Quy trình kiểm thử nghiêm ngặt trên đa thiết bị, trình duyệt và mọi kịch bản người dùng."
+        },
+        "deployment": {
+          "title": "Triển Khai Mượt Mà",
+          "description": "Chúng tôi chịu trách nhiệm toàn bộ các khía cạnh kỹ thuật để đảm bảo ứng dụng ra mắt hoàn hảo nhất."
+        },
+        "support": {
+          "title": "Hỗ Trợ Tận Tâm",
+          "description": "Duy trì bảo trì, cập nhật tính năng và hỗ trợ kỹ thuật liên tục trong suốt quá trình doanh nghiệp phát triển."
+        }
+      }
+    },
+    "cmsSolutions": {
+      "badge": "Hệ Thống Quản Trị Nội Dung",
+      "title": "Giải Pháp CMS Toàn Diện",
+      "titleHighlight": "Làm Chủ Nội Dung Số",
+      "description": "Chúng tôi kiến tạo các hệ thống quản trị nội dung tùy biến, giúp bạn làm chủ hoàn toàn kho dữ liệu số với giao diện trực quan và tính năng vận hành mạnh mẽ.",
+      "ourServices": {
+        "badge": "Dịch Vụ Của Chúng Tôi",
+        "title": "Giải Pháp CMS Chuyên Sâu",
+        "description": "Hệ thống quản trị cấp doanh nghiệp được thiết kế linh hoạt để phát triển song hành cùng quy mô kinh doanh của bạn."
+      },
+      "services": {
+        "headless": {
+          "title": "Phát Triển Headless CMS",
+          "description": "Kiến trúc Headless hiện đại giúp phân phối nội dung đa kênh. Tách biệt quản trị nội dung khỏi giao diện hiển thị để đạt tính linh hoạt tối đa trên Web, Mobile và các nền tảng IoT."
+        },
+        "custom": {
+          "title": "Nền Tảng CMS Tùy Biến",
+          "description": "Hệ thống được thiết kế riêng cho quy trình làm việc đặc thù, từ các trang tin chuyên biệt đến giải pháp doanh nghiệp phức tạp với khả năng tùy biến nâng cao."
+        },
+        "migration": {
+          "title": "Chuyển Đổi & Nâng Cấp CMS",
+          "description": "Di trú dữ liệu liền mạch từ hệ thống cũ hoặc nâng cấp nền tảng hiện có. Chúng tôi bảo toàn nguyên vẹn giá trị nội dung trong khi hiện đại hóa toàn bộ hạ tầng công nghệ."
+        },
+        "integration": {
+          "title": "Dịch Vụ Tích Hợp CMS",
+          "description": "Kết nối CMS với các công cụ, API và dịch vụ bên thứ ba. Tối ưu hóa vận hành thông qua tự động hóa Marketing, hệ thống phân tích và tích hợp thương mại điện tử."
+        }
+      },
+      "process": {
+        "title": "Quy Trình Phát Triển CMS",
+        "description": "Lộ trình bài bản từ hoạch định chiến lược đến triển khai thực tế và hỗ trợ vận hành liên tục."
+      },
+      "steps": {
+        "strategy": {
+          "title": "Chiến Lược Nội Dung",
+          "description": "Phân tích loại hình nội dung, luồng vận hành và cấu trúc nhân sự của doanh nghiệp."
+        },
+        "architecture": {
+          "title": "Thiết Kế Kiến Trúc",
+          "description": "Xây dựng cấu trúc dữ liệu tối ưu và hệ thống phân quyền người dùng khoa học."
+        },
+        "development": {
+          "title": "Phát Triển & Tùy Chỉnh",
+          "description": "Lập trình hệ thống CMS với các tính năng đặc thù và tích hợp hệ sinh thái cần thiết."
+        },
+        "migration": {
+          "title": "Di Trú Nội Dung",
+          "description": "Chuyển đổi dữ liệu hiện có sang hệ thống mới một cách an toàn và bảo mật."
+        },
+        "training": {
+          "title": "Đào Tạo Chuyên Sâu",
+          "description": "Hướng dẫn sử dụng toàn diện cho đội ngũ biên tập và quản trị viên hệ thống."
+        },
+        "optimization": {
+          "title": "Tối Ưu Liên Tục",
+          "description": "Duy trì hỗ trợ kỹ thuật và cải tiến tính năng theo nhu cầu thực tế."
+        }
+      },
+      "cta": {
+        "title": "Sẵn Sàng Số Hóa Quy Trình Quản Trị?",
+        "description": "Hãy để chúng tôi xây dựng một hệ thống CMS giúp giải phóng sức sáng tạo và bứt phá cùng doanh nghiệp của bạn."
+      }
+    },
+    "crmSystems": {
+      "badge": "Quản Trị Quan Hệ Khách Hàng",
+      "title": "Hệ Thống CRM Chuyên Biệt",
+      "titleHighlight": "Đòn Bẩy Tăng Trưởng Doanh Số",
+      "description": "Chúng tôi kiến tạo các giải pháp CRM tối ưu giúp doanh nghiệp thấu hiểu khách hàng, chuẩn hóa quy trình bán hàng và xây dựng những mối quan hệ bền vững, sinh lời.",
+      "ourServices": {
+        "badge": "Dịch Vụ CRM",
+        "title": "Giải Pháp CRM Toàn Diện",
+        "description": "Nền tảng quản trị khách hàng cấp doanh nghiệp, linh hoạt mở rộng theo đà tăng trưởng kinh doanh."
+      },
+      "features": {
+        "leadManagement": {
+          "title": "Quản Trị Khách Hàng Tiềm Năng",
+          "description": "Theo dõi và nuôi dưỡng các cơ hội kinh doanh xuyên suốt hành trình chuyển đổi từ khách lạ thành đơn hàng."
+        },
+        "salesPipeline": {
+          "title": "Tối Ưu Phễu Bán Hàng",
+          "description": "Trực quan hóa và quản trị chặt chẽ mọi giai đoạn bán hàng, từ tiếp cận ban đầu đến khi chốt deal thành công."
+        },
+        "customerInsights": {
+          "title": "Thấu Hiểu Khách Hàng",
+          "description": "Khai thác dữ liệu về lịch sử giao dịch và hành vi để đưa ra những quyết định kinh doanh có độ chính xác cao."
+        },
+        "automation": {
+          "title": "Tự Động Hóa Vận Hành",
+          "description": "Giải phóng đội ngũ khỏi các tác vụ lặp lại, tự động hóa quy trình chăm sóc và cá nhân hóa trải nghiệm khách hàng."
+        }
+      },
+      "services": {
+        "custom": {
+          "title": "Thiết Kế CRM Theo Yêu Cầu",
+          "description": "Hệ thống được 'may đo' riêng biệt, tương thích hoàn hảo với quy trình Sales, chiến lược Marketing và đặc thù vận hành của bạn."
+        },
+        "automation": {
+          "title": "Tự Động Hóa Bán Hàng",
+          "description": "Thiết lập kịch bản chăm sóc tự động, chấm điểm khách hàng tiềm năng và thông báo tiến độ chốt đơn tức thì."
+        },
+        "integration": {
+          "title": "Kết Nối Hệ Sinh Thái Doanh Nghiệp",
+          "description": "Tích hợp liền mạch với Email Marketing, Tổng đài chăm sóc khách hàng, ERP và các công cụ làm việc hiện có."
+        },
+        "analytics": {
+          "title": "Báo Cáo & Phân Tích Chuyên Sâu",
+          "description": "Đo lường hiệu suất Sales, chỉ số KPI và hành vi khách hàng qua hệ thống Dashboard trực quan, chi tiết."
+        }
+      },
+      "process": {
+        "title": "Quy Trình Triển Khai CRM",
+        "description": "Tiếp cận bài bản từ khâu chuẩn hóa quy trình thực tế đến khi hệ thống vận hành tối ưu."
+      },
+      "steps": {
+        "mapping": {
+          "title": "Chuẩn Hóa Quy Trình Kinh Doanh",
+          "description": "Phân tích sâu phễu bán hàng, các điểm tiếp xúc khách hàng và luồng dữ liệu hiện tại của doanh nghiệp."
+        },
+        "design": {
+          "title": "Thiết Kế Cấu Trúc Hệ Thống",
+          "description": "Xây dựng mô hình dữ liệu, phễu bán hàng và các kịch bản tự động hóa phù hợp nhất với đặc thù ngành."
+        },
+        "development": {
+          "title": "Lập Trình & Tùy Chỉnh",
+          "description": "Hoàn thiện hệ thống CRM với các tính năng chuyên biệt và tích hợp bộ công cụ hỗ trợ cần thiết."
+        },
+        "migration": {
+          "title": "Số Hóa & Di Trú Dữ Liệu",
+          "description": "Chuyển đổi an toàn dữ liệu từ Excel hoặc hệ thống cũ sang nền tảng CRM mới một cách khoa học."
+        },
+        "training": {
+          "title": "Đào Tạo Chuyển Giao",
+          "description": "Hướng dẫn thực chiến cho đội ngũ Sales & Marketing để khai thác tối đa sức mạnh của hệ thống."
+        },
+        "improvement": {
+          "improvement": "Cải Tiến & Tối Ưu",
+          "description": "Liên tục theo dõi hiệu quả, lắng nghe phản hồi và tinh chỉnh hệ thống bám sát nhu cầu thực tế."
+        }
+      },
+      "cta": {
+        "title": "Sẵn Sàng Nâng Tầm Quản Trị Khách Hàng?",
+        "description": "Hãy để chúng tôi giúp bạn xây dựng hệ thống CRM mạnh mẽ, biến mọi điểm tiếp xúc thành cơ hội tăng trưởng doanh thu."
+      }
     }
   },
   "projects": {

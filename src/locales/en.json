@@ -79,15 +79,374 @@
   },
   "about": {
     "badge": "About Us",
-    "title": "Who We Are",
-    "description": "We are a team of passionate developers and designers committed to delivering exceptional software solutions.",
-    "mission": {
-      "title": "Our Mission",
-      "description": "To empower businesses with innovative technology solutions that drive growth and success."
+    "hero": {
+      "prefix": "We Turn",
+      "highlight": "Data Into",
+      "suffix": "Solutions",
+      "description": "A fresh Vietnamese tech team specializing in transforming traditional business processes into modern digital platforms."
     },
-    "vision": {
-      "title": "Our Vision",
-      "description": "To be the leading software development partner for businesses worldwide."
+    "focus": {
+      "title": "Our Focus",
+      "description": "We're a new company focused on quality over quantity, building tailored solutions for each client.",
+      "areas": {
+        "educational": "Educational Platforms",
+        "business": "Small Business Sites",
+        "migration": "Excel → Web Migration"
+      }
+    },
+    "story": {
+      "title": "Our Story",
+      "paragraphs": {
+        "p1": "We're a newly established tech team in Vietnam with a clear vision: helping small businesses escape the limitations of Excel spreadsheets.",
+        "p2": "Starting fresh means we can focus entirely on quality and client satisfaction. Every project gets our full attention, and we build lasting relationships with each client.",
+        "p3": "Small but dedicated, we're committed to delivering professional solutions that actually work for small businesses and educational institutions."
+      }
+    },
+    "mission": {
+      "badge": "Our Mission",
+      "title": "Democratize Digital Transformation",
+      "description": "Make professional web platforms accessible and affordable for small businesses and educational institutions.",
+      "values": {
+        "clientFirst": "Client-First Approach",
+        "fastDelivery": "Fast Delivery",
+        "qualityCode": "Quality Code",
+        "longTermSupport": "Long-term Support"
+      }
+    },
+    "whatWeDo": {
+      "title": "What We Do Best",
+      "subtitle": "Three core services that transform businesses",
+      "services": {
+        "excelPlatform": {
+          "title": "Excel → Platform",
+          "description": "Transform your spreadsheets into powerful web platforms",
+          "features": {
+            "migration": "Data Migration",
+            "dashboards": "Custom Dashboards",
+            "realtime": "Real-time Updates",
+            "roles": "Role Management"
+          }
+        },
+        "educational": {
+          "title": "Educational Sites",
+          "description": "Learning platforms for schools and institutes",
+          "features": {
+            "portals": "Student Portals",
+            "courses": "Course Management",
+            "grades": "Grade Tracking",
+            "enrollment": "Online Enrollment"
+          }
+        },
+        "business": {
+          "title": "Business Websites",
+          "description": "Professional web presence for local businesses",
+          "features": {
+            "design": "Modern Design",
+            "mobile": "Mobile First",
+            "seo": "SEO Ready",
+            "updates": "Easy Updates"
+          }
+        }
+      }
+    },
+    "approach": {
+      "badge": "Our Approach",
+      "title": "Quality Over Quantity",
+      "description": "As a new company, we take a personalized approach to every project. You're not just a number to us—you're a partner in building something great.",
+      "items": {
+        "personal": {
+          "title": "Personal Touch",
+          "description": "Direct communication with the developers building your solution"
+        },
+        "attention": {
+          "title": "Full Attention",
+          "description": "We limit our client load to ensure quality work on every project"
+        },
+        "training": {
+          "title": "Training Included",
+          "description": "We teach you how to use and maintain your new platform"
+        },
+        "available": {
+          "title": "Always Available",
+          "description": "Quick responses and ongoing support after launch"
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Work With Us",
+      "items": {
+        "language": {
+          "title": "We Speak Your Language",
+          "description": "No tech jargon. We explain everything in plain terms and focus on solving your business problems."
+        },
+        "affordable": {
+          "title": "Affordable & Transparent",
+          "description": "Fixed pricing, no hidden fees. Quality solutions tailored for small business budgets."
+        },
+        "fast": {
+          "title": "Fast Turnaround",
+          "description": "Most projects delivered in 4-8 weeks. We value your time and move quickly."
+        },
+        "support": {
+          "title": "Ongoing Support",
+          "description": "We don't disappear after launch. Training, updates, and support included."
+        }
+      },
+      "badge": {
+        "quality": "Quality",
+        "guaranteed": "Guaranteed",
+        "builtWithCare": "Built With Care",
+        "since": "Since 2024",
+        "cleanCode": "Clean Code",
+        "modern": "Modern",
+        "secure": "Secure",
+        "quote": "Every project deserves our best work"
+      }
+    },
+    "cta": {
+      "title": "Ready to Go Digital?",
+      "description": "Let's chat about your project. Free consultation, no obligations.",
+      "startProject": "Start Your Project",
+      "viewWork": "View Our Work"
+    }
+  },
+  "servicePages": {
+    "breadcrumb": {
+      "home": "Home",
+      "services": "Services"
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "description": "Let's discuss how we can help transform your business with custom web solutions.",
+      "contactUs": "Contact Us",
+      "viewWork": "View Our Work"
+    },
+    "learnMore": "Learn more",
+    "getStarted": "Get Started",
+    "scheduleConsultation": "Schedule Consultation",
+    "webDevelopment": {
+      "badge": "Enterprise Web Development",
+      "title": "Custom Web Applications",
+      "titleHighlight": "Built for Your Business",
+      "description": "We develop scalable, high-performance web applications that streamline operations, enhance user engagement, and drive measurable business results.",
+      "whyChooseUs": {
+        "title": "Why Choose Us",
+        "description": "We combine technical excellence with business understanding to deliver exceptional results."
+      },
+      "features": {
+        "custom": {
+          "title": "Custom Development",
+          "description": "Tailored web applications built to match your exact business requirements and workflows."
+        },
+        "scalable": {
+          "title": "Scalable Architecture",
+          "description": "Future-proof solutions designed to grow with your business and handle increasing demand."
+        },
+        "responsive": {
+          "title": "Responsive Design",
+          "description": "Seamless experiences across all devices, from mobile phones to desktop workstations."
+        },
+        "optimized": {
+          "title": "Performance Optimized",
+          "description": "Fast-loading applications with optimized code and efficient resource management."
+        }
+      },
+      "whatWeBuild": {
+        "title": "What We Build",
+        "description": "From simple websites to complex enterprise applications, we deliver solutions that drive real business value."
+      },
+      "services": {
+        "business": {
+          "title": "Business Web Applications",
+          "description": "Custom web applications that automate processes, improve efficiency, and solve specific business challenges. From customer portals to internal management systems."
+        },
+        "ecommerce": {
+          "title": "E-Commerce Solutions",
+          "description": "Complete online store development with secure payment processing, inventory management, and customer account systems tailored to your business model."
+        },
+        "api": {
+          "title": "API Development & Integration",
+          "description": "Connect your systems seamlessly with custom API development and third-party integrations that streamline your operations and data flow."
+        },
+        "legacy": {
+          "title": "Legacy System Modernization",
+          "description": "Transform outdated systems into modern, efficient web applications while preserving your valuable business logic and data."
+        }
+      },
+      "approach": {
+        "title": "How We Help You Succeed",
+        "description": "Our comprehensive approach ensures your web application is built right, launched successfully, and supported long-term."
+      },
+      "steps": {
+        "understanding": {
+          "title": "Understanding Your Business",
+          "description": "We start by thoroughly understanding your business processes, challenges, and goals."
+        },
+        "planning": {
+          "title": "Collaborative Planning",
+          "description": "Work closely with our team to define features, workflows, and priorities."
+        },
+        "development": {
+          "title": "Iterative Development",
+          "description": "See your application come to life through regular updates and demos."
+        },
+        "qa": {
+          "title": "Quality Assurance",
+          "description": "Rigorous testing across devices, browsers, and scenarios."
+        },
+        "deployment": {
+          "title": "Smooth Deployment",
+          "description": "We handle all technical aspects of launching your application."
+        },
+        "support": {
+          "title": "Ongoing Support",
+          "description": "Maintenance, updates, and technical support as your business grows."
+        }
+      }
+    },
+    "cmsSolutions": {
+      "badge": "Content Management Systems",
+      "title": "Powerful CMS Solutions",
+      "titleHighlight": "For Your Content",
+      "description": "We build custom content management systems that give you complete control over your digital content with intuitive interfaces and powerful features.",
+      "ourServices": {
+        "badge": "Our Services",
+        "title": "CMS Solutions",
+        "description": "Enterprise-grade content management systems designed to scale with your business."
+      },
+      "services": {
+        "headless": {
+          "title": "Headless CMS Development",
+          "description": "Modern headless architecture for omnichannel content delivery. Decouple your content from presentation for maximum flexibility across web, mobile, and IoT platforms."
+        },
+        "custom": {
+          "title": "Custom CMS Platforms",
+          "description": "Fully custom content management systems tailored to your unique workflows, from simple blogs to complex enterprise solutions with advanced features."
+        },
+        "migration": {
+          "title": "CMS Migration & Upgrades",
+          "description": "Seamlessly migrate from legacy systems or upgrade existing CMS platforms. We preserve your content while modernizing your infrastructure."
+        },
+        "integration": {
+          "title": "CMS Integration Services",
+          "description": "Connect your CMS with third-party tools, APIs, and services. Streamline workflows with marketing automation, analytics, and e-commerce integrations."
+        }
+      },
+      "process": {
+        "title": "Our CMS Development Process",
+        "description": "A structured approach from strategy to deployment and ongoing support."
+      },
+      "steps": {
+        "strategy": {
+          "title": "Content Strategy Analysis",
+          "description": "Understanding your content types, workflows, and team structure."
+        },
+        "architecture": {
+          "title": "CMS Architecture Design",
+          "description": "Planning the optimal structure for your content and user roles."
+        },
+        "development": {
+          "title": "Development & Customization",
+          "description": "Building your CMS with custom features and integrations."
+        },
+        "migration": {
+          "title": "Content Migration",
+          "description": "Safely transferring existing content to the new system."
+        },
+        "training": {
+          "title": "Team Training",
+          "description": "Comprehensive training for editors and administrators."
+        },
+        "optimization": {
+          "title": "Ongoing Optimization",
+          "description": "Continuous support and feature enhancements."
+        }
+      },
+      "cta": {
+        "title": "Ready to Transform Your Content Management?",
+        "description": "Let's build a CMS that empowers your team and scales with your business."
+      }
+    },
+    "crmSystems": {
+      "badge": "Customer Relationship Management",
+      "title": "Custom CRM Systems",
+      "titleHighlight": "Drive Growth",
+      "description": "We develop powerful CRM solutions that help businesses manage customer relationships effectively, streamline sales processes, and build lasting connections.",
+      "ourServices": {
+        "badge": "CRM Services",
+        "title": "Comprehensive CRM Solutions",
+        "description": "Enterprise-grade customer relationship management systems designed to scale with your business."
+      },
+      "features": {
+        "leadManagement": {
+          "title": "Lead Management",
+          "description": "Track and nurture leads through the entire conversion journey from prospect to customer."
+        },
+        "salesPipeline": {
+          "title": "Sales Pipeline",
+          "description": "Visualize and manage your entire sales process from initial contact to closed deals."
+        },
+        "customerInsights": {
+          "title": "Customer Insights",
+          "description": "Comprehensive data on customer history, preferences, and behavior for strategic decisions."
+        },
+        "automation": {
+          "title": "Workflow Automation",
+          "description": "Streamline repetitive tasks, automate follow-ups, and personalize customer experiences."
+        }
+      },
+      "services": {
+        "custom": {
+          "title": "Custom CRM Development",
+          "description": "Tailored CRM systems built to match your specific sales processes, marketing strategies, and business needs."
+        },
+        "automation": {
+          "title": "Sales Automation",
+          "description": "Intelligent sales process automation with email sequences, lead scoring, and automatic deal progression tracking."
+        },
+        "integration": {
+          "title": "CRM Integration Services",
+          "description": "Seamlessly connect with email marketing, customer support systems, ERP, and other business tools for unified data."
+        },
+        "analytics": {
+          "title": "Analytics & Reporting",
+          "description": "Track sales performance, KPIs, and customer behavior through visual dashboards and detailed custom reports."
+        }
+      },
+      "process": {
+        "title": "Our CRM Implementation Process",
+        "description": "A structured approach from process analysis to continuous optimization."
+      },
+      "steps": {
+        "mapping": {
+          "title": "Business Process Mapping",
+          "description": "Deep dive into your sales processes, customer touchpoints, and current data flows."
+        },
+        "design": {
+          "title": "CRM System Design",
+          "description": "Planning optimal customer data structure, sales pipelines, and automation workflows."
+        },
+        "development": {
+          "title": "Development & Customization",
+          "description": "Building your CRM with custom features and necessary tool integrations."
+        },
+        "migration": {
+          "title": "Customer Data Migration",
+          "description": "Safely transferring existing customer data from spreadsheets or legacy systems to the new platform."
+        },
+        "training": {
+          "title": "Team Training",
+          "description": "Comprehensive guidance for sales and marketing teams on effectively using the CRM system."
+        },
+        "improvement": {
+          "title": "Continuous Improvement",
+          "description": "Monitoring performance, gathering feedback, and optimizing the system based on real-world usage."
+        }
+      },
+      "cta": {
+        "title": "Ready to Elevate Your Customer Management?",
+        "description": "Let's build a CRM system that strengthens customer relationships and drives sustainable revenue growth."
+      }
     }
   },
   "projects": {

@@ -2,70 +2,57 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function WebDevelopmentService() {
+  const { t } = useLanguage();
   const [activeService, setActiveService] = useState(0);
-
-  const stats = [
-    { value: "50+", label: "Projects Delivered" },
-    { value: "98%", label: "Client Satisfaction" },
-    { value: "24/7", label: "Support Available" },
-    { value: "5+", label: "Years Experience" },
-  ];
 
   const features = [
     {
-      title: "Custom Development",
-      description:
-        "Tailored web applications built to match your exact business requirements and workflows.",
+      title: t("servicePages.webDevelopment.features.custom.title"),
+      description: t("servicePages.webDevelopment.features.custom.description"),
       icon: "lucide:code-2",
     },
     {
-      title: "Scalable Architecture",
-      description:
-        "Future-proof solutions designed to grow with your business and handle increasing demand.",
+      title: t("servicePages.webDevelopment.features.scalable.title"),
+      description: t("servicePages.webDevelopment.features.scalable.description"),
       icon: "lucide:trending-up",
     },
     {
-      title: "Responsive Design",
-      description:
-        "Seamless experiences across all devices, from mobile phones to desktop workstations.",
+      title: t("servicePages.webDevelopment.features.responsive.title"),
+      description: t("servicePages.webDevelopment.features.responsive.description"),
       icon: "lucide:monitor-smartphone",
     },
     {
-      title: "Performance Optimized",
-      description:
-        "Fast-loading applications with optimized code and efficient resource management.",
+      title: t("servicePages.webDevelopment.features.optimized.title"),
+      description: t("servicePages.webDevelopment.features.optimized.description"),
       icon: "lucide:zap",
     },
   ];
 
   const services = [
     {
-      title: "Business Web Applications",
-      description:
-        "Custom web applications that automate processes, improve efficiency, and solve specific business challenges. From customer portals to internal management systems.",
+      title: t("servicePages.webDevelopment.services.business.title"),
+      description: t("servicePages.webDevelopment.services.business.description"),
       icon: "lucide:briefcase",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "E-Commerce Solutions",
-      description:
-        "Complete online store development with secure payment processing, inventory management, and customer account systems tailored to your business model.",
+      title: t("servicePages.webDevelopment.services.ecommerce.title"),
+      description: t("servicePages.webDevelopment.services.ecommerce.description"),
       icon: "lucide:shopping-cart",
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "API Development & Integration",
-      description:
-        "Connect your systems seamlessly with custom API development and third-party integrations that streamline your operations and data flow.",
+      title: t("servicePages.webDevelopment.services.api.title"),
+      description: t("servicePages.webDevelopment.services.api.description"),
       icon: "lucide:plug",
       color: "from-blue-600 to-cyan-600",
     },
     {
-      title: "Legacy System Modernization",
-      description:
-        "Transform outdated systems into modern, efficient web applications while preserving your valuable business logic and data.",
+      title: t("servicePages.webDevelopment.services.legacy.title"),
+      description: t("servicePages.webDevelopment.services.legacy.description"),
       icon: "lucide:refresh-cw",
       color: "from-cyan-600 to-blue-600",
     },
@@ -73,43 +60,38 @@ export default function WebDevelopmentService() {
 
   const approach = [
     {
-      title: "Understanding Your Business",
-      description:
-        "We start by thoroughly understanding your business processes, challenges, and goals.",
+      title: t("servicePages.webDevelopment.steps.understanding.title"),
+      description: t("servicePages.webDevelopment.steps.understanding.description"),
       icon: "lucide:search",
       step: "01",
     },
     {
-      title: "Collaborative Planning",
-      description:
-        "Work closely with our team to define features, workflows, and priorities.",
+      title: t("servicePages.webDevelopment.steps.planning.title"),
+      description: t("servicePages.webDevelopment.steps.planning.description"),
       icon: "lucide:users",
       step: "02",
     },
     {
-      title: "Iterative Development",
-      description:
-        "See your application come to life through regular updates and demos.",
+      title: t("servicePages.webDevelopment.steps.development.title"),
+      description: t("servicePages.webDevelopment.steps.development.description"),
       icon: "lucide:repeat",
       step: "03",
     },
     {
-      title: "Quality Assurance",
-      description: "Rigorous testing across devices, browsers, and scenarios.",
+      title: t("servicePages.webDevelopment.steps.qa.title"),
+      description: t("servicePages.webDevelopment.steps.qa.description"),
       icon: "lucide:shield-check",
       step: "04",
     },
     {
-      title: "Smooth Deployment",
-      description:
-        "We handle all technical aspects of launching your application.",
+      title: t("servicePages.webDevelopment.steps.deployment.title"),
+      description: t("servicePages.webDevelopment.steps.deployment.description"),
       icon: "lucide:rocket",
       step: "05",
     },
     {
-      title: "Ongoing Support",
-      description:
-        "Maintenance, updates, and technical support as your business grows.",
+      title: t("servicePages.webDevelopment.steps.support.title"),
+      description: t("servicePages.webDevelopment.steps.support.description"),
       icon: "lucide:headset",
       step: "06",
     },
@@ -136,17 +118,17 @@ export default function WebDevelopmentService() {
               href="/"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Home
+              {t('servicePages.breadcrumb.home')}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
             <Link
               href="/#services"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Services
+              {t('servicePages.breadcrumb.services')}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
-            <span className="text-white font-medium">Web Development</span>
+            <span className="text-white font-medium">{t('services.items.webDevelopment.title')}</span>
           </div>
 
           <div className="max-w-4xl mx-auto text-center">
@@ -157,7 +139,7 @@ export default function WebDevelopmentService() {
             >
               <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
               <span className="text-white/90 font-medium">
-                Enterprise Web Development
+                {t('servicePages.webDevelopment.badge')}
               </span>
             </div>
 
@@ -166,10 +148,10 @@ export default function WebDevelopmentService() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 lg:mb-6 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              Custom Web Applications
+              {t('servicePages.webDevelopment.title')}
               <br />
               <span className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">
-                Built for Your Business
+                {t('servicePages.webDevelopment.titleHighlight')}
               </span>
             </h1>
 
@@ -178,9 +160,7 @@ export default function WebDevelopmentService() {
               className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 lg:mb-8 max-w-3xl mx-auto opacity-0 animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              We develop scalable, high-performance web applications that
-              streamline operations, enhance user engagement, and drive
-              measurable business results.
+              {t('servicePages.webDevelopment.description')}
             </p>
 
             {/* CTA Buttons */}
@@ -193,7 +173,7 @@ export default function WebDevelopmentService() {
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all text-center"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  Get Started
+                  {t('servicePages.getStarted')}
                   <Icon
                     icon="lucide:arrow-right"
                     className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -205,7 +185,7 @@ export default function WebDevelopmentService() {
                 href="/contact"
                 className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
               >
-                Schedule Consultation
+                {t('servicePages.scheduleConsultation')}
               </Link>
             </div>
           </div>
@@ -217,11 +197,10 @@ export default function WebDevelopmentService() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Why Choose Us
+              {t('servicePages.webDevelopment.whyChooseUs.title')}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              We combine technical excellence with business understanding to
-              deliver exceptional results.
+              {t('servicePages.webDevelopment.whyChooseUs.description')}
             </p>
           </div>
 
@@ -254,11 +233,10 @@ export default function WebDevelopmentService() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              What We Build
+              {t('servicePages.webDevelopment.whatWeBuild.title')}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              From simple websites to complex enterprise applications, we
-              deliver solutions that drive real business value.
+              {t('servicePages.webDevelopment.whatWeBuild.description')}
             </p>
           </div>
 
@@ -312,7 +290,7 @@ export default function WebDevelopmentService() {
                         href="/contact"
                         className="inline-flex items-center gap-2 text-[#0078D4] font-semibold hover:gap-3 transition-all text-sm sm:text-base"
                       >
-                        Learn more
+                        {t('servicePages.learnMore')}
                         <Icon icon="lucide:arrow-right" className="w-4 h-4" />
                       </Link>
                     </div>
@@ -329,11 +307,10 @@ export default function WebDevelopmentService() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              How We Help You Succeed
+              {t('servicePages.webDevelopment.approach.title')}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              Our comprehensive approach ensures your web application is built
-              right, launched successfully, and supported long-term.
+              {t('servicePages.webDevelopment.approach.description')}
             </p>
           </div>
 
@@ -403,11 +380,10 @@ export default function WebDevelopmentService() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
-            Ready to Start Your Project?
+            {t('servicePages.cta.title')}
           </h2>
           <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Let's discuss how we can help transform your business with custom
-            web solutions.
+            {t('servicePages.cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link
@@ -415,7 +391,7 @@ export default function WebDevelopmentService() {
               className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                Contact Us
+                {t('servicePages.cta.contactUs')}
                 <Icon
                   icon="lucide:arrow-right"
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -427,7 +403,7 @@ export default function WebDevelopmentService() {
               href="/projects"
               className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
             >
-              View Our Work
+              {t('servicePages.cta.viewWork')}
               <Icon
                 icon="lucide:external-link"
                 className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

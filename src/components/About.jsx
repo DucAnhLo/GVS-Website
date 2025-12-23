@@ -1,8 +1,11 @@
 'use client'
 import React from 'react';
 import { Icon } from '@iconify/react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -12,17 +15,17 @@ const About = () => {
           <div className="bg-gray-900 text-white p-12 lg:p-20 flex flex-col justify-center">
             <div className="space-y-6">
               <div className="inline-block px-4 py-2 bg-white/10 text-sm font-medium uppercase tracking-widest rounded-full">
-                About Us
+                {t('about.badge')}
               </div>
               <h1 className="text-4xl lg:text-[48px] font-semibold leading-tight">
-                We Turn
+                {t('about.hero.prefix')}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                  Data Into
+                  {t('about.hero.highlight')}
                 </span>
-                Solutions
+                {t('about.hero.suffix')}
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
-                A fresh Vietnamese tech team specializing in transforming traditional business processes into modern digital platforms.
+                {t('about.hero.description')}
               </p>
             </div>
           </div>
@@ -34,23 +37,23 @@ const About = () => {
             </div>
             <div className="relative z-10 space-y-8">
               <div>
-                <div className="text-2xl font-medium text-gray-900 mb-4">Our Focus</div>
+                <div className="text-2xl font-medium text-gray-900 mb-4">{t('about.focus.title')}</div>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  We're a new company focused on quality over quantity, building tailored solutions for each client.
+                  {t('about.focus.description')}
                 </p>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-1 bg-blue-500 rounded-full"></div>
-                  <span className="text-gray-700 font-medium">Educational Platforms</span>
+                  <span className="text-gray-700 font-medium">{t('about.focus.areas.educational')}</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-24 h-1 bg-purple-500 rounded-full"></div>
-                  <span className="text-gray-700 font-medium">Small Business Sites</span>
+                  <span className="text-gray-700 font-medium">{t('about.focus.areas.business')}</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-20 h-1 bg-green-500 rounded-full"></div>
-                  <span className="text-gray-700 font-medium">Excel → Web Migration</span>
+                  <span className="text-gray-700 font-medium">{t('about.focus.areas.migration')}</span>
                 </div>
               </div>
             </div>
@@ -62,18 +65,18 @@ const About = () => {
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
               <h2 className="text-5xl font-semibold text-gray-900 mb-8 leading-tight">
-                Our Story
+                {t('about.story.title')}
               </h2>
               <div className="w-20 h-1 bg-blue-500 mb-8 rounded-full"></div>
               <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
                 <p>
-                  We're a newly established tech team in Vietnam with a clear vision: helping small businesses escape the limitations of Excel spreadsheets.
+                  {t('about.story.paragraphs.p1')}
                 </p>
                 <p>
-                  Starting fresh means we can focus entirely on quality and client satisfaction. Every project gets our full attention, and we build lasting relationships with each client.
+                  {t('about.story.paragraphs.p2')}
                 </p>
                 <p className="font-medium text-gray-900">
-                  Small but dedicated, we're committed to delivering professional solutions that actually work for small businesses and educational institutions.
+                  {t('about.story.paragraphs.p3')}
                 </p>
               </div>
             </div>
@@ -85,28 +88,28 @@ const About = () => {
                 <div className="relative bg-gray-50 p-12 border-l-8 border-blue-500 rounded-r-3xl rounded-bl-3xl">
                   <div className="space-y-8">
                     <div>
-                      <div className="text-sm font-medium text-blue-600 uppercase tracking-widest mb-2">Our Mission</div>
-                      <h3 className="text-2xl font-medium text-gray-900 mb-3">Democratize Digital Transformation</h3>
+                      <div className="text-sm font-medium text-blue-600 uppercase tracking-widest mb-2">{t('about.mission.badge')}</div>
+                      <h3 className="text-2xl font-medium text-gray-900 mb-3">{t('about.mission.title')}</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Make professional web platforms accessible and affordable for small businesses and educational institutions.
+                        {t('about.mission.description')}
                       </p>
                     </div>
                     <div className="grid grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Icon icon="fluent:people-team-24-filled" className="w-8 h-8 text-purple-500" />
-                        <div className="text-sm font-medium text-gray-900">Client-First Approach</div>
+                        <div className="text-sm font-medium text-gray-900">{t('about.mission.values.clientFirst')}</div>
                       </div>
                       <div className="space-y-2">
                         <Icon icon="fluent:rocket-24-filled" className="w-8 h-8 text-blue-500" />
-                        <div className="text-sm font-medium text-gray-900">Fast Delivery</div>
+                        <div className="text-sm font-medium text-gray-900">{t('about.mission.values.fastDelivery')}</div>
                       </div>
                       <div className="space-y-2">
                         <Icon icon="fluent:shield-checkmark-24-filled" className="w-8 h-8 text-green-500" />
-                        <div className="text-sm font-medium text-gray-900">Quality Code</div>
+                        <div className="text-sm font-medium text-gray-900">{t('about.mission.values.qualityCode')}</div>
                       </div>
                       <div className="space-y-2">
                         <Icon icon="fluent:handshake-24-filled" className="w-8 h-8 text-orange-500" />
-                        <div className="text-sm font-medium text-gray-900">Long-term Support</div>
+                        <div className="text-sm font-medium text-gray-900">{t('about.mission.values.longTermSupport')}</div>
                       </div>
                     </div>
                   </div>
@@ -119,41 +122,56 @@ const About = () => {
         {/* What We Do - Bento Grid Style */}
         <div className="bg-gray-50 px-6 py-24">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-semibold text-gray-900 mb-4">What We Do Best</h2>
-            <p className="text-xl text-gray-600">Three core services that transform businesses</p>
+            <h2 className="text-5xl font-semibold text-gray-900 mb-4">{t('about.whatWeDo.title')}</h2>
+            <p className="text-xl text-gray-600">{t('about.whatWeDo.subtitle')}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 number: '01',
-                title: 'Excel → Platform',
-                description: 'Transform your spreadsheets into powerful web platforms',
+                title: t('about.whatWeDo.services.excelPlatform.title'),
+                description: t('about.whatWeDo.services.excelPlatform.description'),
                 icon: 'fluent:database-arrow-right-24-filled',
                 numberColor: 'text-blue-100',
                 iconColor: 'text-blue-500',
                 dotColor: 'bg-blue-500',
-                features: ['Data Migration', 'Custom Dashboards', 'Real-time Updates', 'Role Management']
+                features: [
+                  t('about.whatWeDo.services.excelPlatform.features.migration'),
+                  t('about.whatWeDo.services.excelPlatform.features.dashboards'),
+                  t('about.whatWeDo.services.excelPlatform.features.realtime'),
+                  t('about.whatWeDo.services.excelPlatform.features.roles')
+                ]
               },
               {
                 number: '02',
-                title: 'Educational Sites',
-                description: 'Learning platforms for schools and institutes',
+                title: t('about.whatWeDo.services.educational.title'),
+                description: t('about.whatWeDo.services.educational.description'),
                 icon: 'fluent:book-open-globe-24-filled',
                 numberColor: 'text-purple-100',
                 iconColor: 'text-purple-500',
                 dotColor: 'bg-purple-500',
-                features: ['Student Portals', 'Course Management', 'Grade Tracking', 'Online Enrollment']
+                features: [
+                  t('about.whatWeDo.services.educational.features.portals'),
+                  t('about.whatWeDo.services.educational.features.courses'),
+                  t('about.whatWeDo.services.educational.features.grades'),
+                  t('about.whatWeDo.services.educational.features.enrollment')
+                ]
               },
               {
                 number: '03',
-                title: 'Business Websites',
-                description: 'Professional web presence for local businesses',
+                title: t('about.whatWeDo.services.business.title'),
+                description: t('about.whatWeDo.services.business.description'),
                 icon: 'fluent:globe-search-24-filled',
                 numberColor: 'text-green-100',
                 iconColor: 'text-green-500',
                 dotColor: 'bg-green-500',
-                features: ['Modern Design', 'Mobile First', 'SEO Ready', 'Easy Updates']
+                features: [
+                  t('about.whatWeDo.services.business.features.design'),
+                  t('about.whatWeDo.services.business.features.mobile'),
+                  t('about.whatWeDo.services.business.features.seo'),
+                  t('about.whatWeDo.services.business.features.updates')
+                ]
               }
             ].map((service, index) => (
               <div key={index} className="group bg-white p-8 hover:shadow-2xl transition-all duration-300 border-t-4 border-transparent hover:border-gray-900 rounded-2xl">
@@ -184,12 +202,12 @@ const About = () => {
         <div className="px-6 py-24 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="text-sm font-medium text-blue-600 uppercase tracking-widest mb-4">Our Approach</div>
+              <div className="text-sm font-medium text-blue-600 uppercase tracking-widest mb-4">{t('about.approach.badge')}</div>
               <h2 className="text-5xl font-semibold text-gray-900 mb-8 leading-tight">
-                Quality Over Quantity
+                {t('about.approach.title')}
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                As a new company, we take a personalized approach to every project. You're not just a number to us—you're a partner in building something great.
+                {t('about.approach.description')}
               </p>
             </div>
 
@@ -197,26 +215,26 @@ const About = () => {
               {[
                 {
                   icon: 'fluent-color:people-chat-24',
-                  title: 'Personal Touch',
-                  description: 'Direct communication with the developers building your solution',
+                  title: t('about.approach.items.personal.title'),
+                  description: t('about.approach.items.personal.description'),
                   iconColor: 'text-blue-500'
                 },
                 {
                   icon: 'fluent:timer-24-filled',
-                  title: 'Full Attention',
-                  description: 'We limit our client load to ensure quality work on every project',
+                  title: t('about.approach.items.attention.title'),
+                  description: t('about.approach.items.attention.description'),
                   iconColor: 'text-purple-500'
                 },
                 {
                   icon: 'fluent:learning-app-24-filled',
-                  title: 'Training Included',
-                  description: 'We teach you how to use and maintain your new platform',
+                  title: t('about.approach.items.training.title'),
+                  description: t('about.approach.items.training.description'),
                   iconColor: 'text-green-500'
                 },
                 {
                   icon: 'fluent:phone-chat-24-filled',
-                  title: 'Always Available',
-                  description: 'Quick responses and ongoing support after launch',
+                  title: t('about.approach.items.available.title'),
+                  description: t('about.approach.items.available.description'),
                   iconColor: 'text-orange-500'
                 }
               ].map((item, index) => (
@@ -234,27 +252,27 @@ const About = () => {
         <div className="grid lg:grid-cols-2">
           {/* Left - Black */}
           <div className="bg-gray-900 text-white p-12 lg:p-20">
-            <h2 className="text-4xl font-semibold mb-12">Why Work With Us</h2>
+            <h2 className="text-4xl font-semibold mb-12">{t('about.whyChooseUs.title')}</h2>
             <div className="space-y-8">
               {[
                 {
-                  title: 'We Speak Your Language',
-                  description: 'No tech jargon. We explain everything in plain terms and focus on solving your business problems.',
+                  title: t('about.whyChooseUs.items.language.title'),
+                  description: t('about.whyChooseUs.items.language.description'),
                   icon: 'fluent:chat-bubbles-question-24-filled'
                 },
                 {
-                  title: 'Affordable & Transparent',
-                  description: 'Fixed pricing, no hidden fees. Quality solutions tailored for small business budgets.',
+                  title: t('about.whyChooseUs.items.affordable.title'),
+                  description: t('about.whyChooseUs.items.affordable.description'),
                   icon: 'fluent:money-hand-24-filled'
                 },
                 {
-                  title: 'Fast Turnaround',
-                  description: 'Most projects delivered in 4-8 weeks. We value your time and move quickly.',
+                  title: t('about.whyChooseUs.items.fast.title'),
+                  description: t('about.whyChooseUs.items.fast.description'),
                   icon: 'fluent:top-speed-24-filled'
                 },
                 {
-                  title: 'Ongoing Support',
-                  description: "We don't disappear after launch. Training, updates, and support included.",
+                  title: t('about.whyChooseUs.items.support.title'),
+                  description: t('about.whyChooseUs.items.support.description'),
                   icon: 'fluent:headset-24-filled'
                 }
               ].map((item, index) => (
@@ -288,27 +306,27 @@ const About = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <Icon icon="fluent:shield-checkmark-24-filled" className="w-20 h-20 text-blue-500 mx-auto mb-3" />
-                      <div className="text-2xl font-semibold text-gray-900">Quality</div>
-                      <div className="text-sm font-medium text-gray-600">Guaranteed</div>
+                      <div className="text-2xl font-semibold text-gray-900">{t('about.whyChooseUs.badge.quality')}</div>
+                      <div className="text-sm font-medium text-gray-600">{t('about.whyChooseUs.badge.guaranteed')}</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Side text decorations */}
                 <div className="absolute -left-8 top-1/2 -translate-y-1/2 -rotate-90">
-                  <div className="text-xs font-medium text-gray-400 uppercase tracking-widest">Built With Care</div>
+                  <div className="text-xs font-medium text-gray-400 uppercase tracking-widest">{t('about.whyChooseUs.badge.builtWithCare')}</div>
                 </div>
                 <div className="absolute -right-8 top-1/2 -translate-y-1/2 rotate-90">
-                  <div className="text-xs font-medium text-gray-400 uppercase tracking-widest">Since 2024</div>
+                  <div className="text-xs font-medium text-gray-400 uppercase tracking-widest">{t('about.whyChooseUs.badge.since')}</div>
                 </div>
               </div>
 
               {/* Features Grid */}
               <div className="mt-12 grid grid-cols-3 gap-4 text-center">
                 {[
-                  { icon: 'fluent:code-24-filled', label: 'Clean Code', iconColor: 'text-blue-500' },
-                  { icon: 'fluent:design-ideas-24-filled', label: 'Modern', iconColor: 'text-purple-500' },
-                  { icon: 'fluent:shield-24-filled', label: 'Secure', iconColor: 'text-green-500' }
+                  { icon: 'fluent:code-24-filled', label: t('about.whyChooseUs.badge.cleanCode'), iconColor: 'text-blue-500' },
+                  { icon: 'fluent:design-ideas-24-filled', label: t('about.whyChooseUs.badge.modern'), iconColor: 'text-purple-500' },
+                  { icon: 'fluent:shield-24-filled', label: t('about.whyChooseUs.badge.secure'), iconColor: 'text-green-500' }
                 ].map((item, index) => (
                   <div key={index} className="p-4 bg-gray-50 hover:bg-gray-100 transition-colors rounded-xl">
                     <Icon icon={item.icon} className={`w-8 h-8 ${item.iconColor} mx-auto mb-2`} />
@@ -320,7 +338,7 @@ const About = () => {
               {/* Bottom tagline */}
               <div className="mt-8 text-center">
                 <p className="text-sm text-gray-600 italic">
-                  "Every project deserves our best work"
+                  "{t('about.whyChooseUs.badge.quote')}"
                 </p>
               </div>
             </div>
@@ -331,24 +349,24 @@ const About = () => {
         <div className="bg-white px-6 py-24">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl lg:text-[48px] font-semibold text-gray-900 mb-6 leading-tight">
-              Ready to Go Digital?
+              {t('about.cta.title')}
             </h2>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-              Let's chat about your project. Free consultation, no obligations.
+              {t('about.cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-10 py-4 bg-brand-black text-white text-sm font-semibold rounded-full hover:bg-brand-black/90 transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2 group"
               >
-                Start Your Project
+                {t('about.cta.startProject')}
                 <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
                 href="#"
                 className="px-10 py-4 border border-brand-black text-brand-black text-sm font-semibold rounded-full hover:bg-brand-black hover:text-white transition-all inline-flex items-center justify-center gap-2 group"
               >
-                View Our Work
+                {t('about.cta.viewWork')}
                 <Icon icon="fluent:arrow-right-24-filled" className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>

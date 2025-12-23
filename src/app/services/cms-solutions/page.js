@@ -2,36 +2,34 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CMSService() {
+  const { t } = useLanguage();
   const [activeService, setActiveService] = useState(0);
 
   const services = [
     {
-      title: "Headless CMS Development",
-      description:
-        "Modern headless architecture for omnichannel content delivery. Decouple your content from presentation for maximum flexibility across web, mobile, and IoT platforms.",
+      title: t("servicePages.cmsSolutions.services.headless.title"),
+      description: t("servicePages.cmsSolutions.services.headless.description"),
       icon: "lucide:globe",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Custom CMS Platforms",
-      description:
-        "Fully custom content management systems tailored to your unique workflows, from simple blogs to complex enterprise solutions with advanced features.",
+      title: t("servicePages.cmsSolutions.services.custom.title"),
+      description: t("servicePages.cmsSolutions.services.custom.description"),
       icon: "lucide:settings",
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "CMS Migration & Upgrades",
-      description:
-        "Seamlessly migrate from legacy systems or upgrade existing CMS platforms. We preserve your content while modernizing your infrastructure.",
+      title: t("servicePages.cmsSolutions.services.migration.title"),
+      description: t("servicePages.cmsSolutions.services.migration.description"),
       icon: "lucide:refresh-cw",
       color: "from-blue-600 to-cyan-600",
     },
     {
-      title: "CMS Integration Services",
-      description:
-        "Connect your CMS with third-party tools, APIs, and services. Streamline workflows with marketing automation, analytics, and e-commerce integrations.",
+      title: t("servicePages.cmsSolutions.services.integration.title"),
+      description: t("servicePages.cmsSolutions.services.integration.description"),
       icon: "lucide:plug",
       color: "from-cyan-600 to-blue-600",
     },
@@ -39,40 +37,38 @@ export default function CMSService() {
 
   const approach = [
     {
-      title: "Content Strategy Analysis",
-      description:
-        "Understanding your content types, workflows, and team structure.",
+      title: t("servicePages.cmsSolutions.steps.strategy.title"),
+      description: t("servicePages.cmsSolutions.steps.strategy.description"),
       icon: "lucide:search",
       step: "01",
     },
     {
-      title: "CMS Architecture Design",
-      description:
-        "Planning the optimal structure for your content and user roles.",
+      title: t("servicePages.cmsSolutions.steps.architecture.title"),
+      description: t("servicePages.cmsSolutions.steps.architecture.description"),
       icon: "lucide:layout",
       step: "02",
     },
     {
-      title: "Development & Customization",
-      description: "Building your CMS with custom features and integrations.",
+      title: t("servicePages.cmsSolutions.steps.development.title"),
+      description: t("servicePages.cmsSolutions.steps.development.description"),
       icon: "lucide:code",
       step: "03",
     },
     {
-      title: "Content Migration",
-      description: "Safely transferring existing content to the new system.",
+      title: t("servicePages.cmsSolutions.steps.migration.title"),
+      description: t("servicePages.cmsSolutions.steps.migration.description"),
       icon: "lucide:database",
       step: "04",
     },
     {
-      title: "Team Training",
-      description: "Comprehensive training for editors and administrators.",
+      title: t("servicePages.cmsSolutions.steps.training.title"),
+      description: t("servicePages.cmsSolutions.steps.training.description"),
       icon: "lucide:users",
       step: "05",
     },
     {
-      title: "Ongoing Optimization",
-      description: "Continuous support and feature enhancements.",
+      title: t("servicePages.cmsSolutions.steps.optimization.title"),
+      description: t("servicePages.cmsSolutions.steps.optimization.description"),
       icon: "lucide:trending-up",
       step: "06",
     },
@@ -99,17 +95,17 @@ export default function CMSService() {
               href="/"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Home
+              {t('servicePages.breadcrumb.home')}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
             <Link
               href="/#services"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Services
+              {t('servicePages.breadcrumb.services')}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
-            <span className="text-white font-medium">CMS Solutions</span>
+            <span className="text-white font-medium">{t('services.items.cmsSolutions.title')}</span>
           </div>
 
           <div className="max-w-4xl mx-auto text-center">
@@ -120,7 +116,7 @@ export default function CMSService() {
             >
               <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
               <span className="text-white/90 font-medium">
-                Content Management Systems
+                {t('servicePages.cmsSolutions.badge')}
               </span>
             </div>
 
@@ -129,10 +125,10 @@ export default function CMSService() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 lg:mb-6 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              Powerful CMS Solutions
+              {t('servicePages.cmsSolutions.title')}
               <br />
               <span className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">
-                For Your Content
+                {t('servicePages.cmsSolutions.titleHighlight')}
               </span>
             </h1>
 
@@ -141,9 +137,7 @@ export default function CMSService() {
               className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 lg:mb-8 max-w-3xl mx-auto opacity-0 animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              We build custom content management systems that give you complete
-              control over your digital content with intuitive interfaces and
-              powerful features.
+              {t('servicePages.cmsSolutions.description')}
             </p>
 
             {/* CTA Buttons */}
@@ -156,7 +150,7 @@ export default function CMSService() {
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all text-center"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  Get Started
+                  {t('servicePages.getStarted')}
                   <Icon
                     icon="lucide:arrow-right"
                     className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -168,7 +162,7 @@ export default function CMSService() {
                 href="/contact"
                 className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
               >
-                Schedule Consultation
+                {t('servicePages.scheduleConsultation')}
               </Link>
             </div>
           </div>
@@ -182,14 +176,13 @@ export default function CMSService() {
           {/* Section Header */}
           <div className="max-w-3xl mb-16 lg:mb-20">
             <p className="text-sm font-medium text-[#0078D4] uppercase tracking-wider mb-4">
-              Our Services
+              {t('servicePages.cmsSolutions.ourServices.badge')}
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-              CMS Solutions
+              {t('servicePages.cmsSolutions.ourServices.title')}
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed">
-              Enterprise-grade content management systems designed to scale with
-              your business.
+              {t('servicePages.cmsSolutions.ourServices.description')}
             </p>
           </div>
 
@@ -227,7 +220,7 @@ export default function CMSService() {
                     href="/contact"
                     className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-[#0078D4] transition-colors duration-300 group/link"
                   >
-                    Get started
+                    {t('servicePages.getStarted')}
                     <Icon
                       icon="lucide:arrow-right"
                       className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300"
@@ -245,11 +238,10 @@ export default function CMSService() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Our CMS Development Process
+              {t('servicePages.cmsSolutions.process.title')}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              A structured approach from strategy to deployment and ongoing
-              support.
+              {t('servicePages.cmsSolutions.process.description')}
             </p>
           </div>
 
@@ -313,11 +305,10 @@ export default function CMSService() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
-            Ready to Transform Your Content Management?
+            {t('servicePages.cmsSolutions.cta.title')}
           </h2>
           <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Let's build a CMS that empowers your team and scales with your
-            business.
+            {t('servicePages.cmsSolutions.cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link
@@ -325,7 +316,7 @@ export default function CMSService() {
               className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                Contact Us
+                {t('servicePages.cta.contactUs')}
                 <Icon
                   icon="lucide:arrow-right"
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -337,7 +328,7 @@ export default function CMSService() {
               href="/projects"
               className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
             >
-              View Our Work
+              {t('servicePages.cta.viewWork')}
               <Icon
                 icon="lucide:external-link"
                 className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

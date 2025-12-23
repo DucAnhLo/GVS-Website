@@ -2,63 +2,57 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CRMService() {
   const [activeService, setActiveService] = useState(0);
+  const { t } = useLanguage();
 
   const features = [
     {
-      title: "Lead Management",
-      description:
-        "Track, score, and nurture leads through your entire sales funnel with intelligent automation.",
+      title: t("servicePages.crmSystems.features.leadManagement.title"),
+      description: t("servicePages.crmSystems.features.leadManagement.description"),
       icon: "lucide:user-plus",
     },
     {
-      title: "Sales Pipeline",
-      description:
-        "Visualize your sales process and forecast revenue with real-time pipeline analytics.",
+      title: t("servicePages.crmSystems.features.salesPipeline.title"),
+      description: t("servicePages.crmSystems.features.salesPipeline.description"),
       icon: "lucide:trending-up",
     },
     {
-      title: "Customer Insights",
-      description:
-        "Unified customer profiles with interaction history, preferences, and behavioral data.",
+      title: t("servicePages.crmSystems.features.customerInsights.title"),
+      description: t("servicePages.crmSystems.features.customerInsights.description"),
       icon: "lucide:chart-bar",
     },
     {
-      title: "Workflow Automation",
-      description:
-        "Automate repetitive tasks, workflows, and communications to boost team productivity.",
+      title: t("servicePages.crmSystems.features.automation.title"),
+      description: t("servicePages.crmSystems.features.automation.description"),
       icon: "lucide:zap",
     },
   ];
 
   const services = [
     {
-      title: "Custom CRM Development",
-      description:
-        "Build a CRM system tailored to your unique sales process, customer journey, and business requirements. From contact management to advanced analytics.",
+      title: t("servicePages.crmSystems.services.custom.title"),
+      description: t("servicePages.crmSystems.services.custom.description"),
       icon: "lucide:users",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Sales Automation",
-      description:
-        "Streamline your sales workflow with automated lead scoring, email campaigns, task assignments, and follow-up reminders to maximize conversion rates.",
+      title: t("servicePages.crmSystems.services.automation.title"),
+      description: t("servicePages.crmSystems.services.automation.description"),
       icon: "lucide:rocket",
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "CRM Integration Services",
-      description:
-        "Connect your CRM with email platforms, marketing automation, e-commerce systems, and third-party tools for a unified customer view.",
+      title: t("servicePages.crmSystems.services.integration.title"),
+      description: t("servicePages.crmSystems.services.integration.description"),
       icon: "lucide:link",
       color: "from-blue-600 to-cyan-600",
     },
     {
-      title: "Analytics & Reporting",
-      description:
-        "Make data-driven decisions with custom dashboards, sales forecasting, pipeline reports, and customer behavior analytics.",
+      title: t("servicePages.crmSystems.services.analytics.title"),
+      description: t("servicePages.crmSystems.services.analytics.description"),
       icon: "lucide:line-chart",
       color: "from-cyan-600 to-blue-600",
     },
@@ -66,38 +60,38 @@ export default function CRMService() {
 
   const approach = [
     {
-      title: "Business Process Mapping",
-      description: "Analyze your sales process and customer touchpoints.",
+      title: t("servicePages.crmSystems.steps.mapping.title"),
+      description: t("servicePages.crmSystems.steps.mapping.description"),
       icon: "lucide:map",
       step: "01",
     },
     {
-      title: "CRM Strategy & Design",
-      description: "Define workflows, data structures, and automation rules.",
+      title: t("servicePages.crmSystems.steps.design.title"),
+      description: t("servicePages.crmSystems.steps.design.description"),
       icon: "lucide:layout-dashboard",
       step: "02",
     },
     {
-      title: "Custom Development",
-      description: "Build your CRM with tailored features and integrations.",
+      title: t("servicePages.crmSystems.steps.development.title"),
+      description: t("servicePages.crmSystems.steps.development.description"),
       icon: "lucide:code",
       step: "03",
     },
     {
-      title: "Data Migration",
-      description: "Import existing customer data safely and accurately.",
+      title: t("servicePages.crmSystems.steps.migration.title"),
+      description: t("servicePages.crmSystems.steps.migration.description"),
       icon: "lucide:database",
       step: "04",
     },
     {
-      title: "Team Onboarding",
-      description: "Train your sales team and administrators.",
+      title: t("servicePages.crmSystems.steps.training.title"),
+      description: t("servicePages.crmSystems.steps.training.description"),
       icon: "lucide:users-2",
       step: "05",
     },
     {
-      title: "Continuous Improvement",
-      description: "Monitor, optimize, and enhance your CRM over time.",
+      title: t("servicePages.crmSystems.steps.improvement.title"),
+      description: t("servicePages.crmSystems.steps.improvement.description"),
       icon: "lucide:settings",
       step: "06",
     },
@@ -124,17 +118,17 @@ export default function CRMService() {
               href="/"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Home
+              {t("servicePages.breadcrumb.home")}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
             <Link
               href="/#services"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Services
+              {t("servicePages.breadcrumb.services")}
             </Link>
             <div className="w-1 h-1 bg-white/50 rounded-full"></div>
-            <span className="text-white font-medium">CRM Systems</span>
+            <span className="text-white font-medium">{t("servicePages.crmSystems.badge")}</span>
           </div>
 
           <div className="max-w-4xl mx-auto text-center">
@@ -145,7 +139,7 @@ export default function CRMService() {
             >
               <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
               <span className="text-white/90 font-medium">
-                Customer Relationship Management
+                {t("servicePages.crmSystems.badge")}
               </span>
             </div>
 
@@ -154,10 +148,10 @@ export default function CRMService() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 lg:mb-6 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              Custom CRM Systems
+              {t("servicePages.crmSystems.title")}
               <br />
               <span className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">
-                That Drive Growth
+                {t("servicePages.crmSystems.titleHighlight")}
               </span>
             </h1>
 
@@ -166,8 +160,7 @@ export default function CRMService() {
               className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 lg:mb-8 max-w-3xl mx-auto opacity-0 animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              Transform how you manage customers and streamline sales processes
-              with powerful CRM solutions built specifically for your business.
+              {t("servicePages.crmSystems.description")}
             </p>
 
             {/* CTA Buttons */}
@@ -180,7 +173,7 @@ export default function CRMService() {
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all text-center"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  Get Started
+                  {t("servicePages.getStarted")}
                   <Icon
                     icon="lucide:arrow-right"
                     className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -192,7 +185,7 @@ export default function CRMService() {
                 href="/contact"
                 className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
               >
-                Schedule Consultation
+                {t("servicePages.scheduleConsultation")}
               </Link>
             </div>
           </div>
@@ -242,15 +235,14 @@ export default function CRMService() {
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 lg:mb-20">
             <div className="max-w-2xl">
               <p className="text-sm font-medium text-[#0078D4] uppercase tracking-wider mb-4">
-                Our Services
+                {t("servicePages.crmSystems.ourServices.badge")}
               </p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight">
-                CRM Solutions
+                {t("servicePages.crmSystems.ourServices.title")}
               </h2>
             </div>
             <p className="text-lg text-gray-500 max-w-md lg:text-right">
-              Enterprise-grade customer relationship management built to
-              accelerate your growth.
+              {t("servicePages.crmSystems.ourServices.description")}
             </p>
           </div>
 
@@ -286,7 +278,7 @@ export default function CRMService() {
                       href="/contact"
                       className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-[#0078D4] transition-colors duration-300 group/link"
                     >
-                      <span className="hidden lg:inline">Learn more</span>
+                      <span className="hidden lg:inline">{t("servicePages.learnMore")}</span>
                       <Icon
                         icon="lucide:arrow-right"
                         className="w-5 h-5 group-hover/link:translate-x-1 transition-transform duration-300"
@@ -305,11 +297,10 @@ export default function CRMService() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Our CRM Development Process
+              {t("servicePages.crmSystems.process.title")}
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              A proven approach to building CRM systems that align with your
-              sales goals.
+              {t("servicePages.crmSystems.process.description")}
             </p>
           </div>
 
@@ -373,11 +364,10 @@ export default function CRMService() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
-            Ready to Boost Your Sales?
+            {t("servicePages.crmSystems.cta.title")}
           </h2>
           <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Let's build a CRM system that helps you close more deals and grow
-            customer relationships.
+            {t("servicePages.crmSystems.cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link
@@ -385,7 +375,7 @@ export default function CRMService() {
               className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0078D4] text-sm font-semibold rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-white/20 transition-all"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                Contact Us
+                {t("servicePages.cta.contactUs")}
                 <Icon
                   icon="lucide:arrow-right"
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -397,7 +387,7 @@ export default function CRMService() {
               href="/projects"
               className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 backdrop-blur-sm text-white text-sm font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2"
             >
-              View Our Work
+              {t("servicePages.cta.viewWork")}
               <Icon
                 icon="lucide:external-link"
                 className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
