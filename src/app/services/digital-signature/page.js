@@ -2,11 +2,79 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function DigitalSignatureService() {
-  const [activeService, setActiveService] = useState(0);
-  const { t } = useLanguage();
+  const [activeFeature, setActiveFeature] = useState(0);
+  const { t, language } = useLanguage();
+
+  const productFeatures = [
+    {
+      titleEn: "Document Management",
+      titleVi: "Quản lý tài liệu",
+      descriptionEn: "Organize and track all your documents in one central dashboard. Monitor document status, recipients, and completion in real-time.",
+      descriptionVi: "Tổ chức và theo dõi tất cả tài liệu của bạn trên một bảng điều khiển tập trung. Giám sát trạng thái tài liệu, người nhận và hoàn thành theo thời gian thực.",
+      image: "/esign/esign1.png",
+      icon: "lucide:folder-open",
+    },
+    {
+      titleEn: "Smart Document Editor",
+      titleVi: "Trình soạn thảo tài liệu thông minh",
+      descriptionEn: "Upload your documents and easily add signature fields, text fields, and other elements with our intuitive drag-and-drop interface.",
+      descriptionVi: "Tải lên tài liệu của bạn và dễ dàng thêm trường chữ ký, trường văn bản và các yếu tố khác với giao diện kéo thả trực quan.",
+      image: "/esign/esign2.png",
+      icon: "lucide:edit",
+    },
+    {
+      titleEn: "Recipient Management",
+      titleVi: "Quản lý người nhận",
+      descriptionEn: "Add multiple signers, set signing order, and manage permissions. Send documents to unlimited recipients with automated notifications.",
+      descriptionVi: "Thêm nhiều người ký, thiết lập thứ tự ký và quản lý quyền. Gửi tài liệu đến số lượng người nhận không giới hạn với thông báo tự động.",
+      image: "/esign/esign3.png",
+      icon: "lucide:users-round",
+    },
+    {
+      titleEn: "Signature Placement",
+      titleVi: "Đặt vị trí chữ ký",
+      descriptionEn: "Click and drag to place signature fields exactly where needed. Customize field types, sizes, and requirements for each signer.",
+      descriptionVi: "Nhấp và kéo để đặt trường chữ ký chính xác vào vị trí cần thiết. Tùy chỉnh loại trường, kích thước và yêu cầu cho từng người ký.",
+      image: "/esign/esign4.png",
+      icon: "lucide:mouse-pointer-click",
+    },
+    {
+      titleEn: "Automated Notifications",
+      titleVi: "Thông báo tự động",
+      descriptionEn: "Recipients receive professional email notifications with secure signing links. Automatic reminders keep your workflow moving.",
+      descriptionVi: "Người nhận nhận được email thông báo chuyên nghiệp với liên kết ký an toàn. Nhắc nhở tự động giữ cho quy trình làm việc của bạn luôn hoạt động.",
+      image: "/esign/esign5.png",
+      icon: "lucide:mail",
+    },
+    {
+      titleEn: "Easy Signing Process",
+      titleVi: "Quy trình ký đơn giản",
+      descriptionEn: "Sign documents with a simple click. Draw signatures, type text, or upload image signatures. Mobile-friendly signing experience.",
+      descriptionVi: "Ký tài liệu chỉ bằng một cú nhấp chuột đơn giản. Vẽ chữ ký, nhập văn bản hoặc tải lên hình ảnh chữ ký. Trải nghiệm ký thân thiện với thiết bị di động.",
+      image: "/esign/esign6.png",
+      icon: "lucide:pen-line",
+    },
+    {
+      titleEn: "Instant Confirmation",
+      titleVi: "Xác nhận tức thì",
+      descriptionEn: "Get immediate confirmation when documents are signed. All parties receive copies and notifications automatically.",
+      descriptionVi: "Nhận xác nhận ngay lập tức khi tài liệu được ký. Tất cả các bên nhận được bản sao và thông báo tự động.",
+      image: "/esign/esign7.png",
+      icon: "lucide:check-circle",
+    },
+    {
+      titleEn: "Secure Document Storage",
+      titleVi: "Lưu trữ tài liệu an toàn",
+      descriptionEn: "All signed documents are securely stored with complete audit trails. Download, share, or archive at any time.",
+      descriptionVi: "Tất cả tài liệu đã ký được lưu trữ an toàn với đầy đủ nhật ký kiểm toán. Tải xuống, chia sẻ hoặc lưu trữ bất cứ lúc nào.",
+      image: "/esign/esign8.png",
+      icon: "lucide:shield",
+    },
+  ];
 
   const features = [
     {
@@ -126,7 +194,7 @@ export default function DigitalSignatureService() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pb-20 sm:pb-0">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0078D4] via-[#0078D4] to-[#005A9E]">
         {/* Animated Background */}
@@ -222,8 +290,134 @@ export default function DigitalSignatureService() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+      {/* Product Showcase Section - Minimal Design */}
+      <section className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-[1600px] mx-auto">
+          {/* Section Header */}
+          <div className="mb-12 sm:mb-16 lg:mb-20">
+            <p className="text-sm font-medium text-[#0078D4] mb-3">
+              {language === 'vi' ? 'Tính Năng Nền Tảng' : 'Platform Features'}
+            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
+              {language === 'vi'
+                ? 'Giải Pháp Chữ Ký Số'
+                : 'Digital Signature Solution'}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl">
+              {language === 'vi'
+                ? 'Quản lý toàn bộ quy trình ký số của bạn'
+                : 'Manage your complete digital signing workflow'}
+            </p>
+          </div>
+
+          {/* Feature Tabs - Minimal */}
+          <div className="mb-12 border-b border-gray-200">
+            <div className="flex overflow-x-auto gap-8 -mb-px scrollbar-hide">
+              {productFeatures.map((feature, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveFeature(index)}
+                  className={`group pb-4 whitespace-nowrap transition-colors ${
+                    activeFeature === index
+                      ? "border-b-2 border-[#0078D4]"
+                      : "border-b-2 border-transparent"
+                  }`}
+                >
+                  <span className={`text-sm font-medium ${
+                    activeFeature === index
+                      ? "text-[#0078D4]"
+                      : "text-gray-500 hover:text-gray-900"
+                  }`}>
+                    {language === 'vi' ? feature.titleVi : feature.titleEn}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Tab Content - Clean Layout */}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            {/* Left - Description */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
+                  {language === 'vi'
+                    ? productFeatures[activeFeature].titleVi
+                    : productFeatures[activeFeature].titleEn}
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  {language === 'vi'
+                    ? productFeatures[activeFeature].descriptionVi
+                    : productFeatures[activeFeature].descriptionEn}
+                </p>
+              </div>
+
+              {/* Feature List */}
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Icon icon="lucide:check" className="w-5 h-5 text-[#0078D4] mt-0.5 flex-shrink-0" />
+                  <p className="text-gray-700">
+                    {language === 'vi' ? 'Dễ sử dụng với giao diện trực quan' : 'Easy to use with intuitive interface'}
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon icon="lucide:check" className="w-5 h-5 text-[#0078D4] mt-0.5 flex-shrink-0" />
+                  <p className="text-gray-700">
+                    {language === 'vi' ? 'An toàn và tuân thủ pháp lý' : 'Secure and legally compliant'}
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon icon="lucide:check" className="w-5 h-5 text-[#0078D4] mt-0.5 flex-shrink-0" />
+                  <p className="text-gray-700">
+                    {language === 'vi' ? 'Theo dõi và thông báo thời gian thực' : 'Real-time tracking and notifications'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Navigation */}
+              <div className="flex items-center justify-between pt-6 border-t border-gray-200">
+                <span className="text-sm text-gray-500">
+                  {language === 'vi'
+                    ? `${activeFeature + 1} / ${productFeatures.length}`
+                    : `${activeFeature + 1} of ${productFeatures.length}`}
+                </span>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setActiveFeature(activeFeature === 0 ? productFeatures.length - 1 : activeFeature - 1)}
+                    className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:border-[#0078D4] hover:text-[#0078D4] transition-colors"
+                  >
+                    <Icon icon="lucide:chevron-left" className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => setActiveFeature((activeFeature + 1) % productFeatures.length)}
+                    className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:border-[#0078D4] hover:text-[#0078D4] transition-colors"
+                  >
+                    <Icon icon="lucide:chevron-right" className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Right - Screenshot */}
+            <div className="relative">
+              <div className="relative rounded-lg overflow-hidden border border-gray-200 bg-white">
+                <div className="aspect-[16/10] relative">
+                  <Image
+                    src={productFeatures[activeFeature].image}
+                    alt={language === 'vi' ? productFeatures[activeFeature].titleVi : productFeatures[activeFeature].titleEn}
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Benefits Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
@@ -387,7 +581,7 @@ export default function DigitalSignatureService() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0078D4] via-[#0078D4] to-[#005A9E] py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0078D4] via-[#0078D4] to-[#005A9E] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 mb-16 sm:mb-0">
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
@@ -451,12 +645,35 @@ export default function DigitalSignatureService() {
           }
         }
 
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
         .animate-fade-in {
           animation: fade-in 0.8s ease-out forwards;
         }
 
         .animate-pulse-slow {
           animation: pulse-slow 4s ease-in-out infinite;
+        }
+
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </div>

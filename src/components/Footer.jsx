@@ -24,7 +24,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <a href="/" className="flex items-center gap-2">
-              <img src="/gsvlogo1.png" alt="GSV Logo" className="h-30" />
+              <img
+                src="/gsvnew2final.png"
+                alt="GSV Logo"
+                className="h-30 w-auto"
+              />
             </a>
             <p className="text-gray-600 dark:text-slate-300 dark:text-slate-300 text-sm leading-relaxed transition-colors">
               {t("footer.description")}

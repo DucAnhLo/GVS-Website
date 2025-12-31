@@ -60,20 +60,20 @@ const Header = () => {
           : "border-b border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex h-20 items-center justify-between gap-4">
           {/* Logo with subtle animation */}
-          <div className="flex-shrink-0 relative group ml-2 md:ml-0">
+          <div className="flex-shrink-0 relative group">
             <Link href="/" className="flex items-center">
               <img
-                src="/gsvlogo1.png"
+                src="/gsvnew2final.png"
                 alt="GSV Logo"
-                className="h-28 w-auto relative z-10 transition-transform duration-300 group-hover:scale-105"
+                className="h-20 sm:h-24 md:h-28 w-auto relative z-10 transition-transform duration-300 group-hover:scale-105"
                 style={{
                   marginTop: "-8px",
                   marginBottom: "-8px",
-                  marginLeft: "-40px",
-                  marginRight: "-10px",
+                  marginLeft: "-20px",
+                  marginRight: "0px",
                 }}
               />
             </Link>
@@ -145,10 +145,11 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button - Enhanced */}
-          <div className="md:hidden">
+          <div className="md:hidden flex-shrink-0 relative z-50">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-gray-700 hover:text-[#0078D4] focus:outline-none transition-colors rounded-lg hover:bg-gray-100"
+              aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
                 <Icon icon="lucide:x" className="w-6 h-6" />
