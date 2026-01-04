@@ -104,7 +104,7 @@ export const projectsData = [
       "Revolutionized mentor management by transforming manual Excel spreadsheets and Google Forms into a comprehensive data management platform with intelligent mentor matching, event creation, and automated catch-up tracking.",
     image: "/clients/TPD/portal.png",
     images: ["/clients/TPD/portal.png", "/clients/TPD/portal2.png"],
-    liveUrl: "https://tpd-portal.pages.dev",
+    liveUrl: "https://portal.theprojectdarts.co.uk/",
     category: "Data Management & Platform",
     tech: [
       "Next.js",
