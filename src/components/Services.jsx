@@ -54,13 +54,9 @@ const Services = () => {
         <div className="mb-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
             <div>
-              <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
-                <span className="font-normal">
-                  {t("services.sectionTitle")}
-                </span>{" "}
-                <span className="font-bold">
-                  {t("services.sectionTitleBold")}
-                </span>
+              <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight font-bold">
+                <span>{t("services.sectionTitle")}</span>{" "}
+                <span>{t("services.sectionTitleBold")}</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
                 {t("services.sectionDescription")}
@@ -115,9 +111,9 @@ const Services = () => {
         <div className="mt-20">
           {/* Header */}
           <div className="mb-16">
-            <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
-              <span className="font-normal">{t("services.trustedBy")}</span>{" "}
-              <span className="font-bold">{t("services.trustedByBold")}</span>
+            <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight font-bold">
+              <span>{t("services.trustedBy")}</span>{" "}
+              <span>{t("services.trustedByBold")}</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
               {t("services.trustedByDescription")}

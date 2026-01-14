@@ -19,9 +19,9 @@ const Projects = () => {
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Header - Minimalist Style */}
         <div className="mb-12">
-          <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight">
-            <span className="font-normal">{t("projects.sectionTitle")}</span>{" "}
-            <span className="font-bold">{t("projects.sectionTitleBold")}</span>
+          <h2 className="text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white leading-tight font-bold">
+            <span>{t("projects.sectionTitle")}</span>{" "}
+            <span>{t("projects.sectionTitleBold")}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
             {t("projects.description")}

@@ -1,4 +1,4 @@
-import { Inter_Tight, Montserrat } from "next/font/google";
+import { Inter, Montserrat, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,13 +9,18 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 // import ThemeToggle from "@/components/ThemeToggle";
 
-const interTight = Inter_Tight({
-  variable: "--font-inter-tight",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
+  subsets: ["latin"],
+});
+
+const sourceSerif4 = Source_Serif_4({
+  variable: "--font-source-serif-4",
   subsets: ["latin"],
 });
 
@@ -45,7 +50,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${interTight.variable} ${montserrat.variable} antialiased`}
+        className={`${inter.variable} ${montserrat.variable} ${sourceSerif4.variable} antialiased`}
       >
         <LanguageProvider>
           <ThemeProvider>
