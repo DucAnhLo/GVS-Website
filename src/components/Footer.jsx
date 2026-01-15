@@ -25,9 +25,9 @@ const Footer = () => {
           <div className="space-y-4">
             <a href="/" className="flex items-center gap-2">
               <img
-                src="/gsvnew2final.png"
+                src="/finallogo.png"
                 alt="GSV Logo"
-                className="h-30 w-auto"
+                className="h-16 w-auto object-contain"
               />
             </a>
             <p className="text-gray-600 dark:text-slate-300 dark:text-slate-300 text-sm leading-relaxed transition-colors">

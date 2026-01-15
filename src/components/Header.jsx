@@ -66,15 +66,9 @@ const Header = () => {
           <div className="flex-shrink-0 relative group">
             <Link href="/" className="flex items-center">
               <img
-                src="/gsvnew2final.png"
+                src="/finallogo.png"
                 alt="GSV Logo"
-                className="h-20 sm:h-24 md:h-28 w-auto relative z-10 transition-transform duration-300 group-hover:scale-105"
-                style={{
-                  marginTop: "-8px",
-                  marginBottom: "-8px",
-                  marginLeft: "-20px",
-                  marginRight: "0px",
-                }}
+                className="h-10 sm:h-12 md:h-14 w-auto relative z-10 transition-transform duration-300 group-hover:scale-105 -my-2 -ml-2 md:-ml-5"
               />
             </Link>
           </div>
